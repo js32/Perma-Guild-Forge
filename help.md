@@ -1,19 +1,19 @@
 Help & Glossary
 
 A quick explanation of concepts, views and features.
-What is a permaculture polyculture?
+What is a polyculture?
 
 A polyculture is a group of plants that support one another: trees, shrubs, perennials, ground covers and root plants are combined so they share nutrients, shade, pollinators and pest defense. Instead of a monoculture, a small, largely self-regulating ecosystem forms around a central anchor plant (often a fruit tree).
 
-This app helps you record plants with their key attributes, enrich them, and print them as cards — a foundation for composing your own polycultures.
+This app helps you record plants with their ecological niche (key attributes, ) enrich them, and print them as cards — a foundation for composing your own polycultures.
 
-On the Polyculturespage you can create your own polycultures: pick an anchor species, add members with a role (companion, ground cover, N-fixer, mineral accumulator, insect or fragrance plant, fruit/berry). The suggestion panel filters your plant stock by open roles and shows a sun/water/pH compatibility score (0–3) against the anchor species.
+On the Polycultures page you can create your own polycultures: pick an anchor species, add members with a desired ecosystem function (ground cover, nitrogen fixer, mineral accumulator, plants useful for pollinators and small animals) and edible yield (fruit, nuts and others). The suggestion panel filters your plant stock by unfulfilled functions and shows a sun/water/pH compatibility score (0–3) in comparison with the anchor species.
 Views
 
 Tiles
-    Overview with image preview, accent stripe by primary use, and a completeness bar. Good for browsing.
+    Overview with image preview, accent stripe by primary use, and a completion bar. Good for browsing.
 List
-    Sortable table (desktop) or compact cards (mobile) with use-dots and completeness. Ideal for multi-select and bulk actions.
+    Sortable table (desktop) or compact cards (mobile) showing with use-dots and completeness. Ideal for multi-select and bulk actions.
 Cards
     Print view of the plant cards — a preview of the PDF export in the browser.
 
@@ -38,15 +38,15 @@ PFAF (Plants For A Future)
 Visual vocabulary
 
     Filled badges = the plant’s use (edible, medicinal, material…).
-    Outline chips = the data source a value came from (e.g. PFAF).
+    Outline chips = the data source a value came from (e.g. PFAF), functions as a link to the reference page.
     Accent stripe / dot = primary use, shown on tiles and list rows.
-    Completeness bar = how many fields are filled relative to the maximum (green ≥ 80%, yellow ≥ 50%, red below).
+    Completion bar = how many fields are filled relative to the maximum (green ≥ 80%, yellow ≥ 50%, red below).
 
 Export & back up data
 
-    Backup (JSON) in Settings: the complete dataset including configuration — ideal as a backup or for moving to another device.
-    CSV / JSON export on the main page: individual or selected plants.
-    PDF export from the card view: all cards, strips or Baumscheiben.
+    Backup (JSON) in Settings: saves the complete dataset including configuration — ideal as a backup or for moving to another device.
+    CSV / JSON export on the main page: saves individual or selected plants.
+    PDF export from the card view: all tiles, lists or cards.
 
 Keyboard shortcuts
 
