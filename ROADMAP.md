@@ -61,6 +61,10 @@ Offene Punkte. Abgeschlossene Roadmap-Punkte stehen in [`CHANGELOG.md`](CHANGELO
 Datei in Dropbox:
 https://www.dropbox.com/scl/fi/kptyeduzlor049spvvvrq/Plant-Species-Toolkit.xlsx?rlkey=eer7brcd9h7tv9wb2a6zlwjmw&dl=0
 
+## bis 1.11./Symposium
+- [ ] bug reporting aufsetzen (mit Formular vorstrukturieren)
+- [ ] Github aktualisieren (help.md, ...)
+
 ### Re: FUNKTIONALITÄT
 
 
