@@ -126,7 +126,7 @@ export const settingsDict: Dict = {
   restoreToast: { de: '{plants} Pflanzen{guildPart}{gardenPlanPart} wiederhergestellt', en: '{plants} plants{guildPart}{gardenPlanPart} restored' },
   restoreFailed: { de: 'Backup-Import fehlgeschlagen: {msg}', en: 'Backup import failed: {msg}' },
 
-  reloadMasterConfirm: { de: 'Golden-Master-Pflanzen erneut importieren? Bestehende Pflanzen mit gleicher ID werden überschrieben.', en: 'Re-import golden-master plants? Existing plants with the same ID will be overwritten.' },
+  reloadMasterConfirm: { de: 'Golden-Master-Pflanzen importieren? Pflanzen, die schon in deiner Liste sind, werden übersprungen.', en: 'Import golden-master plants? Plants already in your list are skipped.' },
   reloadMasterToast: { de: '{n} Pflanzen importiert', en: '{n} plants imported' },
   reloadMasterFailed: { de: 'Import fehlgeschlagen: {msg}', en: 'Import failed: {msg}' },
 

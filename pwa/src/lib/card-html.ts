@@ -161,9 +161,9 @@ export function renderPolyCardHtml(plant: PlantData, imgSrc?: string): string {
     // ── Info bar ──────────────────────────────────────────────────────────────
     `<div style="background:#f5f5f5;padding:3px 8px;font-size:9px;color:#555;flex-shrink:0;` +
          `display:flex;gap:6px;flex-wrap:wrap;align-items:center;">` +
-      (plant.heightM  != null ? `<span>H:${plant.heightM}m</span>`   : '') +
-      (plant.widthM   != null ? `<span>B:${plant.widthM}m</span>`    : '') +
-      (plant.climateZone      ? `<span>Zone\u00a0${plant.climateZone}</span>` : '') +
+      (plant.heightM  != null ? `<span>H:${escapeHtml(String(plant.heightM))}m</span>`   : '') +
+      (plant.widthM   != null ? `<span>B:${escapeHtml(String(plant.widthM))}m</span>`    : '') +
+      (plant.climateZone      ? `<span>Zone\u00a0${escapeHtml(plant.climateZone)}</span>` : '') +
       (growthLabel            ? `<span style="color:#777;">${growthLabel}</span>` : '') +
     `</div>` +
 
@@ -276,9 +276,9 @@ export function renderStripeCardHtml(plant: PlantData, imgSrc?: string): string 
 
     // Specs
     `<div style="font-size:9px;color:#555;width:70px;flex-shrink:0;padding:0 4px;line-height:1.4;">` +
-      (plant.heightM  != null ? `<div>H: ${plant.heightM}m</div>` : '') +
-      (plant.widthM   != null ? `<div>B: ${plant.widthM}m</div>`  : '') +
-      (plant.climateZone      ? `<div>Z: ${plant.climateZone}</div>` : '') +
+      (plant.heightM  != null ? `<div>H: ${escapeHtml(String(plant.heightM))}m</div>` : '') +
+      (plant.widthM   != null ? `<div>B: ${escapeHtml(String(plant.widthM))}m</div>`  : '') +
+      (plant.climateZone      ? `<div>Z: ${escapeHtml(plant.climateZone)}</div>` : '') +
     `</div>` +
 
     // Function dots

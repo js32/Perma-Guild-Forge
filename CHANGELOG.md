@@ -2,6 +2,23 @@
 
 Abgeschlossene Roadmap-Punkte, chronologisch nach Abarbeitung innerhalb ihres ursprünglichen Roadmap-Abschnitts. Offene Punkte stehen weiterhin in `ROADMAP.md`.
 
+## Code-Review (2026-09-29)
+- [x] **Gruppen-Spalte in der Tabelle** — eigene Spalte „Gruppen" (sortierbar, Pflanzen ohne Gruppe ans Ende), dazu ein Filter-Dropdown mit allen vorhandenen Gruppennamen plus „(ohne Gruppe)"; auch in der Sortier-Auswahl von Kachel-/Kartenansicht.
+- [x] **PFAF: Halbschatten-/Schattenpflanzen bekamen „Volle Sonne"** — `includes('sun.jpg')` traf auch `partsun.jpg`/`fullsun.jpg`. Parser in `server/pfaf-parse.mjs` ausgelagert, jetzt exakter Dateiname. Erneutes „Ergänzen" korrigiert bereits gespeicherte falsche Werte, sofern sie von PFAF stammen (manuelle Werte bleiben).
+- [x] **Sicherheit** — gespeichertes XSS über `climateZone` in den Pflanzenkarten behoben; alle Importwege (JSON, Backup, Gist, WebDAV, CSV) laufen durch `normalizePlant()` (Typprüfung, nur http(s)-Bild-URLs); Rate-Limit des Proxys nicht mehr per gefälschtem `X-Forwarded-For` umgehbar; Content-Security-Policy ohne Inline-Skripte (Pre-Paint-Code in `public/boot.js`, Inline-Handler durch Listener ersetzt); Proxy-Origin-Allowlist auf `permadesignkit.org` aktualisiert.
+- [x] **Proxy** — 15 s Timeout gegenüber PFAF, 24 h Ergebnis-Cache (Fehlschläge 10 min), Treffer aus dem Cache zählen nicht gegen das Rate-Limit.
+- [x] **Eine Vollständigkeits-Berechnung** — Balken, Filter und Sortierung „Vollst." nutzen dieselbe Funktion; neue Nutzungen (Nutzholz, Fasern, …) zählen mit.
+- [x] **Zentrale Feldtabelle** (`src/lib/plant-fields.ts`) — Labels, CSV-Spalten, Farben und PDF-Kürzel aller Boolean-Felder an einer Stelle statt in sechs parallelen Listen; drei doppelte i18n-Label-Sets zusammengeführt. `cards.astro` (nicht mehr verlinkt, eigener veralteter Bearbeiten-Dialog) ist jetzt eine Weiterleitung auf `/?view=cards`.
+- [x] **Tabellen-PDF** — Nutzung/Funktionen hatten seit den neuen Feldern mehr Chips als Platz (liefen in die Nachbarspalte); Spaltenbreiten jetzt aus der Chip-Anzahl berechnet, Legende auf vier Zeilen.
+- [x] **CSV** — Export enthält jetzt auch englischen Namen, Sorte, Scores, Blüte-/Fruchtmonate, Bildnachweis, Notizen und Druckanzahl; mehrzeilige Notizen brechen den Import nicht mehr; ältere CSVs importieren weiter.
+- [x] **„Golden Master neu laden"** — funktionierte nicht (Einträge ohne `id`) und hätte bei jedem Klick Duplikate erzeugt; jetzt normalisiert, bereits vorhandene Pflanzen werden übersprungen.
+- [x] **Beispieldaten** — fehlten zehn Felder (u.a. `groups`, `printCount`), jetzt vollständig.
+- [x] **Kaputte Bilder** — der alte `onerror`-Handler suchte eine nicht existierende CSS-Klasse; kaputte Bilder blendeten sich nie aus. Jetzt global über `data-img-wrapper`.
+- [x] **Service Worker** cacht keine Fehlerseiten und keine Proxy-Antworten mehr; IndexedDB-Verbindung wird wiederverwendet.
+- [x] **nginx** — gzip für JS/CSS/SVG/JSON, `/_astro/*` ein Jahr `immutable` gecacht, alles andere per ETag revalidiert. Konfiguration versioniert unter `pwa/server/nginx/`.
+- [x] **Tests & Typecheck** — Vitest-Suite (`npm test`) mit gespeicherten PFAF-Seiten als Fixtures, CSV-Roundtrip, Import-Normalisierung, Filter/Sortierung; `npm run check` (astro check, jetzt 0 Fehler). `deploy.sh` deployt nur noch sauberes `main` = `origin/main` und bricht bei roten Tests ab.
+- [x] **index.astro aufgeteilt** — Filter/Sortierung, CSV, Anreicherung und Badges in eigene Module (2121 → ~1730 Zeilen).
+
 ## prüfen
   1. Salin + Wasserpflanze gelöscht — phSaline/waterPlant komplett aus Typen, Formularen, Karten-Rendering, CSV-Import/Export und Suchlogik
      entfernt (waren laut Status-Doku ohnehin nur Platzhalter ohne echte Funktion).

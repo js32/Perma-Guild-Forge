@@ -32,8 +32,29 @@ const DB_NAME = 'permaculture-guilds';
 // idempotent, same self-healing pattern as prior bumps.
 const DB_VERSION = 5;
 
+// One shared connection per page instead of opening a fresh one on every call.
+// Dropped (and re-opened on next use) if another tab upgrades the schema or
+// the browser closes it, so a newer tab's upgrade is never blocked by this one.
+let dbPromise: ReturnType<typeof openPlantDB> | null = null;
+
 function getDB() {
+  if (!dbPromise) {
+    dbPromise = openPlantDB();
+    dbPromise.catch(() => { dbPromise = null; });
+  }
+  return dbPromise;
+}
+
+function openPlantDB() {
   return openDB<PlantDB>(DB_NAME, DB_VERSION, {
+    blocking() {
+      // A newer version was requested elsewhere: release our handle.
+      dbPromise?.then(db => db.close());
+      dbPromise = null;
+    },
+    terminated() {
+      dbPromise = null;
+    },
     async upgrade(db, _oldVersion, _newVersion, transaction) {
       if (!db.objectStoreNames.contains('plants')) {
         const store = db.createObjectStore('plants', { keyPath: 'id' });
@@ -41,11 +62,11 @@ function getDB() {
       }
       if (!db.objectStoreNames.contains('polycultures')) {
         const newStore = db.createObjectStore('polycultures', { keyPath: 'id' });
-        if (db.objectStoreNames.contains('guilds')) {
+        if (db.objectStoreNames.contains('guilds' as never)) {
           const oldStore = transaction.objectStore('guilds' as never);
           const all = await oldStore.getAll();
           for (const item of all) await newStore.put(item);
-          db.deleteObjectStore('guilds');
+          db.deleteObjectStore('guilds' as never);
         }
       }
       if (!db.objectStoreNames.contains('gardenPlans')) {

@@ -65,14 +65,20 @@ export function loadSettings(): AppSettings {
     const raw = localStorage.getItem(STORAGE_KEY) ?? localStorage.getItem(STORAGE_KEY_LEGACY);
     if (raw) {
       const saved = JSON.parse(raw) as Partial<AppSettings>;
+      const savedSources = Array.isArray(saved.sources) ? saved.sources : [];
       const sources = DEFAULT_SOURCES.map((def) => {
-        const existing = saved.sources?.find((s) => s.id === def.id);
-        return existing ? { ...def, enabled: existing.enabled, apiKey: existing.apiKey } : def;
+        const existing = savedSources.find((s) => s?.id === def.id);
+        return existing
+          ? { ...def, enabled: existing.enabled === true, apiKey: typeof existing.apiKey === 'string' ? existing.apiKey : '' }
+          : { ...def };
       });
+      // Settings can arrive from a restored backup file, so only accept known values.
+      const views: ViewMode[] = ['grid', 'list', 'cards'];
+      const variants: CardVariant[] = ['poly', 'stripe', 'baumscheibe'];
       return {
         sources,
-        defaultView: saved.defaultView ?? DEFAULT_PREFS.defaultView,
-        defaultCardVariant: saved.defaultCardVariant ?? DEFAULT_PREFS.defaultCardVariant,
+        defaultView: views.includes(saved.defaultView as ViewMode) ? saved.defaultView! : DEFAULT_PREFS.defaultView,
+        defaultCardVariant: variants.includes(saved.defaultCardVariant as CardVariant) ? saved.defaultCardVariant! : DEFAULT_PREFS.defaultCardVariant,
       };
     }
   } catch {}

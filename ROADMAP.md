@@ -165,7 +165,7 @@ Offene Punkte. Abgeschlossene Roadmap-Punkte stehen in [`CHANGELOG.md`](CHANGELO
 - [ ] Fehlende Felder: Boden-Typ, Ausbreitungsart, Wurzeltiefe
 
 ### von Opus 
-  1. Kein Testnetz. Das Projekt hat bis heute keine Testsuite — jede
+  1. ✅ erledigt 2026-09-29 (Vitest-Suite, `npm test`; growth-model/blob-shape/compat noch ohne Tests). Kein Testnetz. Das Projekt hatte keine Testsuite — jede
   Regression fällt nur auf, wenn ich sie manuell per Playwright suche.
   Bei inzwischen ~10 Seiten und Modulen wie Wachstumsmodell,
   Blob-Geometrie, compatScore, PFAF-Parser wäre eine kleine Vitest-Suite
@@ -178,7 +178,7 @@ Offene Punkte. Abgeschlossene Roadmap-Punkte stehen in [`CHANGELOG.md`](CHANGELO
   aber State + Handler liegen alle in einem <script>-Block. Aufteilen
   lohnt sich, bevor es weiter wächst.
 
-  3. PFAF-Parser ist fragil. Wir hatten diese Session schon zwei echte
+  3. ✅ erledigt 2026-09-29 (`server/pfaf-parse.mjs` + Fixtures in `test/fixtures/pfaf/`). PFAF-Parser ist fragil. Wir hatten diese Session schon zwei echte
   Bugs darin (Bootstrap-Regex, Prosa-Matching). Der Parser hat null Tests
   und bricht still, wenn PFAF sein Markup ändert — ein Satz
   gespeicherter HTML-Fixtures plus Tests wäre günstig und würde genau die

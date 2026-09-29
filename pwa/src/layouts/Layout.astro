@@ -21,32 +21,14 @@ const containerMaxW = wide ? 'max-w-[1600px]' : 'max-w-6xl';
     <!-- Raleway: matches the Baumscheibe template's own "COMMON NAME" placeholder
          font (see baumscheibe-render.ts NAME_BOXES). OFL-licensed, self-hosted (see global.css) — not loaded from Google Fonts, to avoid IP transfer to Google. -->
     <title>{title}</title>
-    <script is:inline>
-      // Set <html lang> before paint (mirrors the theme script below) so
-      // screen readers / browser UI see the right language immediately.
-      (function () {
-        try {
-          document.documentElement.lang = localStorage.getItem('pgd-lang') === 'en' ? 'en' : 'de';
-        } catch (_) {}
-      })();
-    </script>
+    <!-- Blocking on purpose: sets lang + dark mode before first paint. -->
+    <script is:inline src="/boot.js"></script>
     <!-- Umami Analytics — self-hosted (own VPS, Docker), cookieless, no
          personal data, no IP storage. Replaced Plausible Cloud 2026-09-22
          (see CHANGELOG.md) to keep all data on our own server instead of a
          third-party's. data-domains restricts tracking to the real domain,
          same effect as Plausible's own localhost auto-skip. -->
     <script defer data-website-id="dd0aef9b-00ce-4126-83f8-3bf21e9830c4" data-domains="permadesignkit.org" data-do-not-track="true" src="https://stats.permadesignkit.org/script.js"></script>
-    <script is:inline>
-      // Apply theme before paint to avoid a flash of light UI in dark mode.
-      (function () {
-        try {
-          const stored = localStorage.getItem('theme');
-          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          const isDark = stored === 'dark' || (!stored && prefersDark);
-          document.documentElement.classList.toggle('dark', isDark);
-        } catch (_) {}
-      })();
-    </script>
   </head>
   <body class="flex min-h-full flex-col bg-stone-50 dark:bg-stone-950 text-stone-800 dark:text-stone-100 antialiased">
     <!-- Android / Chrome install banner (top of page, non-sticky) -->
@@ -331,9 +313,11 @@ const containerMaxW = wide ? 'max-w-[1600px]' : 'max-w-6xl';
     <script>
       import { getLang, setLang, createT, applyStaticI18n, type Lang } from '../lib/i18n/core';
       import { layoutDict } from '../lib/i18n/dict-layout';
+      import { installBrokenImageCleanup } from '../lib/html';
 
       const t = createT(layoutDict);
       applyStaticI18n(layoutDict);
+      installBrokenImageCleanup();
 
       // ── Language switcher ────────────────────────────────────────────────
       const langToggle = document.getElementById('lang-toggle');

@@ -3,6 +3,7 @@ import type { PlantData } from './types';
 import { deriveLayer } from './plant-layer';
 import { displayCommonName } from './plant-name';
 import { downloadPdf } from './pdf-export';
+import { badgedFieldsOf, type FieldGroup } from './plant-fields';
 
 /** Printable plant table (landscape A4). Every criterion has a fixed slot per
  *  row with its own letter code, so the meaning survives black-and-white
@@ -10,7 +11,7 @@ import { downloadPdf } from './pdf-export';
  *  Color mode additionally fills chips with the criterion's color; grayscale
  *  mode uses only black/gray. */
 
-type Chip = { key: keyof PlantData; code: string; hex: string; label: string };
+type Chip = { key: keyof PlantData; code: string; hex: string };
 export interface TablePdfLabels {
   title: string; page: string; name: string; latin: string; layer: string;
   uses: string; functions: string; sun: string; water: string; growth: string;
@@ -20,40 +21,26 @@ export interface TablePdfLabels {
 }
 
 const PAGE = { w: 297, h: 210 }, MARGIN = 8;
-const ROW_H = 6.4, CHIP = 4.2, SLOT = 4.7, FONT = 7;
+const ROW_H = 6.4, CHIP = 4.0, SLOT = 4.4, FONT = 7;
 const pt = (mm: number) => mm * 72 / 25.4;
 
-const CHIP_GROUPS = {
-  uses: [
-    { key: 'eatable', code: 'Es', hex: '#dc330c' }, { key: 'culinaric', code: 'Ku', hex: '#f88a70' },
-    { key: 'meds', code: 'Me', hex: '#fa512a' }, { key: 'material', code: 'Ma', hex: '#fb923c' },
-    { key: 'fodder', code: 'Fu', hex: '#a3e635' }, { key: 'fuel', code: 'Br', hex: '#f87171' },
-    { key: 'wood', code: 'Nu', hex: '#92400e' }, { key: 'fiber', code: 'Fa', hex: '#78716c' },
-    { key: 'ornamental', code: 'As', hex: '#ec4899' }, { key: 'dyes', code: 'Fb', hex: '#a855f7' },
-  ],
-  functions: [
-    { key: 'nitrogenFix', code: 'N', hex: '#92d051' }, { key: 'mineralFix', code: 'Mi', hex: '#3cbbe4' },
-    { key: 'groundCover', code: 'Bo', hex: '#d4a525' }, { key: 'insects', code: 'In', hex: '#fadb07' },
-    { key: 'pest', code: 'Sc', hex: '#ef4444' },
-    { key: 'windBreaking', code: 'Wi', hex: '#c6c6c6' }, { key: 'animalProtection', code: 'Ti', hex: '#ba7010' },
-  ],
-  sun: [
-    { key: 'sunFull', code: 'V', hex: '#fbbf24' }, { key: 'sunMid', code: 'H', hex: '#fb923c' }, { key: 'sunShadow', code: 'S', hex: '#64748b' },
-  ],
-  water: [
-    { key: 'waterDry', code: 'T', hex: '#d97706' }, { key: 'waterMid', code: 'M', hex: '#38bdf8' }, { key: 'waterWet', code: 'F', hex: '#1d4ed8' },
-  ],
-  growth: [
-    { key: 'growSpeedLow', code: '1', hex: '#ef4444' }, { key: 'growSpeedMid', code: '2', hex: '#f59e0b' }, { key: 'growSpeedHigh', code: '3', hex: '#22c55e' },
-  ],
-} as const satisfies Record<string, readonly Omit<Chip, 'label'>[]>;
-type GroupName = keyof typeof CHIP_GROUPS;
+type GroupName = 'uses' | 'functions' | 'sun' | 'water' | 'growth';
 const GROUP_ORDER: GroupName[] = ['uses', 'functions', 'sun', 'water', 'growth'];
+const FIELD_GROUP: Record<GroupName, FieldGroup> = { uses: 'usage', functions: 'function', sun: 'sun', water: 'water', growth: 'growth' };
 
-// Column layout (mm). Chip groups get slot-count × SLOT.
+// Chips come straight from the central field table, so a new field gets its
+// own slot (and legend entry) here without touching this file.
+const CHIP_GROUPS = Object.fromEntries(GROUP_ORDER.map(g => [g,
+  badgedFieldsOf(FIELD_GROUP[g]).map(f => ({ key: f.key, code: f.badge.pdfCode, hex: f.badge.hex })),
+])) as Record<GroupName, Chip[]>;
+
+// Column layout (mm). Chip groups are sized from their slot count; the text
+// columns take what's left of the landscape page width.
 const COLS = {
-  name: 44, latin: 44, h: 10, b: 10, layer: 26,
-  uses: 6 * SLOT, functions: 6 * SLOT, sun: 3 * SLOT, water: 3 * SLOT, growth: 3 * SLOT, months: 12 * 2.3,
+  name: 40, latin: 38, h: 9, b: 9, layer: 22,
+  uses: CHIP_GROUPS.uses.length * SLOT, functions: CHIP_GROUPS.functions.length * SLOT,
+  sun: CHIP_GROUPS.sun.length * SLOT, water: CHIP_GROUPS.water.length * SLOT, growth: CHIP_GROUPS.growth.length * SLOT,
+  months: 12 * 2.3,
 };
 const COL_GAP = 1.5;
 
@@ -85,7 +72,7 @@ export async function exportPlantTablePDF(plants: PlantData[], grayscale: boolea
   const gray = (v: number) => rgb(v, v, v);
 
   const groupLabel: Record<GroupName, string> = { uses: L.uses, functions: L.functions, sun: L.sun, water: L.water, growth: L.growth };
-  const legendH = 15, headerH = 9, titleH = 9;
+  const legendH = 17, headerH = 9, titleH = 9;
   const rowsPerPage = Math.floor((PAGE.h - 2 * MARGIN - titleH - headerH - legendH) / ROW_H);
   const pageCount = Math.max(1, Math.ceil(plants.length / rowsPerPage));
 
@@ -129,16 +116,17 @@ export async function exportPlantTablePDF(plants: PlantData[], grayscale: boolea
     let x = MARGIN;
     text(page, L.legend, x, y, 6.5, bold);
     x += 14;
-    const line: string[] = [];
-    for (const g of GROUP_ORDER) {
-      const items = (CHIP_GROUPS[g] as readonly { key: string; code: string }[]).map(c => `${c.code} ${L.chip[c.key]}`).join(', ');
-      line.push(`${groupLabel[g]}: ${items}`);
-    }
-    // wrap into two lines
-    const half = Math.ceil(line.length / 2);
-    const rows = [line.slice(0, half).join('   |   '), line.slice(half).join('   |   ')];
-    rows.forEach((r, i) => text(page, r, x, y + i * 3.4, 6, font, gray(0.25)));
-    text(page, L.monthsNote, x, y + 6.8, 6, font, gray(0.25));
+    const groupLine = (g: GroupName) =>
+      `${groupLabel[g]}: ${CHIP_GROUPS[g].map(c => `${c.code} ${L.chip[c.key]}`).join(', ')}`;
+    // Nutzung and Funktionen each fill a line on their own; the three short
+    // groups share one.
+    const rows = [
+      groupLine('uses'),
+      groupLine('functions'),
+      (['sun', 'water', 'growth'] as const).map(groupLine).join('   |   '),
+      L.monthsNote,
+    ];
+    rows.forEach((r, i) => text(page, r, x, y + i * 3.2, 6, font, gray(0.25)));
   };
 
   for (let pi = 0; pi < pageCount; pi++) {

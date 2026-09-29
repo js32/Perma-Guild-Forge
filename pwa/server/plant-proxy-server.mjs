@@ -7,8 +7,10 @@
 // deployment — the frontend (src/lib/plant-search.ts) always calls the relative path and
 // has no knowledge of where this process runs.
 import { createServer } from 'node:http';
+import { parsePfafHtml } from './pfaf-parse.mjs';
 
 const PORT = process.env.PLANT_PROXY_PORT || 8787;
+const UPSTREAM_TIMEOUT_MS = 15_000;
 
 // PFAF filters on the outbound User-Agent: a self-identifying string like
 // "PermaGuildForge/1.0" got a server-side "200 OK, full page, every field
@@ -28,18 +30,19 @@ const PORT = process.env.PLANT_PROXY_PORT || 8787;
 // know if you ... do anything groovy with this information"). Revisit if
 // that balance ever seems off — e.g. if PFAF's ToS explicitly addresses
 // automated access, or if request volume grows enough to matter to them.
+// The result cache below keeps repeat lookups of the same plant off PFAF.
 const OUTBOUND_USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0';
 
 // --- Origin allowlist ---
 // This process is bind-only to 127.0.0.1, so in practice only the dev-server proxy (or a
-// same-host reverse proxy) can reach it — a browser can never hit this port directly. Kept
-// anyway as defense in depth in case that ever changes (e.g. a future reverse-proxy
-// misconfiguration exposing the port directly).
+// same-host reverse proxy) can reach it. Kept anyway as defense in depth in case that
+// ever changes (e.g. a reverse-proxy misconfiguration exposing the port directly).
+const ALLOWED_ORIGIN_HOSTS = new Set(['localhost', '127.0.0.1', 'permadesignkit.org', 'www.permadesignkit.org']);
+
 function isAllowedOrigin(origin) {
   if (!origin) return true; // same-origin / non-browser / proxied request, no Origin header
   try {
-    const host = new URL(origin).hostname;
-    return host === 'localhost' || host === '127.0.0.1' || host === '178.254.23.156';
+    return ALLOWED_ORIGIN_HOSTS.has(new URL(origin).hostname);
   } catch {
     return false;
   }
@@ -56,17 +59,18 @@ function corsHeaders(origin) {
 }
 
 // --- Best-effort in-process rate limiting ---
-// Unlike a serverless function, this is one long-running process, so an in-memory counter
-// actually works reliably here (no cold-start reset, no multi-instance fan-out to worry
-// about). Real client IP is read from X-Forwarded-For, set by the dev-server proxy
-// (xfwd: true in astro.config.mjs) or should be set by any reverse proxy in front of this.
 const RATE_LIMIT_WINDOW_MS = 60_000;
 const RATE_LIMIT_MAX = 30;
 const requestLog = new Map();
 
+// X-Real-IP is set (overwritten) by nginx from the TCP peer, so a client can't
+// forge it. X-Forwarded-For is NOT safe here: nginx appends the real address to
+// whatever the client sent, so its first entry is attacker-controlled and
+// rotating it bypassed the limit entirely. In dev (Astro's proxy) neither header
+// is trustworthy or needed — the socket address is the local browser.
 function clientIp(req) {
-  const fwd = req.headers['x-forwarded-for'];
-  if (fwd) return fwd.split(',')[0].trim();
+  const real = req.headers['x-real-ip'];
+  if (typeof real === 'string' && real) return real.trim();
   return req.socket.remoteAddress || 'unknown';
 }
 
@@ -85,6 +89,27 @@ setInterval(() => {
     if (timestamps.every((t) => now - t >= RATE_LIMIT_WINDOW_MS)) requestLog.delete(ip);
   }
 }, RATE_LIMIT_WINDOW_MS).unref();
+
+// --- Result cache ---
+// PFAF pages change rarely; caching keeps "Lade alle fehlenden Daten" and repeated
+// imports of the same plant from re-scraping PFAF. Plants PFAF doesn't know are
+// cached briefly too, so a typo loop doesn't hammer it; upstream errors are not cached.
+const CACHE_TTL_HIT_MS = 24 * 60 * 60_000;
+const CACHE_TTL_MISS_MS = 10 * 60_000;
+const CACHE_MAX_ENTRIES = 1000;
+const resultCache = new Map();
+
+function cacheGet(key) {
+  const entry = resultCache.get(key);
+  if (!entry) return null;
+  if (Date.now() > entry.expires) { resultCache.delete(key); return null; }
+  return entry.body;
+}
+
+function cacheSet(key, body, ttl) {
+  if (resultCache.size >= CACHE_MAX_ENTRIES) resultCache.delete(resultCache.keys().next().value);
+  resultCache.set(key, { body, expires: Date.now() + ttl });
+}
 
 function emptyResult(latinName) {
   return {
@@ -109,189 +134,24 @@ function emptyResult(latinName) {
   };
 }
 
-// --- PFAF parsing ---
-
-function parsePfafScore(text) {
-  const m = text.match(/\((\d) of \d\)/);
-  return m ? parseInt(m[1]) : null;
-}
-
-function parsePfafDimension(text) {
-  const m = text.match(/(\d+(?:\.\d+)?)\s*(m|cm)/);
-  if (!m) return null;
-  const val = parseFloat(m[1]);
-  return m[2] === 'cm' ? val / 100 : val;
-}
-
-// PFAF's physical-description text ("It is in flower from April to June...
-// the seeds ripen from November to March") gives exact month ranges, in the
-// same sentence structure across every plant page checked. There's also a
-// separate "Main Bloom Time" field on some pages that only gives a season
-// (e.g. "Early spring, Late spring, Mid spring") — that field's format is
-// inconsistent (sometimes genus-level essay text instead) and coarser than
-// what's already available here, so it's not used.
-const MONTH_NAMES_EN = ['january', 'february', 'march', 'april', 'may', 'june',
-  'july', 'august', 'september', 'october', 'november', 'december'];
-
-function parseMonthRange(fromName, toName) {
-  const months = Array(12).fill(false);
-  const from = MONTH_NAMES_EN.indexOf(fromName.toLowerCase());
-  if (from === -1) return months;
-  const to = toName ? MONTH_NAMES_EN.indexOf(toName.toLowerCase()) : from;
-  if (to === -1) { months[from] = true; return months; }
-  for (let i = from; ; i = (i + 1) % 12) {
-    months[i] = true;
-    if (i === to) break;
-  }
-  return months;
-}
-
-function extractMonths(phys, kind) {
-  const re = kind === 'flower'
-    ? /in flower (?:in|from) (\w+)(?:\s+to\s+(\w+))?/i
-    : /seeds? ripens? (?:in|from) (\w+)(?:\s+to\s+(\w+))?/i;
-  const m = phys.match(re);
-  return m ? parseMonthRange(m[1], m[2]) : null;
-}
-
+/** Returns parsed fields, {} when PFAF has no data for the name, or null on an upstream failure. */
 async function fetchPfaf(name) {
-  // PFAF's canonical URL form uses '+' for spaces (application/x-www-form-
-  // urlencoded style); encode first, then swap %20 for '+' — NOT the reverse
-  // (replace space with '+' and THEN encode), which double-encodes the '+'
-  // into a literal %2B. That bug sent PFAF a search for a plant literally
-  // named "Malus+domestica", which obviously never matched anything — the
-  // page still loaded (200 OK) but with every field empty, which looked
-  // exactly like the separate User-Agent-blocking issue above and delayed
-  // finding this by a full day. Confirmed via curl -sL: %20 without this bug
-  // still works (PFAF 302-redirects it to the '+' form), but going straight
-  // to the canonical form skips that extra round trip.
+  // PFAF's canonical URL form uses '+' for spaces; encode first, then swap %20 for '+'
+  // (the reverse order double-encodes the '+' into %2B and PFAF finds nothing).
   const url = `https://pfaf.org/user/Plant.aspx?LatinName=${encodeURIComponent(name).replace(/%20/g, '+')}`;
-  let html;
   try {
-    const res = await fetch(url, { headers: { 'User-Agent': OUTBOUND_USER_AGENT } });
-    if (!res.ok) return {};
-    html = await res.text();
-  } catch { return {}; }
-
-  const result = { source: 'pfaf' };
-
-  // PFAF's overview table used to be plain `<td>Label</td><td>Value</td>` —
-  // matched by searching for the label text and reading the next <td>. PFAF
-  // redesigned the table (label now in <b>, value now in a <span id="...">),
-  // which broke that: the label regex could no longer reach past the </b>
-  // tag, and the value was no longer directly inside the <td>. ASP.NET control
-  // ids (id="ContentPlaceHolder1_XXX") are far more stable than surrounding
-  // markup, since they're tied to server-side code rather than page styling —
-  // so look values up by id instead of by adjacent label text.
-  const getById = (id) => {
-    const m = html.match(new RegExp(`id="ContentPlaceHolder1_${id}"[^>]*>([^<]*)`, 'i'));
-    return m ? m[1].replace(/&nbsp;/g, ' ').trim() : '';
-  };
-
-  const commonName = getById('lblCommanName'); // sic — typo in PFAF's own markup
-  if (commonName) result.commonName = commonName.split(',')[0].trim();
-
-  const edibleRating = getById('txtEdrating');
-  if (edibleRating) {
-    result.eatableScore = parsePfafScore(edibleRating);
-    result.eatable = (result.eatableScore || 0) > 2;
+    const res = await fetch(url, {
+      headers: { 'User-Agent': OUTBOUND_USER_AGENT },
+      signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
+    });
+    if (!res.ok) return null;
+    return parsePfafHtml(await res.text());
+  } catch {
+    return null;
   }
-
-  const medRating = getById('txtMedRating');
-  if (medRating) {
-    result.medsScore = parsePfafScore(medRating);
-    result.meds = (result.medsScore || 0) > 2;
-  }
-
-  const otherUseRating = getById('txtOtherUseRating');
-  if (otherUseRating) {
-    result.materialScore = parsePfafScore(otherUseRating);
-    result.material = (result.materialScore || 0) > 2;
-  }
-
-  const climateZone = getById('lblUSDAhardiness');
-  if (climateZone) result.climateZone = climateZone;
-
-  const physMatch = html.match(/lblPhystatment[^>]*>([^<]+(?:<[^>]+>[^<]*)*)/i);
-  const phys = physMatch ? physMatch[1].replace(/<[^>]+>/g, '') : '';
-
-  const heightMatch = phys.match(/growing to (\d+(?:\.\d+)?)\s*(m|cm)/i);
-  if (heightMatch) result.heightM = parsePfafDimension(heightMatch[0]);
-
-  const widthMatch = phys.match(/by (\d+(?:\.\d+)?)\s*(m|cm)/i);
-  if (widthMatch) result.widthM = parsePfafDimension(widthMatch[0]);
-
-  result.growSpeedHigh = /at a fast rate/i.test(phys);
-  result.growSpeedMid = /at a medium rate/i.test(phys);
-  result.growSpeedLow = /at a slow rate/i.test(phys);
-
-  result.phVeryAcid = /pH:.*very acid.*soils\./i.test(phys);
-  result.phAcid = /pH:.*mildly acid.*soils\./i.test(phys);
-  result.phNeutral = /pH:.*neutral.*soils\./i.test(phys);
-  result.phAlkaline = /pH:.*mildly alkaline.*soils\./i.test(phys);
-  result.phVeryAlkaline = /pH:.*very alkaline.*soils\./i.test(phys);
-  result.phSaline = /pH:.*saline.*soils\./i.test(phys);
-
-  result.windBreakingOnSea = /tolerate maritime exposure/i.test(phys);
-
-  const flowerMonths = extractMonths(phys, 'flower');
-  if (flowerMonths) result.flowerMonths = flowerMonths;
-  const fruitMonths = extractMonths(phys, 'fruit');
-  if (fruitMonths) result.fruitMonths = fruitMonths;
-
-  result.sunFull = html.includes('sun.jpg');
-  result.sunMid = html.includes('partsun.jpg');
-  result.sunShadow = html.includes('fullsun.jpg');
-  result.waterDry = html.includes('water1.jpg');
-  result.waterMid = html.includes('water2.jpg');
-  result.waterWet = html.includes('water3.jpg');
-  result.waterPlant = html.includes('water4.jpg');
-
-  // Was `/boots[^"]*"[^>]*>/` (no "class="), which doesn't just match the
-  // intended class="boots"/"boots2"/"boots3"/"boots4" divs (Cultivation
-  // details / Medicinal / Edible / Other Uses) — it also matches the literal
-  // substring "boots" inside "bootstrap" in the <head>'s CDN <link>/<script>
-  // tags, which appear *before* the real content. That false match's lazy
-  // capture then runs all the way to the next `</div>` in the document,
-  // swallowing tens of KB of unrelated head/script/hidden-form markup ahead
-  // of the real Uses sections. Fixed by requiring the `class="` prefix.
-  const fieldSection = html.match(/class="boots\d*"[^>]*>([\s\S]*?)<\/div>/gi)?.join(' ') || '';
-
-  // Fields backed by one of PFAF's own "Other Uses" / "Special Uses" tags
-  // (rendered as `<a href='Search_Use.aspx?glossary=Fuel'>Fuel</a>` etc. —
-  // confirmed by checking real PFAF pages, not guessed) match the literal
-  // anchor text, not loose prose. Matching loose prose was the actual bug
-  // behind "Beinwell" (Symphytum officinale) showing fuel/fodder/groundCover
-  // as active: PFAF only tags it Biomass/Compost/Gum/Dynamic accumulator/Food
-  // Forest, but the Biomass tag's own tooltip text reads "...can be converted
-  // into fuel etc.", and the Landscape Uses prose mentions "Ground cover" in
-  // passing — `/\bFuel\b/i` and `/Ground Cover/i` matched that prose as if it
-  // were an assigned tag. materialScore (Other Uses Rating, 4 of 5 for
-  // Beinwell) is unaffected by this bug — that's PFAF's own numeric rating,
-  // not text-matched, and is correctly not a false positive.
-  const hasUseTag = (tagName) =>
-    new RegExp(`>${tagName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</a>`, 'i').test(fieldSection);
-  result.nitrogenFix = hasUseTag('Nitrogen Fixer');
-  result.groundCover = hasUseTag('Ground Cover');
-  result.insects = hasUseTag('Attracts Wildlife');
-  result.fuel = hasUseTag('Fuel');
-  result.fodder = hasUseTag('Fodder');
-  result.pest = hasUseTag('Repellent');
-  result.mineralFix = hasUseTag('Dynamic accumulator');
-  result.culinaric = hasUseTag('Condiment');
-  // windBreaking/animalProtection have no equivalent PFAF glossary tag at all
-  // (verified: Search_Use.aspx?glossary=Windbreak and ?glossary=Living+Trellis
-  // both return PFAF's "no search result found" page even for classic
-  // windbreak species like Elaeagnus x ebbingei) — PFAF only ever mentions
-  // these as free text in the Agroforestry Uses paragraph, so prose-matching
-  // is the best signal available, not a shortcut we chose over a real tag.
-  result.windBreaking = /Windbreak/i.test(fieldSection);
-  result.animalProtection = /Living trellis/i.test(fieldSection);
-
-  return result;
 }
 
-// --- NaturaDB parsing ---
+// --- NaturaDB ---
 //
 // Disabled for now (see ROADMAP.md "Lizenz & Datenquellen"): naturadb.de grants no reuse
 // license for its editorial plant database, and its robots.txt has an explicit
@@ -321,10 +181,13 @@ async function fetchNaturaDb(name) {
   const url = `https://www.naturadb.de/pflanzen/${slug}/`;
   let html;
   try {
-    const res = await fetch(url, { headers: { 'User-Agent': OUTBOUND_USER_AGENT } });
-    if (!res.ok) return {};
+    const res = await fetch(url, {
+      headers: { 'User-Agent': OUTBOUND_USER_AGENT },
+      signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
+    });
+    if (!res.ok) return null;
     html = await res.text();
-  } catch { return {}; }
+  } catch { return null; }
 
   const result = { source: 'naturadb' };
 
@@ -364,6 +227,39 @@ async function fetchNaturaDb(name) {
 
 // --- Main handler ---
 
+async function lookup(name) {
+  const result = emptyResult(name);
+  const [pfaf, naturaDb] = await Promise.all([fetchPfaf(name), fetchNaturaDb(name)]);
+  const sources = [];
+
+  if (pfaf && Object.keys(pfaf).length > 1) {
+    sources.push('pfaf');
+    for (const [key, value] of Object.entries(pfaf)) {
+      if (key === 'source') continue;
+      if (value !== null && value !== undefined && value !== '' && value !== false) {
+        result[key] = value;
+      }
+    }
+  }
+
+  if (naturaDb && Object.keys(naturaDb).length > 1) {
+    sources.push('naturadb');
+    for (const [key, value] of Object.entries(naturaDb)) {
+      if (key === 'source') continue;
+      const current = result[key];
+      const isEmpty = current === null || current === undefined || current === '' || current === false ||
+        (Array.isArray(current) && current.every((v) => !v));
+      if (isEmpty && value !== null && value !== undefined && value !== '') {
+        result[key] = value;
+      }
+    }
+  }
+
+  result.source = sources.join('+');
+  const upstreamFailed = pfaf === null || naturaDb === null;
+  return { body: JSON.stringify(result), found: sources.length > 0, upstreamFailed };
+}
+
 async function handleRequest(req, res) {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const origin = req.headers.origin || null;
@@ -379,49 +275,30 @@ async function handleRequest(req, res) {
     return res.end(JSON.stringify({ error: 'Origin not allowed' }));
   }
 
+  const name = (url.searchParams.get('name') || '').trim();
+  if (!name || name.length > 200) {
+    res.writeHead(400, headers);
+    return res.end(JSON.stringify({ error: 'Missing or invalid ?name= parameter' }));
+  }
+
+  const cacheKey = name.toLowerCase();
+  const cached = cacheGet(cacheKey);
+  if (cached) {
+    res.writeHead(200, headers);
+    return res.end(cached);
+  }
+
   if (isRateLimited(clientIp(req))) {
     res.writeHead(429, headers);
     return res.end(JSON.stringify({ error: 'Rate limit exceeded' }));
   }
 
-  const name = url.searchParams.get('name');
-  if (!name) {
-    res.writeHead(400, headers);
-    return res.end(JSON.stringify({ error: 'Missing ?name= parameter' }));
-  }
-
-  const result = emptyResult(name);
-  const [pfaf, naturaDb] = await Promise.all([fetchPfaf(name), fetchNaturaDb(name)]);
-
-  const sources = [];
-
-  if (Object.keys(pfaf).length > 1) {
-    sources.push('pfaf');
-    for (const [key, value] of Object.entries(pfaf)) {
-      if (key === 'source') continue;
-      if (value !== null && value !== undefined && value !== '' && value !== false) {
-        result[key] = value;
-      }
-    }
-  }
-
-  if (Object.keys(naturaDb).length > 1) {
-    sources.push('naturadb');
-    for (const [key, value] of Object.entries(naturaDb)) {
-      if (key === 'source') continue;
-      const current = result[key];
-      const isEmpty = current === null || current === undefined || current === '' || current === false ||
-        (Array.isArray(current) && current.every((v) => !v));
-      if (isEmpty && value !== null && value !== undefined && value !== '') {
-        result[key] = value;
-      }
-    }
-  }
-
-  result.source = sources.join('+');
+  const { body, found, upstreamFailed } = await lookup(name);
+  if (found) cacheSet(cacheKey, body, CACHE_TTL_HIT_MS);
+  else if (!upstreamFailed) cacheSet(cacheKey, body, CACHE_TTL_MISS_MS);
 
   res.writeHead(200, headers);
-  res.end(JSON.stringify(result));
+  res.end(body);
 }
 
 const server = createServer((req, res) => {

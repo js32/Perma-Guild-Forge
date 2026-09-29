@@ -1,7 +1,8 @@
-import type { PlantData } from './types';
+import { createEmptyPlant, type PlantData } from './types';
 
 export const samplePlants: PlantData[] = [
   {
+    ...createEmptyPlant(),
     id: 'sample-1',
     latinName: 'Acer saccharum',
     commonName: 'Zucker-Ahorn',
@@ -44,6 +45,7 @@ export const samplePlants: PlantData[] = [
     imageUrl: '',
   },
   {
+    ...createEmptyPlant(),
     id: 'sample-2',
     latinName: 'Symphytum officinale',
     commonName: 'Beinwell',

@@ -1,5 +1,6 @@
 import type { Lang } from './i18n/core';
 import type { TablePdfLabels } from './table-pdf';
+import { BOOL_FIELDS } from './plant-fields';
 
 /**
  * Shared TablePdfLabels builder for exportPlantTablePDF(), used identically
@@ -32,33 +33,6 @@ export function buildTablePdfLabels(lang: Lang): TablePdfLabels {
       shrub: pick('Strauch', 'Shrub'),
       herb: pick('Kraut/Bodendecker', 'Herb/groundcover'),
     },
-    chip: {
-      eatable: pick('Essbarkeit', 'Edibility'),
-      culinaric: pick('Küche', 'Culinary'),
-      meds: pick('Gesundheit', 'Medicinal'),
-      material: pick('Materialien', 'Materials'),
-      fodder: pick('Tierfutter', 'Fodder'),
-      fuel: pick('Brennstoff', 'Fuel'),
-      wood: pick('Nutzholz', 'Wood'),
-      fiber: pick('Fasern', 'Fiber'),
-      ornamental: pick('Ästhetik', 'Ornamental'),
-      dyes: pick('Farbstoff', 'Dyes'),
-      nitrogenFix: pick('Stickstoff-Fixierer', 'Nitrogen fixer'),
-      mineralFix: pick('Mineraliensammler', 'Dynamic accumulator'),
-      groundCover: pick('Bodendecker', 'Ground cover'),
-      insects: pick('Insekten', 'Invertebrates'),
-      pest: pick('Schädlingsschutz', 'Pest control'),
-      windBreaking: pick('Windschutz', 'Windbreak'),
-      animalProtection: pick('Kleintiere', 'Wildlife'),
-      sunFull: pick('Volle Sonne', 'Full sun'),
-      sunMid: pick('Halbschatten', 'Partial shade'),
-      sunShadow: pick('Schatten', 'Shade'),
-      waterDry: pick('Trocken', 'Dry'),
-      waterMid: pick('Mittel', 'Medium'),
-      waterWet: pick('Nass', 'Wet'),
-      growSpeedLow: pick('Langsam', 'Slow'),
-      growSpeedMid: pick('Mittel', 'Medium'),
-      growSpeedHigh: pick('Schnell', 'Fast'),
-    },
+    chip: Object.fromEntries(BOOL_FIELDS.map(f => [f.key, de ? f.label.de : f.label.en])),
   };
 }

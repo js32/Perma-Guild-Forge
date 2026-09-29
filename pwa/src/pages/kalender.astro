@@ -41,28 +41,28 @@ import Layout from '../layouts/Layout.astro';
     <details class="filter-dropdown relative">
       <summary class="cursor-pointer select-none rounded-full bg-stone-100 dark:bg-stone-800 px-2.5 py-1 text-xs font-medium text-stone-600 dark:text-stone-300 ring-1 ring-stone-200 dark:ring-stone-700"><span data-i18n="filterUsageLabel">Nutzung</span></summary>
       <div class="absolute z-10 mt-1 w-44 space-y-1 rounded-lg bg-white dark:bg-stone-800 p-2.5 text-xs shadow-lg ring-1 ring-stone-200 dark:ring-stone-700">
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="eatable" /> <span data-i18n="badgeEatable">Essbarkeit</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="culinaric" /> <span data-i18n="badgeCulinaric">Küche</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="meds" /> <span data-i18n="badgeMeds">Gesundheit</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="material" /> <span data-i18n="badgeMaterial">Materialien</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="fodder" /> <span data-i18n="badgeFodder">Tierfutter</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="fuel" /> <span data-i18n="badgeFuel">Brennstoff</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="wood" /> <span data-i18n="badgeWood">Nutzholz</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="fiber" /> <span data-i18n="badgeFiber">Fasern</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="ornamental" /> <span data-i18n="badgeOrnamental">Ästhetik</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="dyes" /> <span data-i18n="badgeDyes">Farbstoff</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="eatable" /> <span data-i18n="fld_eatable">Essbarkeit</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="culinaric" /> <span data-i18n="fld_culinaric">Küche</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="meds" /> <span data-i18n="fld_meds">Gesundheit</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="material" /> <span data-i18n="fld_material">Materialien</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="fodder" /> <span data-i18n="fld_fodder">Tierfutter</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="fuel" /> <span data-i18n="fld_fuel">Brennstoff</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="wood" /> <span data-i18n="fld_wood">Nutzholz</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="fiber" /> <span data-i18n="fld_fiber">Fasern</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="ornamental" /> <span data-i18n="fld_ornamental">Ästhetik</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="dyes" /> <span data-i18n="fld_dyes">Farbstoff</span></label>
       </div>
     </details>
     <details class="filter-dropdown relative">
       <summary class="cursor-pointer select-none rounded-full bg-stone-100 dark:bg-stone-800 px-2.5 py-1 text-xs font-medium text-stone-600 dark:text-stone-300 ring-1 ring-stone-200 dark:ring-stone-700"><span data-i18n="filterFunctionLabel">Funktionen</span></summary>
       <div class="absolute z-10 mt-1 w-44 space-y-1 rounded-lg bg-white dark:bg-stone-800 p-2.5 text-xs shadow-lg ring-1 ring-stone-200 dark:ring-stone-700">
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="nitrogenFix" /> <span data-i18n="badgeNitrogenFix">Stickstoff-Fixierer</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="mineralFix" /> <span data-i18n="badgeMineralFix">Mineraliensammler</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="groundCover" /> <span data-i18n="badgeGroundCover">Bodendecker</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="insects" /> <span data-i18n="badgeInsects">Insekten</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="pest" /> <span data-i18n="badgePest">Schädlingsschutz</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="windBreaking" /> <span data-i18n="badgeWindBreaking">Windschutz</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="animalProtection" /> <span data-i18n="badgeAnimalProtection">Kleintiere</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="nitrogenFix" /> <span data-i18n="fld_nitrogenFix">Stickstoff-Fixierer</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="mineralFix" /> <span data-i18n="fld_mineralFix">Mineraliensammler</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="groundCover" /> <span data-i18n="fld_groundCover">Bodendecker</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="insects" /> <span data-i18n="fld_insects">Insekten</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="pest" /> <span data-i18n="fld_pest">Schädlingsschutz</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="windBreaking" /> <span data-i18n="fld_windBreaking">Windschutz</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="animalProtection" /> <span data-i18n="fld_animalProtection">Kleintiere</span></label>
       </div>
     </details>
     <span id="kalender-count" class="text-xs text-stone-400 dark:text-stone-500 ml-auto"></span>

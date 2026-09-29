@@ -1,3 +1,13 @@
+/** Removes the image box (the nearest [data-img-wrapper]) of any image that
+ *  fails to load. One capturing listener replaces per-image onerror="…"
+ *  attributes, which the Content-Security-Policy doesn't allow. Call once per page. */
+export function installBrokenImageCleanup(): void {
+  document.addEventListener('error', (e) => {
+    const img = e.target;
+    if (img instanceof HTMLImageElement) img.closest('[data-img-wrapper]')?.remove();
+  }, true);
+}
+
 /** Escape a string for safe interpolation into HTML markup (text/attribute context). */
 export function escapeHtml(s: string): string {
   return s.replace(/[&<>"']/g, c => ({

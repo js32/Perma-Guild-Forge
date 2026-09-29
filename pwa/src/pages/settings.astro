@@ -209,7 +209,7 @@ import Layout from '../layouts/Layout.astro';
     type AppSettings, type ViewMode, type CardVariant, type ThemePref,
   } from '../lib/settings';
   import { getAllPlants, importPlants, clearAllPlants, importPolycultures, importGardenPlans } from '../lib/db';
-  import { buildBackupJson, rememberSyncAt, isAutoSyncEnabled, GIST_FILENAME, GIST_FILENAME_LEGACY } from '../lib/sync';
+  import { buildBackupJson, parseBackup, rememberSyncAt, isAutoSyncEnabled, GIST_FILENAME, GIST_FILENAME_LEGACY } from '../lib/sync';
   import { escapeHtml } from '../lib/html';
   import { createT, applyStaticI18n, getLang } from '../lib/i18n/core';
   import { settingsDict } from '../lib/i18n/dict-settings';
@@ -491,16 +491,16 @@ import Layout from '../layouts/Layout.astro';
         headers: { 'Authorization': authHeader() },
       });
       if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
-      const data = await res.json();
-      const restoredPlants = Array.isArray(data) ? data : (data.plants ?? []);
-      if (!Array.isArray(restoredPlants)) throw new Error(t('invalidBackupFormat'));
-      const restoredPolycultures = Array.isArray(data) ? [] : (data.polycultures ?? data.guilds ?? []);
-      const restoredGardenPlans = Array.isArray(data) ? [] : (data.gardenPlans ?? []);
+      const {
+        plants: restoredPlants, polycultures: restoredPolycultures,
+        gardenPlans: restoredGardenPlans, settings: restoredSettings,
+      } = parseBackup(await res.text());
+      if (restoredPlants.length === 0) throw new Error(t('invalidBackupFormat'));
       await importPlants(restoredPlants);
       if (restoredPolycultures.length) await importPolycultures(restoredPolycultures);
       if (restoredGardenPlans.length) await importGardenPlans(restoredGardenPlans);
-      if (!Array.isArray(data) && data.settings) {
-        saveSettings(data.settings);
+      if (restoredSettings) {
+        saveSettings(restoredSettings as AppSettings);
         settings = loadSettings();
         renderSources(); renderPrefs();
       }
@@ -554,11 +554,8 @@ import Layout from '../layouts/Layout.astro';
         });
         const file = await handle.getFile();
         const text = await (file as File).text();
-        const data = JSON.parse(text);
-        const plants = Array.isArray(data) ? data : (data.plants ?? []);
-        if (!Array.isArray(plants)) throw new Error(t('fsaInvalidFormat'));
-        const polycultures = Array.isArray(data) ? [] : (data.polycultures ?? data.guilds ?? []);
-        const gardenPlans = Array.isArray(data) ? [] : (data.gardenPlans ?? []);
+        const { plants, polycultures, gardenPlans, settings: restoredSettings } = parseBackup(text);
+        if (plants.length === 0) throw new Error(t('fsaInvalidFormat'));
         if (!confirm(t('fsaConfirmRead', {
           plants: plants.length,
           guildPart: polycultures.length ? t('restoreGuildPart', { n: polycultures.length }) : '',
@@ -567,8 +564,8 @@ import Layout from '../layouts/Layout.astro';
         await importPlants(plants);
         if (polycultures.length) await importPolycultures(polycultures);
         if (gardenPlans.length) await importGardenPlans(gardenPlans);
-        if (!Array.isArray(data) && data.settings) {
-          saveSettings(data.settings);
+        if (restoredSettings) {
+          saveSettings(restoredSettings as AppSettings);
           settings = loadSettings();
           renderSources(); renderPrefs();
         }
@@ -670,16 +667,13 @@ import Layout from '../layouts/Layout.astro';
       // (Perma Guild Forge) wrote, so existing synced Gists still import.
       const raw: string | undefined = gist.files?.[GIST_FILENAME]?.content ?? gist.files?.[GIST_FILENAME_LEGACY]?.content;
       if (!raw) throw new Error(t('gistFileNotFound', { filename: GIST_FILENAME }));
-      const data = JSON.parse(raw);
-      const plants = Array.isArray(data) ? data : (data.plants ?? []);
-      if (!Array.isArray(plants)) throw new Error(t('invalidBackupFormat'));
-      const polycultures = Array.isArray(data) ? [] : (data.polycultures ?? data.guilds ?? []);
-      const gardenPlans = Array.isArray(data) ? [] : (data.gardenPlans ?? []);
+      const { plants, polycultures, gardenPlans, settings: restoredSettings } = parseBackup(raw);
+      if (plants.length === 0) throw new Error(t('invalidBackupFormat'));
       await importPlants(plants);
       if (polycultures.length) await importPolycultures(polycultures);
       if (gardenPlans.length) await importGardenPlans(gardenPlans);
-      if (!Array.isArray(data) && data.settings) {
-        saveSettings(data.settings);
+      if (restoredSettings) {
+        saveSettings(restoredSettings as AppSettings);
         settings = loadSettings();
         renderSources(); renderPrefs();
       }
@@ -697,14 +691,10 @@ import Layout from '../layouts/Layout.astro';
     if (!file) return;
     try {
       const text = await file.text();
-      const data = JSON.parse(text);
-      const plants = Array.isArray(data) ? data : (data.plants ?? []);
-      if (!Array.isArray(plants) || plants.length === 0) {
+      const { plants, polycultures, gardenPlans, settings: restoreSettings } = parseBackup(text);
+      if (plants.length === 0) {
         throw new Error(t('restoreNoPlants'));
       }
-      const polycultures: any[] = Array.isArray(data) ? [] : (data.polycultures ?? data.guilds ?? []);
-      const gardenPlans: any[] = Array.isArray(data) ? [] : (data.gardenPlans ?? []);
-      const restoreSettings = !Array.isArray(data) && data.settings;
       const guildPart = polycultures.length ? t('restoreGuildPart', { n: polycultures.length }) : '';
       const gardenPlanPart = gardenPlans.length ? t('restoreGardenPlanPart', { n: gardenPlans.length }) : '';
       const settingsPart = restoreSettings ? t('restoreSettingsPart') : '';
@@ -714,7 +704,7 @@ import Layout from '../layouts/Layout.astro';
       if (polycultures.length) await importPolycultures(polycultures);
       if (gardenPlans.length) await importGardenPlans(gardenPlans);
       if (restoreSettings) {
-        saveSettings(data.settings);
+        saveSettings(restoreSettings as AppSettings);
         settings = loadSettings();
         renderSources(); renderPrefs();
       }
@@ -733,8 +723,12 @@ import Layout from '../layouts/Layout.astro';
     try {
       const res = await fetch('/plants-db.json');
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      const plants = Array.isArray(data) ? data : (data.plants ?? []);
+      // plants-db.json is a name index ({latinName, commonName} only, no ids),
+      // so normalize each entry into a full record and skip plants that are
+      // already in the collection — otherwise every click added duplicates.
+      const { plants: master } = parseBackup(await res.text());
+      const existing = new Set((await getAllPlants()).map(p => p.latinName.trim().toLowerCase()));
+      const plants = master.filter(p => !existing.has(p.latinName.trim().toLowerCase()));
       await importPlants(plants);
       showToast(t('reloadMasterToast', { n: plants.length }));
       await renderStats();

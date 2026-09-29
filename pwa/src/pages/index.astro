@@ -63,28 +63,28 @@ import Layout from '../layouts/Layout.astro';
     <details class="filter-dropdown relative">
       <summary id="filter-usage-summary" class="cursor-pointer select-none rounded-full bg-stone-100 dark:bg-stone-800 px-2.5 py-1 font-medium text-stone-600 dark:text-stone-300 ring-1 ring-stone-200 dark:ring-stone-700"><span data-i18n="filterUsageLabel">Nutzung</span></summary>
       <div class="absolute z-10 mt-1 w-44 space-y-1 rounded-lg bg-white dark:bg-stone-800 p-2.5 text-xs shadow-lg ring-1 ring-stone-200 dark:ring-stone-700">
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="eatable" /> <span data-i18n="badgeEatable">Essbarkeit</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="culinaric" /> <span data-i18n="badgeCulinaric">Küche</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="meds" /> <span data-i18n="badgeMeds">Gesundheit</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="material" /> <span data-i18n="badgeMaterial">Materialien</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="fodder" /> <span data-i18n="badgeFodder">Tierfutter</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="fuel" /> <span data-i18n="badgeFuel">Brennstoff</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="wood" /> <span data-i18n="badgeWood">Nutzholz</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="fiber" /> <span data-i18n="badgeFiber">Fasern</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="ornamental" /> <span data-i18n="badgeOrnamental">Ästhetik</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="dyes" /> <span data-i18n="badgeDyes">Farbstoff</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="eatable" /> <span data-i18n="fld_eatable">Essbarkeit</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="culinaric" /> <span data-i18n="fld_culinaric">Küche</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="meds" /> <span data-i18n="fld_meds">Gesundheit</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="material" /> <span data-i18n="fld_material">Materialien</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="fodder" /> <span data-i18n="fld_fodder">Tierfutter</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="fuel" /> <span data-i18n="fld_fuel">Brennstoff</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="wood" /> <span data-i18n="fld_wood">Nutzholz</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="fiber" /> <span data-i18n="fld_fiber">Fasern</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="ornamental" /> <span data-i18n="fld_ornamental">Ästhetik</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-usage-opt accent-green-600" value="dyes" /> <span data-i18n="fld_dyes">Farbstoff</span></label>
       </div>
     </details>
     <details class="filter-dropdown relative">
       <summary id="filter-function-summary" class="cursor-pointer select-none rounded-full bg-stone-100 dark:bg-stone-800 px-2.5 py-1 font-medium text-stone-600 dark:text-stone-300 ring-1 ring-stone-200 dark:ring-stone-700"><span data-i18n="filterFunctionLabel">Funktionen</span></summary>
       <div class="absolute z-10 mt-1 w-44 space-y-1 rounded-lg bg-white dark:bg-stone-800 p-2.5 text-xs shadow-lg ring-1 ring-stone-200 dark:ring-stone-700">
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="nitrogenFix" /> <span data-i18n="badgeNitrogenFix">Stickstoff-Fixierer</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="mineralFix" /> <span data-i18n="badgeMineralFix">Mineraliensammler</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="groundCover" /> <span data-i18n="badgeGroundCover">Bodendecker</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="insects" /> <span data-i18n="badgeInsects">Insekten</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="pest" /> <span data-i18n="badgePest">Schädlingsschutz</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="windBreaking" /> <span data-i18n="badgeWindBreaking">Windschutz</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="animalProtection" /> <span data-i18n="badgeAnimalProtection">Kleintiere</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="nitrogenFix" /> <span data-i18n="fld_nitrogenFix">Stickstoff-Fixierer</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="mineralFix" /> <span data-i18n="fld_mineralFix">Mineraliensammler</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="groundCover" /> <span data-i18n="fld_groundCover">Bodendecker</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="insects" /> <span data-i18n="fld_insects">Insekten</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="pest" /> <span data-i18n="fld_pest">Schädlingsschutz</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="windBreaking" /> <span data-i18n="fld_windBreaking">Windschutz</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-function-opt accent-green-600" value="animalProtection" /> <span data-i18n="fld_animalProtection">Kleintiere</span></label>
       </div>
     </details>
     <!-- Blüte/Frucht: two independent multi-select month dropdowns (not one
@@ -144,25 +144,25 @@ import Layout from '../layouts/Layout.astro';
     <details class="filter-dropdown relative">
       <summary id="filter-sun-summary" class="cursor-pointer select-none rounded-full bg-stone-100 dark:bg-stone-800 px-2.5 py-1 font-medium text-stone-600 dark:text-stone-300 ring-1 ring-stone-200 dark:ring-stone-700"><span data-i18n="thSun">Sonne</span></summary>
       <div class="absolute z-10 mt-1 w-40 space-y-1 rounded-lg bg-white dark:bg-stone-800 p-2.5 text-xs shadow-lg ring-1 ring-stone-200 dark:ring-stone-700">
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-sun-opt accent-amber-500" value="sunFull" /> <span data-i18n="filterSunFull">Volle Sonne</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-sun-opt accent-amber-500" value="sunMid" /> <span data-i18n="filterSunMid">Halbschatten</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-sun-opt accent-amber-500" value="sunShadow" /> <span data-i18n="filterSunShadow">Schatten</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-sun-opt accent-amber-500" value="sunFull" /> <span data-i18n="fld_sunFull">Volle Sonne</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-sun-opt accent-amber-500" value="sunMid" /> <span data-i18n="fld_sunMid">Halbschatten</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-sun-opt accent-amber-500" value="sunShadow" /> <span data-i18n="fld_sunShadow">Schatten</span></label>
       </div>
     </details>
     <details class="filter-dropdown relative">
       <summary id="filter-water-summary" class="cursor-pointer select-none rounded-full bg-stone-100 dark:bg-stone-800 px-2.5 py-1 font-medium text-stone-600 dark:text-stone-300 ring-1 ring-stone-200 dark:ring-stone-700"><span data-i18n="thWater">Wasser</span></summary>
       <div class="absolute z-10 mt-1 w-40 space-y-1 rounded-lg bg-white dark:bg-stone-800 p-2.5 text-xs shadow-lg ring-1 ring-stone-200 dark:ring-stone-700">
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-water-opt accent-blue-500" value="waterDry" /> <span data-i18n="filterWaterDry">Trocken</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-water-opt accent-blue-500" value="waterMid" /> <span data-i18n="filterWaterMid">Mittel</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-water-opt accent-blue-500" value="waterWet" /> <span data-i18n="filterWaterWet">Nass</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-water-opt accent-blue-500" value="waterDry" /> <span data-i18n="fld_waterDry">Trocken</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-water-opt accent-blue-500" value="waterMid" /> <span data-i18n="fld_waterMid">Mittel</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-water-opt accent-blue-500" value="waterWet" /> <span data-i18n="fld_waterWet">Nass</span></label>
       </div>
     </details>
     <details class="filter-dropdown relative">
       <summary id="filter-growspeed-summary" class="cursor-pointer select-none rounded-full bg-stone-100 dark:bg-stone-800 px-2.5 py-1 font-medium text-stone-600 dark:text-stone-300 ring-1 ring-stone-200 dark:ring-stone-700"><span data-i18n="thGrowthSpeed">Wuchs</span></summary>
       <div class="absolute z-10 mt-1 w-40 space-y-1 rounded-lg bg-white dark:bg-stone-800 p-2.5 text-xs shadow-lg ring-1 ring-stone-200 dark:ring-stone-700">
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-growspeed-opt accent-green-500" value="growSpeedLow" /> <span data-i18n="lblGrowSpeedLow">Langsam</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-growspeed-opt accent-green-500" value="growSpeedMid" /> <span data-i18n="lblGrowSpeedMid">Mittel</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-growspeed-opt accent-green-500" value="growSpeedHigh" /> <span data-i18n="lblGrowSpeedHigh">Schnell</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-growspeed-opt accent-green-500" value="growSpeedLow" /> <span data-i18n="fld_growSpeedLow">Langsam</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-growspeed-opt accent-green-500" value="growSpeedMid" /> <span data-i18n="fld_growSpeedMid">Mittel</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-growspeed-opt accent-green-500" value="growSpeedHigh" /> <span data-i18n="fld_growSpeedHigh">Schnell</span></label>
       </div>
     </details>
     <details class="filter-dropdown relative">
@@ -172,6 +172,11 @@ import Layout from '../layouts/Layout.astro';
         <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-layer-opt accent-emerald-600" value="shrub" /> <span data-i18n="layerShrub">Strauch</span></label>
         <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-layer-opt accent-emerald-600" value="herb" /> <span data-i18n="layerHerb">Kraut/Bodendecker</span></label>
       </div>
+    </details>
+    <!-- Gruppen: options are the group names in use, built by renderGroupFilterOptions() -->
+    <details id="filter-groups" class="filter-dropdown relative hidden">
+      <summary id="filter-groups-summary" class="cursor-pointer select-none rounded-full bg-stone-100 dark:bg-stone-800 px-2.5 py-1 font-medium text-stone-600 dark:text-stone-300 ring-1 ring-stone-200 dark:ring-stone-700"><span data-i18n="filterGroupsLabel">Gruppen</span></summary>
+      <div id="filter-groups-options" class="absolute z-10 mt-1 max-h-72 w-48 space-y-1 overflow-y-auto rounded-lg bg-white dark:bg-stone-800 p-2.5 text-xs shadow-lg ring-1 ring-stone-200 dark:ring-stone-700"></div>
     </details>
     <span class="h-4 w-px bg-stone-300 dark:bg-stone-700"></span>
     <button id="btn-filter-clear" data-i18n="filterClear" class="hidden rounded-full bg-stone-200 dark:bg-stone-700 px-2.5 py-1 font-medium text-stone-700 dark:text-stone-200 ring-1 ring-stone-300 dark:ring-stone-600 hover:bg-stone-300 dark:hover:bg-stone-700">Zurücksetzen ×</button>
@@ -203,6 +208,7 @@ import Layout from '../layouts/Layout.astro';
       <option value="growSpeed" data-i18n="thGrowthSpeed">Wuchs</option>
       <option value="layer" data-i18n="thLayer">Ebene</option>
       <option value="completeness" data-i18n="thCompleteness">Vollst.</option>
+      <option value="groups" data-i18n="thGroups">Gruppen</option>
     </select>
     <button id="btn-sort-dir" type="button" data-i18n-title="sortDirTitle" title="Sortierrichtung umkehren" class="rounded-lg bg-stone-100 dark:bg-stone-800 px-2.5 py-1.5 text-sm font-medium text-stone-700 dark:text-stone-200 shadow-sm ring-1 ring-stone-200 dark:ring-stone-700 transition hover:bg-stone-200 dark:hover:bg-stone-700">↑</button>
   </div>
@@ -290,25 +296,25 @@ import Layout from '../layouts/Layout.astro';
         <fieldset class="rounded-lg border border-stone-200 dark:border-stone-700 p-4">
           <legend class="px-2 text-sm font-semibold text-green-800 dark:text-green-300" data-i18n="fieldsetUsage">Nutzung</legend>
           <div class="flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
-            <label class="inline-flex items-center gap-1.5" data-field="eatable"><input type="checkbox" id="f-eatable" class="accent-green-600" /> <span data-i18n="lblEatable">Essbarkeit</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="eatable"><input type="checkbox" id="f-eatable" class="accent-green-600" /> <span data-i18n="fld_eatable">Essbarkeit</span></label>
             <label class="inline-flex items-center gap-1" data-field="eatableScore"><span class="text-stone-400 dark:text-stone-500" data-i18n="lblScore">Score</span><input type="number" id="f-eatableScore" min="0" max="5" class="w-12 rounded border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-800 px-1.5 py-0.5 text-xs" /></label>
-            <label class="inline-flex items-center gap-1.5" data-field="meds"><input type="checkbox" id="f-meds" class="accent-green-600" /> <span data-i18n="lblMeds">Gesundheit</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="meds"><input type="checkbox" id="f-meds" class="accent-green-600" /> <span data-i18n="fld_meds">Gesundheit</span></label>
             <label class="inline-flex items-center gap-1" data-field="medsScore"><span class="text-stone-400 dark:text-stone-500" data-i18n="lblScore">Score</span><input type="number" id="f-medsScore" min="0" max="5" class="w-12 rounded border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-800 px-1.5 py-0.5 text-xs" /></label>
-            <label class="inline-flex items-center gap-1.5" data-field="culinaric"><input type="checkbox" id="f-culinaric" class="accent-green-600" /> <span data-i18n="lblCulinaric">Küche</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="culinaric"><input type="checkbox" id="f-culinaric" class="accent-green-600" /> <span data-i18n="fld_culinaric">Küche</span></label>
           </div>
           <div class="mt-1.5 flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
-            <label class="inline-flex items-center gap-1.5" data-field="fuel"><input type="checkbox" id="f-fuel" class="accent-green-600" /> <span data-i18n="lblFuel">Brennstoff</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="wood"><input type="checkbox" id="f-wood" class="accent-green-600" /> <span data-i18n="lblWood">Nutzholz</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="material"><input type="checkbox" id="f-material" class="accent-green-600" /> <span data-i18n="lblMaterial">Materialien</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="fuel"><input type="checkbox" id="f-fuel" class="accent-green-600" /> <span data-i18n="fld_fuel">Brennstoff</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="wood"><input type="checkbox" id="f-wood" class="accent-green-600" /> <span data-i18n="fld_wood">Nutzholz</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="material"><input type="checkbox" id="f-material" class="accent-green-600" /> <span data-i18n="fld_material">Materialien</span></label>
             <label class="inline-flex items-center gap-1" data-field="materialScore"><span class="text-stone-400 dark:text-stone-500" data-i18n="lblScore">Score</span><input type="number" id="f-materialScore" min="0" max="5" class="w-12 rounded border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-800 px-1.5 py-0.5 text-xs" /></label>
           </div>
           <div class="mt-1.5 flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
-            <label class="inline-flex items-center gap-1.5" data-field="fodder"><input type="checkbox" id="f-fodder" class="accent-green-600" /> <span data-i18n="lblFodder">Tierfutter</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="fiber"><input type="checkbox" id="f-fiber" class="accent-green-600" /> <span data-i18n="lblFiber">Fasern</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="fodder"><input type="checkbox" id="f-fodder" class="accent-green-600" /> <span data-i18n="fld_fodder">Tierfutter</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="fiber"><input type="checkbox" id="f-fiber" class="accent-green-600" /> <span data-i18n="fld_fiber">Fasern</span></label>
           </div>
           <div class="mt-1.5 flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
-            <label class="inline-flex items-center gap-1.5" data-field="ornamental"><input type="checkbox" id="f-ornamental" class="accent-green-600" /> <span data-i18n="lblOrnamental">Ästhetik</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="dyes"><input type="checkbox" id="f-dyes" class="accent-green-600" /> <span data-i18n="lblDyes">Farbstoff</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="ornamental"><input type="checkbox" id="f-ornamental" class="accent-green-600" /> <span data-i18n="fld_ornamental">Ästhetik</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="dyes"><input type="checkbox" id="f-dyes" class="accent-green-600" /> <span data-i18n="fld_dyes">Farbstoff</span></label>
           </div>
         </fieldset>
 
@@ -316,14 +322,14 @@ import Layout from '../layouts/Layout.astro';
         <fieldset class="rounded-lg border border-stone-200 dark:border-stone-700 p-4">
           <legend class="px-2 text-sm font-semibold text-green-800 dark:text-green-300" data-i18n="fieldsetEcosystem">Funktionen</legend>
           <div class="flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
-            <label class="inline-flex items-center gap-1.5" data-field="nitrogenFix"><input type="checkbox" id="f-nitrogenFix" class="accent-green-600" /> <span data-i18n="lblNitrogenFix">Stickstoff-Fixierer</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="mineralFix"><input type="checkbox" id="f-mineralFix" class="accent-green-600" /> <span data-i18n="lblMineralFix">Mineraliensammler</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="groundCover"><input type="checkbox" id="f-groundCover" class="accent-green-600" /> <span data-i18n="lblGroundCover">Bodendecker</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="insects"><input type="checkbox" id="f-insects" class="accent-green-600" /> <span data-i18n="lblInsects">Insekten</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="pest"><input type="checkbox" id="f-pest" class="accent-green-600" /> <span data-i18n="lblPest">Schädlingsschutz</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="animalProtection"><input type="checkbox" id="f-animalProtection" class="accent-green-600" /> <span data-i18n="lblAnimalProtection">Kleintiere</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="windBreaking"><input type="checkbox" id="f-windBreaking" class="accent-green-600" /> <span data-i18n="lblWindBreaking">Windschutz</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="windBreakingOnSea"><input type="checkbox" id="f-windBreakingOnSea" class="accent-green-600" /> <span data-i18n="lblWindBreakingOnSea">Wind (See)</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="nitrogenFix"><input type="checkbox" id="f-nitrogenFix" class="accent-green-600" /> <span data-i18n="fld_nitrogenFix">Stickstoff-Fixierer</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="mineralFix"><input type="checkbox" id="f-mineralFix" class="accent-green-600" /> <span data-i18n="fld_mineralFix">Mineraliensammler</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="groundCover"><input type="checkbox" id="f-groundCover" class="accent-green-600" /> <span data-i18n="fld_groundCover">Bodendecker</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="insects"><input type="checkbox" id="f-insects" class="accent-green-600" /> <span data-i18n="fld_insects">Insekten</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="pest"><input type="checkbox" id="f-pest" class="accent-green-600" /> <span data-i18n="fld_pest">Schädlingsschutz</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="animalProtection"><input type="checkbox" id="f-animalProtection" class="accent-green-600" /> <span data-i18n="fld_animalProtection">Kleintiere</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="windBreaking"><input type="checkbox" id="f-windBreaking" class="accent-green-600" /> <span data-i18n="fld_windBreaking">Windschutz</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="windBreakingOnSea"><input type="checkbox" id="f-windBreakingOnSea" class="accent-green-600" /> <span data-i18n="fld_windBreakingOnSea">Wind (See)</span></label>
           </div>
         </fieldset>
 
@@ -332,25 +338,25 @@ import Layout from '../layouts/Layout.astro';
           <fieldset class="rounded-lg border border-stone-200 dark:border-stone-700 p-3">
             <legend class="px-2 text-xs font-semibold text-green-800 dark:text-green-300" data-i18n="fieldsetSun">Sonne</legend>
             <div class="flex flex-col gap-1 text-sm">
-              <label class="inline-flex items-center gap-1.5" data-field="sunFull"><input type="checkbox" id="f-sunFull" class="accent-amber-500" /> <span data-i18n="lblSunFull">Volle Sonne</span></label>
-              <label class="inline-flex items-center gap-1.5" data-field="sunMid"><input type="checkbox" id="f-sunMid" class="accent-amber-500" /> <span data-i18n="lblSunMid">Halbschatten</span></label>
-              <label class="inline-flex items-center gap-1.5" data-field="sunShadow"><input type="checkbox" id="f-sunShadow" class="accent-amber-500" /> <span data-i18n="lblSunShadow">Schatten</span></label>
+              <label class="inline-flex items-center gap-1.5" data-field="sunFull"><input type="checkbox" id="f-sunFull" class="accent-amber-500" /> <span data-i18n="fld_sunFull">Volle Sonne</span></label>
+              <label class="inline-flex items-center gap-1.5" data-field="sunMid"><input type="checkbox" id="f-sunMid" class="accent-amber-500" /> <span data-i18n="fld_sunMid">Halbschatten</span></label>
+              <label class="inline-flex items-center gap-1.5" data-field="sunShadow"><input type="checkbox" id="f-sunShadow" class="accent-amber-500" /> <span data-i18n="fld_sunShadow">Schatten</span></label>
             </div>
           </fieldset>
           <fieldset class="rounded-lg border border-stone-200 dark:border-stone-700 p-3">
             <legend class="px-2 text-xs font-semibold text-green-800 dark:text-green-300" data-i18n="fieldsetWater">Wasser</legend>
             <div class="flex flex-col gap-1 text-sm">
-              <label class="inline-flex items-center gap-1.5" data-field="waterDry"><input type="checkbox" id="f-waterDry" class="accent-blue-500" /> <span data-i18n="lblWaterDry">Trocken</span></label>
-              <label class="inline-flex items-center gap-1.5" data-field="waterMid"><input type="checkbox" id="f-waterMid" class="accent-blue-500" /> <span data-i18n="lblWaterMid">Mittel</span></label>
-              <label class="inline-flex items-center gap-1.5" data-field="waterWet"><input type="checkbox" id="f-waterWet" class="accent-blue-500" /> <span data-i18n="lblWaterWet">Nass</span></label>
+              <label class="inline-flex items-center gap-1.5" data-field="waterDry"><input type="checkbox" id="f-waterDry" class="accent-blue-500" /> <span data-i18n="fld_waterDry">Trocken</span></label>
+              <label class="inline-flex items-center gap-1.5" data-field="waterMid"><input type="checkbox" id="f-waterMid" class="accent-blue-500" /> <span data-i18n="fld_waterMid">Mittel</span></label>
+              <label class="inline-flex items-center gap-1.5" data-field="waterWet"><input type="checkbox" id="f-waterWet" class="accent-blue-500" /> <span data-i18n="fld_waterWet">Nass</span></label>
             </div>
           </fieldset>
           <fieldset class="rounded-lg border border-stone-200 dark:border-stone-700 p-3">
             <legend class="px-2 text-xs font-semibold text-green-800 dark:text-green-300" data-i18n="fieldsetGrowth">Wachstum</legend>
             <div class="flex flex-col gap-1 text-sm">
-              <label class="inline-flex items-center gap-1.5" data-field="growSpeedLow"><input type="checkbox" id="f-growSpeedLow" class="accent-green-600" /> <span data-i18n="lblGrowSpeedLow">Langsam</span></label>
-              <label class="inline-flex items-center gap-1.5" data-field="growSpeedMid"><input type="checkbox" id="f-growSpeedMid" class="accent-green-600" /> <span data-i18n="lblGrowSpeedMid">Mittel</span></label>
-              <label class="inline-flex items-center gap-1.5" data-field="growSpeedHigh"><input type="checkbox" id="f-growSpeedHigh" class="accent-green-600" /> <span data-i18n="lblGrowSpeedHigh">Schnell</span></label>
+              <label class="inline-flex items-center gap-1.5" data-field="growSpeedLow"><input type="checkbox" id="f-growSpeedLow" class="accent-green-600" /> <span data-i18n="fld_growSpeedLow">Langsam</span></label>
+              <label class="inline-flex items-center gap-1.5" data-field="growSpeedMid"><input type="checkbox" id="f-growSpeedMid" class="accent-green-600" /> <span data-i18n="fld_growSpeedMid">Mittel</span></label>
+              <label class="inline-flex items-center gap-1.5" data-field="growSpeedHigh"><input type="checkbox" id="f-growSpeedHigh" class="accent-green-600" /> <span data-i18n="fld_growSpeedHigh">Schnell</span></label>
             </div>
           </fieldset>
         </div>
@@ -359,11 +365,11 @@ import Layout from '../layouts/Layout.astro';
         <fieldset class="rounded-lg border border-stone-200 dark:border-stone-700 p-4">
           <legend class="px-2 text-sm font-semibold text-green-800 dark:text-green-300" data-i18n="fieldsetPh">Boden pH</legend>
           <div class="flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
-            <label class="inline-flex items-center gap-1.5" data-field="phVeryAcid"><input type="checkbox" id="f-phVeryAcid" class="accent-red-500" /> <span data-i18n="lblPhVeryAcid">Sehr sauer</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="phAcid"><input type="checkbox" id="f-phAcid" class="accent-yellow-500" /> <span data-i18n="lblPhAcid">Sauer</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="phNeutral"><input type="checkbox" id="f-phNeutral" class="accent-green-500" /> <span data-i18n="lblPhNeutral">Neutral</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="phAlkaline"><input type="checkbox" id="f-phAlkaline" class="accent-teal-500" /> <span data-i18n="lblPhAlkaline">Alkalisch</span></label>
-            <label class="inline-flex items-center gap-1.5" data-field="phVeryAlkaline"><input type="checkbox" id="f-phVeryAlkaline" class="accent-blue-500" /> <span data-i18n="lblPhVeryAlkaline">Sehr alk.</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="phVeryAcid"><input type="checkbox" id="f-phVeryAcid" class="accent-red-500" /> <span data-i18n="fld_phVeryAcid">Sehr sauer</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="phAcid"><input type="checkbox" id="f-phAcid" class="accent-yellow-500" /> <span data-i18n="fld_phAcid">Sauer</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="phNeutral"><input type="checkbox" id="f-phNeutral" class="accent-green-500" /> <span data-i18n="fld_phNeutral">Neutral</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="phAlkaline"><input type="checkbox" id="f-phAlkaline" class="accent-teal-500" /> <span data-i18n="fld_phAlkaline">Alkalisch</span></label>
+            <label class="inline-flex items-center gap-1.5" data-field="phVeryAlkaline"><input type="checkbox" id="f-phVeryAlkaline" class="accent-blue-500" /> <span data-i18n="fld_phVeryAlkaline">Sehr alk.</span></label>
           </div>
         </fieldset>
 
@@ -423,13 +429,17 @@ import Layout from '../layouts/Layout.astro';
   import { createEmptyPlant, type PlantData, type DataSource, SOURCE_LABEL, SOURCE_COLOR } from '../lib/types';
   import { samplePlants } from '../lib/sample-data';
   import { crawfordPlants } from '../lib/sample-data-crawford';
-  import { importFromCSV } from '../lib/csv-import';
-  import { validatePlant } from '../lib/validate';
-  import { searchPlants, fetchProxyData, fetchPlantDetails, fetchCommonsCredit, commonsFileName, needsImageCredit } from '../lib/plant-search';
+  import { importFromCSV, buildCSV, buildCSVTemplate } from '../lib/csv';
+  import { parseBackup } from '../lib/sync';
+  import { applyFilters, emptyFilters, sortPlants, allGroups, type ListFilters, type SortField } from '../lib/plant-list';
+  import { completenessPercent, badgeDefs, plantBadgesHtml, groupPillsHtml, type BadgeDef } from '../lib/plant-detail';
+  import { BOOL_FIELD_KEYS } from '../lib/plant-fields';
+  import { searchPlants, fetchProxyData, fetchPlantDetails, needsImageCredit } from '../lib/plant-search';
   import { newId } from '../lib/id';
+  import { enrichPlant, trackSources, SCORE_FIELDS } from '../lib/enrich';
   import { escapeHtml, withButtonSpinner, loadingPlaceholderHtml, imageCreditOverlayHtml } from '../lib/html';
   import { isSourceEnabled, loadSettings } from '../lib/settings';
-  import { deriveLayer, LAYER_STYLE, type PlantLayer } from '../lib/plant-layer';
+  import { deriveLayer, LAYER_STYLE } from '../lib/plant-layer';
   import { exportPolyCardsPDF, exportStripeCardsPDF, exportSingleCardPDF, exportSingleStripeCardPDF, exportBaumscheibePDF, exportBaumscheibesPDF, exportBaumscheibeSheetPDF, exportBaumscheibeScaledPDF, type ScaledPaper } from '../lib/pdf-export';
   import { renderPolyCardHtml, renderStripeCardHtml, printStepperHtml } from '../lib/card-html';
   import { renderBaumscheibeCardHtml } from '../lib/baumscheibe-render';
@@ -451,161 +461,65 @@ import Layout from '../layouts/Layout.astro';
   const initialPrefs = (() => {
     try { return loadSettings(); } catch { return null; }
   })();
-  let viewMode: 'grid' | 'list' | 'cards' = initialPrefs?.defaultView ?? 'grid';
+  // ?view=cards|list|grid overrides the saved default (the old /cards page redirects here).
+  const viewParam = new URLSearchParams(location.search).get('view');
+  let viewMode: 'grid' | 'list' | 'cards' =
+    viewParam === 'grid' || viewParam === 'list' || viewParam === 'cards' ? viewParam : initialPrefs?.defaultView ?? 'grid';
   let cardViewMode: 'poly' | 'stripe' | 'baumscheibe' = initialPrefs?.defaultCardVariant ?? 'poly';
   let selectedIds = new Set<string>();
   let editingPlant: PlantData | null = null;
   let cachedPlants: PlantData[] = [];
   let lastCheckedId: string | null = null;
-  let sortField: 'commonName' | 'latinName' | 'heightM' | 'widthM' | 'completeness' | 'growSpeed' | 'layer' | 'flowerMonth' | 'fruitMonth' = 'commonName';
+  let sortField: SortField = 'commonName';
   let sortDir: 'asc' | 'desc' = 'asc';
 
-  // Free-text filter — separate from the top search bar, which searches
-  // external sources (local DB / Wikidata / PFAF) to import new plants, not
-  // the already-imported list. Matches commonName/latinName only, same
-  // .toLowerCase().includes() convention as searchDB() in plant-search.ts.
-  let textQuery = (() => {
-    try { return localStorage.getItem('plant-text-filter') || ''; } catch { return ''; }
-  })();
-  function persistTextQuery() {
-    try { localStorage.setItem('plant-text-filter', textQuery); } catch {}
+  // Per-column filters and the free-text filter (matching rules live in
+  // lib/plant-list.ts), each persisted under its own localStorage key.
+  // The free-text filter is separate from the top search bar, which searches
+  // external sources to import new plants, not the already-imported list.
+  const SET_FILTER_KEYS = {
+    usage: 'plant-filter-usage', function: 'plant-filter-function', sun: 'plant-filter-sun',
+    water: 'plant-filter-water', growSpeed: 'plant-filter-growspeed', layer: 'plant-filter-layer',
+    flowerMonths: 'plant-filter-flowering', fruitMonths: 'plant-filter-fruiting', groups: 'plant-filter-groups',
+  } as const;
+  type SetFacet = keyof typeof SET_FILTER_KEYS;
+  function readPref(key: string): string | null { try { return localStorage.getItem(key); } catch { return null; } }
+  function writePref(key: string, value: string) { try { localStorage.setItem(key, value); } catch {} }
+  const filters: ListFilters = emptyFilters();
+  for (const [facet, key] of Object.entries(SET_FILTER_KEYS) as [SetFacet, string][]) {
+    try { const raw = readPref(key); if (raw) filters[facet] = new Set(JSON.parse(raw)); } catch {}
+  }
+  filters.heightMin = Number(readPref('plant-filter-height')) || 0;
+  filters.completenessMin = Number(readPref('plant-filter-completeness')) || 0;
+  filters.text = readPref('plant-text-filter') || '';
+  function persistFacet(facet: SetFacet) { writePref(SET_FILTER_KEYS[facet], JSON.stringify([...filters[facet]])); }
+  function persistScalarFilters() {
+    writePref('plant-filter-height', String(filters.heightMin));
+    writePref('plant-filter-completeness', String(filters.completenessMin));
+    writePref('plant-text-filter', filters.text);
   }
 
-  // Per-column filters for the Nutzung/Funktionen/Blüte-Frucht/H/Vollst.
-  // table columns. Nutzung/Funktionen are OR-within-the-set (any selected
-  // usage matches), combined with everything else via AND — the usual
-  // faceted-filter convention (picking two usages should widen results
-  // within that facet, not require a plant to have both at once).
-  function loadSet(key: string): Set<string> {
-    try { const raw = localStorage.getItem(key); if (raw) return new Set(JSON.parse(raw)); } catch {}
-    return new Set<string>();
-  }
-  function saveSet(key: string, set: Set<string>) {
-    try { localStorage.setItem(key, JSON.stringify([...set])); } catch {}
-  }
-  const usageFilter = loadSet('plant-filter-usage');
-  const functionFilter = loadSet('plant-filter-function');
-  const sunFilter = loadSet('plant-filter-sun');
-  const waterFilter = loadSet('plant-filter-water');
-  const growSpeedFilter = loadSet('plant-filter-growspeed');
-  const layerFilter = loadSet('plant-filter-layer');
-  function persistUsageFilter() { saveSet('plant-filter-usage', usageFilter); }
-  function persistFunctionFilter() { saveSet('plant-filter-function', functionFilter); }
-  function persistSunFilter() { saveSet('plant-filter-sun', sunFilter); }
-  function persistWaterFilter() { saveSet('plant-filter-water', waterFilter); }
-  function persistGrowSpeedFilter() { saveSet('plant-filter-growspeed', growSpeedFilter); }
-  function persistLayerFilter() { saveSet('plant-filter-layer', layerFilter); }
-
-  // One-time migration: the old filter-chip buttons (eatable/meds/material/
-  // nitrogenFix, and — until Sonne/Wasser got their own table columns —
-  // sunFull/sunMid/sunShadow/waterDry/waterMid/waterWet too) stored their
-  // selection in one combined 'plant-filters' Set. All of those fields now
-  // live in per-column dropdowns instead, so move any persisted selection
-  // over rather than silently dropping it. No live Set is kept for the old
-  // key afterward — read the raw value once and retire it.
+  // One-time migration of the old combined filter-chip selection
+  // ('plant-filters') into the per-column facets.
   (function migrateLegacyChipFilters() {
     let legacy: Set<string>;
-    try { legacy = new Set(JSON.parse(localStorage.getItem('plant-filters') || '[]')); } catch { legacy = new Set(); }
+    try { legacy = new Set(JSON.parse(readPref('plant-filters') || '[]')); } catch { legacy = new Set(); }
     if (legacy.size === 0) return;
-    for (const f of ['eatable', 'meds', 'material'] as const) if (legacy.has(f)) usageFilter.add(f);
-    if (legacy.has('nitrogenFix')) functionFilter.add('nitrogenFix');
-    for (const f of ['sunFull', 'sunMid', 'sunShadow'] as const) if (legacy.has(f)) sunFilter.add(f);
-    for (const f of ['waterDry', 'waterMid', 'waterWet'] as const) if (legacy.has(f)) waterFilter.add(f);
-    persistUsageFilter(); persistFunctionFilter(); persistSunFilter(); persistWaterFilter();
+    for (const f of ['eatable', 'meds', 'material'] as const) if (legacy.has(f)) filters.usage.add(f);
+    if (legacy.has('nitrogenFix')) filters.function.add('nitrogenFix');
+    for (const f of ['sunFull', 'sunMid', 'sunShadow'] as const) if (legacy.has(f)) filters.sun.add(f);
+    for (const f of ['waterDry', 'waterMid', 'waterWet'] as const) if (legacy.has(f)) filters.water.add(f);
+    (['usage', 'function', 'sun', 'water'] as const).forEach(persistFacet);
     try { localStorage.removeItem('plant-filters'); } catch {}
   })();
 
-  // Blüte/Frucht: two independent month sets (OR within each, AND between
-  // them) rather than one combined month picker — "blüht im Mai" and
-  // "fruchtet im September" are different questions a user might ask.
-  // Values are the checkbox's string value ("0".."11"), same convention as
-  // usageFilter/functionFilter storing field-name strings.
-  const flowerMonthFilter = loadSet('plant-filter-flowering');
-  const fruitMonthFilter = loadSet('plant-filter-fruiting');
-  function persistFlowerMonthFilter() { saveSet('plant-filter-flowering', flowerMonthFilter); }
-  function persistFruitMonthFilter() { saveSet('plant-filter-fruiting', fruitMonthFilter); }
-  let heightMin = (() => {
-    try { return Number(localStorage.getItem('plant-filter-height') || '0'); } catch { return 0; }
-  })();
-  function persistHeightMin() {
-    try { localStorage.setItem('plant-filter-height', String(heightMin)); } catch {}
-  }
-  let completenessMin = (() => {
-    try { return Number(localStorage.getItem('plant-filter-completeness') || '0'); } catch { return 0; }
-  })();
-  function persistCompletenessMin() {
-    try { localStorage.setItem('plant-filter-completeness', String(completenessMin)); } catch {}
-  }
-
-  function applyFilters(plants: PlantData[]): PlantData[] {
-    let result = plants;
-    if (usageFilter.size > 0) {
-      result = result.filter(p => [...usageFilter].some(f => Boolean((p as any)[f])));
-    }
-    if (functionFilter.size > 0) {
-      result = result.filter(p => [...functionFilter].some(f => Boolean((p as any)[f])));
-    }
-    if (sunFilter.size > 0) {
-      result = result.filter(p => [...sunFilter].some(f => Boolean((p as any)[f])));
-    }
-    if (waterFilter.size > 0) {
-      result = result.filter(p => [...waterFilter].some(f => Boolean((p as any)[f])));
-    }
-    if (growSpeedFilter.size > 0) {
-      result = result.filter(p => [...growSpeedFilter].some(f => Boolean((p as any)[f])));
-    }
-    if (layerFilter.size > 0) {
-      result = result.filter(p => layerFilter.has(deriveLayer(p)));
-    }
-    if (flowerMonthFilter.size > 0) {
-      result = result.filter(p => [...flowerMonthFilter].some(m => !!p.flowerMonths?.[Number(m)]));
-    }
-    if (fruitMonthFilter.size > 0) {
-      result = result.filter(p => [...fruitMonthFilter].some(m => !!p.fruitMonths?.[Number(m)]));
-    }
-    if (heightMin > 0) {
-      result = result.filter(p => p.heightM != null && p.heightM >= heightMin);
-    }
-    if (completenessMin > 0) {
-      result = result.filter(p => completenessPercent(p) >= completenessMin);
-    }
-    const q = textQuery.trim().toLowerCase();
-    if (q) {
-      result = result.filter(p =>
-        p.latinName.toLowerCase().includes(q) ||
-        [p.commonName, p.commonNameEn].some(n => n && n.toLowerCase().includes(q))
-      );
-    }
-    return result;
-  }
-
   const textFields = ['latinName', 'commonName', 'commonNameEn', 'varietyName', 'climateZone', 'imageUrl', 'imageCredit', 'notes'] as const;
   const numberFields = ['heightM', 'widthM', 'eatableScore', 'medsScore', 'materialScore'] as const;
-  const boolFields = [
-    'eatable', 'culinaric', 'meds', 'material', 'fodder', 'fuel',
-    'wood', 'fiber', 'ornamental', 'dyes',
-    'nitrogenFix', 'mineralFix', 'groundCover', 'insects', 'pest',
-    'animalProtection', 'windBreaking', 'windBreakingOnSea',
-    'sunFull', 'sunMid', 'sunShadow',
-    'waterDry', 'waterMid', 'waterWet',
-    'phVeryAcid', 'phAcid', 'phNeutral', 'phAlkaline', 'phVeryAlkaline',
-    'growSpeedLow', 'growSpeedMid', 'growSpeedHigh',
-  ] as const;
+  const boolFields = BOOL_FIELD_KEYS;
 
   function el(id: string) { return document.getElementById(`f-${id}`) as HTMLInputElement; }
 
   // ── Source helpers ────────────────────────────────────────────────────────────
-
-  /** Record non-empty fields in data as coming from source. */
-  function trackSources(plant: PlantData, data: Partial<PlantData>, source: DataSource) {
-    if (!plant._sources) plant._sources = {};
-    for (const [key, val] of Object.entries(data) as [keyof PlantData, any][]) {
-      if (key === '_sources' || key === 'id') continue;
-      const isEmpty = val === null || val === undefined || val === '' || val === false ||
-        (Array.isArray(val) && (val as boolean[]).every((v: boolean) => !v));
-      if (!isEmpty) plant._sources[key] = source;
-    }
-  }
 
   /** Update source badge chips next to each form label with data-field attribute.
    *  Clickable where the source is an external site (matches sourceChipsHtml's
@@ -674,14 +588,11 @@ import Layout from '../layouts/Layout.astro';
         const titleLink = t('sourceTitleLink', { source: SOURCE_LABEL[s] });
         const href = sourceLink(s, p);
         return href
-          ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" class="${cls} hover:underline" title="${escapeHtml(titleLink)}">${SOURCE_SHORT[s]}</a>`
+          ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener" class="${cls} hover:underline" title="${escapeHtml(titleLink)}">${SOURCE_SHORT[s]}</a>`
           : `<span class="${cls}" title="${escapeHtml(title)}">${SOURCE_SHORT[s]}</span>`;
       })
       .join(' ');
   }
-
-  /** @deprecated use sourceChipsHtml */
-  function sourceSummaryHtml(p: PlantData): string { return ''; }
 
   // ── Form ─────────────────────────────────────────────────────────────────────
 
@@ -747,76 +658,21 @@ import Layout from '../layouts/Layout.astro';
 
   // ── Plant card badges & color system ─────────────────────────────────────────
 
-  // Nutzung (uses, warm tones) and Funktionen (ecosystem functions, cool/green
-  // tones) — two separate lists so the table view can show them as distinct
-  // columns with a legend (see legendUsageHeading/legendFunctionsHeading),
-  // instead of one undifferentiated row of dots.
-  // 3rd field is the dot color as a literal hex value, applied via inline
-  // style (not a Tailwind class — arbitrary hex can't go through the JIT
-  // scanner, which only generates CSS for class strings literal in source).
-  // Where a field has a matching wedge in the Baumscheibe template's "color"
-  // group (baumscheibe-mapping.ts BOOL_FIELDS' trailing alias, e.g. 'e' for
-  // eatable), the hex is the exact color of that wedge's PNG — extracted via
-  // median RGB of its opaque pixels, not eyeballed — so the table dots match
-  // the actual card. material/fodder/fuel have no wedge in that group (only
-  // 9 of the 15 Nutzung+Funktionen fields do, confirmed by image count in the
-  // SVG), so those three keep an arbitrary but visually consistent hex.
-  const USAGE_BADGES: [keyof PlantData, string, string, string][] = [
-    ['eatable',   'bg-amber-100 text-amber-800',   '#dc330c', t('badgeEatable')],
-    ['culinaric', 'bg-yellow-100 text-yellow-800', '#f88a70', t('badgeCulinaric')],
-    ['meds',      'bg-rose-100 text-rose-700',     '#fa512a', t('badgeMeds')],
-    ['material',  'bg-orange-100 text-orange-800', '#fb923c', t('badgeMaterial')],
-    ['fodder',    'bg-lime-100 text-lime-700',     '#a3e635', t('badgeFodder')],
-    ['fuel',      'bg-red-100 text-red-700',       '#f87171', t('badgeFuel')],
-    ['wood',      'bg-amber-200 text-amber-900',   '#92400e', t('badgeWood')],
-    ['fiber',     'bg-stone-200 text-stone-700',   '#78716c', t('badgeFiber')],
-    ['ornamental','bg-pink-100 text-pink-700',     '#ec4899', t('badgeOrnamental')],
-    ['dyes',      'bg-purple-100 text-purple-700', '#a855f7', t('badgeDyes')],
-  ];
-  const FUNCTION_BADGES: [keyof PlantData, string, string, string][] = [
-    ['nitrogenFix',      'bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-300', '#92d051', t('badgeNitrogenFix')],
-    ['mineralFix',       'bg-emerald-100 text-emerald-800', '#3cbbe4', t('badgeMineralFix')],
-    ['groundCover',      'bg-teal-100 text-teal-800',       '#d4a525', t('badgeGroundCover')],
-    ['insects',          'bg-cyan-100 text-cyan-800',       '#fadb07', t('badgeInsects')],
-    ['pest',             'bg-red-100 text-red-800',         '#ef4444', t('badgePest')],
-    ['windBreaking',     'bg-sky-100 text-sky-800',         '#c6c6c6', t('badgeWindBreaking')],
-    ['animalProtection', 'bg-violet-100 text-violet-800',   '#ba7010', t('badgeAnimalProtection')],
-  ];
-  // Sonne/Wasser — same dot-group convention as Nutzung/Funktionen, no
-  // Baumscheibe-wedge source for these (that template has one generic icon
-  // per sun/water group, not per-state), so the hexes are chosen freely but
-  // thematically: warm yellow→orange→grey for sun exposure, tan→sky→deep
-  // blue for water availability.
-  const SUN_BADGES: [keyof PlantData, string, string, string][] = [
-    ['sunFull',   'bg-yellow-100 text-yellow-800', '#fbbf24', t('filterSunFull')],
-    ['sunMid',    'bg-orange-100 text-orange-800', '#fb923c', t('filterSunMid')],
-    ['sunShadow', 'bg-slate-200 text-slate-700',   '#64748b', t('filterSunShadow')],
-  ];
-  const WATER_BADGES: [keyof PlantData, string, string, string][] = [
-    ['waterDry', 'bg-amber-100 text-amber-800', '#d97706', t('filterWaterDry')],
-    ['waterMid', 'bg-sky-100 text-sky-800',     '#38bdf8', t('filterWaterMid')],
-    ['waterWet', 'bg-blue-100 text-blue-800',   '#1d4ed8', t('filterWaterWet')],
-  ];
-  // Wuchsgeschwindigkeit — same dot-group convention, traffic-light colors
-  // (red→amber→green for slow→mid→fast) since there's no Baumscheibe-wedge
-  // source for this either (one generic growth icon, not per-speed).
-  const GROWTH_BADGES: [keyof PlantData, string, string, string][] = [
-    ['growSpeedLow',  'bg-red-100 text-red-800',     '#ef4444', t('lblGrowSpeedLow')],
-    ['growSpeedMid',  'bg-amber-100 text-amber-800', '#f59e0b', t('lblGrowSpeedMid')],
-    ['growSpeedHigh', 'bg-green-100 text-green-800', '#22c55e', t('lblGrowSpeedHigh')],
-  ];
-  const USE_BADGES = [...USAGE_BADGES, ...FUNCTION_BADGES];
+  // Badge/dot definitions per column, derived from the central field table
+  // (lib/plant-fields.ts) — colors, order and labels live there.
+  const USAGE_BADGES = badgeDefs('usage', t);
+  const FUNCTION_BADGES = badgeDefs('function', t);
+  const SUN_BADGES = badgeDefs('sun', t);
+  const WATER_BADGES = badgeDefs('water', t);
+  const GROWTH_BADGES = badgeDefs('growth', t);
 
   function badges(p: PlantData): string {
-    return USE_BADGES
-      .filter(([k]) => p[k])
-      .map(([,c,,l]) => `<span class="inline-block rounded-full px-2 py-0.5 text-xs font-medium ${c}">${l}</span>`)
-      .join(' ');
+    return plantBadgesHtml(p, t);
   }
 
   /** Compact colored dots for one badge group, each with a real tooltip
    *  (unlike the old combined useDots, which had title="" — no tooltip at all). */
-  function dotGroup(p: PlantData, group: [keyof PlantData, string, string, string][]): string {
+  function dotGroup(p: PlantData, group: BadgeDef[]): string {
     return group
       .filter(([k]) => p[k])
       .map(([,,dot,l]) => `<span class="inline-block h-2 w-2 rounded-full" style="background-color:${dot}" title="${escapeHtml(l)}"></span>`)
@@ -896,14 +752,6 @@ import Layout from '../layouts/Layout.astro';
     return 'bg-stone-200 dark:bg-stone-700';
   }
 
-  /** Completeness bar 0–100 */
-  function completenessPercent(p: PlantData): number {
-    const key = [p.latinName, p.commonName, p.heightM != null, p.widthM != null, p.imageUrl,
-      p.sunFull || p.sunMid || p.sunShadow, p.waterDry || p.waterMid || p.waterWet,
-      p.eatable || p.meds || p.nitrogenFix || p.material || p.fodder,
-      p.fruitMonths.some(Boolean), p.flowerMonths.some(Boolean)];
-    return Math.round(key.filter(Boolean).length / key.length * 100);
-  }
 
   // ── Bulk bar ──────────────────────────────────────────────────────────────────
 
@@ -938,73 +786,7 @@ import Layout from '../layouts/Layout.astro';
     if (heading) heading.textContent = viewMode === 'cards' ? t('headingCards') : viewMode === 'list' ? t('headingList') : t('headingTiles');
   }
 
-  // ── Sorting ───────────────────────────────────────────────────────────────────
-
-  /** Slow=1 / Mid=2 / High=3, unset=Infinity (sorts last, same convention as
-   *  heightM/widthM below) — lets growth speed sort as an ordinal despite
-   *  being stored as three separate booleans rather than one field. */
-  function growSpeedRank(p: PlantData): number {
-    if (p.growSpeedHigh) return 3;
-    if (p.growSpeedMid) return 2;
-    if (p.growSpeedLow) return 1;
-    return Infinity;
-  }
-
-  /** Herb=1 / Shrub=2 / Tree=3 — deriveLayer() always returns a value (no
-   *  "unset" case, unlike growth speed), so no Infinity fallback needed. */
-  const LAYER_RANK: Record<PlantLayer, number> = { herb: 1, shrub: 2, tree: 3 };
-
-  /** Earliest active month (0=Jan..11=Dec), Infinity if none set — same
-   *  "unset sorts last" convention as heightM/widthM/growSpeed above, so a
-   *  plant missing this data never gets silently dropped from the sort,
-   *  just pushed to the end. */
-  function earliestMonth(months: boolean[] | undefined): number {
-    const i = months?.findIndex(Boolean) ?? -1;
-    return i === -1 ? Infinity : i;
-  }
-
-  function sortedPlants(plants: PlantData[]): PlantData[] {
-    return [...plants].sort((a, b) => {
-      let va: string | number, vb: string | number;
-      if (sortField === 'completeness') {
-        va = validatePlant(a).missing.length;
-        vb = validatePlant(b).missing.length;
-      } else if (sortField === 'heightM') {
-        va = a.heightM ?? Infinity;
-        vb = b.heightM ?? Infinity;
-      } else if (sortField === 'widthM') {
-        va = a.widthM ?? Infinity;
-        vb = b.widthM ?? Infinity;
-      } else if (sortField === 'growSpeed') {
-        va = growSpeedRank(a);
-        vb = growSpeedRank(b);
-      } else if (sortField === 'layer') {
-        va = LAYER_RANK[deriveLayer(a)];
-        vb = LAYER_RANK[deriveLayer(b)];
-      } else if (sortField === 'flowerMonth') {
-        va = earliestMonth(a.flowerMonths);
-        vb = earliestMonth(b.flowerMonths);
-      } else if (sortField === 'fruitMonth') {
-        va = earliestMonth(a.fruitMonths);
-        vb = earliestMonth(b.fruitMonths);
-      } else {
-        va = ((a[sortField] as string) || '').toLowerCase();
-        vb = ((b[sortField] as string) || '').toLowerCase();
-      }
-      if (va < vb) return sortDir === 'asc' ? -1 : 1;
-      if (va > vb) return sortDir === 'asc' ? 1 : -1;
-      // Tie-breaker: A-Z by name, always ascending regardless of sortDir
-      // (so e.g. sorting by "Ebene" groups Baum/Strauch/Kraut, and within
-      // each group plants read alphabetically top-to-bottom either way,
-      // instead of an arbitrary leftover DB-fetch order).
-      if (sortField !== 'commonName') {
-        const na = displayName(a).toLowerCase(), nb = displayName(b).toLowerCase();
-        if (na < nb) return -1;
-        if (na > nb) return 1;
-      }
-      return 0;
-    });
-  }
+  // ── Sorting (logic in lib/plant-list.ts) ──────────────────────────────────────
 
   function thSort(field: typeof sortField, label: string, extraClass = ''): string {
     const active = sortField === field;
@@ -1012,187 +794,11 @@ import Layout from '../layouts/Layout.astro';
     return `<th class="cursor-pointer select-none px-3 py-2.5 hover:text-stone-800 ${extraClass}" data-sort="${field}">${label}${active ? `<span class="text-green-600">${arrow}</span>` : `<span class="text-stone-300">${arrow}</span>`}</th>`;
   }
 
-  // ── CSV export ────────────────────────────────────────────────────────────────
-
-  function buildCSV(plants: PlantData[]): string {
-    const headers = [
-      'Lateinisch', 'Deutsch', 'Höhe_m', 'Breite_m', 'Klimazone',
-      'Essbar', 'Kulinarisch', 'Medizinisch', 'Material', 'Futter', 'Brennstoff',
-      'Nutzholz', 'Fasern', 'Ästhetik', 'Farbstoff',
-      'N_Fixierung', 'Mineralien', 'Bodendecker', 'Insekten', 'Schädling',
-      'Tierschutz', 'Windschutz', 'Wind_See',
-      'Sonne_voll', 'Halbschatten', 'Schatten',
-      'Wasser_trocken', 'Wasser_mittel', 'Wasser_nass',
-      'pH_sehr_sauer', 'pH_sauer', 'pH_neutral', 'pH_alkalisch', 'pH_sehr_alk',
-      'Wachstum_langsam', 'Wachstum_mittel', 'Wachstum_schnell', 'Bild_URL', 'Gruppen',
-    ];
-    const b = (v: boolean) => v ? '1' : '0';
-    const q = (v: string | number) => `"${String(v).replace(/"/g, '""')}"`;
-    const rows = plants.map(p => [
-      q(p.latinName), q(p.commonName), p.heightM ?? '', p.widthM ?? '', q(p.climateZone),
-      b(p.eatable), b(p.culinaric), b(p.meds), b(p.material), b(p.fodder), b(p.fuel),
-      b(p.wood), b(p.fiber), b(p.ornamental), b(p.dyes),
-      b(p.nitrogenFix), b(p.mineralFix), b(p.groundCover), b(p.insects), b(p.pest),
-      b(p.animalProtection), b(p.windBreaking), b(p.windBreakingOnSea),
-      b(p.sunFull), b(p.sunMid), b(p.sunShadow),
-      b(p.waterDry), b(p.waterMid), b(p.waterWet),
-      b(p.phVeryAcid), b(p.phAcid), b(p.phNeutral), b(p.phAlkaline), b(p.phVeryAlkaline),
-      b(p.growSpeedLow), b(p.growSpeedMid), b(p.growSpeedHigh), q(p.imageUrl), q((p.groups ?? []).join(', ')),
-    ].join(','));
-    return [headers.join(','), ...rows].join('\r\n');
-  }
-
-  function buildCSVTemplate(): string {
-    const headers = [
-      'Lateinisch', 'Deutsch', 'Höhe_m', 'Breite_m', 'Klimazone',
-      'Essbar', 'Kulinarisch', 'Medizinisch', 'Material', 'Futter', 'Brennstoff',
-      'Nutzholz', 'Fasern', 'Ästhetik', 'Farbstoff',
-      'N_Fixierung', 'Mineralien', 'Bodendecker', 'Insekten', 'Schädling',
-      'Tierschutz', 'Windschutz', 'Wind_See',
-      'Sonne_voll', 'Halbschatten', 'Schatten',
-      'Wasser_trocken', 'Wasser_mittel', 'Wasser_nass',
-      'pH_sehr_sauer', 'pH_sauer', 'pH_neutral', 'pH_alkalisch', 'pH_sehr_alk',
-      'Wachstum_langsam', 'Wachstum_mittel', 'Wachstum_schnell', 'Bild_URL', 'Gruppen',
-    ];
-    const example = [
-      '"Sambucus nigra"', '"Schwarzer Holunder"', '6', '4', '"4-8"',
-      '1','0','1','0','0','0',
-      '0','0','0','0',
-      '0','1','0','1','0',
-      '0','0','0',
-      '1','1','1',
-      '0','1','1',
-      '0','0','1','0','0',
-      '0','1','0', '""', '""',
-    ];
-    return [headers.join(','), example.join(',')].join('\r\n');
-  }
-
   function triggerDownload(content: string, filename: string, type: string) {
     const blob = new Blob([content], { type });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob); a.download = filename; a.click();
     URL.revokeObjectURL(a.href);
-  }
-
-  // ── Enrich ───────────────────────────────────────────────────────────────────
-
-  // A field counts as "fillable" if it's genuinely empty, OR — commonName
-  // specifically — if it's just the Latin name mirrored in by a prior
-  // enrichment run. Wikidata mirrors the scientific name into labels.de/en
-  // when no real vernacular name exists (see bestCommonName() in
-  // plant-search.ts), and enrichment never overwrites a non-empty field —
-  // so a plant enriched before that mirroring was detected keeps showing
-  // its Latin name as "commonName" forever, even after re-running
-  // "ergänzen", because PFAF/a later Wikidata pass never gets a chance to
-  // try a better value. Re-checking against the Latin name here lets a
-  // later source (e.g. PFAF's "Silver-Bell Tree" for Halesia carolina)
-  // supersede that stale mirrored value without a one-off migration.
-  // eatableScore/medsScore/materialScore default to 0 (unrated), which isn't
-  // caught by the null/undefined/''/false checks below — without this, a
-  // freshly-imported plant's 0 looks "already set" and PFAF's real score
-  // (fetched separately from the eatable/meds/material booleans) can never
-  // fill it in, silently keeping every rating stripe empty.
-  const SCORE_FIELDS = new Set(['eatableScore', 'medsScore', 'materialScore']);
-  function isFillable(key: string, cur: unknown, plant: PlantData): boolean {
-    if (cur === null || cur === undefined || cur === '' || cur === false) return true;
-    if (SCORE_FIELDS.has(key) && cur === 0) return true;
-    if (Array.isArray(cur) && cur.every(v => !v)) return true;
-    // Never override a value the user typed themselves, even if it happens
-    // to equal the Latin name.
-    if (plant._sources?.[key as keyof PlantData] === 'manual') return false;
-    if (key === 'commonName' && typeof cur === 'string' &&
-        cur.trim().toLowerCase() === plant.latinName.trim().toLowerCase()) return true;
-    return false;
-  }
-
-  // A REAL (non-manual, non-mirrored) commonName already stored — e.g.
-  // PFAF's English "Apple" — doesn't count as "fillable" above, so it stays
-  // stuck even after bestCommonName()'s German-preferring logic (in
-  // plant-search.ts) improves and could now offer "Kulturapfel" instead.
-  // Wikidata specifically (never PFAF — PFAF is English-only and must never
-  // clobber a German name) gets one extra chance per commonName: replace an
-  // existing non-manual value if its own answer is both real (not just its
-  // own mirrored-Latin-name fallback) and actually different.
-  function isCommonNameUpgrade(newValue: unknown, cur: unknown, plant: PlantData): boolean {
-    if (typeof newValue !== 'string' || !newValue) return false;
-    if (plant._sources?.commonName === 'manual') return false;
-    const latinLower = plant.latinName.trim().toLowerCase();
-    const newLower = newValue.trim().toLowerCase();
-    if (newLower === latinLower) return false;
-    const curLower = typeof cur === 'string' ? cur.trim().toLowerCase() : '';
-    return newLower !== curLower;
-  }
-
-  async function enrichPlant(plant: PlantData): Promise<number> {
-    if (!plant.latinName) return 0;
-    if (!plant._sources) plant._sources = {};
-    let enriched = 0;
-
-    // Wikidata first, deliberately: it's the source with a German commonName
-    // (fetchPlantDetails prefers labels.de). PFAF only has an English common
-    // name ("Apple"). Since enrichment only ever fills currently-empty
-    // fields (never overwrites), whichever of the two runs first "wins" — so
-    // Wikidata has to go first or its German name never gets a chance,
-    // silently losing to PFAF's English one. Previously PFAF ran first here
-    // (unlike the search-import flow below, which already had this right),
-    // which is why bulk-enriching e.g. the Crawford sample set produced
-    // English common names in a German-language app.
-    if (isSourceEnabled('wikidata')) {
-      const searchUrl = new URL('https://www.wikidata.org/w/api.php');
-      searchUrl.searchParams.set('action', 'wbsearchentities');
-      searchUrl.searchParams.set('search', plant.latinName);
-      searchUrl.searchParams.set('language', 'en');
-      searchUrl.searchParams.set('type', 'item');
-      searchUrl.searchParams.set('limit', '1');
-      searchUrl.searchParams.set('format', 'json');
-      searchUrl.searchParams.set('origin', '*');
-      const sr = await fetch(searchUrl.toString());
-      if (sr.ok) {
-        const sd = await sr.json();
-        const wdId = sd.search?.[0]?.id;
-        if (wdId) {
-          const details = await fetchPlantDetails(wdId);
-          const filled: Partial<PlantData> = {};
-          for (const [key, value] of Object.entries(details)) {
-            const cur = (plant as any)[key];
-            // The credit belongs to Wikidata's image — only take it if that's
-            // the image this plant ended up with (imageUrl is filled first).
-            if (key === 'imageCredit' && plant.imageUrl !== details.imageUrl) continue;
-            const fillable = isFillable(key, cur, plant) ||
-              (key === 'commonName' && isCommonNameUpgrade(value, cur, plant));
-            if (fillable && value) {
-              (plant as any)[key] = value; (filled as any)[key] = value; enriched++;
-            }
-          }
-          if (Object.keys(filled).length > 0) trackSources(plant, filled, 'wikidata');
-        }
-      }
-    }
-
-    if (isSourceEnabled('pfaf') || isSourceEnabled('naturadb')) {
-      const proxyData = await fetchProxyData(plant.latinName);
-      const filled: Partial<PlantData> = {};
-      for (const [key, value] of Object.entries(proxyData)) {
-        const cur = (plant as any)[key];
-        if (isFillable(key, cur, plant) &&
-            value !== null && value !== undefined && value !== '' && value !== false) {
-          (plant as any)[key] = value; (filled as any)[key] = value; enriched++;
-        }
-      }
-      if (Object.keys(filled).length > 0) {
-        const src: DataSource = isSourceEnabled('pfaf') ? 'pfaf' : 'naturadb';
-        trackSources(plant, filled, src);
-      }
-    }
-
-    // Existing plants whose Commons image predates attribution support.
-    if (needsImageCredit(plant)) {
-      const credit = await fetchCommonsCredit(commonsFileName(plant.imageUrl)!);
-      if (credit) { plant.imageCredit = credit; enriched++; }
-    }
-
-    return enriched;
   }
 
   // ── renderList ────────────────────────────────────────────────────────────────
@@ -1212,16 +818,18 @@ import Layout from '../layouts/Layout.astro';
           </svg>
           <p class="mb-1 text-base font-semibold text-stone-500 dark:text-stone-400">${escapeHtml(t('emptyStateTitle'))}</p>
           <p class="mb-4 text-sm text-stone-400 dark:text-stone-500">${escapeHtml(t('emptyStateSubtitle'))}</p>
-          <button onclick="document.getElementById('plant-search').focus()" class="rounded-lg bg-green-700 px-4 py-2 text-sm font-medium text-white shadow transition hover:bg-green-800 active:scale-95">${escapeHtml(t('emptyStateBtn'))}</button>
+          <button type="button" data-focus-search class="rounded-lg bg-green-700 px-4 py-2 text-sm font-medium text-white shadow transition hover:bg-green-800 active:scale-95">${escapeHtml(t('emptyStateBtn'))}</button>
         </div>`;
+      listEl.querySelector('[data-focus-search]')!.addEventListener('click', () => document.getElementById('plant-search')!.focus());
       return;
     }
 
-    const filtered = applyFilters(cachedPlants);
-    // Sorting now applies to all three views — list sorts via clickable
-    // table headers, grid/cards via the sort-toolbar dropdown above —
-    // both drive the same sortField/sortDir state through sortedPlants().
-    const displayPlants = sortedPlants(filtered);
+    renderGroupFilterOptions();
+    const filtered = applyFilters(cachedPlants, filters);
+    // Sorting applies to all three views — list sorts via clickable table
+    // headers, grid/cards via the sort-toolbar dropdown above — both drive
+    // the same sortField/sortDir state.
+    const displayPlants = sortPlants(filtered, sortField, sortDir);
     syncFilterChips(filtered.length, cachedPlants.length);
     const bulkPrintBtn = document.getElementById('btn-bulk-print-count');
     if (bulkPrintBtn) bulkPrintBtn.textContent = t('printCountAllBtn', { n: filtered.length });
@@ -1283,8 +891,8 @@ import Layout from '../layouts/Layout.astro';
           <!-- Accent left border -->
           <div class="absolute left-0 top-0 h-full w-1 ${accentColor(p)}"></div>
           <!-- Image thumbnail -->
-          ${p.imageUrl ? `<div class="relative h-32 overflow-hidden bg-stone-100 dark:bg-stone-800 pl-1">
-            <img src="${escapeHtml(p.imageUrl)}" alt="${escapeHtml(displayName(p))}" class="h-full w-full object-cover" loading="lazy" onerror="this.closest('.group').querySelector('.img-wrapper')?.remove()" />
+          ${p.imageUrl ? `<div data-img-wrapper class="relative h-32 overflow-hidden bg-stone-100 dark:bg-stone-800 pl-1">
+            <img src="${escapeHtml(p.imageUrl)}" alt="${escapeHtml(displayName(p))}" class="h-full w-full object-cover" loading="lazy" />
             ${imageCreditOverlayHtml(p.imageCredit)}
           </div>` : ''}
           <!-- Content -->
@@ -1306,7 +914,7 @@ import Layout from '../layouts/Layout.astro';
               ${p.climateZone ? `<span>${escapeHtml(t('zoneLabel', { zone: p.climateZone }))}</span>` : ''}
             </div>
             <div class="flex flex-wrap gap-1">${badges(p)}</div>
-            ${(p.groups ?? []).length > 0 ? `<div class="mt-1 flex flex-wrap gap-1">${(p.groups ?? []).map(g => `<span class="inline-block rounded-full bg-stone-100 dark:bg-stone-700 px-2 py-0.5 text-[10px] font-medium text-stone-600 dark:text-stone-300">${escapeHtml(g)}</span>`).join('')}</div>` : ''}
+            ${groupPillsHtml(p, 'mt-1')}
           </div>
           <!-- Footer: completeness bar + source chips -->
           <div class="flex items-center gap-2 border-t border-stone-100 px-4 py-2">
@@ -1363,7 +971,7 @@ import Layout from '../layouts/Layout.astro';
                 <div class="min-w-0">
                   <p class="truncate text-sm font-semibold text-stone-800 dark:text-stone-100">${escapeHtml(displayName(p))}</p>
                   <p class="truncate text-xs italic text-stone-500 dark:text-stone-400">${escapeHtml(p.latinName)}</p>
-                  ${(p.groups ?? []).length > 0 ? `<div class="mt-0.5 flex flex-wrap gap-1">${(p.groups ?? []).map(g => `<span class="inline-block rounded-full bg-stone-100 dark:bg-stone-700 px-1.5 py-0 text-[10px] font-medium text-stone-500 dark:text-stone-400">${escapeHtml(g)}</span>`).join('')}</div>` : ''}
+                  ${groupPillsHtml(p, 'mt-0.5')}
                 </div>
                 <div class="flex shrink-0 gap-1">${actionBtns}</div>
               </div>
@@ -1419,6 +1027,7 @@ import Layout from '../layouts/Layout.astro';
                 ${thSort('layer', t('thLayer'))}
                 <th class="px-3 py-2.5">${escapeHtml(t('thPhenology'))}</th>
                 ${thSort('completeness', t('thCompleteness'))}
+                ${thSort('groups', t('thGroups'))}
                 <th class="px-3 py-2.5">${escapeHtml(t('thCount'))}</th>
                 <th class="px-3 py-2.5">${escapeHtml(t('thSources'))}</th>
                 <th class="px-3 py-2.5">${escapeHtml(t('thActions'))}</th>
@@ -1431,10 +1040,7 @@ import Layout from '../layouts/Layout.astro';
                 <td class="px-3 py-2">
                   <div class="flex items-center gap-1.5">
                     <div class="h-5 w-0.5 rounded-full ${accentColor(p)} shrink-0"></div>
-                    <div class="min-w-0">
-                      <span class="font-medium text-stone-800 dark:text-stone-100">${escapeHtml(displayName(p))}</span>
-                      ${(p.groups ?? []).length > 0 ? `<div class="mt-0.5 flex flex-wrap gap-1">${(p.groups ?? []).map(g => `<span class="inline-block rounded-full bg-stone-100 dark:bg-stone-700 px-1.5 py-0 text-[10px] font-medium text-stone-500 dark:text-stone-400">${escapeHtml(g)}</span>`).join('')}</div>` : ''}
-                    </div>
+                    <span class="font-medium text-stone-800 dark:text-stone-100">${escapeHtml(displayName(p))}</span>
                   </div>
                 </td>
                 <td class="px-3 py-2 italic text-stone-500 dark:text-stone-400">${escapeHtml(p.latinName)}</td>
@@ -1455,6 +1061,7 @@ import Layout from '../layouts/Layout.astro';
                     <span class="text-[10px] tabular-nums text-stone-400 dark:text-stone-500">${pct}%</span>
                   </div>
                 </td>
+                <td class="px-3 py-2">${groupPillsHtml(p) || '<span class="text-stone-300 dark:text-stone-600">—</span>'}</td>
                 <td class="px-3 py-2">${printHtml}</td>
                 <td class="px-3 py-2">${srcHtml}</td>
                 <td class="px-3 py-2"><div class="flex gap-1">${actionBtns}</div></td>
@@ -1655,7 +1262,7 @@ import Layout from '../layouts/Layout.astro';
     document.getElementById(id)!.addEventListener('click', async () => {
       const { exportPlantTablePDF } = await import('../lib/table-pdf');
       const { buildTablePdfLabels } = await import('../lib/table-pdf-labels');
-      const rows = sortedPlants(applyFilters(cachedPlants));
+      const rows = sortPlants(applyFilters(cachedPlants, filters), sortField, sortDir);
       if (rows.length === 0) return;
       await withButtonSpinner(document.getElementById(id) as HTMLButtonElement,
         () => exportPlantTablePDF(rows, gray, buildTablePdfLabels(getLang())));
@@ -1803,7 +1410,15 @@ import Layout from '../layouts/Layout.astro';
   document.getElementById('btn-import')!.addEventListener('click', () => fileInput.click());
   fileInput.addEventListener('change', async () => {
     const f = fileInput.files?.[0]; if (!f) return;
-    await importPlants(JSON.parse(await f.text())); renderList(); fileInput.value = '';
+    try {
+      const { plants } = parseBackup(await f.text());
+      if (plants.length === 0) { alert(t('alertNoJsonPlants')); return; }
+      await importPlants(plants); renderList();
+    } catch (err) {
+      alert(t('alertJsonImportFailed', { msg: err instanceof Error ? err.message : String(err) }));
+    } finally {
+      fileInput.value = '';
+    }
   });
   document.getElementById('btn-import-csv')!.addEventListener('click', () => csvInput.click());
   csvInput.addEventListener('change', async () => {
@@ -1899,7 +1514,7 @@ import Layout from '../layouts/Layout.astro';
               const filled: Partial<PlantData> = {};
               for (const [key, value] of Object.entries(proxyData)) {
                 const cur = (plant as any)[key];
-                // See the SCORE_FIELDS comment on isFillable() above — same
+                // See the SCORE_FIELDS comment on isFillable() in lib/enrich.ts — same
                 // 0-vs-"empty" gap applies to this search-add's own merge.
                 const empty = cur === null || cur === undefined || cur === '' || cur === false ||
                   (SCORE_FIELDS.has(key) && cur === 0) ||
@@ -1948,14 +1563,13 @@ import Layout from '../layouts/Layout.astro';
 
   // ── Filter chips ───────────────────────────────────────────────────────
   function anyFilterActive(): boolean {
-    return usageFilter.size > 0 || functionFilter.size > 0 || sunFilter.size > 0 || waterFilter.size > 0
-      || growSpeedFilter.size > 0 || layerFilter.size > 0
-      || flowerMonthFilter.size > 0 || fruitMonthFilter.size > 0
-      || heightMin > 0 || completenessMin > 0 || !!textQuery.trim();
+    return (Object.keys(SET_FILTER_KEYS) as SetFacet[]).some(f => filters[f].size > 0)
+      || filters.heightMin > 0 || filters.completenessMin > 0 || !!filters.text.trim();
   }
   /** Shared active/inactive styling + "(n)" count for a <details> dropdown's <summary>. */
   function syncDropdownSummary(id: string, count: number, label: string) {
-    const el = document.getElementById(id)!;
+    const el = document.getElementById(id);
+    if (!el) return;
     const active = count > 0;
     el.classList.toggle('bg-green-700', active);
     el.classList.toggle('text-white', active);
@@ -1969,21 +1583,27 @@ import Layout from '../layouts/Layout.astro';
   document.getElementById('btn-bulk-print-count')!.addEventListener('click', async () => {
     const raw = parseInt((document.getElementById('bulk-print-count-value') as HTMLInputElement).value, 10);
     const n = Number.isFinite(raw) ? Math.max(0, Math.min(99, raw)) : 1;
-    const targets = applyFilters(cachedPlants);
+    const targets = applyFilters(cachedPlants, filters);
     if (targets.length === 0) return;
     for (const p of targets) { p.printCount = n; await savePlant(p); }
     renderList();
   });
 
+  // Checkbox-group dropdowns: [facet, checkbox selector, summary id, summary label key].
+  const CHECKBOX_FACETS: [SetFacet, string, string, string][] = [
+    ['usage', '.filter-usage-opt', 'filter-usage-summary', 'filterUsageLabel'],
+    ['function', '.filter-function-opt', 'filter-function-summary', 'filterFunctionLabel'],
+    ['sun', '.filter-sun-opt', 'filter-sun-summary', 'thSun'],
+    ['water', '.filter-water-opt', 'filter-water-summary', 'thWater'],
+    ['growSpeed', '.filter-growspeed-opt', 'filter-growspeed-summary', 'thGrowthSpeed'],
+    ['layer', '.filter-layer-opt', 'filter-layer-summary', 'thLayer'],
+    ['flowerMonths', '.filter-flowering-opt', 'filter-flowering-summary', 'legendFlowering'],
+    ['fruitMonths', '.filter-fruiting-opt', 'filter-fruiting-summary', 'legendFruiting'],
+    ['groups', '.filter-groups-opt', 'filter-groups-summary', 'filterGroupsLabel'],
+  ];
+
   function syncFilterChips(shown: number, total: number) {
-    syncDropdownSummary('filter-usage-summary', usageFilter.size, t('filterUsageLabel'));
-    syncDropdownSummary('filter-function-summary', functionFilter.size, t('filterFunctionLabel'));
-    syncDropdownSummary('filter-sun-summary', sunFilter.size, t('thSun'));
-    syncDropdownSummary('filter-water-summary', waterFilter.size, t('thWater'));
-    syncDropdownSummary('filter-growspeed-summary', growSpeedFilter.size, t('thGrowthSpeed'));
-    syncDropdownSummary('filter-layer-summary', layerFilter.size, t('thLayer'));
-    syncDropdownSummary('filter-flowering-summary', flowerMonthFilter.size, t('legendFlowering'));
-    syncDropdownSummary('filter-fruiting-summary', fruitMonthFilter.size, t('legendFruiting'));
+    for (const [facet, , summaryId, labelKey] of CHECKBOX_FACETS) syncDropdownSummary(summaryId, filters[facet].size, t(labelKey));
     const clearBtn = document.getElementById('btn-filter-clear')!;
     const countEl = document.getElementById('filter-count')!;
     if (anyFilterActive()) {
@@ -1996,89 +1616,80 @@ import Layout from '../layouts/Layout.astro';
     }
   }
 
-  /** Wires a checkbox-group dropdown (Nutzung/Funktionen/Sonne/Wasser/Blüte/Frucht) to a
-   *  Set-backed filter: initializes checked state, persists + re-renders on
-   *  change. Returns the elements so clearAllFilters() can reset them. */
-  function wireCheckboxGroup(selector: string, set: Set<string>, persist: () => void): HTMLInputElement[] {
-    const els = Array.from(document.querySelectorAll<HTMLInputElement>(selector));
-    els.forEach(cb => {
-      cb.checked = set.has(cb.value);
-      cb.addEventListener('change', () => {
-        if (cb.checked) set.add(cb.value); else set.delete(cb.value);
-        persist();
-        renderList();
-      });
-    });
-    return els;
+  // Delegated, so the group dropdown's options (rebuilt whenever the set of
+  // group names changes) need no re-wiring.
+  document.getElementById('filter-bar')!.addEventListener('change', (e) => {
+    const cb = e.target as HTMLInputElement;
+    const entry = CHECKBOX_FACETS.find(([, selector]) => cb.matches(selector));
+    if (!entry) return;
+    const facet = entry[0];
+    if (cb.checked) filters[facet].add(cb.value); else filters[facet].delete(cb.value);
+    persistFacet(facet);
+    renderList();
+  });
+  function syncCheckboxStates() {
+    for (const [facet, selector] of CHECKBOX_FACETS) {
+      document.querySelectorAll<HTMLInputElement>(selector).forEach(cb => { cb.checked = filters[facet].has(cb.value); });
+    }
   }
-  const filterUsageEls = wireCheckboxGroup('.filter-usage-opt', usageFilter, persistUsageFilter);
-  const filterFunctionEls = wireCheckboxGroup('.filter-function-opt', functionFilter, persistFunctionFilter);
-  const filterSunEls = wireCheckboxGroup('.filter-sun-opt', sunFilter, persistSunFilter);
-  const filterWaterEls = wireCheckboxGroup('.filter-water-opt', waterFilter, persistWaterFilter);
-  const filterGrowSpeedEls = wireCheckboxGroup('.filter-growspeed-opt', growSpeedFilter, persistGrowSpeedFilter);
-  const filterLayerEls = wireCheckboxGroup('.filter-layer-opt', layerFilter, persistLayerFilter);
-  const filterFloweringEls = wireCheckboxGroup('.filter-flowering-opt', flowerMonthFilter, persistFlowerMonthFilter);
-  const filterFruitingEls = wireCheckboxGroup('.filter-fruiting-opt', fruitMonthFilter, persistFruitMonthFilter);
+
+  /** Rebuilds the Gruppen dropdown from the group names currently in use
+   *  (plus "ohne Gruppe"); hidden while no plant has a group. A selected group
+   *  that no longer exists is dropped from the filter. */
+  let renderedGroupOptions = '';
+  function renderGroupFilterOptions() {
+    const groups = allGroups(cachedPlants);
+    const wrap = document.getElementById('filter-groups')!;
+    wrap.classList.toggle('hidden', groups.length === 0);
+    const valid = new Set(['', ...groups]);
+    let pruned = false;
+    for (const g of [...filters.groups]) if (!valid.has(g)) { filters.groups.delete(g); pruned = true; }
+    if (pruned) persistFacet('groups');
+    const key = JSON.stringify(groups);
+    if (key === renderedGroupOptions) return;
+    renderedGroupOptions = key;
+    const opt = (value: string, label: string) =>
+      `<label class="flex items-center gap-1.5"><input type="checkbox" class="filter-groups-opt accent-green-600" value="${escapeHtml(value)}" ${filters.groups.has(value) ? 'checked' : ''} /> <span class="truncate">${escapeHtml(label)}</span></label>`;
+    document.getElementById('filter-groups-options')!.innerHTML =
+      groups.map(g => opt(g, g)).join('') + opt('', t('filterGroupsNone'));
+  }
 
   const filterHeightEl = document.getElementById('filter-height') as HTMLSelectElement;
-  filterHeightEl.value = String(heightMin);
+  filterHeightEl.value = String(filters.heightMin);
   filterHeightEl.addEventListener('change', () => {
-    heightMin = Number(filterHeightEl.value);
-    persistHeightMin();
+    filters.heightMin = Number(filterHeightEl.value);
+    persistScalarFilters();
     renderList();
   });
   const filterCompletenessEl = document.getElementById('filter-completeness') as HTMLSelectElement;
-  filterCompletenessEl.value = String(completenessMin);
+  filterCompletenessEl.value = String(filters.completenessMin);
   filterCompletenessEl.addEventListener('change', () => {
-    completenessMin = Number(filterCompletenessEl.value);
-    persistCompletenessMin();
+    filters.completenessMin = Number(filterCompletenessEl.value);
+    persistScalarFilters();
     renderList();
   });
 
   const filterTextEl = document.getElementById('filter-text') as HTMLInputElement;
-  filterTextEl.value = textQuery;
+  filterTextEl.value = filters.text;
   let filterTextDebounce: ReturnType<typeof setTimeout> | undefined;
   filterTextEl.addEventListener('input', () => {
-    textQuery = filterTextEl.value;
-    persistTextQuery();
+    filters.text = filterTextEl.value;
+    persistScalarFilters();
     clearTimeout(filterTextDebounce);
     filterTextDebounce = setTimeout(renderList, 150);
   });
   function clearAllFilters() {
-    usageFilter.clear();
-    persistUsageFilter();
-    filterUsageEls.forEach(cb => { cb.checked = false; });
-    functionFilter.clear();
-    persistFunctionFilter();
-    filterFunctionEls.forEach(cb => { cb.checked = false; });
-    sunFilter.clear();
-    persistSunFilter();
-    filterSunEls.forEach(cb => { cb.checked = false; });
-    waterFilter.clear();
-    persistWaterFilter();
-    filterWaterEls.forEach(cb => { cb.checked = false; });
-    growSpeedFilter.clear();
-    persistGrowSpeedFilter();
-    filterGrowSpeedEls.forEach(cb => { cb.checked = false; });
-    layerFilter.clear();
-    persistLayerFilter();
-    filterLayerEls.forEach(cb => { cb.checked = false; });
-    flowerMonthFilter.clear();
-    persistFlowerMonthFilter();
-    filterFloweringEls.forEach(cb => { cb.checked = false; });
-    fruitMonthFilter.clear();
-    persistFruitMonthFilter();
-    filterFruitingEls.forEach(cb => { cb.checked = false; });
-    heightMin = 0;
-    persistHeightMin();
+    for (const facet of Object.keys(SET_FILTER_KEYS) as SetFacet[]) { filters[facet].clear(); persistFacet(facet); }
+    filters.heightMin = 0;
+    filters.completenessMin = 0;
+    filters.text = '';
+    persistScalarFilters();
+    syncCheckboxStates();
     filterHeightEl.value = '0';
-    completenessMin = 0;
-    persistCompletenessMin();
     filterCompletenessEl.value = '0';
-    textQuery = '';
-    persistTextQuery();
     filterTextEl.value = '';
   }
+  syncCheckboxStates();
   document.getElementById('btn-filter-clear')!.addEventListener('click', () => {
     clearAllFilters();
     renderList();

@@ -1,5 +1,7 @@
 import { getAllPlants, getAllPolycultures, getAllGardenPlans } from './db';
-import { loadSettings } from './settings';
+import { loadSettings, type AppSettings } from './settings';
+import type { PlantData, Polyculture, GardenPlan } from './types';
+import { normalizePlants, normalizePolycultures, normalizeGardenPlans } from './plant-normalize';
 
 export const GIST_FILENAME = 'perma-design-kit-backup.json';
 /** Filename earlier versions (Perma Guild Forge) wrote to — read as a
@@ -23,6 +25,30 @@ export async function buildBackupJson(): Promise<string> {
   const [plants, polycultures, gardenPlans] = await Promise.all([getAllPlants(), getAllPolycultures(), getAllGardenPlans()]);
   const settings = loadSettings();
   return JSON.stringify({ version: 1, exportedAt: new Date().toISOString(), settings, plants, polycultures, gardenPlans }, null, 2);
+}
+
+export interface ParsedBackup {
+  plants: PlantData[];
+  polycultures: Polyculture[];
+  gardenPlans: GardenPlan[];
+  /** Raw settings object, if the backup carried one; saveSettings() merges it onto defaults. */
+  settings: Partial<AppSettings> | null;
+}
+
+/** Parses a backup file / Gist / WebDAV payload — either the full backup
+ *  object or a bare plant array (the plant list's own JSON export). Every
+ *  record is normalized; malformed ones are dropped. Throws on invalid JSON. */
+export function parseBackup(text: string): ParsedBackup {
+  const data: unknown = JSON.parse(text);
+  if (Array.isArray(data)) return { plants: normalizePlants(data), polycultures: [], gardenPlans: [], settings: null };
+  if (typeof data !== 'object' || data === null) return { plants: [], polycultures: [], gardenPlans: [], settings: null };
+  const d = data as Record<string, unknown>;
+  return {
+    plants: normalizePlants(d.plants),
+    polycultures: normalizePolycultures(d.polycultures ?? d.guilds),
+    gardenPlans: normalizeGardenPlans(d.gardenPlans),
+    settings: typeof d.settings === 'object' && d.settings !== null && !Array.isArray(d.settings) ? d.settings as Partial<AppSettings> : null,
+  };
 }
 
 export type SyncResult = { ok: boolean; provider: 'webdav' | 'gist' | null; error?: string };

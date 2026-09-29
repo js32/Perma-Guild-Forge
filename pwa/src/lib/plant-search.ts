@@ -336,46 +336,61 @@ export async function fetchPlantDetails(wikidataId: string): Promise<Partial<Pla
  * Returns partial PlantData with all the fields that the proxy could parse.
  */
 export async function fetchProxyData(latinName: string): Promise<Partial<PlantData>> {
-  const enabledPfaf = isSourceEnabled('pfaf');
-  const enabledNatura = isSourceEnabled('naturadb');
-  if (!enabledPfaf && !enabledNatura) return {};
+  return (await fetchProxyResult(latinName)).fields;
+}
+
+const PROXY_DIRECT_FIELDS = [
+  'commonName', 'heightM', 'widthM', 'climateZone',
+  'eatableScore', 'medsScore', 'materialScore',
+  'eatable', 'culinaric', 'meds', 'material', 'fodder', 'fuel',
+  'nitrogenFix', 'mineralFix', 'groundCover', 'insects', 'pest',
+  'animalProtection', 'windBreaking', 'windBreakingOnSea',
+  'sunFull', 'sunMid', 'sunShadow',
+  'waterDry', 'waterMid', 'waterWet',
+  'growSpeedLow', 'growSpeedMid', 'growSpeedHigh',
+  'phVeryAcid', 'phAcid', 'phNeutral',
+  'phAlkaline', 'phVeryAlkaline',
+] as const;
+
+export interface ProxyResult {
+  /** Fields with a real value — what gets filled into empty plant fields. */
+  fields: Partial<PlantData>;
+  /** Boolean fields the source explicitly reported as false for a plant it
+   *  knows — lets a re-enrich correct a stale `true` it set earlier. Empty
+   *  when the source didn't recognise the plant. */
+  reportedFalse: (keyof PlantData)[];
+}
+
+export async function fetchProxyResult(latinName: string): Promise<ProxyResult> {
+  const empty: ProxyResult = { fields: {}, reportedFalse: [] };
+  if (!isSourceEnabled('pfaf') && !isSourceEnabled('naturadb')) return empty;
 
   const proxyUrl = `/api/plant-proxy?name=${encodeURIComponent(latinName)}`;
   try {
     const res = await fetch(proxyUrl);
-    if (!res.ok) return {};
+    if (!res.ok) return empty;
     const data = await res.json();
 
-    const result: Partial<PlantData> = {};
-    // Map proxy response fields to PlantData
-    const directFields = [
-      'commonName', 'heightM', 'widthM', 'climateZone',
-      'eatableScore', 'medsScore', 'materialScore',
-      'eatable', 'culinaric', 'meds', 'material', 'fodder', 'fuel',
-      'nitrogenFix', 'mineralFix', 'groundCover', 'insects', 'pest',
-      'animalProtection', 'windBreaking', 'windBreakingOnSea',
-      'sunFull', 'sunMid', 'sunShadow',
-      'waterDry', 'waterMid', 'waterWet',
-      'growSpeedLow', 'growSpeedMid', 'growSpeedHigh',
-      'phVeryAcid', 'phAcid', 'phNeutral',
-      'phAlkaline', 'phVeryAlkaline',
-    ] as const;
-
-    for (const f of directFields) {
+    const fields: Partial<PlantData> = {};
+    const reportedFalse: (keyof PlantData)[] = [];
+    const found = typeof data.source === 'string' && data.source !== '';
+    for (const f of PROXY_DIRECT_FIELDS) {
       if (data[f] !== null && data[f] !== undefined && data[f] !== '' && data[f] !== false) {
-        (result as any)[f] = data[f];
+        (fields as any)[f] = data[f];
+      } else if (found && data[f] === false) {
+        reportedFalse.push(f);
       }
     }
 
     // PFAF's common names are English.
-    if (typeof data.commonName === 'string' && data.commonName.trim()) result.commonNameEn = data.commonName.trim();
+    if (typeof data.commonName === 'string' && data.commonName.trim()) fields.commonNameEn = data.commonName.trim();
 
-    if (data.fruitMonths?.some((v: boolean) => v)) result.fruitMonths = data.fruitMonths;
-    if (data.flowerMonths?.some((v: boolean) => v)) result.flowerMonths = data.flowerMonths;
+    if (data.fruitMonths?.some((v: boolean) => v)) fields.fruitMonths = data.fruitMonths;
+    if (data.flowerMonths?.some((v: boolean) => v)) fields.flowerMonths = data.flowerMonths;
 
-    return result;
+    return { fields, reportedFalse };
   } catch {
-    return {};
+    return empty;
   }
 }
 
