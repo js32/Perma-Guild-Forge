@@ -57,6 +57,9 @@ Offene Punkte. Abgeschlossene Roadmap-Punkte stehen in [`CHANGELOG.md`](CHANGELO
 - [ ] Logo&CI (Jörn)?: muster in dropbox:
 'https://www.dropbox.com/scl/fi/r9p078v5vkvl1f17ol2le/pdk_1920px_v1.jpg?rlkey=2oy8d1d54m6f8hq2ud44213rb&dl=0
 - [ ] zulip wieder starten: cd /opt/zulip && docker compose start
+- [ ] EdibleForestGardens - Datensatz integrieren
+Datei in Dropbox:
+https://www.dropbox.com/scl/fi/kptyeduzlor049spvvvrq/Plant-Species-Toolkit.xlsx?rlkey=eer7brcd9h7tv9wb2a6zlwjmw&dl=0
 
 ### Re: FUNKTIONALITÄT
 
