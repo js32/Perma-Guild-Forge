@@ -64,18 +64,9 @@ https://www.dropbox.com/scl/fi/kptyeduzlor049spvvvrq/Plant-Species-Toolkit.xlsx?
 ## bis 1.11./Symposium
 - [ ] bug reporting aufsetzen (mit Formular vorstrukturieren)
 - [ ] Github aktualisieren (help.md, ...)
+- [ ] Dokumentation fertig (readme.md; Help.md)
 
 ### Re: FUNKTIONALITÄT
-
-
-
-
-
-
-
-
-
-
 - [x] Durchmesser auf Baumscheibe etwas runterschieben
       
 ### Re: Calendars
