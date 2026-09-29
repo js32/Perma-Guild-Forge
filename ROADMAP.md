@@ -102,8 +102,7 @@ https://www.dropbox.com/scl/fi/kptyeduzlor049spvvvrq/Plant-Species-Toolkit.xlsx?
 - [ ] PFAF hat noch eine agroforestry/regen.agricult. rubrik für weitere funktionen wie erosion control, carbon seq., etc die wir übernehmen wollen
 - [ ] new functions: barrier
 - [ ] create default/other plant lists: -CAFG (v5? - 41 spp.), CAFG full? (350+ spp.), PFAF - selected book, Grünheck?
-- [ ] Zirkeldreher-Tool
-
+- [ ] Zirkeldreher-Tool: Prüfen ob wir uns da was abkucken können, v.a. was garden plan angeht
 - [x] domain permadesignkit.org gekauft
 - [x] Tabelle: Baum/Strauch/Krautebene als Spalte und Filter/sortierfunktion
 - [x] Zeichen für Baum/Strauch.. ebene -> psd erneut in svg konvertieren
@@ -127,6 +126,7 @@ https://www.dropbox.com/scl/fi/kptyeduzlor049spvvvrq/Plant-Species-Toolkit.xlsx?
 - [ ] führung durch die webseite beim ersten aufruf der webseite
 - [ ] nutzen prüfen, ist alles vorhanden, was in Baumscheibe angezeigt wird?#
 - [ ] polykulturen-tab entwickeln
+- [ ] Finanzierungsmodell für die zukünftigen laufenden Kosten (Hosting, Software, Orga/Kommunikation, Bugfixing, Verbesserung & Erweiterung der Software) ausdenken: z.B. erst implementieren wenn Break-Even (transparente und ehrliche Kommunikation!) erreicht ist: "Countdown-Crowdfunding"
 
 ### PDF Generierung
 - [ ] zweite Option: Größen entsprechend Baumdurchmesser
