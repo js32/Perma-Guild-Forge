@@ -87,10 +87,7 @@ https://www.dropbox.com/scl/fi/kptyeduzlor049spvvvrq/Plant-Species-Toolkit.xlsx?
 - [ ] lizenz auf github: fair-use
   - [ ] Jens & Sebastian um Lizenzänderung bitten?
 - [ ] naturadb anrufen (Anfrage: Erlaubnis für gemeinnützige, nicht-kommerzielle Nutzung der Daten?)
-- [ ] Toensmeier: können wir seine Daten dafür nutzen? Anfrage ist raus@Joern
-
-
-
+- [x] Toensmeier: können wir seine Daten dafür nutzen? Anfrage ist raus@Joern: US-Recht verbietet Nutzung der Tabellendaten nicht
 
 
 ## später / Fragen für Präsentation
