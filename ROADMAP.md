@@ -33,13 +33,13 @@ Offene Punkte. Abgeschlossene Roadmap-Punkte stehen in [`CHANGELOG.md`](CHANGELO
   - [x] field "functions": show tickboxes and labels for all possible functions
 
 - [x] include the following new uses to the filtering dropdown menu "uses" and include tickboxes in the edit view of a plant, using the following english and Germen terms: ornamental - Ästhetik, wood - Nutzholz, dyes - Farbstoff, fiber - Fasern,
-- [ ] printing out: define min. size of plant card in cm to include in page by user. only print plant cards which will be bigger. show list of all discarded plants to user.
-  - [ ] Druck kommt immer noch mit microkreisen raus
-  - [ ] Druckmenü schwer verständlich  
+- [x] printing out: define min. size of plant card in cm to include in page by user. only print plant cards which will be bigger. show list of all discarded plants to user.
+- [ ] Druck kommt immer noch mit microkreisen raus
+- [ ] Druckmenü schwer verständlich  
 
 - [x] neue funktion: für jede pflanze soll die möglichkeit existieren sie in einer oder mehreren gruppen einzusortieren. implementiere dies, so, dass dies auf der bearbeiten-seite, in der liste und weiteren sichtbar ist in welchen gruppen eine Pflanze ist.
 
-- [ ] in /root/pdk/temp stehen mehrere neue jpgs. erstelle 2-3 designs für die webseite basierend auf diesen jpgs - inkl. neuem logo auf basis dieser desings, welches oben links angezeigt wird. erstelle erstmal nur voransichten und schalte das nicht live. 
+- [x] in /root/pdk/temp stehen mehrere neue jpgs. erstelle 2-3 designs für die webseite basierend auf diesen jpgs - inkl. neuem logo auf basis dieser desings, welches oben links angezeigt wird. erstelle erstmal nur voransichten und schalte das nicht live. 
 
 ## Prios
 - [ ] bug fixing
@@ -55,13 +55,15 @@ Offene Punkte. Abgeschlossene Roadmap-Punkte stehen in [`CHANGELOG.md`](CHANGELO
 
 
 
+## jetzt 2.0
+- [ ] EdibleForestGardens(Toensmeier) - Datensatz neben PFAF und WD integrieren: https://docs.google.com/spreadsheets/d/1_PgxV4pxlNTa0Ep9TDY_57oJfVtrofmu/htmlview#gid=1609043836$- Ziehe die Tabelle auf den Server und fülle abfragen auch damit.
+- [ ] Priorisierung bei der Datenbefüllung der Pflanzen: PFAF > EdibleForestGardens(Toensmeier) > Wikidata. In den Einstellungen eine Möglichkeit schaffen, dass die Nutzerin die Reihenfolge selbst definieren kann. Quelle von Toensmeier (Buch) überall wie pfaf und WD als Quelle - soweit genutzt - angeben.
+- [ ] Faser- und Nutzholz-icons werden immer angezeigt. das stimmt so nicht, bitte prüfen
+
 ## kurzfristig
-- [ ] Logo&CI (Jörn)?: muster in dropbox:
-'https://www.dropbox.com/scl/fi/r9p078v5vkvl1f17ol2le/pdk_1920px_v1.jpg?rlkey=2oy8d1d54m6f8hq2ud44213rb&dl=0
+- [ ] Design festlegen. icon integrieren?
 - [ ] zulip wieder starten: cd /opt/zulip && docker compose start
-- [ ] EdibleForestGardens - Datensatz integrieren
-Datei in Dropbox:
-https://www.dropbox.com/scl/fi/kptyeduzlor049spvvvrq/Plant-Species-Toolkit.xlsx?rlkey=eer7brcd9h7tv9wb2a6zlwjmw&dl=0
+
 
 ## bis 1.11./Symposium
 - [ ] bug reporting aufsetzen (mit Formular vorstrukturieren)
