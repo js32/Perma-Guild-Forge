@@ -1,5 +1,5 @@
 import type { PlantData } from './types';
-import { hasSource } from './types';
+import { dataCredits } from './types';
 import { TEXT_FIELDS, BOOL_FIELDS } from './baumscheibe-mapping';
 import { deriveLayer } from './plant-layer';
 import { displayCommonName } from './plant-name';
@@ -141,19 +141,22 @@ function injectMonthCalendar(svg: SVGSVGElement, fruitMonths: boolean[], flowerM
   setMonthRing(svg, 'flowering', flowerMonths);
 }
 
-/** PFAF's database text is CC BY 4.0, which requires attribution wherever the
- *  data is republished. Placed in the dome's otherwise-empty area, right of
- *  the name text, below the month calendar. */
-function injectPfafAttribution(svg: SVGSVGElement) {
+/** Source credits (PFAF's CC BY 4.0 requires attribution wherever its data
+ *  is republished; Edible Forest Gardens is credited the same way). Placed in
+ *  the dome's otherwise-empty area, right of the name text, below the month
+ *  calendar — one line per source. */
+function injectDataCredits(svg: SVGSVGElement, credits: string[]) {
   const SVG_NS = 'http://www.w3.org/2000/svg';
-  const text = document.createElementNS(SVG_NS, 'text');
-  text.setAttribute('x', '1250');
-  text.setAttribute('y', '700');
-  text.setAttribute('font-family', 'Inter, sans-serif');
-  text.setAttribute('font-size', '18');
-  text.setAttribute('fill', '#999999');
-  text.textContent = 'Daten: PFAF.org (CC BY 4.0)';
-  svg.appendChild(text);
+  credits.forEach((credit, i) => {
+    const text = document.createElementNS(SVG_NS, 'text');
+    text.setAttribute('x', '1250');
+    text.setAttribute('y', String(700 + i * 24));
+    text.setAttribute('font-family', 'Inter, sans-serif');
+    text.setAttribute('font-size', '18');
+    text.setAttribute('fill', '#999999');
+    text.textContent = i === 0 ? `Daten: ${credit}` : credit;
+    svg.appendChild(text);
+  });
 }
 
 // The "growth speed" group's three icons (speed1/speed2/speed3, one chevron-
@@ -273,7 +276,8 @@ export async function renderBaumscheibeSvg(plant: PlantData): Promise<string> {
   // against the current template — kept in case a future export brings it
   // back visible again.)
   for (const el of findByLabel(svg, ['soil'])) setVisible(el, false);
-  if (hasSource(plant, 'pfaf')) injectPfafAttribution(svg);
+  const credits = dataCredits(plant);
+  if (credits.length) injectDataCredits(svg, credits);
 
   for (const [field, labels] of Object.entries(BOOL_FIELDS)) {
     if (!labels) continue;

@@ -14,10 +14,16 @@ export type ViewMode = 'grid' | 'list' | 'cards';
 export type CardVariant = 'poly' | 'stripe' | 'baumscheibe';
 export type ThemePref = 'auto' | 'light' | 'dark';
 
+/** Sources that fill plant data, in the order the user ranked them. */
+export type EnrichSource = 'pfaf' | 'efg' | 'wikidata';
+export const DEFAULT_SOURCE_PRIORITY: EnrichSource[] = ['pfaf', 'efg', 'wikidata'];
+
 export interface AppSettings {
   sources: DataSource[];
   defaultView: ViewMode;
   defaultCardVariant: CardVariant;
+  /** Highest priority first: per field, the first source with data wins. */
+  sourcePriority: EnrichSource[];
 }
 
 const STORAGE_KEY = "perma-design-kit-settings";
@@ -28,7 +34,16 @@ const STORAGE_KEY_LEGACY = "guild-designer-settings";
 const DEFAULT_PREFS: Omit<AppSettings, 'sources'> = {
   defaultView: 'grid',
   defaultCardVariant: 'baumscheibe',
+  sourcePriority: DEFAULT_SOURCE_PRIORITY,
 };
+
+/** Keeps a saved priority list valid: known sources only, each once, any
+ *  missing one appended in default order (so a newly added source still runs). */
+function normalizePriority(saved: unknown): EnrichSource[] {
+  const list = Array.isArray(saved) ? saved.filter((s): s is EnrichSource => DEFAULT_SOURCE_PRIORITY.includes(s as EnrichSource)) : [];
+  const unique = [...new Set(list)];
+  return [...unique, ...DEFAULT_SOURCE_PRIORITY.filter(s => !unique.includes(s))];
+}
 
 export const DEFAULT_SOURCES: DataSource[] = [
   {
@@ -48,6 +63,15 @@ export const DEFAULT_SOURCES: DataSource[] = [
     needsApiKey: false,
     apiKey: "",
     url: "https://pfaf.org",
+  },
+  {
+    id: "efg",
+    name: "Edible Forest Gardens (Jacke & Toensmeier)",
+    description: "Artentabelle aus „Edible Forest Gardens\" Bd. 2 (aufbereitet von Lally Luck Farm): Licht, Feuchte, pH, Größe, Wuchs, Nutzungen, Funktionen. Rund 600 vor allem nordamerikanische Arten; liegt auf unserem Server.",
+    enabled: true,
+    needsApiKey: false,
+    apiKey: "",
+    url: "https://www.chelseagreen.com/product/edible-forest-gardens-volume-ii/",
   },
   {
     id: "naturadb",
@@ -79,10 +103,15 @@ export function loadSettings(): AppSettings {
         sources,
         defaultView: views.includes(saved.defaultView as ViewMode) ? saved.defaultView! : DEFAULT_PREFS.defaultView,
         defaultCardVariant: variants.includes(saved.defaultCardVariant as CardVariant) ? saved.defaultCardVariant! : DEFAULT_PREFS.defaultCardVariant,
+        sourcePriority: normalizePriority(saved.sourcePriority),
       };
     }
   } catch {}
-  return { sources: DEFAULT_SOURCES.map((s) => ({ ...s })), ...DEFAULT_PREFS };
+  return { sources: DEFAULT_SOURCES.map((s) => ({ ...s })), ...DEFAULT_PREFS, sourcePriority: [...DEFAULT_SOURCE_PRIORITY] };
+}
+
+export function getSourcePriority(): EnrichSource[] {
+  return loadSettings().sourcePriority;
 }
 
 export function saveSettings(settings: AppSettings): void {

@@ -49,6 +49,10 @@ When creating or enriching a plant, data from several sources is combined. You c
 Botanical and common names, images, taxonomy. CORS-free, accessed directly from the browser.
 *** PFAF (Plants For A Future)
 Use scores (edibility, medicinal, material), light, pH and water requirements, growth rate, dimensions, flowering and fruiting times. Fetched via server proxy.
+*** Edible Forest Gardens (Jacke & Toensmeier)
+Species table from Dave Jacke & Eric Toensmeier, "Edible Forest Gardens", vol. 2 (Chelsea Green 2005), compiled as the "Species Toolkit" by Lally Luck Farm: light, moisture, pH, size, growth, uses and functions for about 600 mostly North American species. Hosted on our server.
+*** Order
+When several sources have data for a field, the higher-ranked one wins (default: PFAF, then Edible Forest Gardens, then Wikidata; changeable in the settings). Values you entered are never overwritten; the German name always comes from Wikidata.
 
 ** Visual vocabulary
 

@@ -1,0 +1,617 @@
+Taxonomy,,,,Tolerances,,,,,,,,Architecture,,,,,,Habitats,,,,,,,,,,,,Uses,,,,,,,,Functions,,,,,,,Drawbacks,
+,,,,,,,,Soil PH,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Genus,Species,Common Name,Family,Zone cold,Zone warm,Light,Moisture,Strongly Acidic - 3.5-5.0,Acidic - 5.1-6.0,Garden Soil - 6.1-7.0,Basic - 7.1-8.5,Form,Habit,Root Pattern,Height,Width,Growth Rate,Native Region,Disturbed,Meadows,Prairies,Oldfields,Thickets,Edges,Gaps/Clearings,Open Woods,Forest,Conifer Forest,Other Habitats,Edible Fruit,Edible Nuts/Mast,Edible Greens etc,Edible Roots,Culinary,Tea,Edible Other,Medicinal,N2 Fixer,Dynamic Accumulator,Wildlife,Invertebrate Shelter,Nectary,Groundcover,Other Uses & Functions,Nuisances,Poison
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Acacia,angustissima,prairie acacia,Fabaceae,7,10,□◘,□◘,,,■■,■■,Shrub (m),ms,,3-6',3-6',F,ENA,,,X,,,,X,X,,,X,,,,,,,,,Y,,F,,G,,,,P
+Acacia,angustissima hirta,dwarf prairie acacia,Fabaceae,7,10,□◘,□◘,,,■■,■■,Shrub (s),ms,,1-3',1-6',F,ENA,,,X,,,,X,X,,,X,,,,,,,,,Y,,F,,G,Y,,,P
+Acer ,saccharinum,silver maple,Aceraceae,3b,3b,□◘,□■,,■,■,,Tree (l),std,F,75-100',75-100',F,ENA,,,,,,,,,X,,X,,,,,,,G,,,Y,,,G,,C,D,P
+Acer ,saccharum,sugar maple,Aceraceae,3,7,□■,◘,,,■■,■,Tree (l),std,"F, N",75-100',75-100',S-M,ENA,,,,,,,,,X,,X,,,,,,,E,F,,Y,,,G,,C,D,P
+Acer ,saccharum var. nigrum,black maple,Aceraceae,3b,3b,□■,◘,,,■■,■,Tree (l),std,F,75-100',75-100',S-M,ENA,,,,,,,,,X,,X,,,,,,,G,,,Y,,,G,,C,D,P
+Achillea,millefolium,yarrow,Asteraceae,3,10,□,□◘,,■■,■■,■,Herb (m),run,"Fb, R",2-3',indef.,F,EURA,X,X,,X,,,,,,,X,,,,,,,,E,,Y,,Y,S,Y,A,D,P
+Achillea,ptarmica,white tansy yarrow,Asteraceae,3,7,□,□◘,,■■,■■,■,Herb (s),run,R,"6-12""",indef.,F,EURA,X,X,,X,,,,,,,X,,,,,,,,Y,,,,Y,S,Y,A,D,P
+Actinidia,arguta,hardy kiwifruit,Actinidiaceae,4,8,□,◘,,■■,■■,■■,Vine (h),w vine,H,20-100',20-100',F,ASIA,,,,,,X,,X,X,X,,E,,,,,,,S,,,,,,,,S,
+Actinidia,kolomikta,superhardy kiwifruit,Actinidiaceae,3,8,□◘,◘,,■■,■■,■■,Vine (h),w vine,,20-100',20-100',M-F,ASIA,X,,,,,X,X,X,X,X,X,E,,,,,,,S,,,,,,,,S,
+Actinidia,purpurea,purple hardy kiwifruit,Actinidiaceae,4,8,□,◘,,■■,■■,■■,Vine (h),w vine,,20-100',20-100',M-F,ASIA,,,,,,X,,,,,,E,,,,,,,S,,,,,,,,,
+Adiantum,pdeatum,maidenhair fern,Adiantaceae,3,8,◘■,◘,,■■,■■,■■,Herb (m),clmp,R,"18-24""",3-5',S,ENA,,X,X,,X,,,X,X,,X,,,,,,,,Y,,,,,,Y,,,
+Agastache,foeniculum,anise hyssop,Lamiaceae,3,8,□◘,◘,,,■■,,Herb (m-l),clmp,F,2-4',1-2',M,WNA,,X,X,,X,,,X,X,,X,,,,,,E,,E,,,,Y,G,,A,,
+Alcea,rosea,hollyhock,Malvaceae,4,4,□,◘,,■■,■■,■,Herb (vl),clmp,,7',2',F,EURA,X,,,,,,,,,,X,,,G,,,,F,S,,,,,G,,,,
+Allium,ampeloprasum,perennial sweet leek,Alliaceae,6,9,□,◘,,,■■,,Herb (s-m),clmp,B,1-2',1',M,EUR,,,,,,,,,,,X,,,E,,G,,,S,,,,,G,,A,,
+Allium,canadense,wild garlic,Alliaceae,3,9,□◘,□◘,,,■■,,Herb (s-m),clmp,B,"6-24""",1',F,ENA,X,X,X,,X,,,X,,,X,,,G,G,G,,F,S,,,,,G,,A,"P,D",P
+Allium,cepa aggregatum,"potato onion, shallot",Alliaceae,5,9,□,◘,,,■■,,Herb (s),clmp,B,1',1',M,EURA,,,,,,,,,,,X,,,G,E,E,,,S,,,,,G,,A,,
+Allium,cepa proliferum,Egyptian walking onion,Alliaceae,5,10,□,◘,,,■■,,Herb (m),clmp,B,2',2-5',M-F,EURA,X,,,,,,,,,,X,,,G,G,G,,F,S,,,,,G,,A,,
+Allium,cernuum,nodding wild onion,Alliaceae,3,8,□◘,◘,■,■■,■■,■■,Herb (s-m),clmp,B,1-2',1-2',S,ENA,,X,X,,,,,X,,,X,,,G,,G,,,S,,,,,G,,A,,
+Allium,fistulosum,Welsh onion,Alliaceae,4,10,□,◘,,■,■■,■,Herb (m),clmp,B,2-3',1-2',S-M,ASIA,,,,,,,,,,,X,,,E,E,E,,,S,,,,,G,,A,,
+Allium,schoenoprasum,chives,Alliaceae,2,10,□◘,◘,,,■■,■■,Herb (s-m),clmp,B,"6-20""","6-20""",S-M,ASIA,X,X,,,,,,,,,X,,,E,,E,,G,S,,Y,,,G,Y,A,,
+Allium,tricoccum,ramps,Alliaceae,4,8,◘■,◘,,■,■■,,Herb (s),e clmp,B,"6-10""",indef.,S,ENA,,,,,,,,,X,,,,,E,E,E,,,S,,,,,G,,A,,
+Allium,tuberosum,garlic chives,Alliaceae,3,10,□,◘,,■,■■,■■,Herb (s-m),clmlp,B,"18""","12""",S-M,ASIA,,,,,X,,,,,,X,,,E,,E,,G,S,,,,,G,Y,A,,
+Alnus,cordata,Italian alder,Betulaceae,6,,□◘,□■,,■■,■■,■■,Tree (m),std,,30-50',20-35',F,EUR,,,,,,,,,,,X,,,,,,,,G,Y,,,,,,C,,
+Alnus,incana,gray alder,Betulaceae,2,6,□◘,□■,,■,■■,■,Tree (m-l),std,,40-60',25-40',F,EUR,,,,,X,X,,X,X,,X,,,,,,,,G,Y,,,,,,C,,
+Alnus,rugosa,speckled alder,Betulaceae,2,6,□◘,■,,■,■■,■,Shrub (vl-xl),ms,F,20-35',20-35',F,ENA,,,,,X,,,,X,,X,,,,,,,,G,Y,,S,,G,,C,,
+Alnus,serrulata,smooth alder,Betulaceae,5,8,□◘,■,,■,■■,■,Shrub (vl),ms,"F, Sk",12-20',12-20',F,ENA,,,,,X,,,,,,X,,,,,,,,G,Y,,S,,G,,C,,
+Althaea,officinalis,marsh mallow,Malvaceae,3,7,□,◘■,,,■■,,Herb (m-l),clmp,T,2-4',2-4',,EURA,,X,,,X,,,,,,X,,G,G,,,,,E,,,,,,,,,
+Amelanchier,alnifolia,saskatoon (berry),Rosaceae,2,,□,◘,,■■,■■,■■,Shrub (m-vl),ms,St,5-15',5-15',M,WNA,,,,X,X,,,X,X,X,X,E,,,,,,,S,,,F,,G,,,,P
+Amelanchier,bartramiana,Bartram's shadblow,Rosaceae,4,7,□,◘■,■,■■,■■,,Shrub (s-l),ms,,2-8',2-8',,ENA,,,,,X,,,X,,,X,E,,,,,,,S,,,B,,G,,,,P
+Amelanchier,lamarkii,juneberry,Rosaceae,3,,□,◘,,,■,,Shrub (xl),ms,"F, Sk",35-50',20-35,M,ENA,,,,,X,X,,X,,,X,E,,,,,,,S,,,F,,G,,,,P
+Amelanchier,obovalis,southern juneberry,Rosaceae,6,8,□,◘,,■,■■,,Shrub (l),ms,,8-10',8-10',M,ENA,,,,,,,,X,,,X,E,,,,,,,S,,,F,,G,,,,P
+Amelanchier,stolonifera,running juneberry,Rosaceae,4,,□,□◘,,■■,■■,,Shrub (m),Rtkt,St,4-6',indef.,M,ENA,,,,X,X,,,X,,,X,E,,,,,,,S,,,B,,G,,,,P
+Amorpha,canescens,leadplant,Fabaceae,3,,□,□◘,,,,■■,Shrub (s),ms,"T, Sk",3',3-6',M,PRAI,,X,X,,,X,X,X,,,X,,,,,,,,,Y,,,Y,G,,,,P
+Amorpha,fruticosa,false indigo,Fabaceae,3,,□,□■,,,■■,■■,Shrub (l-vl),ms,"F, Sk",6-20',12-20',M,ENA,X,X,,,X,X,,X,,,X,,,,,,,,,Y,,,Y,G,,,,P
+Amorpha,nana,fragrant false indigo,Fabaceae,3,6,□,□◘,,■,■■,■,Shrub (s),ms,,3',3',M,PRAI,,X,X,,,,,,,,X,,,,,,,,,Y,,,Y,G,,,,P
+Amorphophallus,riveri var. konjac,konjac,Araceae,6,10,□◘,◘,,,■■,,Herb (l),clmp,C,4-5',3-4',S,ASIA,,,,,,,,X,,,X,,,,Y,,,,G,,,,,,,,,P
+Amphicarpaea,bracteata,hog peanut,Fabaceae,3,9,□■,◘,,■■,■■,,Vine (l),a r vine,Fb,1-3',1-3',M-F,ENA,,,,,X,X,X,X,X,,,,,,G,,,Y,,Y,,,Y,,Y,,,
+Andropgon,gerardii,big bluestem,Poaceae,3,,□◘,□◘,,■■,■■,,Herb (vl),clmp,C,5-6',3-4',M,ENA,,X,X,X,,,,,,,,,,,,,,,,,,,Y,G,,,H,
+Antennaria,dioica,pussytoes,Asteraceae,3,9,□◘,□◘,,■■,■■,,Herb (p-s),E clmp,St,"2-10""",12',S,EURA,,X,X,,,,,X,,,X,,,,,,,,F,,,,Y,S,Y,,,
+Antennaria,plantaginifolia,pussytoes,Asteraceae,3,10,□◘,□◘,,■■,■■,,Herb (p-s),run,St,"2-10""",indef.,M,ENA,,X,,,,X,,X,,,X,,,,,,,,F,,,,Y,S,Y,,,
+Apios,americana,groundnut,Fabaceae,3,10,□◘,◘,,■■,■■,,Vine (l),r v/skr,Tu,4-8',indef.,M-F,ENA,,X,,,X,X,,,,,X,,,,E,,,,,Y,,,Y,G,Y,,S,
+Apios,fortunei,Fortune's groundnut,Fabaceae,U,,□◘,◘,■■,■■,■■,■,Vine (l),r vine,Tu,3-6',3-6',M-F,ASIA,,,,,X,,,,X,,,,,,E,,,,,Y,,,Y,G,,,,
+Apios,priceana,Price's groundnut,Fabaceae,6,,□◘,◘,,■■,■■,,Vine (l),r vine,Tu,3-6',3-6',M-F,ENA,,,,,X,,,,X,,,,,,E,,,,,Y,,,Y,G,,,,
+Aquilegia,canadensis,clombine,Ranunculaceae,3,8,□■,◘,,■■,■■,■■,Herb (s-m),clmp,T,1-2',1-2',S,ENA,,,,,,X,,X,X,,X,,,,,,,,,,,F,,G,,,,
+Arabis,caucasica,rock cress,Brassicaceae,4,10,□,□◘,,■,■■,■■,Herb (s),clmp,,"6-12""","18""",M-F,EURA,,,,,,,,,,,X,,,F,,,,,G,,,,,G,Y,,,
+Aralia,cordata,udo,Araliaceae,4b,,□◘,◘,,■■,■■,■,Herb (vl),clmp,,6-9',6-9',F,ASIA,,,,,X,,,X,,,X,,,E,,,,,E,,,,,S,,,,P
+Aralia,elara,angelica tree,Araliaceae,4b,,□◘,◘,,■■,■■,■,Shrub (vl),Ctkt,Sk,15-30',15-20',S-M,ASIA,,,,,X,,,X,X,,X,,,Y,,,,,,,,S,,S,,,,P
+Aralia,hispida,bristly sarsaparilla,Araliaceae,3,,□◘,□◘,,■■,■■,,Shrub (s),Ctkt,Sk,1-3',1-3',M,ENA,,,,,,X,X,X,,,,,,,,F,F,,F,,,S,,S,,,T,P
+Aralia ,nudicaulis,wild sarsaparilla,Araliaceae,3,,□◘,◘,,■■,■■,,Herb (s),run,R,"12-18""",indef.,M,ENA,,,,,,X,,X,X,,X,,,,,,F,,F,,,F,,S,Y,,,P
+Aralia,racemosa,spikenard,Araliaceae,4,,□■,◘,,■■,■■,,Shrub (m),ms,Sk,3-6',3-6',M,ENA,,,,,X,,,,X,,,,,,,F,F,,E,,,,,S,,,,P
+Araucaria,araucana,monkey puzzle tree,Araucariaceae,6,8,□,◘,,,■■,,Tree (l),E std,,100',50',S,SAM,,,,,,,,,,X,X,,E,,,,,,,,,S,,,,,,
+Arbutus,unedo,strawberry tree,Ericaceae,8,,□,◘,,,■■,,Shrub (l-vl),ms,,6-20',6-9',S-M,EUR,,,,,X,,,X,X,,X,G,,,,,,,,,,F,,,,,,
+Arctostaphylos,uva-ursi,bearberry,Ericaceae,2,,□,□◘,■,■■,■■,,Shrub (p),E Rmat,F,"2-6""",indef.,S-M,ENA,,,,,,,X,X,X,,X,F,,,,,F,,E,,,F,,G,Y,,,
+Armoracia,rusticana,horseradish,Brassicaceae,2,8,□◘,◘,,■■,■■,■■,Herb (l),run,T,3',indef.,F,EURA,X,,,X,,,,,,,X,,,F,,E,,,E,,,,,,,A,P,P
+Arnoglossum,atriplicifolia,pale Indian plantain,Asteraceae,4,,◘■,◘,,■■,■■,,Herb (l),clmp,,3-6',3',,ENA,X,,,,X,,X,X,,,X,,,,,,,,F,,,,,S,,,,
+Aronia,arbutifolia,red chokeberry,Rosaceae,4b,,□◘,◘■,,■■,■,,Shrub (l),ms,"F, Sk",6-12',6',S,ENA,,X,,,X,X,,X,,,X,F,,,,,,,F,,,F,,G,,,,
+Aronia,melanocarpa,black chokeberry,Rosaceae,3,,□◘,□■,,■■,■,,Shrub (s-m),Ctkt,"F, Sk",1.5-6',6-10',S-F,ENA,,,,X,,X,,X,,,X,G,,,,,,,F,,,B,,G,Y,,,
+Artemisia,dracunculus var. sativa,French tarragon,Asteraceae,5,,□,◘,,,■■,■■,Herb (l),clmp,R,4',4',S,EURA,X,X,,,,,,,,,X,,,,,E,,,G,,,,Y,S,,A,H,P
+Artemisia,frigida,fringed sagebrush,Asteraceae,2,,□◘,□◘,,■■,■■,■,Herb (s),clmp,Fb,"18""","18""",S-M,ENA,X,X,X,,,,,,,,X,,,,,,,,F,,,,Y,S,Y,A,H,P
+Artemisia,stelleriana,beach wormwood,Asteraceae,3,9,□◘,□◘,,,■■,■,Herb (m),clmp,R,2',3',S,ENA,X,,,,,,,,,,X,,,,,,,,G,,,,Y,S,Y,A,H,P
+Arundinaria,gigantea,canebrake bamboo,Poaceae,6,9,□◘,◘■,,,■■,■■,Bamboo (l-vl),E run,R,10-20',indef.,F,ENA,,,,,,,,X,X,,X,,,G,,,,,,,,S,,,,,E,P
+Arundinaria,gigantea tecta,dwarf canebrake,Poaceae,6,9,□◘,◘■,,,■■,■■,Bamboo (m),E run,R,6',indef.,F,ENA,,,,,,,,X,X,,X,,,G,,,,Y,,,,S,,,,,"E, H",P
+Asarum,canadense,wild ginger,Aristolochiaceae,3,8,◘■,◘,,■■,■■,■,Herb (p-s),run,R,"4-8""",indef.,S,ENA,,,,,,,,,X,,X,,,,,F,,,F,,,,,,Y,,,P
+Asarum,shuttleworthii,Shuttleworth's ginger,Aristolochiaceae,6,9,◘■,◘,,■■,,,Herb (p-s),E clmp,R,"4-8""","14""",S,ENA,,,,,,,,,X,,X,,,,,F,,,,,,,,,Y,,,P
+Asarum,splendens,Chinese evergreen wild ginger,Aristolochiaceae,5,9,◘■,◘,,■■,■■,,Herb (p-s),run,R,"4-8""",indef.,S,ASIA,,,,,,,,,X,,X,,,,,F,,,,,,,,,Y,,,P
+Asclepias,incarnata,swamp milkweed,Asclepiadaceae,3,9,□,◘■,■■,■■,■■,,Herb (l),clmp,R,3-5',1-2',M,ENA,,X,,,X,,,,,,X,,,,,,,,F,,,,,G,,,,P
+Asclepias,syriaca,milkweed,Asclepiadaceae,3,8,□,□■,,■■,■■,,Herb (l),run,R,3-4',indef.,F,ENA,,,,X,X,,,,,,X,,,G,,,,F,F,,,,,G,,,"E,P,D",P
+Asimina,triloba,pawpaw,Annonaceae,5b,7,□■,◘,,,■■,■■,Tree (s-m),skr,"T, H, Sk",20-35',20-35',S-M,ENA,,,,,,X,,,X,,,E,,,,,,,F,,,S,,,,C,,P
+Asparagus,officinalis,asparagus,Asparagaceae,2,9,□,◘,,,■,■,Herb (l),clmp,R,3-5',"18-36""",M,EURA,X,X,X,X,,,,,,,X,,,E,,,,,G,,,,,G,,,D,P
+Asphodeline,lutea,yelllow asphodel,Asphodelaceae,6,9,□◘,◘,,,■■,,Herb (m),clmp,Tu,2-3',2-3',M,EURA,,,,,,,,,,,X,,,G,G,,,E,F,,,,,,,,,
+Aster,divaricatus,white wood aster,Asteraceae,4,8,□■,◘,,■■,■■,,Herb (m),clmp,"Fb, St",2',2',M-F,ENA,,,,,,,X,X,X,,,,,,,,,,,,,,Y,S,,,,
+Aster,novae-angliae,New England aster,Asteraceae,3,9,□◘,◘■,,■,■■,,Herb (l),clmp,R,4-5',4-5',F,ENA,X,X,,,X,,,,,,X,,,,,,,,,,,,Y,S,,,,
+Astragalus,canadensis,Canadian milk vetch,Fabaceae,3,8,□◘,□◘,,,■■,,Herb (s-l),run,,1-4',indef.,M,ENA,,,X,,X,,,X,,,X,,,,Y,,,,,Y,,,Y,G,,,,P
+Astragalus,crassicarpus,groundplum milk vetch,Fabaceae,3,8,□,□◘,,,,,Herb (s),clmp,R,"6-15""",1-2',S,PRAI,,,X,,,,X,X,,,X,,,,,,,G,,Y,,,Y,G,,,,P
+Astragalus,glycyphyllos,milk vetch,Fabaceae,4,8,□,□◘,,,■■,■■,Herb (s),clmp,,"8-12""",3-5',F,EUR,X,X,,X,X,X,,,,,X,,,,,,,,Y,Y,,,Y,G,Y,,,P
+Astragalus,membranaceous,huang-qi,Fabaceae,5,,□,□◘,,,■■,■■,Herb (m),clmp,,2-3',2-3',,ASIA,,,,,X,X,,,,,X,,,,,,G,,E,Y,,,Y,G,,,,P
+Athyrium,filix-femina,lady fern,Dryopteridaceae,3,8,◘■,◘■,,■■,■■,,Herb (m-l),clmp,R,"18-36""","18-24""",M,ENA,,X,,,,,,,X,,X,,,,,,,,F,,,,,,Y,,,
+Atriplex,halimus,saltbush,Chenopodiaceae,7,,□,□◘,,,■■,■■,Shrub (m),ms,,6',9',,EUR,,,,,,,,,,,X,,,E,,,,,F,,,,,,,,H,P
+Balsamorhiza,sagittata,balsamroot sunflower,Asteraceae,4,,□◘,□◘,,■,■■,,Herb (s-m),clmp,T,1-2',1-2',M,WNA,,,X,,,,,X,,,X,,,Y,Y,,,,,,,,Y,S,Y,,,
+Baptisia,australis,wild blue indigo,Fabaceae,4,8,□◘,□◘,■■,■■,■■,,Herb (m-l),clmp,T,2-4',2-5',S-M,ENA,X,,X,,X,,X,X,X,,X,,,,,,,,,Y,,,Y,G,,,,P
+Baptisia,tinctoria,yellow wild indigo,Fabaceae,4,9,□◘,□◘,,■,■■,,Herb (m),clmp,"T, Fb",2-3',2-5',S-M,ENA,,X,X,,,,X,X,,,X,,,,,,,,G,Y,,,Y,G,,,,P
+Bellis,perennis,English daisy,Asteraceae,4,10,□◘,◘,,,■■,,Herb (p),clmlp,"Fb, R","6""",1-2',S-M,EUR,X,X,,,,,,,,,X,,,G,,,,,G,,,,Y,S,Y,,D,
+Berberis,canadensis,Canada barberry,Berberidaceae,4,8,□◘,□◘,,,■■,■■,Shrub (m),ms,,5',3-5',M,ENA,,,,,,,X,X,X,,X,F,,,,,,,E,,,F,,G,,,"T, D",P
+Beta,vulgaris maritima,sea beet,Chenopodiaceae,7,,□◘,◘,,■■,■■,■■,Herb (m),clmp,T,3',2',S,EUR,X,,,,,,,,,,X,,,E,,,,,G,,,,,,,,H,P
+Betula,allegheniensis,yellow birch,Betulaceae,3,7,□■,◘,■,■■,■■,■■,Tree (l),std,"F, H",50-75',35-50',M,ENA,,,,,,,,,X,,X,,,,,,E,G,G,,Y,,,G,,C,D,
+Betula,lenta,black birch,Betulaceae,3,,□◘,□◘,■,,,,Tree (l),std,H,50-75',35-50',M,ENA,,,,,X,,,,X,,X,,,,,,E,G,G,,Y,,,G,,C,D,
+Blephilia,ciliata,downy wood mint,Lamiaceae,4,7,◘,□◘,■,■■,■,,Herb (s-m),clmp,,1-2',1-2',,ENA,X,X,,,X,,X,X,X,,X,,,,,G,G,,,,,,Y,G,,A,,
+Blephilia,hirsuta,hairy wood mint,Lamiaceae,4,7,◘,◘,■,■■,■,,Herb (s-m),clmp,,1-2',1-2',,ENA,,,,,,,,X,,,X,,,,,G,G,,,,,,Y,G,,A,,
+Borago,officinalis,borage,Boraginaceae,3,,□,◘,,■■,■■,,Herb (a),a clmp,,1-2',"9-12""",F,EURA,X,,,,,,,,,,,,,G,,,,G,F,,,,Y,G,,,D,
+Brassica,oleracea,wild cabbage,Brassicaceae,7,,□,◘,,,■■,,Herb (m),clmp,F,3',2',F,EUR,,,,,,,,,,,X,,,G,,,,Y,S,,Y,,Y,G,,,,P
+Brassica,oleracea (acephala group),tree collards,Brassicaceae,7,,□,◘,,,■■,,Herb (l-vl),clmp,F,3-9',3-5',F,CULT,,,,,,,,,,,X,,,G,,,,,S,,Y,,Y,G,,,,P
+Brassica,oleracea (botrytis group),perennial broccoli 'nine star',Brassicaceae,7,,□◘,◘,,,■■,,Herb (m),clmp,F,"18-36""","18-36""",F,CULT,,,,,,,,,,,X,,,G,,,,G,S,,Y,,Y,G,,,,P
+Bunias,orientalis,turkish rocket,Brassicaceae,4,,□◘,□◘,,,■■,,Herb (m),clmp,,18-36',1-2',F,EURA,X,X,X,,,,,,,,X,,,G,,,,G,,,,,,,,,,P
+Bunium,bulbocastanum,earth chestnut,Apiaceae,5,,□,◘,,,■■,■■,Herb (m),clmp,Tu,2',1-2',M,EUR,,X,,,,,,,,,X,,,,E,F,,,,,,,Y,S,,,,
+Calamintha,nepeta,calamint savory,Lamiaceae,6,10,□,◘,,,■■,■■,Herb (m),run,St,2',indef.,M,EUR,X,X,,X,,,X,X,X,X,X,,,,,Y,G,,G,,,,,,Y,A,,
+Callirhoe,involucrata,purple poppy mallow,Malvaceae,4,,□◘,□◘,,■■,■■,■■,Herb (p-s),clmp,Tu,"3-10""",4-5',M,WNA,,,X,,,,,,,,X,,,F,G,,,,,,,,,,Y,,,
+Calycanthus,floridus,Carolina allspice,Calycanthaceae,5,,□■,◘■,,,■■,■,Shrub (l),Ctkt,"F, Sk",6-12',6-12',S-M,ENA,,,,,,,,X,X,,X,,,,,Y,,,F,,,S,,,,,,P
+Camassia,cusickii,Cusick's camass,Hyacinthaceae,5,8,□◘,◘■,,,,,Herb (m),clmp,B,1-2',1',,WNA,,X,,,,,,,,,X,,,,Y,,,,,,,,,G,,,,P
+Camassia,leichtlinii,wild hyacinth,Hyacinthaceae,5,8,□◘,◘■,,,■■,,Herb (s-m),e run,B,"18-28""","18-28""",,WNA,,X,X,,,,X,X,,,X,,,,G,,,,,,,,,G,,,,P
+Camassia,quamash,camass,Hyacinthaceae,4,,□,◘■,,■■,■■,■,Herb (s-m),e run,B,1-2',1-2',,WNA,,X,,,,,X,X,,X,X,,,,G,,,,,,,,,G,,,,P
+Campanula,carpatica,Carpathian bellflower,Campanulaceae,3,8,□◘,◘,,,■■,■■,Herb (s),clmp,Fb,"8-10""","18""",S,EURA,,X,,,,,,,,,X,,,G,,,,Y,,,,,,G,Y,,,
+Campanula,glomerata,clustered bellflower,Campanulaceae,3,,□◘,◘,,,■■,■■,Herb (m),clmp,,3',2',F,EURA,X,X,,X,,,,,,,X,,,G,,,,Y,,,,,,G,,,,
+Campanula,portenschlagiana,Dalmation bellflower,Campanulaceae,3,7,□◘,◘,,,■■,■■,Herb (p-s),run,,"6-9""",indef.,M-F,EURA,X,,,,,,,,,,X,,,G,,,,Y,,,,,,G,Y,,E,
+Caragana,arborescens,Siberian pea shrub,Fabaceae,2,7,□,□◘,,■■,■■,■■,Shrub (l-vl),ms,,8-20',"12-18""",M-F,ASIA,X,,,,,X,,X,,,X,,,,,,,F,,Y,,F,Y,G,,,T,
+Caragana,frutex,Russian pea shrub,Fabaceae,2,7,□,□◘,,■■,■■,■■,Shrub (l),ms,,6-10',6-10',S,ASIA,,,,,X,X,,,X,X,X,,,,,,,,,Y,,F,Y,G,,,T,
+Caragana,pygmaea,pygmy pea shrub,Fabaceae,3,7,□,□◘,,■■,■■,■■,Shrub (m),ms,,4',4',S-M,ASIA,,X,X,,,,,,,,X,,,,,,,,,Y,,F,Y,G,,,T,
+Cardamine,bulbosa,spring cress,Brassicaceae,4,8,□◘,◘■,,,■■,,Herb (s-m),clmp,Tu,"8-20""","8-20""",,ENA,,X,,,,,,X,X,,X,,,G,G,G,,,F,,,,,,,,,P
+Cardamine,diphylla,toothwort,Brassicaceae,3,8,◘■,◘,,,■■,,Herb (s),e run,R,"8-16""",indef.,M,ENA,,,,,,,,,X,,X,,,,,G,,,F,,,,,,,,,P
+Cardamine,pratensis,cuckoo flower,Brassicaceae,3,7,□◘,◘■,,,■■,,Herb (s-m),clmp,R,"8-20""","8-20""",,ENA,,X,,,,,,,X,,X,,,E,,,,,F,,,,,,,,D,P
+Carex,pensylvanica,Pennsylvania sedge,Cyperaceae,4,8,□■,□◘,,■■,■■,,Herb (s),E clmp,,"10""","12""",S-M,ENA,,,,,,,,X,X,X,X,,,,,,,,,,,,,G,Y,,,
+Carya,illinoinensis,pecan,Juglandaceae,6,9,□,◘,,,■,■,Tree (l-vl),std,T,75-120',75-120',S,ENA,,,,,,,,,X,,X,,E,,,,,,S,,Y,,,G,,C,H,
+Carya,laciniosa,shellbark hickory,Juglandaceae,6,,□,◘■,,,■,■,Tree (l),std,T,70-85',30-50',M,ENA,,,,,,,X,,X,,X,,E,,,,,,S,,Y,,,G,,C,H,
+Carya,ovata,shagbark hickory,Juglandaceae,4,7,□◘,□◘,,,■,,Tree (l),std,T,70-85',30-50',S,ENA,X,,,,,X,,X,X,,X,,E,,,,,,S,,Y,,,G,,C,H,
+Carya,x hybrids,hican,Juglandaceae,5,,□,◘,,,■■,,Tree (l),std,T,75',50',S,CULT,,,,,,,,,,,X,,E,,,,,,S,,Y,,,G,,C,H,
+Castanea,dentata,American chestnut,Fagaceae,4,,□◘,□◘,■■,■■,,,Tree (l-vl),std,T,75-100'+,50-75',M-F,ENA,,,,,,,,,X,,X,,E,,,,,,S,,,,,G,,C,,
+Castanea,mollissima,Chinese chestnut,Fagaceae,5,,□,□◘,,■■,■■,■,Tree (m),std,,25-35',25-35',S-M,ASIA,,,,,,X,,,X,,X,,E,,,,,,S,,,,,G,,C,,
+Castanea,pumila,chinquapin,Fagaceae,5b,,□,□◘,,■■,■,,Shrub (l-vl),ms,"H, F, Sk",6-20',6-20',M,ENA,X,,,,X,,,X,X,X,X,,E,,,,,,S,,,,,G,,C,,
+Ceanothus,americanus,New Jersey tea,Rhamnaceae,3b,,□◘,□◘,■,■■,■■,,Shrub (s),ms,F,3',3-6',S-M,ENA,,,X,,X,,,X,X,,X,,,,,,E,,E,Y,,F,,G,,,,
+Ceanothus ,prostratus,mahala mint,Rhamnaceae,7,10,□◘,□◘,,■■,■■,■,Shrub (p),E Cmat,F,"3-6""",10',S-M-F,WNA,,,,,,,,,X,,X,,,,,,,,,Y,,,,G,Y,,,
+Celtis,laevigata,sugarberry,Ulmaceae,6,,□,◘■,,■■,■■,■■,Tree (l),std,F,60-100',60-100',M-F,ENA,,,,,,,,,X,,X,F,,,,,,,,,,F,,G,,C,H,
+Celtis,occidentalis,hackberry,Ulmaceae,3,7,□◘,□■,,,■,■■,Tree (l),std,H,75-100',75-100',M-F,ENA,,X,,,,X,,X,X,,X,F,,,,,,,,,,F,,G,,C,H,
+Centrathus,ruber,red valerian,Valerianaceae,6,,□◘,◘,,,■■,,Herb (m),clmp,,3',3',,EURA,X,,,,,,,,,,X,,,G,,,,,,,,,,,,,,
+Cephalotaxus,harringtonia,plum yew,Cephalotaxaceae,6,,□■,◘,,,■■,,Shrub (l-vl),F ms,,10-15',10-15',S,ASIA,,,,,,,,,X,,X,F,Y,,,,,,,,,S,,,,,,
+Cercis,canadensis,redbud,Fabaceae,5,9,□■,□◘,,,■,■■,Tree (s-m),std,T,20-35',20-35',S-M,ENA,,,,,X,,,X,X,,,,,G,,,,E,F,,,F,,G,,,,
+Cercocarpus,montanus,mountain mahogany,Rosaceae,6,,□,□,,,■■,■■,Shrub (l-vl),ms,,6-20',6-20',S,WNA,,,,,X,,,X,,,X,,,,,,,,,Y,,,,G,,,,P
+Chaenomeles,speciosa,flowering quince,Rosaceae,4,8,□,◘,,■■,■■,■,Shrub (l),ms,,6-10',6-10',M-F,ASIA,,,,,,,,,,,X,G,,,,,,,F,,,,,G,,,,P
+Chamaemelum,nobile,chamomile,Asteraceae,5,8,□,□◘,,■■,■■,■,Herb (p),Cmat,,"3-6""",1',M-F,EURA,X,,,,,,,,,,X,,,,,,E,,E,,Y,,Y,S,Y,,,
+Chasmanthium,latifolium,northern sea oats,Poaceae,5,,□◘,◘,,■■,■■,,Herb (l),clmp,,3',2-3',M,ENA,,X,X,X,,,,X,,,,,,,,,,,,,,,Y,G,,,H,
+Chenopodium,bonus-Henricus,good King Henry,Chenopodiaceae,3,9,□◘,◘,,■,■■,■,Herb (s-m),clmlp,"T, Fb",1-3',"12-18""",M,EUR,X,,,X,,X,,,,,X,,,E,,,,G,F,,,,,,,,"D, H",P
+Chimaphila,maculata,pipsissewa,Pyrolaceae,4,7,◘,□◘,,■■,,,Herb (p),E run,R,"4""",indef.,S,ENA,,,,,,,,,X,,,,,,,,,,E,,,,,,Y,,,
+Chimaphila,umbellata,pipsissewa,Pyrolaceae,4,7,◘,□◘,,■■,,,Herb (p-s),E run,R,"6-10""",indef.,S,ENA,,,,,,,X,X,X,X,X,,,,,,,,E,,,,,,Y,,,
+Chrysogonum,virginianum,green and gold,Asteraceae,5,9,□◘,◘,,■,■■,,Herb (p),E clmp,R,"3-6""","18""",M-F,ENA,,,,,,X,,,X,,X,,,,,,,,,,,,Y,S,Y,,,
+Chrysosplenium,americanum,golden saxifrage,Saxifragaceae,3,8,◘■,◘■,■■,■■,■■,■■,Herb (p),Cmat,"Fb, St","2-5""",2'+,S-M,ENA,,,,,,,,,X,,X,,,Y,,,,,,,,,,S,Y,,,
+Cichorium,intybus,chicory,Asteraceae,3,,□◘,◘,■,■■,■■,■■,Herb (s-l),clmlp,T,1-4',1-2',F,EURA,X,,,X,,X,,,,,X,,,E,,,G,,G,,Y,,Y,G,,,D,
+Claytonia,caroliniana,Carolina spring beauty,Portulacaceae,4,8,◘■,◘,,■■,,,Herb (p-s),e Rmat,C,"3-6""",indef.,,ENA,,,,,,,,X,,,,,,G,G,,,,,,,,,G,,,,
+Claytonia,megarhiza,alpine spring beauty,Portulacaceae,2,,□,◘,,■■,,,Herb (p),clmp,T,"4""","4""",,WNA,,,,,,,,,,,X,,,G,G,,,,,,,,,G,,,,
+Claytonia,virginica,spring beauty,Portulacaceae,4,8,◘■,◘■,,■■,■■,,Herb (p-s),e run,C,"3-12""",indef.,,ENA,,,,,,,,,X,,X,,,G,G,,,,,,,,,G,,,,
+Clinopodium,glabellum,smooth-leaved satureja,Lamiaceae,6,,□◘,◘,,■■,,,Herb (m),E clmp,Fb,1-2',4',F,ENA,X,,,,,,,,,,X,,,,,,,,Y,,,,,G,Y,A,,
+Clintonia,borealis,bluebead llily,Convallariaceae,3,7,◘■,◘,■■,■■,,,Herb (s),clmp,R,"6-18""","6-12""",S,ENA,,,,,,,,,X,X,X,,,F,,,,,F,,,,,,,,,
+Clitoria,mariana,butterfly pea,Fabaceae,6,9,□◘,□◘,,,,,Vine (l),r vine,,2-3',2-3',,ENA,,,,,X,,X,X,X,,X,,,,,,,,,Y,,,Y,,,,,
+Colocasia,esculenta,taro,Araceae,7,10,□◘,◘■,,■■,■■,,Herb (l),clmlp,C,4-5',4-5',S,ASIA,,,,,,,,,,,X,,,G,E,,,,F,,,,,,,,,P
+Colutea,arborescens,bladder senna,Fabaceae,5,7,□,□◘,,,■■,■■,Shrub (l-vl),ms,,6-15',6-9',M-F,EUR,X,,,,X,X,,X,,,X,,,,,,,,F,Y,,,Y,,,,D,P
+Commelina,erecta,Virginia dayflower,Commelinaceae,6,9,□◘,◘,,,■■,,Herb (m-l),clmp,R,"18-36""","18-36""",F,ENA,,X,,,X,,X,,X,X,X,,,F,,,,,,,,,,,,,,
+Comptonia,pellegrina,sweetfern,Myricaceae,2,6,□◘,□,■,■■,■,,Shrub (s),Ctkt,"F, Sk",3',4-8',S-M,ENA,X,,,X,,,X,X,,X,X,,,,,,G,,G,Y,,S,,,,,H,
+Conoclinium,coelestinum,hardy ageratum,Asteraceae,6,10,□◘,◘■,,■■,■,,Herb (s-m),run,R,"12-30""",indef.,M-F,ENA,,,,,X,,X,,X,,X,,,,,,,,,,,,Y,G,Y,,E,
+Conopodium,majus,pig nut,Apiaceae,6,,□◘,◘,,■■,■■,,Herb (s),clmp,Tu,1',1',,EUR,,X,,,,X,,,X,,,,,,G,,,,,,,,Y,S,,,,
+Coptis,trifolia var groenlandica,goldthread,Ranunculaceae,2,7,◘■,◘■,■■,,,,Herb (p),E run,R,"2-4""",indef.,S,ENA,,,,,X,,,,X,X,X,,,,,,,,E,,,,,,Y,,,
+Coreopsis,auriculata,dwarf tickseed,Asteraceae,5,9,□◘,◘,■■,■■,■■,,Herb (s),clmp,"Fb, St","6-12""",1'+,M,ENA,,,,,,X,,X,X,,,,,,,,,,,,,,,S,Y,,,
+Coreopsis,rosea,pink tickseed,Asteraceae,4,9,□,□■,,■■,■,,Herb (m),run,"Fb, St",1-2',indef.,M-F,ENA,,,,,,,,,,,X,,,,,,,,,,,,,S,Y,,,
+Coreopsis,verticillata,thread-leaved coreopsis,Asteraceae,3,9,□,□◘,,■■,■■,,Herb (m),clmp,"Fb, St","18""",3',M-F,ENA,,X,,,,X,X,X,,,,,,,,,,,,,,,,S,Y,,,
+Cornus,canadensis,bunchberry,Cornaceae,2,,□■,◘,■,■■,,,Shrub (p-s),E Rmat,Sk,"4-9""",indef.,S,ENA,,X,,,,,X,,X,X,X,G,,,,,,,F,,,F,,,Y,,,
+Cornus,florida,flowering dogwood,Cornaceae,5b,9,□■,◘,,■,■,,Tree (m),std,"F, H",35',35',S-M,ENA,,,,,,,,,X,,X,,,,,,,,F,,Y,F,,,,C,,
+Cornus,kousa,kousa dogwood,Cornaceae,5,,□◘,◘,,,■■,■■,Tree (m),std,,30',20',S,ASIA,,,,,X,,,,,,X,G,,,,,,,,,,F,,,,,,
+Cornus,mas,cornelian cherry,Cornaceae,4,,□,◘,,,■■,■■,Tree (s),std,,20',20',M,EURA,,,,,,,,,,,X,G,,,,,,,Y,,,F,,,,,,
+Cornus,paniculata,gray dogwood,Cornaceae,3,,□◘,□◘,,,■■,■■,Shrub (l),Ctkt,"F, Sk",6-12',6-12',S-M,ENA,,,,X,X,X,,,,,X,,,,,,,,,,,B,,S,,,,
+Cornus,sericea,red osier dogwood,Cornaceae,4,,□,◘■,,,■■,■,Shrub (l),ms,Sk,6-12',6-12',F,ENA,X,,,,X,,,,X,,X,,,,,,,,,,,B,,S,,,,
+Corylus,americana,American hazel,Corylaceae,3,,□,◘,,,■■,■,Shrub (l),Ctkt,"F, Sk",6-12',6-20',M-F,ENA,X,,,,X,X,,X,X,,X,,G,,,,,,S,,,S,,G,,C,H,
+Corylus,avellana,European filbert,Corylaceae,4,,□,◘,,■■,■■,■■,Shrub (vl),Ctkt,Sk,12-25',25',M-F,EUR,,,,,,X,,X,X,,,,G,,,,,,S,,,S,,G,,C,H,
+Corylus,chinensis,Chinese tree hazel,Corylaceae,7,,□,◘,,,■■,■■,Tree (vl),std,,120',75',,ASIA,,,,,,,,,X,,,,G,,,,,,S,,,,,G,,C,H,
+Corylus,colurna,tree hazel,Corylaceae,5,,□,◘,,■,■■,■■,Tree (l),std,,80',30',M,EURA,,,,,,,,,X,,X,,G,,,,,,S,,,,,G,,C,H,
+Corylus,cornuta,beaked hazel,Corylaceae,3,,□,◘,,,■■,■,Shrub (l),Ctkt,"F, Sk",6-12',6-12',M,ENA,X,,,X,X,X,,X,X,,X,,G,,,,,,S,,,S,,G,,C,H,
+Corylus,x colurnoides,trazel,Corylaceae,5,,□,◘,,,■■,■■,Tree (l),std,,60',40',,CULT,,,,,,,,,,,X,,G,,,,,,S,,,,,G,,C,H,
+Corylus,x hybrids,"filazal, hazelbert",Corylaceae,3,,□,◘,,,■■,,Shrub (vl),Ctkt,Sk,12-20',12-15',,CULT,,,,,,,,,,,X,,E,,,,,,S,,,S,,G,,C,H,
+Crambe,maritima,sea kale,Brassicaceae,4,8,□◘,□◘,,,■,■,Herb (m),clmp,T,2-3',3',M-F,EUR,,,,,,,,,,,X,,,E,,,,G,G,,,,,G,,,,P
+Crataegus,aestivalus,mayhaw,Rosaceae,6,9,□,□■,,■■,■■,,Tree (m),std,,27',27',,ENA,,,,,,,,,,,X,E,,,,,,,E,,,F,,G,,C,T,
+Crataegus,mollis,downy hawthorn,Rosaceae,3b,,□,□◘,,,■■,■■,Tree (m),std,T,35-50',35-50',S-M,PRAI,,X,,,,X,,X,,,,F,,,,,,,E,,,F,,G,,C,T,
+Crataegus,pinnatifida,Chinese haw,Rosaceae,6,,□,□◘,,,■■,■■,Tree (s),std,T,21',21',,ASIA,,,,X,X,,,,,,X,G,,,,,,,E,,,F,,G,,C,T,
+Crataegus,punctata,dotted hawthorn,Rosaceae,4b,,□,□◘,,,■■,■■,Tree (s-m),std,T,20-35',20-35',S-M,ENA,,X,,,X,X,,,X,,X,F,,,,,,,E,,,F,,G,,C,T,
+Crocus,sativus,saffron crocus,Iridaceae,6,,□◘,◘,,■,■■,■■,Herb (p),run,C,"6""","6""",,EURA,,,,,,,,,,,X,,,,,E,,,F,,,,,G,,,,P
+Cryptotaenia,canadensis,honewort,Apiaceae,5,,◘■,◘,,,■■,,Herb (s-m),clmp,"Fb, R",1-3',1-2',M,ENA,,,,,X,,,,X,,X,,,G,Y,,,,,,,,Y,S,,,,
+Cryptotaenia,japonica,mitsuba,Apiaceae,5,,◘■,◘,,■■,■■,■,Herb (s-m),clmp,"T, F",1-3',1-2',M,ASIA,,,,,,,,,X,,X,,,E,Y,E,,,,,,,Y,S,,,,
+Cudrania,tricuspidata,che fruit,Moraceae,5,10,□,□◘,,,■■,,Tree (s),spr,,15-25',15-25',S,ASIA,,,,,,,,,,,X,G,,,,,,,F,,,S,,,,,,
+Cunila,origanoides,Maryland dittany,Lamiaceae,4,9,◘,◘,■,■,,,Herb (s),clmlp,,"8-16""","6-12""",,ENA,,,,,X,,X,X,,,,,,,,Y,G,,G,,,,Y,G,,A,,
+Cydonia,oblonga,quince,Rosaceae,5,9,□,◘,,,■■,,Tree (d-s),std,F,10-20',10-20',M,EURA,,,,,X,X,,,,,X,E,,,,,,,F,,,,,G,,,,P
+Cymopterus,newberryi,corkwing,Apiaceae,7,,□,□,,,,,Herb (m),clmp,T,1',1',,WNA,,,X,,,,,,,,X,,,,E,,,,,,,,Y,S,,,,
+Cymopterus,purpurascens,gamote,Apiaceae,6,,□,□,,,,,Herb (m),clmp,T,1',1',,WNA,,,X,,,,,,,,,,,,E,,,,,,,,Y,S,,,,
+Cytisus,decumbens,prostrate broom,Fabaceae,6,8,□,□◘,,■■,■■,■■,Shrub (p-s),Cmat,,"4-8""",3'+,M,EUR,,,,,,,,,,,X,,,,,,,,,Y,,,Y,G,Y,,,P
+Darmera,peltata,Indian rhubarb,Saxifragaceae,5,7,□◘,◘■,,■■,■■,■■,Herb (l),clmp,R,3-6',3-6',,WNA,,,,,,,,X,X,,X,,,Y,,,,,,,,,,G,,,,
+Darmera,peltata nana,dwarf Indian rhubarb,Saxifragaceae,5,7,□◘,◘■,,■■,■■,■■,Herb (s-m),clmp,R,"12-28""","12-28""",S-M,WNA,,,,,,,,X,X,,X,,,Y,,,,,,,,,,G,Y,,,
+Decaisnea,fargesii,blue bean,Lardizabalaceae,7,,□◘,◘,,,■■,,Shrub (vl),ms,,15',10-15',M,ASIA,,,,,X,,,,X,,X,Y,,,,,,,,,,,,,,,,
+Dennstaedtia,punctilobula,hay-scented fern,Dennstaedtiaceae,3,8,□■,◘,,■,■■,,Herb (s-m),run,R,1-2',indef.,F,ENA,,X,,,,X,X,X,X,,X,,,,,,,,,,,,,,Y,,E,
+Desmodium,canadense,showy tick trefoil,Fabaceae,3,6,□◘,□◘,■,■■,■■,■■,Herb (m-l),clmp,T,2-6',1-3',M-F,ENA,,X,X,,X,,,X,,,X,,,,,,,,,Y,,,Y,,,,D,
+Desmodium,glutinosum,pointed-leaved tick trefoil,Fabaceae,3,9,□◘,◘,,,,,Herb (s-m),clmp,,2-3',2-3',M-F,ENA,,,,,,,,X,,,X,,,,,,,,,Y,,,Y,,,,D,
+Dicentra,eximia,dwarf bleeding heart,Fumariaceae,3,9,◘,◘,,■■,■■,,Herb (s),clmp,"Fb, R","12-18""","12-18""",S-M,ENA,,,,,,,,X,X,,X,,,,,,,,,,,,,,Y,,,P
+Dioscorea,batatas,Chinese yam,Dioscoreaceae,5,10,□◘,◘,,,■■,,Vine (l),r vine,"T, Fl",10',10',M-F,ASIA,X,X,,,X,,,X,X,,X,,,,E,,,,E,,,,,,,,"S, D",
+Dioscorea,japonica,jinenjo,Dioscoreaceae,4,10,□,◘,,,■■,,Vine (l),r vine,Tu,9',9',M-F,ASIA,,,,,,X,,X,,,X,,,G,E,,,,G,,,,,,,,,
+Diospyros,kaki,kaki persimmon,Ebenaceae,7,10,□,◘,,,■■,,Tree (m),std,T,25-40',25-40',S-M,ASIA,,,,,,,,,,,X,E,,,,,,,G,,,,,G,,,,P
+Diospyros,virginiana,American persimmon,Ebenaceae,5,9,□,□◘,,■,■■,■■,Tree (l),skr,"T, Sk",50-75',35-50',S-M,ENA,,X,,X,,X,X,X,X,,,E,,,,,,,G,,,F,,G,,C,,P
+Diplotaxis,muralis,sylvetta arugula,Brassicaceae,7,,□,□◘,,■■,■■,,Herb (s),clmp,,1',1',,EUR,X,,,,,,,,,,X,,,G,,,,,Y,,,,,,,,,
+Diplotaxis,tenuifolia,sylvetta arugula,Brassicaceae,7,,□,□◘,,■■,■■,,Herb (s),clmp,,1',1',,EUR,X,,,,,,,,,,X,,,G,,,,,Y,,,,,,,,,
+Dryas,octopeleta,mountain avens,Rosaceae,2,4,□◘,□◘,,■,■■,■,Shrub (p),E Cmat,Fb,"3-6""",2',M,ENA,X,,,,,,,,,,X,,,,,,Y,,,Y,,,,,Y,,,
+Dryopteris,marginalis,marginal wood fern,Dryopteridaceae,3,9,◘■,◘,,■■,■■,,Herb (m),E clmp,R,"18""","36""",S,ENA,,,,,,,,,X,,X,,,,,,,,,,,,,,Y,,,P
+Echinacea,purpurea,purple coneflower,Asteraceae,3,8,□◘,◘,,,■■,,Herb (l),clmp,T,3-4',1-2',M-F,ENA,,X,X,,,,,X,,,,,,,,,F,,E,,,,Y,G,,,,
+Eleagnus,commutata,silverberry,Eleagnaceae,2,6,□,□◘,,,■■,■■,Shrub (l),ms,"F, St",6-12',6-12',M-F,WNA,,,X,,,,,,,,X,F,,,,,,,,Y,,F,,G,,,D,
+Eleagnus,multiflora,goumi,Eleagnaceae,5,8,□◘,□◘,,■■,■■,■■,Shrub (l),ms,,6-8',6-8',M-F,ASIA,,,,,X,,,X,,,X,G,,,,,,,,Y,,F,,G,,,D,
+Epigaea,repens,trailing arbutus,Ericaceae,2,,□◘,□◘,■,■■,,,Shrub (p),E Rmat,"T, H","4-6""",indef.,S,ENA,,,,,,,X,X,X,X,X,,,,,,,G,G,,,,,G,Y,,,
+Epilobium,angustifolium,fireweed,Onagraceae,1,8,□◘,◘■,,,■■,,Herb (p-s),clmp,"Fb, R","4-16""",2-6',F,ENA,X,X,,,,X,X,,X,,X,,,G,,,,,F,,,F,,G,,,D,
+Epilobium,latifolium,river beauty,Onagraceae,1,4,□,◘■,,,■■,,Herb (l),run,Fb,4-6',4-6'+,,ENA,,,,,,,,,,,X,,,G,,,,,,,,,,,,,,
+Equisetum,scirpoides,dwarf horsetail,Equisetaceae,1,9,□◘,◘■,,■■,■■,■,Herb (s),E run,R,"6-8""",indef.,S,ENA,,,,,X,,,,X,,X,,,,,,,,F,,Y,,,,Y,,,P
+Equisetum,sylvaticum,woodland horsetail,Equisetaceae,1,5,◘■,◘■,,■,■■,■,Herb (s-m),E run,R,"10-20""",indef.,M,ENA,,X,,,X,,,,X,,X,,,,,,,,F,,Y,,,,Y,,,
+Erigenia,bulbosa,pepper and salt,Apiaceae,4,7,◘■,◘,,,■■,,Herb (p-s),clmp,Tu,"4-9""","4-5""",,ENA,,,,,,,,,X,,,,,,Y,,,,,,,,Y,S,,,,
+Erigeron,pulchellus,Robin's plantain,Asteraceae,4,,□◘,◘,,■■,■■,,Herb (s-m),clmp,St,"12-20""","12-20""",M-F,ENA,,X,,,,,,X,,,X,,,,,,,,,,,,Y,S,,,,
+Eryngium,maritimum,sea holly,Apiaceae,4b,,□,□◘,,■■,■■,■■,Herb (m),clmp,T,2',2',M,EUR,,,,,,,,,,,X,,,G,G,,,,,,,,Y,S,,,,
+Erythronium,americanum,trout lily,Liliaceae,4,7,◘■,◘,,■■,■■,,Herb (p-s),e Clmp,"C, St","5-10""","5""",S-M,ENA,,,,,X,,,,X,,X,,,F,G,,,,F,,,,,,,,,P
+Eucalyptus,gunnii,cider gum,Myrtaceae,7,,□◘,□◘,,,,,Tree (l),std,,80',25',M-F,AUST,,,,,,,,X,,,X,,,,,,E,E,Y,,,,,,,A,,P
+Fagus,grandifolia,American beech,Fagaceae,3b,8,□■,◘,,■,■,,Tree (l),skr,"F, H, Sk",75-100',50-75',S-M,ENA,,,,,,,,,X,,X,,F,G,,,,,F,,Y,,,G,,C,,P
+Fagus,sylvatica,European beech,Fagaceae,5,,□■,◘,,■■,■■,■■,Tree (l),skr,Sk,80',80',S-M,EUR,,,,,,,,,X,,X,,F,G,,,,,F,,Y,,,G,,C,,P
+Foeniculum,vulgare,fennel,Apiaceae,6,,□,□◘,,,■■,,Herb (l),clmp,,3-5',1-3',M-F,EUR,X,X,X,,,,,,,,,,,,,E,G,,E,,,,Y,S,,,D,
+Fragaria,chiloensis,beach strawberry,Rosaceae,4,9,□,◘,,■,■■,,Herb (p),E run,"Fb, St","6""",indef.,F,WNA,,,,,,,,,,,X,E,,,,,G,,,,Y,F,,G,Y,,,
+Fragaria,moschata,musk strawberry,Rosaceae,5,,□◘,◘,,■,■■,,Herb (p-s),E run,"Fb, St","6-12""",indef.,M-F,EUR,,,,,,X,,,,,,E,,,,,G,,F,,Y,F,,G,Y,,,
+Fragaria,vesca,woodland strawberry,Rosaceae,5,10,□◘,◘,,■,■■,,Herb (s),E run,"Fb, St","8""",indef.,M-F,EUR,X,,,,,X,X,X,,,X,E,,,,,G,,F,,Y,F,,G,Y,,,
+Fragaria,vesca alpina,alpine strawberry,Rosaceae,5,10,□◘,◘,,■,■■,,Herb (s),E clmp,"Fb, St","10""","10""",M-F,EUR,,,,,,X,,,,,X,E,,,,,G,,F,,Y,F,,G,,,,
+Fragaria,virginiana,wild strawberry,Rosaceae,4,9,□◘,◘,,■,■■,,Herb (p-s),E run,"Fb, St","4-12""",indef.,F,ENA,,X,,,,X,,X,,,X,E,,,,,G,,F,,Y,F,,G,Y,,,
+Fragaria,x ananassa,garden strawberry,Rosaceae,3,10,□,◘,,■,■■,,Herb (s),E run,"Fb, St","6-12""",indef.,M-F,CULT,X,,,,,,,,,,X,E,,,,,G,,F,,Y,F,,G,Y,,,
+Fritillaria,camschatcensis,Kamchatka lily,Liliaceae,3,,□◘,◘,,■,■■,■,Herb (m),clmp,"B, R",1-3',"6""",M,WNA,,X,,,,,,X,,,X,,,,G,,,,,,,,,,,,,
+Galax,urceolata,galax,Diapensiaceae,5,9,◘■,◘,,■,■■,■,Herb (s),E run,"Fb, St","6-12""",indef.,M,ENA,,,,,,,,X,,,,,,,,,,,,,,,,,Y,,,
+Gaultheria,hispidula,creeping snowberry,Ericaceae,3,,◘■,◘,■,■■,,,Shrub (p),E Rmat,"F, St","1-4""",indef.,S,ENA,,,,,,,,,X,X,X,G,,,,,Y,,F,,,F,,,Y,,,
+Gaultheria,procumbens,winterberry,Ericaceae,3,,◘■,◘,■,■■,■,,Shrub (p),E Rmat,"F, St","2-6""",indef.,S,ENA,,,,,,,X,X,X,X,,E,,,,,E,,F,,Y,F,,,Y,,,
+Gaultheria,shallon,salal,Ericaceae,6,8,□◘,◘,■,■■,■,,Shrub (s-m),E Rtkt,"F, St",1-6',indef.,M,WNA,,,,,,,,,,X,X,G,,,,,,,F,,,B,,G,Y,,,
+Gaylussacia,baccata,black huckleberry,Ericaceae,3,,□◘,◘,■,■■,■■,,Shrub (s),Rtkt,Sk,3',indef.,S,ENA,,,,,X,,X,,X,,X,G,,,,,,,,,,F,,G,,,,
+Gaylussacia,brachycera,box huckleberry,Ericaceae,5,9,□◘,◘,■,■,,,Shrub (p-s),E Rmat,,"6-8""",indef.,S,ENA,,,,,,,,,X,,X,G,,,,,,,,,,F,,G,Y,,,
+Genista,pilosa,silky-leaf woodwaxen,Fabaceae,6,8,□◘,□◘,,■,■■,■■,Shrub (s),ms,,1',3-4',S-M,EUR,,,,,,,,,,,X,,,,,,,,,Y,,,Y,G,Y,,,P
+Genista,pilosa procumbens,trailing silky-leaf woodwaxen,Fabaceae,6,8,□◘,□◘,,■,■■,■■,Shrub (p),Cmat,,"2""",3',S-M,EUR,,,,,,,,,,,X,,,,,,,,,Y,,,Y,G,Y,,,P
+Genista,sagittalis,arrow broom,Fabaceae,3,8,□◘,□◘,,■,■■,■■,Shrub (p-s),Cmat,,"4-18""",2-3',S-M,EUR,,,,,,,,,,,X,,,,,,,,,Y,,,Y,G,Y,,,P
+Genista,tinctoria,dyer's greenwood,Fabaceae,4,7,□,□◘,,■,■■,■■,Shrub (s),ms,,2-3',2-3',S,EUR,,X,,,X,X,,,X,X,X,,,,,,,,F,Y,,,Y,G,,,,P
+Geranium,maculatum,wild geranium,Geraniaceae,3,8,□◘,◘,■,■■,,,Herb (s-m),clmp,R,1-2',2-3',F,ENA,,,,X,X,,,,X,,X,,,,,,,,G,,,,,,Y,,,
+Geum,rivale,water avens,Rosaceae,3,,□◘,◘■,,,■■,,Herb (m),clmp,R,2',1-2',F,ENA,,,,,,,,,X,,X,,,,,,F,,F,,,,,G,,,,
+Geum,urbanum,clove root,Rosaceae,7,,□◘,◘■,,,■■,,Herb (m),clmp,R,2',1-2',S,EURA,,,,,,X,,,X,,X,,,F,,Y,Y,,F,,,,,G,,,,
+Ginkgo,biloba,maidenhair tree,Ginkgoaceae,5,,□,◘,,,■■,■■,Tree (vl),std,,130',10-30'+,S-M,ASIA,,,,,,,,,,,X,,G,,,,F,,E,,,,,,,C,,P
+Gleditsia,triacanthos,honey locust,Fabaceae,4b,9,□,□■,,,■■,■,Tree (l),std,"T, H, F",50-75',50-75',F,ENA,,,,X,,,,X,X,,X,,F,,,,,,F,,,,,G,,C,T,
+Glycyrrhiza,glabra,licorice,Fabaceae,6,,□◘,◘,,,■■,■,Herb (l),run,St,3-6',indef.,S-M,EURA,,,X,,,,,,,,X,,,,,G,E,,E,Y,Y,,Y,G,,,P,
+Glycyrrhiza,lepidota,American licorice,Fabaceae,3,8,□◘,□◘,,,■■,■■,Herb (m),run ,R,1-3',indef.,F,PRAI,X,X,X,X,,,,,,,X,,,,F,G,G,,E,Y,Y,,Y,G,,,"E, P",
+Glycyrrhiza,uralensis,Chinese licorice,Fabaceae,5,9,□◘,◘,,,■■,■,Herb (m),run,R,2',indef.,F,ASIA,,X,X,,,,,,X,,X,,,,,G,E,,E,Y,Y,,Y,G,,,P,
+Gymnocarpium,dryopteris,oak fern,Dryopteridaceae,2,7,◘■,■,,■,■■,■,Herb (s),run,R,"8-11""",indef.,S,ENA,,,,,,,X,X,X,,X,,,,,,,,,,,,,,Y,,,
+Halesia,tetraptera,silverbell,Styracaceae,4,,□■,◘,,■■,■■,,Tree (s-m),clmp,,20-40',15-30',M,ENA,,,,,,,,X,,,,Y,,,,,,,,,,,,,,C,,
+Hedysarum,boreale,sweet vetch,Fabaceae,3,,□,◘,,,■■,,Herb (s-m),clmp,T,"10-24""","20""",,ENA,,,,,,,,,,,X,,,,G,,,,,Y,,,Y,,,,,
+Helianthus,decapetalus,thin-leaved sunflower,Asteraceae,2,8,□◘,◘,,■,■■,,Herb (l),run,R,3-5',indef.,F,ENA,,X,,,X,,,X,,,X,,,,,,,,,,,,Y,S,,,,P
+Helianthus,giganteus,giant sunflower,Asteraceae,2,9,□◘,◘■,,■■,■■,,Herb (l-vl),run,R,5-12',indef.,F,ENA,,X,,,X,,X,X,,,,,,,,,,Y,S,,,,Y,S,,,,P
+Helianthus,giganteus var subtuberosum,Indian potato,Asteraceae,2,9,□◘,◘■,,■■,■■,,Herb (l-vl),run,R,5-12',indef.,F,ENA,,X,,X,,X,X,,,,,,,,G,,,Y,S,,,,Y,S,,,,P
+Helianthus,maximilianii,Maximilian sunflower,Asteraceae,2,,□◘,◘■,,■,■■,,Herb (m-vl),run,"Tu, R",2-12',indef.,F,ENA,X,X,X,,,,,,,,,,,,G,,,Y,S,,,,Y,S,,,"E, All",P
+Helianthus,tuberosus,Jerusalem artichoke,Asteraceae,2,10,□◘,◘,,■■,■■,■,Herb (vl),run,Tu,6-12',indef.,F,ENA,X,X,,,X,,,,,,,,,,E,,,,S,,,,Y,S,,,E,P
+Helianthus,x laetiflorus,showy sunflower,Asteraceae,4,,□◘,□◘,,■■,■■,,Herb (l-vl),run,Tu,4-8',indef.,F,ENA,X,X,X,,X,,,X,,,X,,,,G,,,,,,,,Y,S,,,,P
+Heliopsis,helianthoides,oxeye sunflower,Asteraceae,4,,□◘,◘,,,,,Herb (l),clmp,,4-5',3-5',,ENA,X,X,,,X,X,,X,,,X,,,,,,,,,,,,Y,S,,,,
+Hemerocallis,fulva,tawny daylily,Hemerocallidaceae,2,9,□◘,□◘,,■■,■■,■■,Herb (m-l),clmp,"Tu, R",2-6',3-5',F,ASIA,X,X,,,X,,,,X,,X,,,F,F,,,E,G,,,F,,,Y,,"E, P",P
+Hemerocallis,hybrids,daylily,Hemerocallidaceae,3,9,□◘,□◘,,■■,■■,■■,Herb (s-l),clmp,"Fb, Fl",1-4',2-5',S-F,EURA,,,,,,,,,,,X,,,F,F,,,E,G,,,F,,,Y,,"E, P",P
+Hemerocallis,lilio-asphodelus,yellow daylily,Hemerocallidaceae,3,9,□◘,□◘,,■■,■■,■■,Herb (m-l),clmp,"Tu, R",3-5',3',F,ASIA,X,X,,,X,,,X,X,,X,,,F,F,,,E,G,,,F,,,Y,,P,P
+Heracleum,sphondylium,cow parsnip,Apiaceae,2,9,□◘,◘,,■■,■■,,Herb (l-vl),clmp,T,4-10',4-8',M-F,ENA,X,X,,,X,X,,,X,,X,,,F,G,Y,,,,,,,Y,S,,,,P
+Heuchera,americana,alum root,Saxifragaceae,4,9,◘,◘,,■■,,,Herb (p-s),E clmp,R,"3-12""",1',S,ENA,,,,,,,,,X,,,,,,,,,,F,,,F,,S,Y,,,
+Hibiscus,syriacus,rose of Sharon,Malvaceae,5,9,□◘,◘,,,■■,,Shrub (l),ms,,6-12',6-10',M-F,ASIA,,,,,X,,,,,,X,,,F,,,,F,Y,,,F,,,,,,
+Hieracium,venosum,rattlesnake weed,Asteraceae,3,,□◘,◘,■,■■,,,Herb (s-m),clmp,,1-3',1-2',F,ENA,,X,,,X,X,X,X,,,,,,,,,,,F,,,,,S,,,,
+Hippophae,rhamnoides,sea buckthorn,Eleagnaceae,3,7,□◘,□◘,,■,■■,■,Shrub (l-vl),Ctkt,Sk,10-20',10-20',M-F,EURA,,,,,,,,,,,X,G,,,,,,,S,Y,,B,,,,,D,
+Houttuynia,cordata,hot tuna,Saururaceae,5,8,□◘,◘■,,■■,■■,■,Herb (s),run,R,"12-15""",indef.,F,ASIA,,,,,,,,,,,X,,,,,G,,G,E,,,,,,Y,,E,
+Hovenia,dulcis,Japanese raisin tree,Rhamnaceae,6,9,□,◘,,,■■,■■,Tree (m),std,,30-45',30-45',M,ASIA,,,X,,,,X,,,,X,,,,,,,E,F,,,,,,,,,
+Humulus,lupulus,hops,Cannabidaceae,4,,□,◘,,,■■,,Vine (h),r vine,R,15-30',15-30',M-F,ENA,X,,,,X,,X,,X,,X,,,G,,,E,,E,,,,,,,,,
+Hydrophyllum,virginianum,Virginia waterleaf,Hydrophyllaceae,4,7,◘■,◘,,■■,■■,,Herb (s-m),clmp,R,1-3',1-2',M,ENA,,,,,,,X,,X,,,,,G,,,,,F,,,,,G,,,,
+Hylotelephium,telephium,orpine,Crassulaceae,3,9,□◘,□◘,,■■,■■,■,Herb (s),E clmp,Tu,"12-18""","18-24""",M,EURA,X,,,,X,X,,,,,X,,,F,,,,,F,,,,,,,,D,
+Ilex,glabra,inkberry,Aquifoliaceae,5,,□◘,◘,,■■,■■,,Shrub (l),E Ctkt,,10',10',M,ENA,,,,,X,,,,,,X,,,,,,,,,,,B,,G,,,,P
+Illicium,floridanum,Florida star anise,Illiciaceae,6b,10,□■,◘■,,■■,■■,,Shrub (l),E Ctkt,Sk,6-10',4-6',M,ENA,,,,,,X,,X,X,,,,,,,G,,,G,,,S,,,,,,
+Indigofera,decora,Chinese indigo,Fabaceae,5,,□,◘,,■■,■■,■,Shrub (s),ms,,"18""",6-8',F,ASIA,,,,,,,,,,,X,,,,,,,,,Y,,,Y,,Y,,,P
+Ipomoea,leptophylla,bush morning glory,Convolvulaceae,4,7,□,□◘,,,■■,,Herb (s-l),clmp,Tu,1-4',1-4',,PRAI,,,X,,,,,,,,,,,,F,,,,G,,,,,G,,,,P
+Ipomoea,pandurata,wild potato vine,Convolvulaceae,6,9,□◘,◘,,,■■,,Vine (l),r vine,"T, Tu",4-6',4-6',,ENA,,X,,X,X,X,,X,,,X,,,,F,,,,G,,,,,G,,,,P
+Iris,cristata,dwarf crested iris,Iridaceae,4,8,□■,◘,,■■,■■,■,Herb (p-s),Rmat,R,"4-8""",indef.,M-F,ENA,,,,,,,,,X,,X,,,,,,,,Y,,,F,,,Y,,,P
+Jeffersonia,diphylla,twinleaf,Berberidaceae,5,8,□■,◘,,,■■,■,Herb (s),clmp,Fb,"10-12""","16""",S,ENA,,,,,,,,X,X,,X,,,,,,,,G,,,,,,Y,,,
+Juglans,ailantifolia var. cordiformis,heartnut,Juglandaceae,5,,□,◘,,,■,■■,Tree (l),std,,60',60',M,ASIA,,,,,,,,,X,,X,,E,,,,,,S,,Y,,,G,,,,
+Juglans,cinera,butternut,Juglandaceae,3,,□,◘,,,■,■■,Tree (l),std,T,50-75',50-75',M-F,ENA,,,,,,,,,X,,X,,E,,,,,,S,,Y,,,G,,C,,
+Juglans,nigra,black walnut,Juglandaceae,4b,7,□,□◘,,,■,■■,Tree (l),std,T,75-100',75-100',F,ENA,,,,,,,,X,X,,X,,E,,,,,,S,,Y,,,G,,C,All,
+Juglans,regia,Carpathian walnut,Juglandaceae,5,7,□,◘,,,■■,■,Tree (l),std,,100',75-100',M-F,EURA,,,,,,,,,X,,X,,E,,,,,,S,,Y,,,G,,,,
+Juglans,regia,English walnut,Juglandaceae,7,9,□,◘,,,■■,■,Tree (vl),std,,100'+,75-100',M-F,EURA,,,,,,,,X,X,,X,,E,,,,,,S,,Y,,,G,,,,
+Juglans,x bixbyi,buartnut,Juglandaceae,4,,□,◘,,,■■,■,Tree (l),std,,60',60',M-F,CULT,,,,,,,,,,,X,,E,,,,,,S,,Y,,,G,,,,
+Lactuca,perennis,perennial lettuce,Asteraceae,5,,□◘,◘,,,■■,,Herb (m),clmp,,2',1',F,EURA,X,,,,,,,,,,X,,,F,,,,,E,,,,Y,G,,,D,
+Laportaea,canadensis,wood nettle,Urticaceae,3,8,◘■,◘,,■,■■,■,Herb (s-m),run,,1-3',1-3',M,ENA,,,,,,,,,X,,X,,,E,,,E,,F,,,,,,,,St,P
+Lathyrus,japonicus maritima,beach pea,Fabaceae,3b,7,□,□◘,,,■■,,Vine (l),r v/skr,R,1-2',indef.,M,ENA,X,,,,,,,,,,X,,,,,,,Y,,Y,,,Y,G,Y,,,P
+Lathyrus,latifolius,everlasting pea,Fabaceae,4,9,□◘,□◘,,■,■■,■,Vine (l),r v/skr,R,6',indef.,F,EUR,X,X,,,X,X,,,,,X,,,,,,,,,Y,,,Y,G,Y,,,P
+Lathyrus,linifolius var. montanus,bitter vetch,Fabaceae,6b,,□◘,□◘,,■■,■■,■,Vine (l),r vine,,1-2',1-2',,EUR,,,,,X,X,,X,X,,,,,,G,,,Y,,Y,,,Y,G,,,,P
+Lathyrus,tuberosus,earth-nut pea,Fabaceae,6b,,□◘,◘,,■,■■,■,Vine (l),r v/skr,Tu,3-4',indef.,M-F,EUR,,X,,,,X,,,,,X,,,,G,,,,,Y,,,Y,G,,,,P
+Lespedeza,bicolor,bush clover,Fabaceae,4,7,□,□◘,,■■,■■,■■,Shrub (l),ms,,6-9',6-9',,ASIA,,X,X,,X,X,X,X,X,,,,,F,,,Y,Y,,Y,,,Y,G,,,,
+Lespedeza,capitata,round-headed bush clover,Fabaceae,4,8,□◘,◘,,,■■,,Herb (m-l),clmp,,2-4',2-4',,ENA,,X,X,,X,,,X,,,X,,,,,,,,F,Y,,,Y,G,,,,
+Levisticum,officinale,lovage,Apiaceae,4,,□◘,◘,,■,■■,■,Herb (l-vl),clmp,R,4-8',4-8',M-F,EURA,X,X,,,,X,,,,,X,,,G,,G,,,F,,,,Y,S,,,,
+Ligusticum,canadense,Canada ligusticum,Apiaceae,6,,◘■,◘,,,,,Herb (l),clmp,,3-6',3',,ENA,,,,,,,,,X,,X,,,,,,,,,,,,Y,S,,,,
+Ligusticum,canbyi,osha,Apiaceae,3,,◘■,◘,,,,,Herb (l),clmp,T,4',3',,WNA,,,,,,,,,X,,,,,G,Y,G,,,,,,,Y,S,,,,
+Ligusticum,scoticum,Scotch lovage,Apiaceae,4,,□,□◘,,■■,■■,■■,Herb (m),clmp,T,2',2',,ENA,,,,,,,,,,,X,,,G,Y,,,,F,,,,Y,S,,,,
+Lilium,brownii,Hong Kong lily,Liliaceae,7,,□◘,◘,,,■■,,Herb (l),clmp,B,4',2',S,ASIA,,X,,,X,X,,X,,,X,,,,G,,,,F,,,F,,,,,,
+Lilium,canadense,Canada lily,Liliaceae,3,7,□◘,◘,,■■,,,Herb (l-vl),clmp,"B, St",3-8',3-4',S,ENA,,X,,,,,,X,,,,,,,F,,,,F,,,F,,,,,,
+Lilium,lancifolium,tiger lily,Liliaceae,5,,□◘,◘,,■■,■,,Herb (l),clmp,B,6',2-4',S,ASIA,X,X,,,X,,,,,,X,,,,G,,,,,,,F,,,,,,
+Lilium,longiflorum,white trumpet lily,Liliaceae,7,,□◘,◘,,,■■,,Herb (m),clmp,B,3',1',S,ASIA,,,,,,,,,,,X,,,,G,,,,,,,F,,,,,,
+Lilium,philadelphicum,wood lily,Liliaceae,4,7,□◘,◘,■■,■■,,,Herb (s-m),clmp,"B, St",1-3',1-3',S,ENA,,X,X,,,,X,X,,,X,,,,F,,,,F,,,F,,,,,,
+Lilium,superbum,Turk's-cap lily,Liliaceae,4,8,□◘,◘■,,■■,■,,Herb (l-vl),clmp,"B, St",3-8',4-8'+,S,ENA,,X,,,X,,X,X,X,,,,,,F,,,,,,,F,,,,,,
+Lindera,benzoin,spicebush,Lauraceae,5,8,□■,◘■,■,■■,■,,Shrub (l),ms,H,6-12',6-12',S-M,ENA,,,,,X,,,,X,,X,,,,,G,G,,G,,,F,,,,,,
+Linnea,borealis,twinflower,Caprifoliaceae,3,7,◘,◘,■■,,,,Shrub (p),E Rmat,"Fb, Sk","1-3""",indef.,M,ENA,,,,,X,,,,X,X,X,,,,,,,,F,,,,,,Y,,,
+Lobelia,cardinalis,cardinal flower,Lobeliaceae,4,10,□◘,◘■,■■,■■,■■,,Herb (m),clmp,Fb,3',3-5',,ENA,,,,,,,,,X,,X,,,,,,,,G,,,F,,G,,,,P
+Lomatium,cous,biscuit root,Apiaceae,5,,□,□◘,,,■■,■■,Herb (m-l),clmp,T,"18-36""","18-36""",,WNA,,,,,,,,,,,X,,,F,G,,,,,,,,Y,S,,,,
+Lomatium,dissectum,fern-leaved biscuit root,Apiaceae,5,,□,□◘,,,■,■,Herb (m-l),clmp,T,"18-36""","18-36""",,WNA,,,,,,,,,,,X,,,,G,,,,,,,,Y,S,,,,
+Lomatium,macrocarpum,large-fruited biscuit root,Apiaceae,5,,□,□◘,,,■■,■■,Herb (m-l),clmp,T,"18-36""","18-36""",,WNA,,,X,,,,,,,,X,,,,G,,,,,,,,Y,S,,,,
+Lomatium,nudicaule,biscuit root,Apiaceae,5,,□,□◘,,,,,Herb (m-l),clmp,T,"18-36""","18-36""",,WNA,,,,,,,,X,,,X,,,F,G,,,,,,,,Y,S,,,,
+Lonicera,caerulea var. edulis,edible honeysuckle,Caprifoliaceae,3,,□,◘,,■■,■■,,Shrub (m),Cthk,,5',5',,ASIA,,,,X,,,,,,,,G,,,,,,,,,,F,,G,,,D,P
+Lonicera,kamschatica,honeyberry honeysuckle,Caprifoliaceae,3,8,□◘,◘,,,■■,■,Shrub (m),ms,,5',5',,EURA,,,,,,,,,,,X,G,,,,,,,,,,F,,G,,,D,P
+Lonicera,sempervirens,trumpet honeysuckle,Caprifoliaceae,4,,□◘,◘,,,■■,,Vine (l-h),w vine,,4-15',4-15',M-F,ENA,,,,,X,X,,,,,,,,,,,,,,,,B,,G,Y,,D,P
+Lonicera,villosa,northern fly honeysuckle,Caprifoliaceae,3,,□,◘■,,■■,■■,■,Shrub (s),ms,,1-3',1-3',,ENA,,X,,,,,,,X,,X,G,,,,,,,,,,F,,G,,,D,P
+Lotus,corniculatus cv.,prostrate birds foot trefoil 'Plena',Fabaceae,5,,□◘,□◘,,■■,■■,■■,Herb (p),Cmat,,"1""",1-2',M,EUR,X,,,X,X,,,,,,,,,,,,,,,Y,,,Y,G,Y,,,P
+Lupinus,hybrids,hybrid lupine,Fabaceae,3,,□,◘,■,■■,■■,,Herb (m),clmp,,3-4',2-3',F,CULT,,,,,,,,,,,X,,,,,,,,,Y,Y,,Y,G,,,,P
+Lupinus,perennis,lupine,Fabaceae,3,9,□,□◘,■■,■■,■,,Herb (s-m),clmp,F,1-2',1-2',M,ENA,X,X,X,,,,X,X,,X,X,,,,,,,,,Y,Y,,Y,G,Y,,,P
+Lycopodium,clavatum,running club moss,Lycopodiaceae,1,8,◘,□◘,,■■,■■,■,Herb (s),E run,,"5-12""",indef.,S,ENA,,,,X,X,,X,X,,,,,,,,,,,G,,,,,,Y,,,
+Lycopus,uniflorus,northern bugleweed,Lamiaceae,3,7,□◘,◘■,,■■,■■,,Herb (s-m),clmp,"Tu, R, St","6-24""","6-24""",M,ENA,,X,,,X,,,,,,X,,,,G,,,,,,,,Y,G,,,,
+Maackia,amurensis,Amur maackia,Fabaceae,3,7,□■,□◘,,■■,■■,■■,Tree (s-m),std,,20-30',20-35',S,ASIA,,X,,,X,X,,,,,X,,,,,,,,,Y,,,Y,,,,,P
+Magnolia,virginiana,sweet bay magnolia,Magnoliaceae,5b,9,□■,◘■,,■■,■,,Tree (s-l),E std,H,12-70',12-25',M-F,ENA,,,,,,,,X,X,,X,,,,,Y,,,,,,B,,G,,C,,
+Mahonia,aquifolium,Oregon grape,Berberidaceae,5,,□■,◘,,■■,■■,■■,Shrub (m),E ms,"F, St",3-6',3-6',S,WNA,,,,,X,,,X,,X,X,F,,,,,,,E,,,B,,G,,,T,P
+Mahonia,repens,creeping mahonia,Berberidaceae,5,9,□◘,□◘,,■■,■■,,Shrub (s),E Ctkt,St,1-2',4-5',S,WNA,,X,,,X,,,X,X,X,X,F,,,,,,,,,,B,,G,Y,,T,P
+Maianthemum,canadense,false lily-of-the-valley,Convallariaceae,2,8,□■,◘,■■,■■,,,Herb (p),run,R,"2-4""",indef.,M-F,ENA,,,,,,,X,,X,X,,,,,,,,,F,,,,,,Y,,,
+Malus,baccata,Siberian crabapple,Rosaceae,3,,□,◘,,■■,■,,Tree (s-m),std,,20-50',20-50',M,ASIA,X,,,,,,,,,,X,F,,,,,,,F,,Y,F,,G,,C,,P
+Malus,ioensis,prairie crabapple,Rosaceae,2,,□,◘,,■■,■■,■,Tree (s-m),std,F,20-35',20-35',M,ENA,X,X,,,,X,,X,,,X,F,,,,,,,F,,Y,F,,G,,C,,P
+Malus,pumila,"apple, minidwarf",Rosaceae,4,9,□,◘,,,■■,,Tree (d),std,F,4-6',4-6',M,EURA,,,,,,,,,,,,E,,,,,,,F,,Y,F,,G,,C,D,P
+Malus,pumila,"apple, dwarf",Rosaceae,4,9,□,◘,,,■■,,Tree (d),std,F,5-12',5-12',M,EURA,,,,,,,,,,,,E,,,,,,,F,,Y,F,,G,,C,D,P
+Malus,pumila,"apple, semidwarf",Rosaceae,4,9,□,◘,,,■■,,Tree (d),std,F,12-20',12-20',M,EURA,,,,,,,,,,,,E,,,,,,,F,,Y,F,,G,,C,D,P
+Malus,pumila,"apple, standard",Rosaceae,4,9,□,◘,,,■■,,Tree (d),std,F,25-35',25-35',M,EURA,,,,,,,,,,,,E,,,,,,,F,,Y,F,,G,,C,D,P
+Malva,alcea,mallow,Malvaceae,5,,□◘,□◘,,■■,■■,■■,Herb (m),clmp,T,3',2',,EUR,X,X,,,,X,,,,,X,,,G,,,,G,G,,,,Y,G,,,D,
+Malva,moschata,musk mallow,Malvaceae,4,,□◘,◘,,■■,■■,■■,Herb (m),E clmp,,3',2',F,EUR,X,X,,,,,,,,,X,,,G,,,,G,G,,,,Y,G,,,D,
+Matteucia,struthiopteris,ostrich fern,Dryopteridaceae,2,8,◘■,◘■,■■,■■,■■,,Herb (l),run,R,2-6',indef.,M-F,ENA,,,,,,,,X,X,,X,,,E,,,,,,,,,,,,,,
+Medeola,virginiana,Indian cucumber root,Convallariaceae,3,8,■,◘,■,■■,,,Herb (s),clmp,R,"8-12""","6""",S,ENA,,,,,,,,,X,,X,,,,E,,,,,,,,,,,,,
+Medicago,sativa,alfalfa,Fabaceae,3,,□,◘,,,■,■■,Herb (s-m),clmp,T,1-3',1-3',M,EURA,X,X,,,,,,,,,X,,,,,,G,E,S,Y,Y,,Y,G,,,D,
+Melissa,officinalis,lemon balm,Lamiaceae,5,,□◘,◘,,,■■,■,Herb (s-m),clmp,"Fb, St","14-24""",2'+,M,EURA,X,,,,,,,X,,,X,,,,,E,E,,E,,Y,,Y,G,Y,A,D,
+Mentha,arvensis,American field mint,Lamiaceae,3,8,□◘,◘■,,■,■■,■,Herb (s-m),run,"R, St","6-20""",indef.,F,ENA,,,,,,,X,,X,,X,,,,,E,E,,G,,,,Y,G,Y,A,E,
+Mentha,requienii,Corsican mint,Lamiaceae,6,10,◘■,◘■,,■,■■,■,Herb (p),Cmat,"R, St","1""",1',S,EUR,,,,,,X,,X,X,,X,,,,,E,E,,G,,,,Y,G,Y,A,,
+Mentha,spicata,spearmint,Lamiaceae,4,10,□◘,◘■,,■,■■,■,Herb (s-m),run,"R, St","8-24""",indef.,F,EURA,X,X,,,,,,,,,X,,,,,E,E,,G,,,,Y,G,Y,A,E,
+Mentha,suaveolens,apple mint,Lamiaceae,6,,□◘,◘■,,■,■■,■,Herb (s),run,"R, St","12-18""",indef.,M-F,EURA,X,,,,,,,,,,X,,,,,E,E,,G,,,,Y,G,Y,A,E,
+Mentha,x piperita,peppermint,Lamiaceae,3,10,□◘,◘■,,■,■■,■,Herb (m),run,"R, St",1-2',indef.,F,EURA,X,,,X,,,,,,,X,,,,,E,E,,E,,Y,,Y,G,Y,A,E,
+Mentha,x villosa,Bowle's mint,Lamiaceae,6,,□◘,◘,,■,■■,,Herb (m),run,"R, St",2',indef.,F,EURA,,,,,,,,,,,X,,,,,E,E,,G,,,,Y,G,Y,A,E,
+Mertensia,maritima,oyster plants,Boraginaceae,2,7,□,◘,,,■■,,Herb (s),clmp,T,1',3',,ENA,,,,,,,,,,,X,,,G,G,,,,,,,,,,,,,P
+Mespilus,germanica,medlar,Rosaceae,5,8,□,◘,,■,■■,■,Tree (s),std,,20',20',M,EURA,,,,,X,X,,X,,,,G,,,,,,,,,,,,G,,,,
+Mitchella,repens,partidgeberry,Rubiaceae,4,8,□■,□◘,■■,■■,,,Shrub (p),E Rmat,"Fb, St","1-2""",indef.,S-M,ENA,,,,,,,,X,,X,X,F,,,,,,,G,,,F,,,Y,,,
+Mitella,diphylla,miterwort,Saxifragaceae,4,8,◘■,◘■,,,■■,,Herb (s),clmp,R,"6-12""","8-12""",F,ENA,,,,,,,,X,X,,,,,,,,,,,,,,,S,Y,,,
+Monarda,didyma,bee balm,Lamiaceae,4,9,□◘,◘,,■■,■■,,Herb (l),run,R,3-4',2-6',M-F,ENA,,,,,X,,X,,X,,X,,,,,G,E,G,G,,,F,Y,G,,A,E,
+Monarda,fistulosa,wild bergamot,Lamiaceae,3,9,□◘,□◘,,■■,■■,■,Herb (m-l),run,R,2-4',2-6',F,ENA,X,X,X,,X,X,X,,X,,X,,,,,G,E,,G,,,F,Y,G,,A,,
+Montia,perfoliata,miner's lettuce,Portulacaceae,4,,□,◘,,,■■,,Herb (s),a Rmat,Fb,"6-12""",indef.,M-F,WNA,X,X,,,X,,,X,X,,X,,,E,,,,,,,,,,,Y,,D,
+Montia,sibirica,Siberian miner's lettuce,Portulacaceae,4,,□■,◘■,,■■,■■,,Herb (s),mat,Fb,"8-12""",indef.,M-F,WNA,,X,,,X,,,X,X,,X,,,G,,,,,,,,,,,Y,,D,
+Morus,alba,white mulberry,Moraceae,5,,□◘,□◘,,■,■■,■,Tree (m),std,,40',40',F,EURA,X,,X,,X,X,,,,,X,G,,,,,,,G,,,F,,,,C,"D, H",P
+Morus,nigra,black mulberry,Moraceae,6,,□◘,◘,,■,■■,■,Tree (m),std,,30',50',F,EURA,,,,,,,,,,,X,G,,,,,,,G,,,F,,,,C,"D, H",P
+Morus,rubra,red mulberry,Moraceae,5b,9,□◘,□◘,,,■■,■■,Tree (m),std,"T, H",35-50',35-50',F,ENA,,,,,X,,,X,X,,X,G,,,,,,,G,,,F,,,,C,"D,H",P
+Morus,x hybrid cv.,Geraldi Dwarf' mulberry,Moraceae,5,,□◘,□◘,,,■■,■,Tree (d),std,,8',6-8',F,CULT,,,,,,,,,,,X,E,,,,,,,G,,,F,,,,C,"D, H",P
+Morus,x hybrids,hybrid mulberry,Moraceae,5,9,□,◘,,,■■,■,Tree (m-l),std,,30-60',30-60',F,CULT,,,,,,,,,,,X,E,,,,,,,G,,,F,,,,C,"D, H",P
+Myrica,cerifera,southern bayberry,Myricaceae,6b,9,□◘,◘■,■,■■,■■,,Shrub (l-xl),E ms,St,10-30',10-30',M-F,ENA,,,,,X,,,X,,,X,,,,,Y,G,,G,Y,,B,,G,,,H,
+Myrica,gale,sweet gale,Myricaceae,1,6,□,◘■,■■,■■,,,Shrub (s-m),ms,St,2-6',2-6',S-M,ENA,,,,,X,,,,,,X,,,,,Y,G,,G,Y,,B,,G,,,H,
+Myrica,pensylvanica,northern bayberry,Myricaceae,2,7,□,□◘,,■■,■,,Shrub (l),Ctkt,"H, F, St",6-12',6-12',M-F,ENA,,,,X,,,,X,,X,X,,,,,Y,,,G,Y,,B,,G,,,H,
+Myrrhis,odorata,sweet cicely,Apiaceae,4,,□◘,◘,,■,■■,■,Herb (m),clmp,"T, F",3',3',M,EUR,,X,,,,X,,X,X,,X,,,E,G,E,E,,,,,,Y,S,,A,D,
+Nasturtium,officinale,watercress,Brassicaceae,2,10,□◘,◘■,,,■,■,Herb (s),run,Fb,"6-12""",indef.,M-F,EURA,,,,,,,,,,,X,,,E,,E,,,G,,Y,,,,,,D,P
+Onoclea,sensibilis,sensitive fern,Dryopteridaceae,3,,□◘,◘■,,■■,,,Herb (s-m),run,R,1-2',indef.,F,ENA,,X,,,X,X,,X,,,X,,,,,,,,,,,,,,Y,,E,P
+Opuntia,compressa,prickly pear cactus,Cactaceae,5,9,□,□,,■,■■,■■,Shrub (p-s),Cmat,Fb,"4-8""",3',S,ENA,,X,,,,,,X,,X,X,F,,F,,,,F,G,,,,,G,,,T,
+Origanum,vulgare hirtum,oregano,Lamiaceae,4,9,□,□◘,,,■■,■,Herb (s-m),clmp,R,1-2',1-4',M-F,EURA,X,,,,,,,X,X,,X,,,,,E,Y,,E,,,,Y,G,Y,A,,
+Osmorhiza,claytonii,sweet cicely,Apiaceae,4,,◘■,◘,,■■,■■,,Herb (s-m),clmp,"Fb, Fl",1-3',1-2',,ENA,,,,,X,,,,X,,X,,,,,G,,,E,,,,Y,S,,,,
+Osmorhiza,longistylis,anise root,Apiaceae,4,,◘■,◘,,■■,■■,,Herb (s-m),clmp,"Fb, Fl",1-3',1-2',,ENA,,,,,,,,,X,,X,,,,G,G,,,E,,,,Y,S,,,,
+Oxalis,grandis,great wood sorrel,Oxalidaceae,5,,◘■,◘,,,,,Herb (s-m),run ,R,"8-36""",indef.,,ENA,,,,,,,,X,X,,X,,,G,,,,G,G,,,,,,,,,
+Oxalis,montana,wood worrel,Oxalidaceae,3,,◘■,◘,,■■,■■,,Herb (p),run,R,"2-6""",indef.,M-F,ENA,,,,,,,,,X,X,,,,G,,,,G,G,,,,,,Y,,,
+Oxalis,oregana,red wood sorrel,Oxalidaceae,7,10,◘■,◘,,■■,■■,,Herb (s),clmp,R,"10""",2-3',M-F,WNA,X,,,,,,,,X,,X,,,G,,,,G,G,,,,,,Y,,,
+Oxalis,violacea,violet wood sorrel,Oxalidaceae,3,,◘,◘,,■■,■■,,Herb (p-s),clmp,B,"4-8""",1-2',F,ENA,,,,,,,,,X,,,,,G,,,,G,G,,,,,,,,D,
+Oxyria,digyna,mountain sorrel,Polygonaceae,2,8,□◘,◘,,■■,■■,,Herb (s),clmp,R,"2-12""","12""",M,ENA,X,,,,,,,,,,X,,,E,,,,,G,,,,,,,,D,P
+Pachysandra,procumbens,Allegheny spurge,Buxaceae,5,8,◘■,◘,,,■,,Herb (s),clmp,R,"6-12""","6-10""",S-M,ENA,,,,,,,,,X,X,X,,,,,,,,,,,,,,Y,,,
+Panax,quinquefolius,American ginseng,Araliaceae,4,7,◘■,◘,■,■■,,,Herb (s),clmp,"T, Fl","6-16""",1',S,ENA,,,,,,,,,X,,X,,,,,,G,,E,,,,,S,,,,
+Panax,trifolius,dwarf ginseng,Araliaceae,4,,◘■,◘,■,■■,,,Herb (p),run,Tu,"6""","6""",S,ENA,,X,,,,,X,X,X,,,,,,,,G,,G,,,,,S,,,,
+Parthenium,integrifolium,wild quinine,Asteraceae,4,,□◘,□◘,,,,,Herb (s-l),clmp,Fl,1-4',13',,ENA,X,,X,,X,,,X,,,X,,,,,,,,G,,,,,S,,,,P
+Passiflora,incarnata,maypop,Passifloraceae,6,10,□,□◘,■,■■,■,,Vine (h),r v/skr,St,10-30',indef.,F,ENA,X,X,,,X,X,,,X,,X,G,,,,,G,,E,,,F,,,,,"E,S",
+Perideridia,gairdneri,yampa,Apiaceae,5,,□◘,◘,,■■,■,,Herb (m-l),clmp,Tu,"18-36""","12-18""",,WNA,,X,,,,X,,X,X,,,,,,E,Y,,,,,,,Y,S,,,,
+Persea,borbonia,red bay,Lauraceae,6,9,□◘,◘,,■■,■■,,Tree (m-l),E std,,40-70',40',M,ENA,,,,,,,,,X,,X,,,,,G,Y,,,,,S,,G,,,,
+Petasites,japonicus,fuki,Asteraceae,4,9,◘,◘,,■,■■,■,Herb (m-l),run,R,2-4',indef.,F,ASIA,,,,,,,X,X,X,,,,,G,,,,,F,,,,Y,S,Y,,"E, P",
+Petasites,japonicus giganteus,giant fuki,Asteraceae,4,,◘■,◘■,,■,■■,■,Herb (l),run,R,5-6',indef.,F,ASIA,,,,,,,,X,X,,,,,G,,,,,F,,,,Y,S,,,E,
+Phaseolus,polystachios,wild bean,Fabaceae,6,10,□◘,□◘,,■■,■■,,Vine (l),r vine,,1-3',1-3',M,ENA,,,,,X,,,X,X,X,,,,,,,,Y,,Y,,F,Y,G,Y,,,
+Phlox,divaricata,wild blue phlox,Polemoniaceae,4,9,□■,◘,,■■,■■,,Herb (s),E clmp,Fb,"12-16""","18-36""",M-F,ENA,,,,,,,,X,X,,X,,,,,,,,,,,F,,,Y,,,
+Phlox,nivaris,trailing phlox,Polemoniaceae,6,9,□◘,□◘,,■■,■■,,Herb (s),clmp,Fb,"12""","18""",M,ENA,,,,,X,,,X,X,X,,,,,,,,,,,,F,,,Y,,,
+Phlox,stolonifera,creeping phlox,Polemoniaceae,4,9,◘■,◘,,■■,■■,,Herb (p-s),E run,"Fb, St","3-12""",indef.,M-F,ENA,,,,,,,,,X,,X,,,,,,,,,,,F,,,Y,,,
+Phlox,subulata,moss pink,Polemoniaceae,4,9,□,□◘,,■■,■■,■■,Herb (p),E clmp,Fb,"4-6""",2',M-F,ENA,,X,,,,,,X,X,,X,,,,,,,,,,,F,,,Y,,,
+Phyllostachys,dulcis,sweetshoot bamboo,Poaceae,7,,□◘,◘,,,■■,■■,Bamboo (vl-xl),E run,R,20-40',indef.,F,ASIA,,,,,X,X,,X,,,,,,E,,,,,,,,S,,,,,E,
+Phyllostachys,nuda,stone bamboo,Poaceae,7,,□◘,◘,,,■■,■■,Bamboo (vl-xl),E run,R,20-35',indef.,F,ASIA,,,,,X,X,,X,,,,,,E,,,,,,,,S,,,,,E,
+Phyllostachys,viridi-glaucescens,blue-green glaucous bamboo,Poaceae,7,,□◘,◘,,,■■,■■,Bamboo (vl-xl),E run,R,20-35',indef.,F,ASIA,,,,,X,X,,X,,,,,,E,,,,,,,,S,,,,,E,
+Physalis,heterophylla,ground cherry,Solanaceae,3,,□,◘,,■■,■■,,Herb (s-m),clmp,"Fb, R",1-3',1-3',M-F,ENA,X,X,,X,,,X,X,X,,X,F,,,,,,,F,,,F,,,,,E,P
+Phytolacca,americana,pokeweed,Phytolaccaceae,3,9,□,◘,,■■,■■,■,Herb (l-vl),clmp,T,5-9',5-9',F,ENA,X,X,,,,,X,,,,X,,,E,,,,,G,,,F,,,,,"P, D",P
+Pimpinella,saxifraga,burnet saxifrage,Apiaceae,5,,□◘,□◘,,■■,■■,■■,Herb (m),clmp,Fb,3',2',,EURA,X,X,,,,X,,,,X,X,,,E,,,,,F,,,,Y,S,,,D,
+Pinus,albicaulis,whitebark pine,Pinaceae,3,,□,◘,,■■,■■,,Tree (m),E std,T,32',20',,WNA,,,,,,,,X,X,X,X,,Y,,,,Y,,G,,,S,,,,,,
+Pinus,armandii,Chinese white pine,Pinaceae,5,,□,◘,,,,,Tree (l),E std,T,65',30-40',S-M,ASIA,,,,,,,,X,X,X,X,,Y,,,,Y,,Y,,,S,,,,,,
+Pinus,cembra,Swiss stone pine,Pinaceae,4,7,□,◘,,,■■,,Tree (m-l),E std,H,30-65',15-25',S,EURA,,,,,,,,X,,X,X,,Y,,,,Y,,Y,,,S,,,,,,
+Pinus,cembra var. sibirica,Siberian stone pine,Pinaceae,3,,□,□■,,■■,■■,,Tree (vl),E std,T,110',50',S,ASIA,,,,,,,,,,X,X,,Y,,,,Y,,Y,,,S,,,,,,
+Pinus,edulis,pinyon pine,Pinaceae,5,,□,□,,,■■,,Tree (m),E std,T,50',35',S-M,WNA,,,,,,,,X,,X,X,,E,,,,Y,,Y,,,S,,,,,,
+Pinus,flexilis,limber pine,Pinaceae,3,7,□◘,□◘,,■■,■■,,Tree (m-l),E std,T,30-75',15-50',S,WNA,,,,,,,,X,,X,X,,Y,,,,Y,,Y,,,S,,,,,,
+Pinus,jeffreyi,Jeffrey pine,Pinaceae,6,,□,◘,,,,,Tree (vl),E std,T,100-200',50-100',M,WNA,,,,,,,,,,X,X,,Y,,,,Y,,Y,,,S,,,,,,
+Pinus,koraiensis,Korean pine,Pinaceae,4,7,□,□◘,,■■,■■,,Tree (m-l),E std,"F, T",30-100',15-50',S,ASIA,X,,,,,,,X,X,X,X,,E,,,,Y,,Y,,,S,,,,,,
+Pinus,pumila,Japanese stone pine,Pinaceae,4,,□,◘,,■■,■■,,Tree (d),E std,H,1-7',1-7',S,ASIA,,,,,,,,,,,X,,Y,,,,Y,,Y,,,S,,,,,,
+Platycodon,grandiflorus,balloon flower,Campanulaceae,5,,□,◘,,,■■,,Herb (s-m),clmp,T,1-3',1-3',M,ASIA,,X,,,,,,,,,X,,,,G,,,,E,,,,,G,,,,
+Podophyllum,peltatum,mayapple,Berberidaceae,3,8,◘■,◘,■,■■,■■,,Herb (s),run,"Fb, R","12-18""",indef.,F,ENA,,X,,,,,,X,X,,X,G,,,,,,,F,,,,,,Y,,,P
+Polygonatum,biflorum,Solomon's seal,Convallariaceae,3,7,□■,□◘,■■,■■,■■,,Herb (s-m),run,R,1-3',2'+,S-M,ENA,,,,,X,X,,,X,,X,,,E,F,,,,E,,,,,,Y,,,
+Polygonatum,biflorum var. commutatum,giant Solomon's seal,Convallariaceae,3,7,□■,□◘,■■,■■,■■,,Herb (m-l),run,R,3-5',4'+,S-M,ENA,,,,,X,X,,,X,,X,,,E,F,,,,E,,,,,,,,,
+Polygonum,bistorta,bistort,Polygonaceae,4,8,□■,◘,■,■■,■■,■,Herb (m),clmp,R,"18-24""","18-24""",F,EURA,,X,,,X,X,X,,,,X,,,E,,,,,G,,,,,,Y,,D,
+Polygonum,bistortoides,western bistort,Polygonaceae,2,,□,◘■,■■,■■,■■,,Herb (s-m),clmp,R,"8-28""","8-28""",M,WNA,,X,,,,,,,,,X,,,G,G,,,,,,,,,,,,,
+Polygonum,viviparum,alpine bistort,Polygonaceae,1,8,□◘,◘,,,■■,,Herb (s),clmp,R,1',1',,ENA,,X,,,,,,,,,X,,,F,G,,,,,,,,,,,,,
+Polypodium,glycyrrhiza,licorice fern,Polypodiaceae,6,,◘■,◘,,■■,■■,,Herb (s),E clmp,R,"6-8""",2-5',S-M,WNA,,,,,,,,,,,X,,,,G,,,,,,,,,,,,,
+Polypodium,virginianum,rock polypody,Polypodiaceae,3,,◘■,◘,,■■,,,Herb (s),E clmp,R,"10""",5',M,ENA,,,,,,,,X,X,,X,,,,,,,,G,,,,,,Y,,,
+Polystichum,acrostichoides,Christmas fern,Dryopteridaceae,4,7,◘■,◘,,■■,■■,■■,Herb (m-l),E clmp,R,"18-36""",3-4',S,ENA,,,,,,,,,X,,X,,,,,,,,F,,,,,,Y,,,
+Polytaenia,nuttallii,prairie parsley,Apiaceae,4,,□◘,□◘,,,,,Herb (m-l),clmp,,"18-36""","12-28""",,ENA,,,X,,,,X,X,,,X,,,,,,,,,,,,Y,S,,,,
+Polytrichum,commune,common haircap moss,Polytrichaceae,2,10,◘■,◘,■■,■■,,,Herb (p),Rmat,,"1-2""",indef.,S,ENA,,,,,,,,X,X,X,,,,,,,,,,,,,,,Y,,,
+Potentilla,anserina,silverweed,Rosaceae,3,7,□,□◘,,■■,■■,■■,Herb (p-s),run,"T, St","3-14""",indef.,F,ENA,X,,,,,,,,,,X,,,,G,,Y,,F,,Y,,,G,Y,,D,
+Prosopis,glandulosa,honeypod mesquite,Fabaceae,7,,□,□◘,,,■■,■■,Shrub (vl),ms,Sk,12-25',30',M,WNA,X,,X,,,,,,,,X,,G,,,,,,,Y,,,,G,,,"T, D, H",
+Prunus,alleghaniensis,Allegheny plum,Rosaceae,5,,□,◘,,,■■,,Tree (s),spr,,12-20',12-20',,ENA,,,,,X,X,,X,,,,G,,,,,,,F,,,F,,G,,,T,P
+Prunus,americana,American plum,Rosaceae,3,8,□,□◘,,,■,■,Tree (m),skr,"F, Sk",20-35',20-35',F,ENA,,X,,,X,X,,X,X,,X,E,,,,,,,F,,,B,,G,,,T,
+Prunus,americana var. nigra,Canada plum,Rosaceae,3,,□,◘,,,■■,,Tree (d-s),skr,Sk,6-20',6-20',M,ENA,,,,,X,X,,,,,X,E,,,,,,,F,,,F,,G,,,T,P
+Prunus,angustifolia,Chickasaw plum,Rosaceae,5,,□,◘,,,■■,,Shrub (l),Ctkt,Sk,8-10',8-10',,ENA,X,X,X,,X,X,,,,,X,G,,,,,,,F,,,B,,G,,,T,P
+Prunus,angustifolia var. watsonii,sandhill plum,Rosaceae,5,,□,◘,,,■■,,Shrub (m),Rtkt,Sk,3-6',5-70',,ENA,,X,X,,X,X,,,,,X,F,,,,,,,F,,,B,,G,,,T,P
+Prunus,armenaica,"""alpricot""",Rosaceae,5,9,□,◘,,,■,■■,Tree (s-m),std,,20-30',20-30',M,EURA,,,,,,,,,,,X,E,G,,,,,,E,,,,,G,,,,P
+Prunus,armenaica,"apricot, dwarf",Rosaceae,5,9,□,◘,,,■,■■,Tree (d),std,,4-8',4-8',M,EURA,,,,,,,,,,,X,E,,,,,,,E,,,,,G,,,,P
+Prunus,armenaica,"apricot, semidwarf",Rosaceae,5,9,□,◘,,,■,■■,Tree (s),std,,12-15',12-15',M,EURA,,,,,,,,,,,X,E,,,,,,,E,,,,,G,,,,P
+Prunus,armenaica,"apricot, standard",Rosaceae,5,9,□,◘,,,■,■■,Tree (s-m),std,,20-30',20-30',M,EURA,,,,,,,,,,,X,E,,,,,,,E,,,,,G,,,,P
+Prunus,avium,"sweet cherry, dwarf",Rosaceae,5,9,□,◘,,,■■,,Tree (d),spr,,6-8',8-15',M,EURA,,,,,,,,,,,X,E,,,,,,,F,,,F,,G,,C,D,P
+Prunus,avium,"sweet cherry, semidwarf",Rosaceae,5,9,□,◘,,,■■,,Tree (d-s),spr,,10-15',18-20',M,EURA,,,,,,,,,,,X,E,,,,,,,F,,,F,,G,,C,D,P
+Prunus,avium,"sweet cherry, standard",Rosaceae,5,9,□,◘,,,■■,,Tree (m),spr,,25-35',35-40',M,EURA,X,,,,X,,,,,,X,E,,,,,,,F,,,F,,G,,C,D,P
+Prunus,cerasifera,myrobalan plum,Rosaceae,5,,□,◘,■,■■,■■,■■,Tree (s-m),spr,,15-30',15-30',F,EURA,,,,,,,,,,,X,G,,,,,,,F,,,F,,G,,,T,P
+Prunus,cerasus,sour cherry,Rosaceae,4,8,□,◘,,,■■,,Tree (s),spr,,20',25',M,EURA,X,,X,,X,X,,,,,X,E,,,,,,,F,,,F,,G,,,,P
+Prunus,cerasus var. frutescens,dwarf sour cherry,Rosaceae,4,8,□,◘,,,■■,,Tree (d),spr,,10',12',M,EURA,,,,,,,,,,,X,E,,,,,,,F,,,F,,G,,,,P
+Prunus,domestica,"European plum, dwarf",Rosaceae,4,9,□,◘,,,■■,,Tree (d),spr,,10-12',10-15',M,EURA,,,,,,,,,,,X,E,,,,,,,F,,,,,G,,,,P
+Prunus,domestica,"European plum, standard",Rosaceae,4,9,□,◘,,,■■,,Tree (s),spr,,15-20',15-20',M,EURA,,,,,X,X,,,,,X,E,,,,,,,F,,,,,G,,,,P
+Prunus,domestica var. institia,damson plum,Rosaceae,4,,□,◘,,,■■,,Tree (s),spr,,15-25',15-25',M,EURA,,,,,X,X,,,,,X,E,,,,,,,F,,,,,G,,,"T, D",P
+Prunus,dulcis,"almond, dwarf",Rosaceae,6,9,□,◘,,,■■,,Tree (d),std,,8',8',M,EURA,,,,,,,,,,,X,,E,,,,,,S,,,,,G,,,,P
+Prunus,dulcis,"almond, semidwarf",Rosaceae,6,9,□,◘,,,■■,,Tree (d-s),std,,8-20',8-20',M,EURA,,,,,,,,,,,X,,E,,,,,,S,,,,,G,,,,P
+Prunus,dulcis,"almond, standard",Rosaceae,6,9,□,◘,,,■■,,Tree (s-m),std,,20-30',20-30',M,EURA,,,,,X,X,,,,,X,,E,,,,,,S,,,,,G,,,,P
+Prunus,fruticosa,Mongolian bush cherry,Rosaceae,2,,□,◘,,,■■,,Shrub (s),ms,,3',3',M,ASIA,,,X,,X,,,X,,,X,G,,,,,,,F,,,B,,G,,,,P
+Prunus,hortulana,hog plum,Rosaceae,5,,□,□◘,,,■■,■,Tree (s-m),spr,F,12-30',12-30',F,PRAI,,,,,X,X,,X,X,,X,G,,,,,,,F,,,,,G,,,,P
+Prunus,japonica var. nakai,Japanese bush cherry,Rosaceae,4,,□,◘,,,■■,,Shrub (l),Ctkt,F,8',8',,ASIA,,X,,,,,,,X,,,G,,,,,,,F,,,B,,G,,,,P
+Prunus,mandschurica,Manchurian apricot,Rosaceae,3,9,□,◘,,,■■,,Shrub (vl),ms,F,12-15',12-15',M,EURA,,,,,,,,,,,X,G,,,,,,,F,,,,,G,,,,P
+Prunus,maritima,beach plum,Rosaceae,3,,□,◘,,,■■,,Shrub (l),Ctkt,Sk,8',8',M-F,ENA,,,,,X,,,,,,X,G,,,,,,,Y,,,B,,G,,,T,P
+Prunus,munsoniana,wild goose plum,Rosaceae,5,,□,◘,,,■■,,Shrub (l),Ctkt,Sk,10',10',,PRAI,X,,X,,X,X,,,,,X,G,,,,,,,F,,,B,,G,,,,P
+Prunus,persica,"peach, dwarf",Rosaceae,5,9,□,◘,,,■■,,Tree (d),std,,2-5',2-5',M,EURA,,,,,,,,,,,X,E,,,,,,,G,,,,,G,,,,P
+Prunus,persica,"peach, semidwarf",Rosaceae,5,9,□,◘,,,■■,,Tree (d-s),std,,10-14',10-14',M,EURA,,,,,,,,,,,X,E,,,,,,,G,,,,,G,,,,P
+Prunus,persica,"peach, standard",Rosaceae,5,9,□,◘,,,■■,,Tree (s),std,,15-20',20-25',M,EURA,,,,,X,X,,,,,X,E,,,,,,,G,,,,,G,,,,P
+Prunus,persica nucipersica,"nectarine, dwarf",Rosaceae,5,9,□,◘,,,■■,,Tree (d),std,,2-5',2-5',M,EURA,,,,,,,,,,,X,E,,,,,,,,,,,,G,,,,P
+Prunus,persica nucipersica,"nectarine, semidwarf",Rosaceae,5,9,□,◘,,,■■,,Tree (d-s),std,,10-14',10-14',M,EURA,,,,,,,,,,,X,E,,,,,,,,,,,,G,,,,P
+Prunus,persica nucipersica,"nectarine, standard",Rosaceae,5,9,□,◘,,,■■,,Tree (s),std,,15-20',20-25',M,EURA,,,,,X,X,,,,,X,E,,,,,,,,,,,,G,,,,P
+Prunus,pumila,eastern dwarf cherry,Rosaceae,3b,,□,□◘,,■■,■■,,Shrub (m),ms,,3-6',3-6',,ENA,X,,,,X,,X,,,,X,G,,,,,,,F,,,B,,G,,,,P
+Prunus,pumila var. besseyi,sand cherry,Rosaceae,3,,□,□◘,,,■■,,Shrub (m),Ctkt,Sk,3-6',3',,WNA,,,X,,,,,,,,X,G,,,,,,,F,,,B,,G,,,T,P
+Prunus,salicina,dwarf Japanese plum,Rosaceae,6,10,□,◘,,,■■,,Tree (d),spr,,8-12',10-15',M,ASIA,,,,,,,,,,,X,E,,,,,,,F,,,,,G,,,,P
+Prunus,salicina,Japanese plum,Rosaceae,6,10,□,◘,,,■■,,Tree (s),spr,,15-18',15-20',M,ASIA,,,,,,,,,X,,,E,,,,,,,F,,,,,G,,,,P
+Prunus,tomentosa,Nanking cherry,Rosaceae,3,7,□,□◘,,,■■,,Shrub (l),ms,"T, F",6-10',6-8',M,ASIA,,,,,,,,,,,X,G,,,,,,,F,,,F,,G,,,,P
+Prunus,virginiana,chokecherry,Rosaceae,2,,□◘,□◘,,,■,■,Tree (m),skr,"F, Sk",35-50',35-50',F,ENA,X,,,X,X,X,,,,,X,G,,,,,,,F,,,B,,G,,C,D,P
+Prunus,x gondouinii,duke cherry,Rosaceae,4,8,□,◘,,,■■,,Tree (s),spr,,20',25',,CULT,,,,,,,,,,,X,E,,,,,,,F,,,,,G,,,,P
+Prunus,x hybrids,hybrid plum,Rosaceae,,,□,◘,,,■■,,Tree (d-s),spr,,10-25',10-25',,CULT,,,,,,,,,,,X,E,,,,,,,F,,,,,G,,,,P
+Pseudostellaria,jamesiana,tuberous chickweed,Caryophyllaceae,4,,◘■,◘,,,,,Herb (s-m),clmp,Tu,"8-20""","8-20""",,WNA,,,,,X,,,X,X,,,,,G,G,,,,S,,,,,G,,,,
+Psoralea,esculenta,prairie turnip,Fabaceae,3,7,□,□◘,,,,,Herb (s-m),clmp,Tu,"6-20""","6-20""",S,PRAI,,,X,,,,X,X,,,X,,,,G,,,,,Y,,,Y,G,,,,P
+Pycnanthemum,flexuosum,hyssop-leaved mountain mint,Lamiaceae,5,9,□◘,□◘,,,■■,,Herb (s-m),clmp,R,1-3',indef.,M-F,ENA,,X,,,X,,,X,,,,,,,,,E,,F,,,,Y,G,Y,A,,
+Pycnanthemum,virginianum,Virginia mountain mint,Lamiaceae,4,9,□◘,□◘,,,■■,,Herb (s-m),clmp,R,1-3',indef.,F,ENA,,X,,,X,,,,X,,X,,,,,,E,,F,,,,Y,G,,A,,
+Pyrus,bretschneideris,Asian pear,Rosaceae,4,9,□,◘,,,■,,Tree (m),std,,25-30',25',M-F,ASIA,,,,,,,,,,,X,E,,,,,,,,,,,,G,,,,
+Pyrus,communis,"European pear, minidwarf",Rosaceae,4,9,□,◘,,,■,,Tree (d),std,,4-6',4-6',M,EURA,X,,,,X,,,,,,X,E,,,,,,,,,,,,G,,C,,
+Pyrus,communis,"European pear, dwarf",Rosaceae,4,9,□,◘,,,■,,Tree (d-s),std,,8-15',10-15',M,EURA,X,,,,X,,,,,,X,E,,,,,,,,,,,,G,,C,,
+Pyrus,communis,"European pear, semidwarf",Rosaceae,4,9,□,◘,,,■,,Tree (s),std,,15-20',15',M,EURA,X,,,,X,,,,,,X,E,,,,,,,,,,,,G,,C,,
+Pyrus,communis,"European pear, standard",Rosaceae,4,9,□,◘,,,■,,Tree (m),std,,25-40',25',M,EURA,X,,,,X,,,,,,X,E,,,,,,,,,,,,G,,C,,
+Pyrus,communis,perry pear,Rosaceae,4,9,□,◘,,,■,,Tree (l),std,,70',15-55',M,EURA,,,,,,,,,,,X,G,,,,,,,,,,,,G,,C,,
+Quercus,acutissima,sawtooth oak,Fagaceae,5,,□,◘,,■■,■■,,Tree (m),std,,50',50',M-F,ASIA,,,,,,,,,X,X,X,,F,,,,,,F,,,,,G,,C,"D, H",P
+Quercus,alba,white oak,Fagaceae,4,8,□◘,□◘,,,■■,■,Tree (l),std,T,75-100',75-100',S-M,ENA,,,,,,,,X,X,,X,,F,,,,,,E,,Y,,,G,,C,H,P
+Quercus,bicolor,swamp white oak,Fagaceae,4,,□◘,◘■,,,■,,Tree (l),std,F,75-100',50-75',M-F,ENA,,,,,,,,,X,,X,,F,,,,,,,,,,,G,,C,H,P
+Quercus,fruticosa,fruticosa oak,Fagaceae,4b,,□,◘,,,■■,,Tree (l),std,,60',60',F,CULT,,,,,,,,,,,X,,F,,,,,,,,,,,G,,,H,P
+Quercus,gambelii,Gambel oak,Fagaceae,6,,□,□◘,,,,,Shrub (vl),Ctkt,Sk,15-25',15-25',S,WNA,,,,,,,,,X,X,X,,F,,,,,,,,,S,,G,,,H,P
+Quercus,ilex var. rotundifolia,holly oak,Fagaceae,7,,□,□◘,,,,,Tree (l),std,,75',75',S-F,EUR,,,,,X,,,,,,X,,G,,,,,,,,,S,,G,,,H,P
+Quercus,macrocarpa,bur oak,Fagaceae,2,8,□,□■,■,■■,■■,■■,Tree (l),std,T,75-100',75-100',S,ENA,,,X,,,,,X,X,,X,,F,,,,,,,,,,,G,,C,H,P
+Quercus,meuhlenbergii,chinkapin oak,Fagaceae,4b,,□,□◘,,,■■,■■,Tree (m),std,H,35-50',35-50',S-M,ENA,,,,,X,,,X,X,,X,,F,,,,,,,,,,,G,,C,H,P
+Quercus,michauxii,swamp chestnut oak,Fagaceae,6,,□,◘■,,■■,■■,,Tree (l),std,,75-100',75-100',M,ENA,,,,,,,,,X,,X,,F,,,,,,,,,,,G,,C,H,P
+Quercus,prinoides,dwarf chinkapin oak,Fagaceae,5b,,□,□◘,,■■,■■,■■,Shrub (l),ms,"H, Sk",12',12-20',S,ENA,,,X,,X,X,,X,,X,,,F,,,,,,,,,,,G,,,H,P
+Quercus,prinus,chestnut oak,Fagaceae,5,,□◘,□◘,,,■■,,Tree (l),std,T,50-75',75-100',S-M,ENA,,,,,,,,X,X,,X,,F,,,,,,,,,,,G,,C,H,P
+Rheum,australe,Himalayan rhubarb,Polygonaceae,5,8,□◘,◘,,■■,■■,,Herb (vl),clmp,,6-10',6',,EURA,,X,,,,,,,,,X,,,E,,,,,E,,,,,,,,,P
+Rheum,palmatum,turkey rhubarb,Polygonaceae,4,,□◘,◘,,■■,■■,,Herb (vl),clmp,,6',6',,ASIA,,X,,,,,,,,,X,,,E,,,,,E,,,,,,,,,P
+Rheum,x cultorum,rhubarb,Polygonaceae,1,9,□◘,◘,,,■,,Herb (l),clmp,Fb,3-5',3-5',F,ASIA,X,,,,,,,,,,X,,,E,,,,,E,,,,,,,,P,P
+Rhexia,virginica,meadow beauty,Melastomataceae,4,,□◘,◘■,■■,■■,,,Herb (s-m),clmp,Tu,1-2',1',M-F,ENA,,,,,,,,,,,X,,,G,G,,,,,,,,,,,,,
+Rhodiola,rosea,roseroot,Crassulaceae,2,,□◘,□◘,,,■■,,Herb (p-s),E clmp,R,"5-10""","5-10""",S-M,ENA,,X,,,,,,,,,X,,,Y,Y,,,,F,,,,,G,Y,,,
+Rhododendron,periclymenoides,pinxter flower azalea,Ericaceae,4b,8,□■,◘■,■,■,,,Shrub (l),ms,"F, Sk",6-12',6-12',,ENA,,,,,X,,,,X,,X,,,,,,,Y,,,,,,,,,,P
+Rhus,aromatica,fragrant sumac,Anacardiaceae,4,8,□,◘,,,■■,■■,Shrub (s-l),Ctkt,"F, Sk",2-8',6-10',M-F,ENA,,X,X,X,X,X,,X,,,X,,,,,,E,,Y,,,B,,G,,,,P
+Rhus,copallina,winged sumac,Anacardiaceae,5,,□,□◘,,,■■,,Shrub (xl),Rtkt,"F, Sk",20-35',20-35',F,ENA,X,X,,X,X,X,X,,,,X,,,,,,E,,Y,,,B,,G,,,"E, D",P
+Rhus,glabra,smooth sumac,Anacardiaceae,2,,□,□◘,,,■■,,Shrub (l-vl),Rtkt,"F, Sk",10-20',20-35',F,ENA,,,X,X,X,X,X,X,,,X,,,,,,E,,Y,,,B,,G,,,"E, D",P
+Rhus,hirta,staghorn sumac,Anacardiaceae,3,,□,□◘,,,■■,,Shrub (xl),Rtkt,"F, Sk",35-50',35-50',M-F,ENA,,,,X,X,X,,,,,X,,,,,,E,,Y,,,B,,G,,,"E, D",P
+Ribes,americanum,American black currant,Grossulariaceae,3,,□◘,◘■,,,■■,■■,Shrub (m),ms,"F, Sk",3-6',3-6',M,ENA,,,,,X,,,X,X,,X,F,,,,,,,F,,,B,,G,,,,
+Ribes,aureum,golden currant,Grossulariaceae,3,,□◘,◘,,,■■,,Shrub (m-l),ms,"H, Sk",3-8',3-6',,WNA,,,,,X,,,,,,X,G,,,,,,,,,,B,,G,,,,
+Ribes,hirtellum,smooth gooseberry,Grossulariaceae,3,,□◘,◘,,■■,■■,,Shrub (m),ms,,3-5',3-5',,ENA,,,X,,X,,X,X,X,,X,G,,,,,,,,,,B,,G,,,T,
+Ribes,missouriense,Missouri gooseberry,Grossulariaceae,4,,□◘,□◘,,,■■,■■,Shrub (m),ms,"F, Sk",3-6',3-6',F,ENA,,,,X,X,,,X,,,X,G,,,,,,,,,,B,,G,,,T,
+Ribes,nigrum,black currant,Grossulariaceae,4,,□◘,◘,,■■,■■,,Shrub (m),ms,,3-5',3-5',M-F,EURA,,,,,X,X,,X,,,X,E,,,,,,,G,,,B,,G,,,,
+Ribes,odoratum,clove currant,Grossulariaceae,3b,,□◘,□◘,,,■■,■■,Shrub (l),ms,"H, Sk",6-12',6-12'+,F,ENA,,,X,X,,X,,X,,,X,E,,,,,,,,,,B,,G,,,,
+Ribes,silvestre,red currant,Grossulariaceae,3,,□◘,◘,,■■,■■,,Shrub (m),ms,,3-5',3-5',M,EURA,,,,,X,X,,X,X,,X,E,,,,,,,,,,B,,G,,,,
+Ribes,triste,American red currant,Grossulariaceae,3,,□◘,◘■,,■■,■■,,Shrub (m),ms,,3-5',3-5',,ENA,,,,,,,,X,X,,X,G,,,,,,,,,,B,,G,,,,
+Ribes,uva-crispe,gooseberry,Grossulariaceae,3,,□◘,◘,,■■,■■,,Shrub (m),ms,Sk,3-5',3-5',M,EURA,,,,,X,X,,X,X,,,E,,,,,,,F,,,B,,G,,,T,
+Ribes,x culverwellii,jostaberry,Grossulariaceae,3,,□◘,◘,,■■,■■,,Shrub (m-l),ms,,4-8',4-8',F,CULT,,,,,,,,,,,X,E,,,,,,,,,,B,,G,,,,
+Ribes,x hybrids,gooseberry hybrids,Grossulariaceae,3,,□◘,◘,,■■,■■,,Shrub (m-l),Ctkt,Sk,3-5',3-5',,CULT,,,,,,,,,,,X,E,,,,,,,,,,B,,G,,,T,
+Robinia,hispida,bristly locust,Fabaceae,4,8,□,□◘,,,■■,■■,Shrub (l),Ctkt,St,6-12',3-6',F,ENA,X,,,X,X,,,X,,,X,,,,,,,,,Y,,B,Y,G,,,"E, T",P
+Robinia,pseudoacacia,black locust,Fabaceae,3b,,□,□◘,,■■,■■,■■,Tree (l),skr,"F, Sk",50-75',35-50',F,ENA,X,,,X,X,X,,X,X,,X,,,,,,,G,,Y,Y,F,Y,G,,C,"E, T, D",P
+Robinia,viscosa,clammy locust,Fabaceae,5,8,□,□◘,,,■■,■■,Shrub (l-vl),Rtkt,"F, Sk",6-20',6-20',F,ENA,,,,X,X,,,X,X,,X,,,,,,,,,Y,,B,Y,G,,,"E, T",P
+Rosa,carolina,pasture rose,Rosaceae,4b,8,□,□■,,,■■,■■,Shrub (s),Rtkt,"F, Sk",3',6-12'+,F,ENA,X,,X,X,X,X,,,X,,X,F,,,,,,,G,,,B,,G,,,,
+Rosa,palustris,marsh rose,Rosaceae,3,9,□,■,,,,,Shrub (l),Ctkt,"St, Sk",5-7',5-7',F,ENA,,,,,X,,,,X,,X,F,,,,,,,G,,,B,,G,,,,
+Rosa,rugosa,rugosa rose,Rosaceae,2,7,□,□◘,,■■,■■,,Shrub (m),Rtkt,Sk,4-6',4-8'+,F,ASIA,X,,,,,,,,,,X,G,,,,,,,G,,,B,,G,,,"E, D",
+Rosa,setigera,prairie rose,Rosaceae,4b,7,□,□◘,,,■■,■■,Shrub (l),Ctkt,"F, Sk",6-12',12-30',F,PRAI,,X,X,X,X,X,X,X,,,X,F,,,,,,,G,,,B,,G,,,E,
+Rosa,villosa,apple rose,Rosaceae,3,7,□,◘,,,■,■,Shrub (m),ms,,4',4',F,EURA,,,,X,,X,,X,,,,G,,,,,,,G,,,B,,G,,,D,
+Rosmarinus,ofiicinalis,rosemary,Lamiaceae,7,9,□,□◘,,■,■■,■,Shrub (s-m),E ms,,3-4',3-4',S,EUR,X,,,,,,,,,,X,,,,,E,G,,E,,,F,Y,G,,A,,
+Rubus,alleghaniensis,Allegheny blackberry,Rosaceae,3b,,□,□◘,■,■■,■■,■,Shrub (m),Rtkt,"F, Sk",3-6',6-12'+,F,ENA,X,,X,X,X,X,X,X,,,X,E,,F,,,G,,S,,,B,,G,,,E,
+Rubus,chamaemorus,cloudberry,Rosaceae,2,4,□,◘■,■■,■■,■■,,Herb (p-s),clmp,R,"3-8""","3-8""",S,ENA,,,,,,,,,,,X,E,,,,,,,S,,,F,,G,,,,
+Rubus,flagellaris,prickly dewberry,Rosaceae,4,,□◘,◘,,,■■,,Shrub (s),Rtkt,Sk,1',indef.,M,ENA,X,X,X,X,X,X,,X,,,X,Y,,,,,G,,S,,,F,,G,,,,
+Rubus,fruticosus,blackberry,Rosaceae,5,,□,◘,,■,■■,,Shrub (m-l),Rtkt,Sk,4-8',4-8',F,CULT,,,,,,,,,,,X,E,,,,,G,,S,,,B,,G,,,E,
+Rubus,idaeus,raspberry,Rosaceae,3,9,□,◘,,■,■■,,Shrub (m),Rtkt,Sk,4-6',4-6',F,CULT,,,,,,,,,,,X,E,,F,,,G,,S,,,B,,G,,,E,
+Rubus,idaeus var. strigosus,American red raspberry,Rosaceae,2,6,□,□■,,■,■■,,Shrub (m),Rtkt,Sk,3-6',6-12'+,F,ENA,X,,,X,X,,X,X,,,X,E,,F,,,G,,S,,,B,,G,,,E,
+Rubus,illecebrosus,strawberry-raspberry,Rosaceae,6b,,□,◘,,,■■,,Shrub (s),E Rtkt,Sk,1-2',indef.,M-F,ASIA,X,,,,X,,,,,,X,G,,,,,,,S,,,F,,G,Y,,,
+Rubus,occidentalis,black raspberry,Rosaceae,4,,□,□◘,■,■■,■,,Shrub (m),Rtkt,"F, Sk",3-6',6-12'+,F,ENA,X,X,,,X,X,X,X,,,X,E,,F,,,G,,S,,,B,,G,,,E,
+Rubus,odoratus,purple-flowering raspberry,Rosaceae,4,,□◘,◘,,■■,■■,,Shrub (m),ms,Sk,6',6',F,ENA,X,,,,X,X,,X,,,X,F,,,,,,,S,,,B,,G,,,,
+Rubus,parviflorus,thimbleberry,Rosaceae,4,9,□■,◘,,,■■,,Shrub (m),ms,Sk,4-6',4-6',M,WNA,X,,,,,X,X,X,,,X,G,,F,,,,,S,,,B,,G,,,,
+Rubus,spectabilis,salmonberry,Rosaceae,6,,□,◘,,■■,■■,,Shrub (m),Ctkt,Sk,4-5',4-5',M-F,WNA,X,,,,X,X,,,X,,X,E,,F,,,G,,S,,,B,,G,,,E,
+Rubus,tricolor,creeping bramble,Rosaceae,7b,,□■,◘,,,■■,,Shrub (s),Rmat,Sk,"18""",7',F,ASIA,,,,,X,,,,,,X,F,,,,,,,S,,,F,,G,Y,,,
+Rubus,x hybrids,"boysenberry, etc",Rosaceae,6,,□,◘,,■,■■,,Shrub (m),Rtkt,Sk,4-6',4-6',F,CULT,,,,,,,,,,,X,E,,,,,G,,S,,,B,,G,,,E,
+Rubus,spp.,dewberry,Rosaceae,7,,□,◘,,■,■■,,Shrub (m),Ctkt,Sk,4-8',4-8',F,CULT,,,,,,,,,,,X,E,,,,,G,,S,,,B,,G,,,E,
+Rubus,x stellarcticus,all-fieldberry,Rosaceae,2,8,□,◘,,■■,■■,,Herb (s),Cmat,,1',2'+,M-F,CULT,,,,,,,,,,,X,E,,,,,,,S,,,F,,G,Y,,,
+Rumex,acetosa,French sorrel,Polygonaceae,3,9,□◘,◘,,■■,■■,■,Herb (s-m),clmp,Fb,1-3',"10-12""",M,EURA,,X,,,,,,X,,,X,,,E,,,,,F,,Y,,,,,,D,P
+Rumex,acetosella,sheep sorrel,Polygonaceae,3,,□,□◘,■■,■■,■■,,Herb (p),Rmat,St,"6""",indef.,F,EURA,X,X,,,,,,,,,,,,E,,,,,F,,Y,,,G,Y,,"D, E, H",P
+Rumex,scutatus,buckler-leaved sorrel,Polygonaceae,3,9,□◘,□◘,,■■,■■,■■,Herb (s),clmp,,1',1-2',M,EURA,,,,X,,,,,,,,,,E,,,,,F,,Y,,,,Y,,,P
+Salvia,officinalis,broadleaf sage,Lamiaceae,5,9,□,□◘,,■,■■,■,Shrub (s),E ms,H,"18-30""","30-36""",M,EUR,X,,,,,,,,,,X,,,,,E,G,,G,,,F,Y,G,,A,,
+Sambucus,canadensis,elderberry,Sambucaceae,3,10,□◘,□■,,,■■,■,Shrub (l),ms,"F, Sk",6-12',6-12',F,ENA,,,,X,X,X,,X,X,,X,G,,,,,G,,E,,,B,,S,,,,P
+Sanguisorba,canadensis,American great burnet,Rosaceae,3,8,□◘,◘■,,,■■,■■,Herb (l),clmp,R,4-5',4-5',M,ENA,,X,X,,,,,X,X,,X,,,G,,,,,,,,,Y,G,,,,
+Sanguisorba,minor,salad burnet,Rosaceae,5,,□◘,◘,,,,■■,Herb (s-m),clmp,R,1-2',1',M,EUR,X,X,,,,,,,,,X,,,G,,,,,,,Y,,Y,G,,,D,
+Sanguisorba,officinalis,great burnet,Rosaceae,4,,□◘,◘,,,■,■■,Herb (m),clmp,R,3',2',M-F,EUR,,X,,,X,,,,,,X,,,G,,,,,F,,,,Y,G,,,D,
+Sasa,kurilensis,chishima-zasa bamboo,Poaceae,7,,□◘,◘,,,■■,■■,Bamboo (m-l),E run,R,5-10',indef.,F,ASIA,,,,,X,,,,,,X,,,E,,,,,,,,S,,,,,E,
+Sassafras,albidum,sassafras,Lauraceae,5b,,□◘,□◘,,■■,■■,,Tree (m),skr,"T, Sk",35-50',35-50',M-F,ENA,X,,,X,,X,,X,,,X,,,,,F,E,,F,,,B,,G,,C,,
+Satureja,douglasii,yerba buena,Lamiaceae,5,9,□◘,◘,,■■,■■,,Herb (p),E clmp,R,"2""",3',M,WNA,,,,,X,,,,X,X,X,,,,,Y,E,,Y,,Y,,Y,G,Y,A,,
+Saxifraga,stolonifera,strawberry saxifrage,Saxifragaceae,7,10,◘■,◘,,,■■,,Herb (p-s),E Rmat,St,"6-8""",indef.,F,ASIA,,,,,,,,,,,X,,,Y,,,,,,,,,,S,Y,,,
+Schisandra,chinensis,magnolia vine,Schisandraceae,4b,,□◘,◘,,■,■■,,Vine (h),w vine,,20',20',M,ASIA,,,,,,X,,,X,X,X,G,,,,,Y,,E,,,,,,,,S,
+Scorzonera,hispanica,scorzonera,Asteraceae,4,9,□◘,◘,,,■■,,Herb (s-m),clmp,T,1-3',1-2',M,EUR,,,,,X,,,,,,X,,,E,E,,,,,,,,Y,S,,,,
+Sedum,album,white stonecrop,Crassulaceae,6,,□◘,□◘,,■■,■■,■,Herb (p),E run,,"2-5""",indef.,F,EURA,,,,,,,,,,,X,,,F,,,,,F,,,,,G,Y,,,P
+Sedum,reflexum,stonecrop,Crassulaceae,3,,□◘,□◘,,■■,■■,■,Herb (s),E run,,"8-10""",indef.,M,EUR,X,,,,,,,,,,X,,,F,,,,,F,,,,,G,Y,,,P
+Sedum,ternatum,wild stonecrop,Crassulaceae,3,8,□■,◘,,,,■■,Herb (p),E run,,"2-6""",indef.,S-M,ENA,,,,,,,,,,,X,,,F,,,,,F,,,,,G,Y,,,P
+Semiarundinaria,fastuosa,temple bamboo,Poaceae,6b,,□◘,◘,,,■■,,Bamboo (l-xl),E run,R,10-35',indef.,S-M,ASIA,,,,,,,,X,,,X,,,E,,,,,,,,S,,,,,E,
+Senecio,aureus,golden groundsel,Asteraceae,4,,□◘,◘■,,■■,■,,Herb (s-m),clmp,R,1-3',"18""",M-F,ENA,,X,X,,X,,,X,X,,X,,,,,,,,G,,,,Y,S,,,,P
+Senecio,obovatus,round-leaved ragwort,Asteraceae,4,,◘,◘,,■,■■,,Herb (s-m),clmp,St,"6-24""",1-2',M-F,ENA,,X,,,,,,,X,,X,,,,,,,,,,,,Y,S,,,,P
+Shepherdia,canadensis,Canadian buffaloberry,Eleagnaceae,2,,□,□◘,,,■■,■■,Shrub (l),ms,H,6-12',6-12',S-F,ENA,,,,,X,X,,X,,,X,F,,,,,,,,Y,,F,,G,,,,
+Silphium,laciniatum,compass plant,Asteraceae,4,,□◘,□◘,,,,,Herb (l-vl),run,,4-10',indef.,F,ENA,,,X,X,,X,X,X,,,X,,,,,,,F,F,,,F,Y,S,,,E,
+Silphium,perfoliatum,cup plant,Asteraceae,4,,□◘,◘,,,,,Herb (l-vl),run,R,4-8',indef.,F,ENA,X,X,X,,X,,,,X,,X,,,,,,,Y,F,,,F,Y,S,,,E,
+Silphium,trifoliatum,whorled rosinweed,Asteraceae,4,,□◘,◘,,,,,Herb (l-vl),run,,3-7',indef.,F,ENA,,,X,,X,X,X,,X,,,,,,,,,Y,,,,F,Y,S,,,E,
+Sium,sisarum,skirret,Apiaceae,5,9,□◘,◘■,,■,■■,■■,Herb (m),clmp,Tu,3',1-2',M,EUR,,,,,,,,,,,X,,,,E,,,,,,,,Y,S,,,,
+Smallanthus,uvedalia,leafcup,Asteraceae,4,,◘,◘,,■■,■■,,Herb (s-l),clmp,,"18""-5'",1-3',,ENA,,,,,X,,,,X,,X,,,,,,,,G,,,,Y,S,,,,
+Smilacina,racemosa,false Solomon's seal,Convallariaceae,2,8,□■,□◘,,■■,■,,Herb (s-m),run,R,1-3',indef.,S,ENA,,,,,,X,X,,X,X,X,F,,G,,,,,,,,,,,,,,P
+Smilax,herbacea,carrion flower,Smilacaceae,4,,□◘,◘,,■■,■■,,Vine (l),r vine,,6-10',4-6',M-F,ENA,,,,X,X,X,,X,,,,Y,,G,,,,,,,,F,,,,,,
+Solidago,flexicaulis,zig-zag goldenrod,Asteraceae,4,,□■,◘■,,■■,■■,,Herb (s-m),clmp,R,1-3',1-3',M-F,ENA,,,,,X,,,,X,,X,,,,,,Y,Y,E,,,,Y,S,,,,P
+Solidago,missouriensis,Missouri goldenrod,Asteraceae,4,,□◘,□◘,,,,,Herb (s-m),clmp,R,1-3',1-3',F,ENA,X,,X,,X,X,,X,,,X,,,Y,,,Y,,E,,,,Y,S,,,,P
+Solidago,odora,sweet goldenrod,Asteraceae,3,9,□◘,□◘,■,■■,■,,Herb (m-l),clmp,Fb,2-4',2-4',F,ENA,X,,,,X,,X,X,,,X,,,G,,G,E,,E,,,,Y,S,,A,,P
+Sophora,japonica,Japanese pagoda tree,Fabaceae,4,8,□,□◘,,,■■,,Tree (l),std,,50-75',50-75',M-F,ASIA,,,,,,,,,,,X,,,,,,,,,Y,,,Y,G,,,,P
+Sorbus,americana,American mountain ash,Rosaceae,2,,□,◘,,■■,■■,,Tree (s-m),std,,10-30',10-30',,ENA,,,,,,,,,X,X,X,F,,,,,,,F,,,F,,G,,C,,P
+Sorbus,aucuparia,rowan,Rosaceae,3,7,□,◘,,■■,■■,,Tree (s-m),std,,20-40',15-35',M,EURA,X,,,,X,X,,X,X,X,X,G,,,,,,,F,,,F,,G,,C,D,P
+Sorbus,decora,showy mountain ash,Rosaceae,2,5,□,◘■,,■■,■■,,Tree (s-m),std,F,20-35',20-35',M,ENA,,,,,,,,,X,,X,F,,,,,,,,,,F,,G,,C,,P
+Sorbus,domestica,service tree,Rosaceae,4,,□,◘,,,■■,,Tree (m),std,,30-35',30-35',M,EUR,,,,,X,,,,X,,X,G,,,,,,,,,,F,,G,,C,D,P
+Sorghum,x hybrids,perennial sorghum,Poaceae,7,10,□,◘,,,■■,,Herb (l),run,,6',indef.,F,CULT,,,,,,,,,,,X,,,,,,,E,,,,,,,,,"E, D, H",
+Stachys,affinis,Chinese artichoke,Lamiaceae,5,9,□,◘,,,■■,,Herb (s-m),run,R,"18""",indef.,M-F,ASIA,,,,,,,,,,,X,,,,E,,,,,,,,Y,G,Y,,P,
+Stachys,hyssopifolia,hyssop hedge nettle,Lamiaceae,6,9,□,◘■,,■■,■■,,Herb (s-m),clmp,St,"6-30""",1',,ENA,,X,,,,,,,,,X,,,,G,,,,,,,,Y,G,,,,
+Stachys,palustris,woundwort,Lamiaceae,3,,□◘,◘■,,■■,■■,,Herb (s-l),clmp,R,1-3',1',,ENA,X,X,X,,,,,,,,X,,,,G,,,,G,,,,Y,G,,,,
+Stellaria,media,annual chickweed,Caryophyllaceae,4,,□◘,◘,,,■■,,Herb (s),a Rmat,Fb,"6-12""",1-2',F,EURA,X,X,,,,X,,,,,X,,,E,,,,,S,,Y,,Y,G,Y,,D,
+Stellaria,pubera,giant chickweed,Caryophyllaceae,5,8,◘■,◘,,,■■,,Herb (s),clmp,,"6-12""",1',M-F,ENA,,,,,,,,,X,,X,,,G,,,,,S,,,,Y,G,Y,,,
+Streptopus,amplexifolius,twisted stalk,Convallariaceae,3,8,◘■,◘,,,■,,Herb (s-m),clmp,"Fb, R",1-2',1-2',S-M,ENA,,,,,X,,X,,X,,X,F,,G,G,,,,,,,,,,,,,P
+Streptopus,roseus,rosybells,Convallariaceae,3,8,◘■,◘,,,■,,Herb (s-m),clmp,R,1-3',1-3',S-M,ENA,,X,,,,,X,,X,,X,F,,G,,,,,,,,,,,,,,P
+Strophostyles,umbellata,wild bean,Fabaceae,6,9,□◘,□◘,,,,,Vine (l),r vine,,1-3',1-3',,ENA,,X,,,X,,X,,X,,X,,,,,,,,,Y,,,Y,,,,,
+Stylosanthes,biflora,two-flowered pencil flower,Fabaceae,5,,□◘,□◘,,,,,Herb (s-m),clmp,,"6-20""","6-10""",,ENA,,X,X,,X,,X,X,X,,,,,,,,,,,Y,,,Y,,,,,
+Symphytum,grandiflorum,large-flowered comfrey,Boraginaceae,4,8,□◘,□◘,,■,■■,■■,Herb (s),clmp,R,"8-12""","18""+",F,EURA,X,,,X,,X,,,,,X,,,,,,,,E,,Y,,Y,G,Y,,P,P
+Symphytum,officinale,comfrey,Boraginaceae,4,,□◘,◘,,■,■■,■■,Herb (l),clmp,"Fb, Fl",3-5',3-5',F,EURA,X,,,X,,X,,,,,X,,,,,,,,E,,Y,,Y,G,,,"P, D",P
+Symphytum,x uplandicum,Russian comfrey,Boraginaceae,5,8,□◘,◘,,■,■■,■■,Herb (s-l),clmp,"Fb, Fl",1-4',3',F,EURA,X,,,X,,X,,,,,X,,,,,,,,E,,Y,,Y,G,,,P,P
+Taenidia,integerrima,yellow pimpernel,Apiaceae,4,,□◘,◘,,,,,Herb (s-m),clmp,T,1-3',1-2',,ENA,,,X,,X,,,X,X,,X,,,,,,,,,,,,Y,S,,,,
+Taraxacum,officinale,dandelion,Asteraceae,3,,□◘,◘,,,■■,■■,Herb (s-m),clmp,T,"6-24""","6-24""",F,EURA,X,X,,,,,,,,,X,,,E,F,,G,F,S,,Y,,Y,G,,,D,
+Thaspium,barbinode,meadow parsnip,Apiaceae,4,,□◘,◘,,,,,Herb (s-l),clmp,T,1-4',"8-24""",,ENA,,,,,X,,,X,,,X,,,,,,,,,,,,Y,S,,,,
+Thaspium,trifoliatum,woodland thaspium,Apiaceae,4,,◘,◘,,,,,Herb (s-l),clmp,T,1-4',1-2',,ENA,,,,,X,,,X,X,,X,,,,,,,,,,,,Y,S,,,,
+Thelypteris,noveboracensis,New York fern,Thelypteridaceae,2,,◘■,◘■,,■,■■,,Herb (s-m),run,R,"12-24""",indef.,M,ENA,,,,,X,,,,X,X,X,,,,,,,,,,,,,,Y,,,
+Thermopsis,villosa,Carolina bush pea,Fabaceae,5,8,□◘,□◘,,■■,,,Herb (l),clmp,,4-5',2-3',S,ENA,,X,,,,X,X,X,,,X,,,,,,,,,Y,,,Y,,,,,P
+Thymus,vulgaris,thyme,Lamiaceae,4,10,□,□◘,,,■■,■■,Shrub (p-s),Cmat,T,"6-18""",3-4',S-M,EUR,X,X,,,X,,,,,,X,,,,,E,G,,E,,,,Y,G,Y,A,D,
+Tiarella,cordifolia,foamflower,Saxifragaceae,3,8,◘■,◘,,■■,■,,Herb (p-s),run,St,"6-12""",indef.,M-F,ENA,,,,,,,,,X,,,,,,,,,,F,,,,,S,Y,,,
+Tilia,americana,American basswood,Tiliaceae,3,,□■,◘,,,■,■,Tree (l),spr,"T, F",75-100',50-75',M-F,ENA,,,,,,,,,X,,X,,,E,,,E,,G,,Y,,,G,,C,D,
+Tilia,x vulgaris,linden,Tiliaceae,4,,□◘,□■,,,■■,■■,Tree (l),spr,Sk,75-100',40',M,EUR,X,,,,,,,,X,,X,,,E,,,E,,G,,Y,,,G,,C,D,
+Toona,sinensis,fragrant spring tree,Meliaceae,5,,□,◘,,■■,■■,■■,Tree (m-l),skr,Sk,30-70',30-45',M-F,ASIA,,,,,,,,X,,,X,,,G,,G,,,F,,,,,,,C,D,
+Tradescantia,virginiana,Virginia spiderwort,Commelinaceae,4,9,□◘,◘■,,■■,■■,■,Herb (s-m),run,,1-2',indef.,M-F,ENA,X,X,,,X,,,X,,,X,,,F,,,,,F,,,,,G,Y,,,P
+Trifolium,pratense,red clover,Fabaceae,3,,□,◘,,■,■■,■,Herb (s-m),clmp,T,"6-16""","6-16""",M,EURA,X,X,,,,X,,X,,,X,,,,,,G,F,E,Y,Y,,Y,G,Y,,D,
+Trifolium,repens,white clover,Fabaceae,4,,□◘,◘,,■,■■,,Herb (p-s),clmp,St,"4-10""","6-36""",M,EURA,X,X,,,,X,,,,,X,,,,,,G,F,,Y,Y,,Y,G,Y,,D,
+Trillium,grandiflorum,white trillium,Trilliaceae,3,7,◘■,◘,,■■,■■,■,Herb (s),e run,R,"12-18""",indef.,S-M,ENA,,,,,,,,,X,,X,,,F,,,,,G,,,,,G,Y,,,
+Tripsacum,dactyloides,eastern gamma grass,Poaceae,3,9,□◘,◘,,■■,■■,,Herb (vl),clmp,,6',5-6',M-F,ENA,,X,X,X,,,,,,,,,,,,,,F,,,,,Y,G,,,H,
+Triteleia,grandiflorum,blue dicks,Alliaceae,6,,□◘,□◘,,,■■,,Herb (s-m),e clmp,C,1-2',1',S,WNA,,X,,,,,,X,X,,X,,,,Y,,,,,,,,,,,,,
+Triticum,x aevesticum,perennial wheat,Poaceae,,,□,◘,,,■■,,Herb (m-l),clmp,,2-4',2-3',M,EURA,,,,,,,,,,,X,,,,,,,E,,,,,Y,G,,,H,P
+Ulmus,rubra,slippery elm,Ulmaceae,3,9,□,◘,,,■■,■,Tree (m-l),std,,40-60',40-60',M-F,ENA,X,,,,,X,,,X,,X,,,,,,,Y,E,,,,,,,C,,
+Urtica,dioica,stinging nettle ,Urticaceae,4,8,□◘,◘,,■,■■,■,Herb (s-l),run,"Fb, R",1-5',indef.,F,EURA,X,X,,X,X,X,,,X,,X,,,E,,,E,,S,,Y,,Y,,,,"St, E, D",P
+Urtica,dioca var. gracilis,native nettle,Urticaceae,3,,□,◘,,,■■,,Herb (l),run,"Fb, R",3-4',1-3',F,ENA,X,X,,X,X,X,,,X,,X,,,E,,,E,,Y,,Y,,Y,,,,"St, E, D",P
+Uvularia,sessilifolia,bellwort,Convallariaceae,3,8,◘■,◘,,■■,■■,,Herb (s),clmp,R,"8-12""","8-12""",S,WNA,,,,,X,,,,X,,X,,,G,F,,,,,,,,,,,,,
+Vaccinium,angustifolium,lowbush blueberry,Ericaceae,2,6,□,□◘,■■,■■,,,Shrub (s),Ctkt,"F, St",2',3'+,S,ENA,,,,,,,X,X,X,,X,E,,,,,,,S,,,F,,,Y,,,
+Vaccinium,ashei,rabbiteye blueberry,Ericaceae,7b,,□,◘,■,■■,,,Shrub (m-vl),ms,Sk,4-18',4-18',S,ENA,,,,,,,,X,,X,X,E,,,,,,,S,,,F,,,,,,
+Vaccinium,corymbosum,highbush blueberry,Ericaceae,4b,8,□,□■,■■,■■,,,Shrub (l),ms,"F, St",6-12',6-12',S,ENA,,,,X,X,,,X,X,,X,E,,,,,,,S,,,F,,,,,,
+Vaccinium,crassifolium,creeping blueberry,Ericaceae,7,9,□◘,◘,■■,■■,,,Shrub (p),E Cmat,,"2-6""",5'+,S-M,ENA,,,,,,,,X,,X,X,E,,,,,,,S,,,F,,,Y,,,
+Vaccinium,macrocarpon,cranberry,Ericaceae,3,,□,■,■■,■■,,,Shrub (p),E Rmat,"F, St","6""",indef.,S-M,ENA,,,,,,,,,,,X,E,,,,,,,S,,,F,,,Y,,,
+Vaccinium,vitis-idaea,lingonberry,Ericaceae,4,7,□,◘,■,■■,,,Shrub (s),E Cmat,Sk,"6-12""",2',S-M,ENA,,,,,,,,,,,X,E,,,,,,,S,,,F,,,Y,,,
+Vaccinium,x hybrids,half-high blueberry,Ericaceae,3,7,□,◘,■■,■■,,,Shrub (s-m),ms,,2-4',2-4',S,CULT,,,,,,,,,,,X,E,,,,,,,S,,,F,,,,,,
+Verbena,canadensis,rose verbena,Verbenaceae,5,9,□◘,□◘,,■,■■,■,Herb (p-s),clmp,,"4-12""","18""",M-F,ENA,,X,X,,,,X,X,,,X,,,,,,,,,,,F,,G,Y,,,
+Vernonia,noveboracensis,New York ironweed,Asteraceae,4,,□,◘,,■■,,,Herb (l-vl),clmp,,5-8',3-4',M-F,ENA,,X,,,X,,,,,,X,,,,,,,,,,,,,G,,,,P
+Veronica,officinalis,speedwell,Scrophilariaceae,4,,□◘,◘,,■■,,,Herb (s),E run,,"12""",indef.,M-F,ENA,,X,,,,,,X,,,X,,,,,,Y,,F,,,F,,G,Y,,,
+Viburnum,cassinoides,witherod viburnum,Caprifoliaceae,2,8,□◘,□■,,■■,■,,Shrub (l),ms,F,6-12',6-12',M,ENA,,,,X,X,,,,X,,X,F,,,,,Y,,,,,F,,S,,,,P
+Viburnum,lentago,nannyberry,Caprifoliaceae,2,,□◘,□◘,,,■■,■,Shrub (vl-xl),ms,F,20-35',10-20',M-F,ENA,X,X,,,X,X,,,X,,X,F,,,,,,,,,,F,,S,,,,P
+Viburnum,trilobum,highbush cranberry,Caprifoliaceae,2,,□,◘■,,,■,■,Shrub (l),ms,F,6-12',6-12',M,ENA,,X,,X,,,,,X,,X,G,,,,,,,,,,F,,S,,,,P
+Vicia,americana,American vetch,Fabaceae,3,7,□,◘,,,,,Vine (l),r vine,R,3',3',M-F,ENA,,X,,,X,,,X,,,X,,,Y,,,,,,Y,Y,,Y,G,,,,P
+Vicia,caroliniana,wood vetch,Fabaceae,3,9,◘■,◘,,,,,Vine (l),r vine,,1-5',1-5',,ENA,,,,,X,,,X,X,,X,,,,,,,,,Y,Y,,Y,G,,,,P
+Vicia,cracca,tufted vetch,Fabaceae,6,,□◘,◘,,,■■,,Vine (l),r vine,R,5',5',,EURA,X,X,,,X,,X,X,,,X,,,Y,,,,Y,,Y,Y,,Y,G,,,,P
+Viola,canadensis,Canada violet,Violaceae,4,,□◘,◘,,,■■,,Herb (s),run,R,"6-16""",indef.,M-F,ENA,,,,,,,X,,X,X,X,,,G,,,,G,F,,Y,,,,Y,,,
+Viola,labradorica,Labrador violet,Violaceae,3,,□■,◘,,■■,■■,,Herb (p),E run,,"4""",indef.,F,ENA,X,,,,X,,X,,X,,X,,,F,,,,G,,,Y,,,,Y,,,
+Viola,odorata,sweet violet,Violaceae,6,,□◘,◘,,■■,■■,,Herb (s),E run,"R, St","6-8""",indef.,F,EURA,X,X,,,,,X,,X,,X,,,G,,,,G,G,,Y,,,,Y,,,
+Viola,sororaria,blue violet,Violaceae,4,8,□◘,◘,,,■■,,Herb (s),run,R,"6-12""",indef.,F,ENA,X,X,,,,,,X,X,,X,,,F,,,,G,,,Y,,,,Y,,D,
+Vitex,agnus-castus,chaste tree,Verbenaceae,6,8,□,□◘,,,■■,,Shrub (l-vl),ms,,8-20',8-20',M-F,EUR,,,,,,,,,X,,X,,,,,Y,,,E,,,,,G,,,D,
+Vitis,"labrusca, hybrids",fox grape,Vitaceae,3,9,□,□■,,■,■■,■,Vine (h),w vine,,35'+,20-35'+,F,ENA,,,,,X,X,,X,,,X,E,,G,,,,,S,,,F,,G,,,S,
+Vitis,riparia,riverbank grape,Vitaceae,2,6,□,□■,,,■■,■■,Vine (h),w vine,,35'+,20-35'+,F,ENA,,,,,X,X,,,X,,X,E,,G,,,,,S,,,F,,G,Y,,S,
+Vitis,rotundifolia,muscadine grape,Vitaceae,7,10,□,◘,,,■■,,Vine (h),w vine,,12-20',12-20',F,ENA,,,,,X,X,,,X,,,E,,,,,,,S,,,F,,G,,,S,
+Vitis,"vinifera, hybrids",grape,Vitaceae,6,9,□,□◘,,,■,,Vine (h),w vine,,12-20',12-20',F,EUR,,,,,,,,X,X,,X,E,,E,,,,,S,,,F,,G,,,S,
+Waldsteinia,fragaroides,barren strawberry,Rosaceae,4,7,□■,□◘,,■,■,,Herb (p-s),E run,R,"4-8""",indef.,M-F,ENA,,,,,,X,X,,X,,,,,,,,,,,,,,,,Y,,,
+Wisteria,floribunda,Japanese wisteria,Fabaceae,4,9,□,◘,,■,■■,■■,Vine (h),w vine,,30-50',30-50',F,ASIA,,,,,X,,,X,X,,X,,,,,,,,Y,Y,,,Y,G,,,"S, E",P
+Wisteria,frutescens,American wisteria,Fabaceae,5,,□◘,◘,,■■,,,Vine (h),w vine,,30-40',30-40',F,ENA,,,,,X,X,,X,,,X,,,,,,,,,Y,,,Y,G,,,S,P
+Wisteria,macrostachya,Kentucky wisteria,Fabaceae,5,9,□◘,◘■,,,■■,■,Vine (h),w vine,H,20-35',12-20',F,PRAI,,,,X,,,,,X,,X,,,,,,,,,Y,,,Y,G,,,S,P
+Woodwardia,areolata,netted chain fern,Blechnaceae,4,9,◘,◘■,,■■,■■,,Herb (s),run,R,"12-18""",indef.,M,ENA,,,,,,,,,X,,X,,,,,,,,,,,,,,Y,,,
+Woodwardia,virginica,Virginia chain fern,Blechnaceae,3,10,◘,◘■,,■■,■■,,Herb (m),run,R,"18-24""",indef.,S-F,ENA,,,,,,,,,X,X,X,,,,,,,,,,,,,,Y,,E,
+Xanthoceras,sorbifolium,yellowhorn,Sapindaceae,5,7,□,◘,,■,■■,■■,Tree (s),std,,18-24',18-24',S-F,ASIA,,,,,X,,,,,,X,,Y,Y,,,,Y,,,,,,,,,,
+Yucca,baccata,banana yucca,Agavaceae,5,,□,□◘,,,■■,■■,Shrub (s-m),E ms,T,3-4',3-4',S,WNA,,,X,,,,,,,,X,G,,F,,,,Y,G,,,F,,,,,T,
+Zanthoxylum,americanum,prickly ash,Rutaceae,3,,□,□◘,,,■,■■,Tree (s-m),skr,Sk,20-35',20-35',F,ENA,,,,X,X,,,X,X,,X,,,,,Y,,,E,,,S,,G,,,T,P
+Zanthoxylum,piperitum,Japanese pepper tree,Rutaceae,7,,□◘,◘,,,■■,■■,Shrub (m),Ctkt,Sk,6',6',,ASIA,,,,,X,X,,,,,X,,,,,E,,,E,,,S,,G,,,"T, D",
+Zizia,aptera,heart-leaved alexanders,Apiaceae,4,,□◘,◘,,■■,■■,,Herb (m),clmp,Fb,2',2',M-F,ENA,,X,X,,X,,X,X,X,,X,,,,,,,,,,,,Y,S,,,,
+Zizia,aurea,golden alexanders,Apiaceae,4,,□◘,◘,,■■,■■,,Herb (s-m),E clmp,,"12-30""","12-24""",M-F,ENA,,X,X,,X,,X,X,X,,X,,,,,,,G,F,,,,Y,S,,,,
+Ziziphus,jujuba,jujube,Rhamnaceae,6,9,□,□◘,,,■■,■■,Tree (s-m),skr,"T, Sk",15-30',15-30',F,EURA,X,,X,,,,,,,,X,G,,,,,,,E,,,,,G,,,"T, D",

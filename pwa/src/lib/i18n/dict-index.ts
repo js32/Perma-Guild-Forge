@@ -228,6 +228,5 @@ export const indexDict: Dict = {
   alertNoCsvPlants: { de: 'Keine Pflanzen in der CSV gefunden.', en: 'No plants found in the CSV.' },
   alertNoJsonPlants: { de: 'Keine gültigen Pflanzen in der JSON-Datei gefunden.', en: 'No valid plants found in the JSON file.' },
   alertJsonImportFailed: { de: 'JSON-Import fehlgeschlagen: {msg}', en: 'JSON import failed: {msg}' },
-  enrichWikidataStatus: { de: 'Wikidata...', en: 'Wikidata...' },
-  enrichPfafStatus: { de: 'PFAF...', en: 'PFAF...' },
+  enrichSourcesStatus: { de: 'Lade Daten…', en: 'Loading data…' },
 };

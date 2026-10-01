@@ -75,7 +75,8 @@ import Layout from '../layouts/Layout.astro';
   import { getAllPlants, savePlant } from '../lib/db';
   import { displayName, displayCommonName } from '../lib/plant-name';
   import { getAllPolycultures, getPolyculture, savePolyculture, deletePolyculture } from '../lib/db';
-  import { searchPlants, importPlantFromSearch } from '../lib/plant-search';
+  import { searchPlants } from '../lib/plant-search';
+  import { createPlantFromSearch } from '../lib/enrich';
   import {
     createEmptyPolyculture,
     ROLE_REQUIREMENT,
@@ -371,7 +372,7 @@ import Layout from '../layouts/Layout.astro';
     const results = await searchPlants(latin);
     const match = results.find(r => r.latinName.toLowerCase() === latin.toLowerCase()) ?? results[0];
     if (!match) return null;
-    const plant = await importPlantFromSearch(match);
+    const { plant } = await createPlantFromSearch(match);
     await savePlant(plant);
     plants = await getAllPlants();
     plantsById = new Map(plants.map(p => [p.id, p]));

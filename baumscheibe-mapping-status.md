@@ -85,7 +85,8 @@ Gleiches Bild wie bei Sonne: `setWaterIcon()` wählt zwischen `waterWet`/`waterM
 | `materialScore` | — (Gruppe `rating`) | ❌ Kein Mapping | s.o. |
 | `fodder` | `fodder` → NEU `u_fodder` (`<image>`) | ✅ OK | |
 | `fuel` | `fuel` → NEU `u_fuel` (`<image>`) | ✅ OK | |
-| *(fibre / Faser)* | `fibre` (`<image>`, raster10) | — kein PlantData-Feld / 🖼️ immer sichtbar | Kein `fibre`-Feld in `types.ts` (nur `material`); Icon im SVG vorhanden, nie ausgeblendet |
+| `fiber` | `u_fiber` (`<image>`) | ✅ OK | Seit 2026-10-01 gemappt (war ungemappt und dadurch immer sichtbar) |
+| `wood` | `u_timber` (`<image>`) | ✅ OK | Seit 2026-10-01 gemappt (war ungemappt und dadurch immer sichtbar) |
 
 ## Ökosystem-Funktionen
 
@@ -95,8 +96,7 @@ Gleiches Bild wie bei Sonne: `setWaterIcon()` wählt zwischen `waterWet`/`waterM
 | `mineralFix` | `mineralFix` → NEU `f_dynacc` (`<image>`) | ✅ OK | |
 | `groundCover` | `groundCover` → NEU `f_groundcover` (`<image>`) | ✅ OK | |
 | `insects` | `insects` → NEU `f_pollinators` (`<image>`) | ✅ OK | |
-| *(pest confuser / Duftverwirrer)* | `duftverwirrer` (`<image>`, raster4) → NEU `apc`/`f_apc` | — kein PlantData-Feld / 🖼️ immer sichtbar | ODS: „vorerst ignorieren"; Icon trotzdem immer sichtbar |
-| `pest` | — | kein passendes Element | ❌ Kein Mapping (ODS: „vorerst ignorieren") |
+| `pest` | `f_apc` + Farbkeil `apc` (Duftverwirrer-Icon) | ✅ OK | Seit 2026-10-01: `pest` = „Schädlingsschutz / pest control" deckt den Duftverwirrer ab; war ungemappt und immer sichtbar |
 | `animalProtection` | `animalProtection` → NEU `f_shelter` (`<image>`) | ✅ OK | |
 | `windBreaking` | `windBreaking` → NEU `f_windbreak2` (`<image>`) | ✅ OK | |
 | `windBreakingOnSea` | — | kein Element | ❌ Kein Mapping (ODS: „NA, für spätere Version") |

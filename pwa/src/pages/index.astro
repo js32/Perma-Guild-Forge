@@ -434,9 +434,9 @@ import Layout from '../layouts/Layout.astro';
   import { applyFilters, emptyFilters, sortPlants, allGroups, type ListFilters, type SortField } from '../lib/plant-list';
   import { completenessPercent, badgeDefs, plantBadgesHtml, groupPillsHtml, type BadgeDef } from '../lib/plant-detail';
   import { BOOL_FIELD_KEYS } from '../lib/plant-fields';
-  import { searchPlants, fetchProxyData, fetchPlantDetails, needsImageCredit } from '../lib/plant-search';
+  import { searchPlants, needsImageCredit } from '../lib/plant-search';
   import { newId } from '../lib/id';
-  import { enrichPlant, trackSources, SCORE_FIELDS } from '../lib/enrich';
+  import { enrichPlant, trackSources, createPlantFromSearch } from '../lib/enrich';
   import { escapeHtml, withButtonSpinner, loadingPlaceholderHtml, imageCreditOverlayHtml } from '../lib/html';
   import { isSourceEnabled, loadSettings } from '../lib/settings';
   import { deriveLayer, LAYER_STYLE } from '../lib/plant-layer';
@@ -550,13 +550,14 @@ import Layout from '../layouts/Layout.astro';
   const SOURCE_OUTLINE: Record<DataSource, string> = {
     wikidata: 'border-blue-300 text-blue-500',
     pfaf:     'border-green-300 text-green-600',
+    efg:      'border-amber-300 text-amber-700',
     naturadb: 'border-orange-300 text-orange-500',
     manual:   'border-stone-300 dark:border-stone-600 text-stone-500 dark:text-stone-400',
     csv:      'border-purple-300 text-purple-500',
     sample:   'border-teal-300 text-teal-500',
   };
   const SOURCE_SHORT: Record<DataSource, string> = {
-    wikidata: 'WD', pfaf: 'PFAF', naturadb: 'NDB', manual: 'M', csv: 'CSV', sample: '~',
+    wikidata: 'WD', pfaf: 'PFAF', efg: 'EFG', naturadb: 'NDB', manual: 'M', csv: 'CSV', sample: '~',
   };
 
   /** Deep-link to this plant's actual record on the given source, when that's possible. */
@@ -569,6 +570,9 @@ import Layout from '../layouts/Layout.astro';
         return `https://www.wikidata.org/w/index.php?search=${encodeURIComponent(p.latinName)}`;
       case 'naturadb':
         return `https://www.naturadb.de/pflanzen/${p.latinName.toLowerCase().replace(/ /g, '-')}/`;
+      case 'efg':
+        // No per-plant pages: the species table itself (Edible Forest Gardens Vol. 2).
+        return 'https://docs.google.com/spreadsheets/d/1_PgxV4pxlNTa0Ep9TDY_57oJfVtrofmu/htmlview#gid=1609043836';
       default:
         return null; // manual/csv/sample aren't external sources
     }
@@ -1469,68 +1473,9 @@ import Layout from '../layouts/Layout.astro';
           const statusEl = b.closest('[data-idx]')?.querySelector('.import-status') as HTMLElement | null;
           if (b.dataset.dupe && !confirm(t('searchAddAnywayConfirm', { name: results[idx].commonName || results[idx].latinName }))) return;
           b.disabled = true;
-          const sourceLabels: string[] = [];
           try {
-            const r = results[idx];
-            const plant = createEmptyPlant();
-            plant._sources = {};
-            plant.latinName = r.latinName;
-            plant.commonName = r.commonName;
-            if (plant.latinName) plant._sources['latinName'] = 'manual';
-            if (plant.commonName) plant._sources['commonName'] = 'manual';
-
-            if (isSourceEnabled('wikidata')) {
-              b.textContent = t('enrichWikidataStatus');
-              let wdId = r.wikidataId;
-              if (!wdId && plant.latinName) {
-                const searchUrl = new URL('https://www.wikidata.org/w/api.php');
-                searchUrl.searchParams.set('action', 'wbsearchentities');
-                searchUrl.searchParams.set('search', plant.latinName);
-                searchUrl.searchParams.set('language', 'en');
-                searchUrl.searchParams.set('type', 'item');
-                searchUrl.searchParams.set('limit', '1');
-                searchUrl.searchParams.set('format', 'json');
-                searchUrl.searchParams.set('origin', '*');
-                const sr = await fetch(searchUrl.toString());
-                if (sr.ok) { const sd = await sr.json(); wdId = sd.search?.[0]?.id; }
-              }
-              if (wdId) {
-                const details = await fetchPlantDetails(wdId);
-                if (Object.keys(details).length > 0) {
-                  const filled: Partial<PlantData> = {};
-                  for (const [key, value] of Object.entries(details)) {
-                    const cur = (plant as any)[key];
-                    const empty = cur === null || cur === undefined || cur === '' || cur === false;
-                    if (empty && value) { (plant as any)[key] = value; (filled as any)[key] = value; }
-                  }
-                  if (Object.keys(filled).length > 0) { trackSources(plant, filled, 'wikidata'); sourceLabels.push('Wikidata'); }
-                }
-              }
-            }
-
-            if (plant.latinName && (isSourceEnabled('pfaf') || isSourceEnabled('naturadb'))) {
-              b.textContent = t('enrichPfafStatus');
-              const proxyData = await fetchProxyData(plant.latinName);
-              const filled: Partial<PlantData> = {};
-              for (const [key, value] of Object.entries(proxyData)) {
-                const cur = (plant as any)[key];
-                // See the SCORE_FIELDS comment on isFillable() in lib/enrich.ts — same
-                // 0-vs-"empty" gap applies to this search-add's own merge.
-                const empty = cur === null || cur === undefined || cur === '' || cur === false ||
-                  (SCORE_FIELDS.has(key) && cur === 0) ||
-                  (Array.isArray(cur) && cur.every((v: boolean) => !v));
-                if (empty && value !== null && value !== undefined && value !== '' && value !== false) {
-                  (plant as any)[key] = value; (filled as any)[key] = value;
-                }
-              }
-              if (Object.keys(filled).length > 0) {
-                const src: DataSource = isSourceEnabled('pfaf') ? 'pfaf' : 'naturadb';
-                trackSources(plant, filled, src);
-                if (isSourceEnabled('pfaf')) sourceLabels.push('PFAF');
-              }
-            }
-
-            plant.id = newId();
+            b.textContent = t('enrichSourcesStatus');
+            const { plant, sourceLabels } = await createPlantFromSearch(results[idx]);
             await savePlant(plant);
             renderList();
             b.textContent = t('searchAdded');

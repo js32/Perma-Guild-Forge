@@ -1,6 +1,5 @@
-import { createEmptyPlant, type DataSource, type PlantData } from './types';
+import type { PlantData } from './types';
 import { isSourceEnabled } from './settings';
-import { newId } from './id';
 
 // ── Local plant database ─────────────────────────────────────────────────────
 
@@ -31,19 +30,6 @@ function searchDB(db: DBEntry[], query: string): SearchResult[] {
       commonName: p.commonName || p.latinName,
       description: 'Lokale Datenbank',
     }));
-}
-
-// ── Source recording ─────────────────────────────────────────────────────────
-
-function recordSources(plant: PlantData, data: Partial<PlantData>, source: DataSource) {
-  if (!plant._sources) plant._sources = {};
-  for (const key of Object.keys(data) as (keyof PlantData)[]) {
-    if (key === '_sources' || key === 'id') continue;
-    const val = data[key];
-    const isEmpty = val === null || val === undefined || val === '' || val === false ||
-      (Array.isArray(val) && (val as boolean[]).every(v => !v));
-    if (!isEmpty) (plant._sources as any)[key] = source;
-  }
 }
 
 export interface SearchResult {
@@ -148,7 +134,7 @@ export async function searchPlants(query: string): Promise<SearchResult[]> {
   const signal = activeController.signal;
 
   const wikidataEnabled = isSourceEnabled('wikidata');
-  const proxyEnabled = isSourceEnabled('pfaf') || isSourceEnabled('naturadb');
+  const proxyEnabled = isSourceEnabled('pfaf') || isSourceEnabled('efg');
 
   // 1. Local DB first (instant, no network)
   const db = await getPlantDB();
@@ -331,12 +317,23 @@ export async function fetchPlantDetails(wikidataId: string): Promise<Partial<Pla
   return result;
 }
 
-/**
- * Fetch enrichment data from PFAF via the server proxy (server/plant-proxy-server.mjs).
- * Returns partial PlantData with all the fields that the proxy could parse.
- */
-export async function fetchProxyData(latinName: string): Promise<Partial<PlantData>> {
-  return (await fetchProxyResult(latinName)).fields;
+/** Wikidata item id for a Latin name (first search hit), or undefined. */
+export async function findWikidataId(latinName: string): Promise<string | undefined> {
+  const url = new URL('https://www.wikidata.org/w/api.php');
+  url.searchParams.set('action', 'wbsearchentities');
+  url.searchParams.set('search', latinName);
+  url.searchParams.set('language', 'en');
+  url.searchParams.set('type', 'item');
+  url.searchParams.set('limit', '1');
+  url.searchParams.set('format', 'json');
+  url.searchParams.set('origin', '*');
+  try {
+    const res = await fetch(url.toString());
+    if (!res.ok) return undefined;
+    return (await res.json()).search?.[0]?.id;
+  } catch {
+    return undefined;
+  }
 }
 
 const PROXY_DIRECT_FIELDS = [
@@ -352,85 +349,52 @@ const PROXY_DIRECT_FIELDS = [
   'phAlkaline', 'phVeryAlkaline',
 ] as const;
 
-export interface ProxyResult {
-  /** Fields with a real value — what gets filled into empty plant fields. */
+export interface SourceData {
+  /** Fields the source has a real value for. */
   fields: Partial<PlantData>;
-  /** Boolean fields the source explicitly reported as false for a plant it
-   *  knows — lets a re-enrich correct a stale `true` it set earlier. Empty
-   *  when the source didn't recognise the plant. */
+  /** Boolean fields the source explicitly reports as false for a plant it
+   *  knows — an opinion too, which lets it outrank or correct a `true`. */
   reportedFalse: (keyof PlantData)[];
 }
 
-export async function fetchProxyResult(latinName: string): Promise<ProxyResult> {
-  const empty: ProxyResult = { fields: {}, reportedFalse: [] };
-  if (!isSourceEnabled('pfaf') && !isSourceEnabled('naturadb')) return empty;
+export type ProxySource = 'pfaf' | 'efg';
 
-  const proxyUrl = `/api/plant-proxy?name=${encodeURIComponent(latinName)}`;
-  try {
-    const res = await fetch(proxyUrl);
-    if (!res.ok) return empty;
-    const data = await res.json();
-
-    const fields: Partial<PlantData> = {};
-    const reportedFalse: (keyof PlantData)[] = [];
-    const found = typeof data.source === 'string' && data.source !== '';
-    for (const f of PROXY_DIRECT_FIELDS) {
-      if (data[f] !== null && data[f] !== undefined && data[f] !== '' && data[f] !== false) {
-        (fields as any)[f] = data[f];
-      } else if (found && data[f] === false) {
-        reportedFalse.push(f);
-      }
-    }
-
-    // PFAF's common names are English.
-    if (typeof data.commonName === 'string' && data.commonName.trim()) fields.commonNameEn = data.commonName.trim();
-
-    if (data.fruitMonths?.some((v: boolean) => v)) fields.fruitMonths = data.fruitMonths;
-    if (data.flowerMonths?.some((v: boolean) => v)) fields.flowerMonths = data.flowerMonths;
-
-    return { fields, reportedFalse };
-  } catch {
-    return empty;
+/** One source's raw proxy fields → SourceData. Common names from PFAF and EFG
+ *  are English, so they also fill commonNameEn. */
+export function proxyFieldsToSourceData(raw: Record<string, any>): SourceData {
+  const fields: Partial<PlantData> = {};
+  const reportedFalse: (keyof PlantData)[] = [];
+  for (const f of PROXY_DIRECT_FIELDS) {
+    const v = raw[f];
+    if (v !== null && v !== undefined && v !== '' && v !== false) (fields as any)[f] = v;
+    else if (v === false) reportedFalse.push(f);
   }
+  if (typeof raw.commonName === 'string' && raw.commonName.trim()) fields.commonNameEn = raw.commonName.trim();
+  if (Array.isArray(raw.fruitMonths) && raw.fruitMonths.some(Boolean)) fields.fruitMonths = raw.fruitMonths;
+  if (Array.isArray(raw.flowerMonths) && raw.flowerMonths.some(Boolean)) fields.flowerMonths = raw.flowerMonths;
+  return { fields, reportedFalse };
 }
 
 /**
- * Import a plant from search: Wikidata first, then enrich with PFAF/NaturaDB proxy.
+ * Data from the server proxy (PFAF scraped live, Edible Forest Gardens from
+ * the sheet on the server), per source. Sources the proxy doesn't know the
+ * plant in are absent.
  */
-export async function importPlantFromSearch(result: SearchResult): Promise<PlantData> {
-  const plant = createEmptyPlant();
-  plant._sources = {};
-  plant.latinName = result.latinName;
-  plant.commonName = result.commonName;
-
-  // Wikidata details (image, dimensions)
-  if (result.wikidataId && isSourceEnabled('wikidata')) {
-    const details = await fetchPlantDetails(result.wikidataId);
-    Object.assign(plant, details);
-    recordSources(plant, details, 'wikidata');
-  }
-
-  // PFAF + NaturaDB enrichment via proxy
-  if (plant.latinName && (isSourceEnabled('pfaf') || isSourceEnabled('naturadb'))) {
-    const proxyData = await fetchProxyData(plant.latinName);
-    // Only fill empty fields — don't overwrite Wikidata data
-    // See the SCORE_FIELDS comment in index.astro's isFillable() — same
-    // 0-vs-"empty" gap applies here for a fresh import.
-    const SCORE_FIELDS = new Set(['eatableScore', 'medsScore', 'materialScore']);
-    const filled: Partial<PlantData> = {};
-    for (const [key, value] of Object.entries(proxyData)) {
-      const current = (plant as any)[key];
-      const isEmpty = current === null || current === undefined || current === '' || current === false ||
-        (SCORE_FIELDS.has(key) && current === 0) ||
-        (Array.isArray(current) && current.every((v: boolean) => !v));
-      if (isEmpty) {
-        (plant as any)[key] = value;
-        (filled as any)[key] = value;
+export async function fetchProxySources(latinName: string): Promise<Partial<Record<ProxySource, SourceData>>> {
+  try {
+    const res = await fetch(`/api/plant-proxy?name=${encodeURIComponent(latinName)}`);
+    if (!res.ok) return {};
+    const data = await res.json();
+    const out: Partial<Record<ProxySource, SourceData>> = {};
+    if (data.sources && typeof data.sources === 'object') {
+      for (const src of ['pfaf', 'efg'] as const) {
+        if (data.sources[src]) out[src] = proxyFieldsToSourceData(data.sources[src]);
       }
+    } else if (typeof data.source === 'string' && data.source.includes('pfaf')) {
+      out.pfaf = proxyFieldsToSourceData(data); // older proxy: one merged PFAF result
     }
-    recordSources(plant, filled, 'pfaf'); // proxy merges pfaf+naturadb; use 'pfaf' as primary
+    return out;
+  } catch {
+    return {};
   }
-
-  plant.id = newId();
-  return plant;
 }

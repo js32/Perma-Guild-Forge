@@ -13,7 +13,8 @@
     "deploy": "bash scripts/deploy.sh",
     "astro": "astro",
     "test": "vitest run",
-    "check": "astro check"
+    "check": "astro check",
+    "efg:update": "node scripts/update-efg.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",

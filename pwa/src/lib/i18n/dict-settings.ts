@@ -11,6 +11,12 @@ export const settingsDict: Dict = {
   apiKeyPlaceholder: { de: 'API Key eingeben...', en: 'Enter API key...' },
   sourceDescWikidata: { de: 'Freie Wissensdatenbank — Taxon-Namen, Bilder, Grunddaten. CORS-frei, kein Proxy nötig.', en: 'Free knowledge base — taxon names, images, basic data. CORS-free, no proxy needed.' },
   sourceDescPfaf: { de: 'Essbarkeit, Medizin, Material-Scores, pH, Sonne, Wasser, Wachstum. Läuft über Proxy.', en: 'Edibility, medicinal, material scores, pH, sun, water, growth. Runs via proxy.' },
+  sourceDescEfg: { de: 'Artentabelle aus „Edible Forest Gardens" Bd. 2 (Jacke & Toensmeier; aufbereitet von Lally Luck Farm): Licht, Feuchte, pH, Größe, Wuchs, Nutzungen, Funktionen. Rund 600 vor allem nordamerikanische Arten; liegt auf unserem Server.', en: 'Species table from "Edible Forest Gardens" vol. 2 (Jacke & Toensmeier; compiled by Lally Luck Farm): light, moisture, pH, size, growth, uses, functions. About 600 mostly North American species; hosted on our server.' },
+  priorityTitle: { de: 'Reihenfolge beim Befüllen', en: 'Order when filling data' },
+  priorityHelp: { de: 'Haben mehrere Quellen Daten zu einem Feld, gewinnt die obere. Von dir eingetragene Werte werden nie überschrieben; der deutsche Name kommt immer von Wikidata. Gilt für neue Pflanzen und beim erneuten Ergänzen — mit „Speichern" übernehmen.', en: 'When several sources have data for a field, the higher one wins. Values you entered are never overwritten; the German name always comes from Wikidata. Applies to new plants and when enriching again — confirm with "Save".' },
+  priorityUp: { de: 'Nach oben', en: 'Move up' },
+  priorityDown: { de: 'Nach unten', en: 'Move down' },
+  priorityDisabled: { de: 'deaktiviert', en: 'disabled' },
   sourceDescNaturadb: { de: 'Deutsche Namen, Höhe/Breite, Frucht-/Blütemonate, Licht, Wasser. Vorerst deaktiviert (ungeklärte Lizenzlage, siehe CHANGELOG.md) — der Proxy liefert dafür keine Daten mehr, unabhängig von diesem Schalter.', en: 'German names, height/width, fruit/flower months, light, water. Currently disabled (unresolved licensing, see CHANGELOG.md) — the proxy no longer returns data for it regardless of this toggle.' },
 
   sectionView: { de: 'Ansicht', en: 'View' },

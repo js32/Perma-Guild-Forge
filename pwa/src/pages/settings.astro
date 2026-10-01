@@ -11,6 +11,11 @@ import Layout from '../layouts/Layout.astro';
   <section class="mb-8">
     <h2 class="mb-3 text-lg font-semibold text-stone-800 dark:text-stone-100" data-i18n="sectionSources">Datenquellen</h2>
     <div id="sources-list" class="space-y-4"></div>
+    <div class="mt-4 rounded-xl bg-white dark:bg-stone-800 p-5 shadow-sm ring-1 ring-stone-200 dark:ring-stone-700">
+      <h3 class="text-sm font-bold text-stone-800 dark:text-stone-100" data-i18n="priorityTitle">Reihenfolge beim Befüllen</h3>
+      <p class="mt-1 text-xs text-stone-500 dark:text-stone-400" data-i18n="priorityHelp">Haben mehrere Quellen Daten zu einem Feld, gewinnt die obere.</p>
+      <ol id="source-priority" class="mt-3 space-y-2"></ol>
+    </div>
   </section>
 
   <!-- Ansicht -->
@@ -223,8 +228,38 @@ import Layout from '../layouts/Layout.astro';
   const SOURCE_DESC_KEY: Record<string, string> = {
     wikidata: 'sourceDescWikidata',
     pfaf: 'sourceDescPfaf',
+    efg: 'sourceDescEfg',
     naturadb: 'sourceDescNaturadb',
   };
+
+  // ── Source priority (order used when filling plant data) ────────────────
+  const priorityList = document.getElementById('source-priority')!;
+  function renderPriority() {
+    const order = settings.sourcePriority;
+    priorityList.innerHTML = order.map((id, i) => {
+      const src = settings.sources.find(s => s.id === id);
+      const off = !src?.enabled;
+      const btn = (dir: 'up' | 'down', disabled: boolean, label: string, sym: string) =>
+        `<button type="button" data-move="${dir}" data-idx="${i}" ${disabled ? 'disabled' : ''} aria-label="${escapeHtml(label)}" class="rounded-md px-2.5 py-1 text-sm ring-1 ring-stone-200 dark:ring-stone-600 hover:bg-stone-100 dark:hover:bg-stone-700 disabled:opacity-30 disabled:hover:bg-transparent">${sym}</button>`;
+      return `<li class="flex items-center gap-3 rounded-lg bg-stone-50 dark:bg-stone-900/40 px-3 py-2 ${off ? 'opacity-60' : ''}">
+        <span class="w-5 text-sm font-bold tabular-nums text-stone-400">${i + 1}.</span>
+        <span class="flex-1 text-sm font-medium text-stone-800 dark:text-stone-100">${escapeHtml(src?.name ?? id)}${off ? ` <span class="text-xs font-normal text-stone-500">(${escapeHtml(t('priorityDisabled'))})</span>` : ''}</span>
+        ${btn('up', i === 0, t('priorityUp'), '↑')}
+        ${btn('down', i === order.length - 1, t('priorityDown'), '↓')}
+      </li>`;
+    }).join('');
+  }
+  priorityList.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest('button[data-move]') as HTMLButtonElement | null;
+    if (!b) return;
+    const i = Number(b.dataset.idx);
+    const j = b.dataset.move === 'up' ? i - 1 : i + 1;
+    const order = [...settings.sourcePriority];
+    [order[i], order[j]] = [order[j], order[i]];
+    settings.sourcePriority = order;
+    renderPriority();
+    (priorityList.querySelector(`button[data-idx="${j}"][data-move="${b.dataset.move}"]`) as HTMLButtonElement | null)?.focus();
+  });
 
   const sourcesList = document.getElementById('sources-list')!;
   const toast = document.getElementById('toast')!;
@@ -281,6 +316,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
     `;
     }).join('');
+    renderPriority();
   }
 
   function renderPrefs() {

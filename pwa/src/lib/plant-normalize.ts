@@ -11,7 +11,7 @@ import { newId } from './id';
 // `groups`) working, and keeps a crafted file from smuggling markup-shaped
 // values into fields the renderers treat as numbers or safe URLs.
 
-const DATA_SOURCES = new Set<DataSource>(['wikidata', 'pfaf', 'naturadb', 'manual', 'csv', 'sample']);
+const DATA_SOURCES = new Set<DataSource>(['wikidata', 'pfaf', 'efg', 'naturadb', 'manual', 'csv', 'sample']);
 const ROLES = new Set<PolycultureRole>(['companion', 'groundCover', 'nFixer', 'mineralFixer', 'insectary', 'pestConfuser', 'fruitProducer', 'other']);
 
 const isObject = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null && !Array.isArray(v);

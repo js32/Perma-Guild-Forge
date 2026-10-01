@@ -8,6 +8,7 @@
 // has no knowledge of where this process runs.
 import { createServer } from 'node:http';
 import { parsePfafHtml } from './pfaf-parse.mjs';
+import { lookupEfg, efgIndex } from './efg.mjs';
 
 const PORT = process.env.PLANT_PROXY_PORT || 8787;
 const UPSTREAM_TIMEOUT_MS = 15_000;
@@ -227,35 +228,34 @@ async function fetchNaturaDb(name) {
 
 // --- Main handler ---
 
+/** Copies a source's fields, minus its 'source' tag. */
+const fieldsOf = (r) => Object.fromEntries(Object.entries(r).filter(([k]) => k !== 'source'));
+
 async function lookup(name) {
   const result = emptyResult(name);
   const [pfaf, naturaDb] = await Promise.all([fetchPfaf(name), fetchNaturaDb(name)]);
-  const sources = [];
+  const efg = lookupEfg(name);
 
-  if (pfaf && Object.keys(pfaf).length > 1) {
-    sources.push('pfaf');
-    for (const [key, value] of Object.entries(pfaf)) {
-      if (key === 'source') continue;
-      if (value !== null && value !== undefined && value !== '' && value !== false) {
-        result[key] = value;
-      }
-    }
-  }
+  // Per-source results, so the client can merge them in the order the user
+  // chose (Einstellungen → Quellen-Priorität). The flat fields are a legacy
+  // merge (first source wins, the others fill gaps) for older clients.
+  const bySource = {};
+  if (pfaf && Object.keys(pfaf).length > 1) bySource.pfaf = fieldsOf(pfaf);
+  if (Object.keys(efg).length > 1) bySource.efg = fieldsOf(efg);
+  if (naturaDb && Object.keys(naturaDb).length > 1) bySource.naturadb = fieldsOf(naturaDb);
 
-  if (naturaDb && Object.keys(naturaDb).length > 1) {
-    sources.push('naturadb');
-    for (const [key, value] of Object.entries(naturaDb)) {
-      if (key === 'source') continue;
+  for (const fields of Object.values(bySource)) {
+    for (const [key, value] of Object.entries(fields)) {
       const current = result[key];
       const isEmpty = current === null || current === undefined || current === '' || current === false ||
         (Array.isArray(current) && current.every((v) => !v));
-      if (isEmpty && value !== null && value !== undefined && value !== '') {
-        result[key] = value;
-      }
+      if (isEmpty && value !== null && value !== undefined && value !== '' && value !== false) result[key] = value;
     }
   }
 
+  const sources = Object.keys(bySource);
   result.source = sources.join('+');
+  result.sources = bySource;
   const upstreamFailed = pfaf === null || naturaDb === null;
   return { body: JSON.stringify(result), found: sources.length > 0, upstreamFailed };
 }
@@ -310,5 +310,5 @@ const server = createServer((req, res) => {
 });
 
 server.listen(PORT, '127.0.0.1', () => {
-  console.log(`plant-proxy-server listening on http://127.0.0.1:${PORT} (NaturaDB: ${NATURADB_ENABLED ? 'enabled' : 'disabled'})`);
+  console.log(`plant-proxy-server listening on http://127.0.0.1:${PORT} (EFG: ${efgIndex().size} species; NaturaDB: ${NATURADB_ENABLED ? 'enabled' : 'disabled'})`);
 });

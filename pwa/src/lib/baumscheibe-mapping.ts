@@ -57,11 +57,17 @@ export const BOOL_FIELDS: Partial<Record<keyof PlantData, string[]>> = {
   material:   ['material',  'Material',  'u_material'],
   fodder:     ['fodder',    'Fodder',    'u_fodder'],
   fuel:       ['fuel',      'Fuel',      'u_fuel'],
+  // Template icons that had no field until wood/fiber existed — unmapped
+  // icons are never hidden, so they showed on every disc.
+  wood:       ['wood',      'u_timber'],
+  fiber:      ['fiber',     'u_fiber'],
   // Funktionen — same color-wedge aliases where the "color" group has one.
   nitrogenFix:      ['nitrogenFix',      'NitrogenFix',   'f_Nfixer',      'n+'],
   mineralFix:       ['mineralFix',       'MineralFix',    'f_dynacc',      'da'],
   groundCover:      ['groundCover',      'GroundCover',   'f_groundcover', 'gc'],
   insects:          ['insects',          'Insects',       'f_pollinators', 'i'],
+  // "apc" is the pest-confuser icon (Duftverwirrer); `pest` covers pest control.
+  pest:             ['pest',             'f_apc',         'apc'],
   animalProtection: ['animalProtection', 'Animalshelter', 'f_shelter',     'sh'],
   windBreaking:     ['windBreaking',     'Windbreak',     'f_windbreak2',  'w'],
 };

@@ -34,7 +34,7 @@ export const impressumDict: Dict = {
   imCopyrightBody1: { de: 'Der Quellcode dieser Anwendung steht unter der im', en: 'The source code of this application is available under the license specified in the' },
   imCopyrightLink: { de: 'GitHub-Repository', en: 'GitHub repository' },
   imCopyrightBody2: {
-    de: 'angegebenen Lizenz. Pflanzendaten stammen aus den jeweils genannten Quellen unter deren Lizenzbedingungen (Wikidata: CC0, PFAF: CC BY 4.0, Wikimedia Commons: jeweilige Bildlizenz).',
-    en: '. Plant data comes from the respectively named sources under their license terms (Wikidata: CC0, PFAF: CC BY 4.0, Wikimedia Commons: respective image license).',
+    de: 'angegebenen Lizenz. Pflanzendaten stammen aus den jeweils genannten Quellen unter deren Lizenzbedingungen (Wikidata: CC0, PFAF: CC BY 4.0, Wikimedia Commons: jeweilige Bildlizenz) sowie aus der Artentabelle in Dave Jacke & Eric Toensmeier, „Edible Forest Gardens", Bd. 2 (Chelsea Green 2005), aufbereitet von Lally Luck Farm.',
+    en: '. Plant data comes from the respectively named sources under their license terms (Wikidata: CC0, PFAF: CC BY 4.0, Wikimedia Commons: respective image license) and from the species table in Dave Jacke & Eric Toensmeier, "Edible Forest Gardens", vol. 2 (Chelsea Green 2005), compiled by Lally Luck Farm.',
   },
 };

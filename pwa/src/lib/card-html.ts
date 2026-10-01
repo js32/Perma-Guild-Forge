@@ -1,12 +1,10 @@
 import type { PlantData } from './types';
-import { hasSource } from './types';
+import { dataCredits } from './types';
 import { escapeHtml, imageCreditOverlayHtml } from './html';
 import { displayCommonName } from './plant-name';
 
-/** PFAF's database text is CC BY 4.0, which requires attribution wherever the
- *  data is republished — including on printed/exported cards, not just in the
- *  app's own UI. Only shown when the plant actually has PFAF-sourced fields. */
-const PFAF_ATTRIBUTION = 'Daten: PFAF.org (CC BY 4.0)';
+// Source credits (PFAF's CC BY 4.0 requires attribution wherever its data is
+// republished, printed cards included) — only for sources the plant uses.
 
 // Colour palette matching the original SVG templates
 const C = {
@@ -223,8 +221,8 @@ export function renderPolyCardHtml(plant: PlantData, imgSrc?: string): string {
       `</div>` +
     `</div>` +
 
-    (hasSource(plant, 'pfaf')
-      ? `<div style="padding:1px 8px 3px;font-size:7px;color:#aaa;flex-shrink:0;">${PFAF_ATTRIBUTION}</div>`
+    (dataCredits(plant).length
+      ? `<div style="padding:1px 8px 3px;font-size:7px;color:#aaa;flex-shrink:0;">Daten: ${escapeHtml(dataCredits(plant).join(' · '))}</div>`
       : '') +
 
     `</div>` // end card
@@ -305,8 +303,8 @@ export function renderStripeCardHtml(plant: PlantData, imgSrc?: string): string 
     `</div>` +
 
     // Attribution (fixed column, not truncated like the name field would be)
-    (hasSource(plant, 'pfaf')
-      ? `<div style="font-size:6px;color:#aaa;flex-shrink:0;padding:0 4px;line-height:1.3;white-space:nowrap;">PFAF.org<br/>CC BY 4.0</div>`
+    (dataCredits(plant, true).length
+      ? `<div style="font-size:6px;color:#aaa;flex-shrink:0;padding:0 4px;line-height:1.3;white-space:nowrap;">${dataCredits(plant, true).map(escapeHtml).join('<br/>')}</div>`
       : '') +
 
     `</div>`

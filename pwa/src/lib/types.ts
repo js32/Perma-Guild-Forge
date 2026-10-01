@@ -116,11 +116,12 @@ export function createEmptyGardenPlan(): GardenPlan {
 
 // ── Data sources ────────────────────────────────────────────────────────────
 
-export type DataSource = 'wikidata' | 'pfaf' | 'naturadb' | 'manual' | 'csv' | 'sample';
+export type DataSource = 'wikidata' | 'pfaf' | 'efg' | 'naturadb' | 'manual' | 'csv' | 'sample';
 
 export const SOURCE_LABEL: Record<DataSource, string> = {
   wikidata: 'Wikidata',
   pfaf:     'PFAF',
+  efg:      'Edible Forest Gardens',
   naturadb: 'NaturaDB',
   manual:   'Manuell',
   csv:      'CSV',
@@ -129,6 +130,7 @@ export const SOURCE_LABEL: Record<DataSource, string> = {
 
 export const SOURCE_COLOR: Record<DataSource, string> = {
   wikidata: 'bg-blue-100 text-blue-700',
+  efg:      'bg-amber-100 text-amber-800',
   pfaf:     'bg-green-100 text-green-700',
   naturadb: 'bg-orange-100 text-orange-700',
   manual:   'bg-stone-100 text-stone-600',
@@ -140,6 +142,16 @@ export const SOURCE_COLOR: Record<DataSource, string> = {
  *  decide whether a card needs that source's attribution (e.g. PFAF's CC BY 4.0). */
 export function hasSource(plant: { _sources?: Partial<Record<string, DataSource>> }, source: DataSource): boolean {
   return !!plant._sources && Object.values(plant._sources).includes(source);
+}
+
+/** Credit for each published source a plant's data comes from — printed on
+ *  cards and discs (PFAF's CC BY 4.0 requires it; the Edible Forest Gardens
+ *  book is credited the same way). `short` for very narrow spaces. */
+export function dataCredits(plant: { _sources?: Partial<Record<string, DataSource>> }, short = false): string[] {
+  const credits: string[] = [];
+  if (hasSource(plant, 'pfaf')) credits.push(short ? 'PFAF.org CC BY 4.0' : 'PFAF.org (CC BY 4.0)');
+  if (hasSource(plant, 'efg')) credits.push(short ? 'Jacke & Toensmeier' : 'Jacke & Toensmeier, Edible Forest Gardens');
+  return credits;
 }
 
 export interface PlantData {

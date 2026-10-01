@@ -56,9 +56,9 @@ Offene Punkte. Abgeschlossene Roadmap-Punkte stehen in [`CHANGELOG.md`](CHANGELO
 
 
 ## jetzt 2.0
-- [ ] EdibleForestGardens(Toensmeier) - Datensatz neben PFAF und WD integrieren: https://docs.google.com/spreadsheets/d/1_PgxV4pxlNTa0Ep9TDY_57oJfVtrofmu/htmlview#gid=1609043836$- Ziehe die Tabelle auf den Server und fülle abfragen auch damit.
-- [ ] Priorisierung bei der Datenbefüllung der Pflanzen: PFAF > EdibleForestGardens(Toensmeier) > Wikidata. In den Einstellungen eine Möglichkeit schaffen, dass die Nutzerin die Reihenfolge selbst definieren kann. Quelle von Toensmeier (Buch) überall wie pfaf und WD als Quelle - soweit genutzt - angeben.
-- [ ] Faser- und Nutzholz-icons werden immer angezeigt. das stimmt so nicht, bitte prüfen
+- [x] EdibleForestGardens(Toensmeier) - Datensatz neben PFAF und WD integrieren: https://docs.google.com/spreadsheets/d/1_PgxV4pxlNTa0Ep9TDY_57oJfVtrofmu/htmlview#gid=1609043836$- Ziehe die Tabelle auf den Server und fülle abfragen auch damit.
+- [x] Priorisierung bei der Datenbefüllung der Pflanzen: PFAF > EdibleForestGardens(Toensmeier) > Wikidata. In den Einstellungen eine Möglichkeit schaffen, dass die Nutzerin die Reihenfolge selbst definieren kann. Quelle von Toensmeier (Buch) überall wie pfaf und WD als Quelle - soweit genutzt - angeben.
+- [x] Faser- und Nutzholz-icons werden immer angezeigt. das stimmt so nicht, bitte prüfen
 
 ## kurzfristig
 - [ ] Design festlegen. icon integrieren?

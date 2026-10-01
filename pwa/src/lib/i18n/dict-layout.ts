@@ -34,7 +34,7 @@ export const layoutDict: Dict = {
   welcomeStartTour: { de: 'Rundgang starten', en: 'Start tour' },
   tourSkip: { de: 'Überspringen', en: 'Skip' },
   tourSearchTitle: { de: '1 · Suche', en: '1 · Search' },
-  tourSearchText: { de: 'Hier suchst du Pflanzen nach deutschem oder lateinischem Namen. Die Daten kommen aus Wikidata und PFAF und werden beim Hinzufügen automatisch übernommen.', en: 'Search plants by German or Latin name here. Data comes from Wikidata and PFAF and is imported automatically when you add a plant.' },
+  tourSearchText: { de: 'Hier suchst du Pflanzen nach deutschem oder lateinischem Namen. Die Daten kommen aus PFAF, Edible Forest Gardens und Wikidata und werden beim Hinzufügen automatisch übernommen.', en: 'Search plants by German or Latin name here. Data comes from PFAF, Edible Forest Gardens and Wikidata and is imported automatically when you add a plant.' },
   tourEditTitle: { de: '2 · Pflanze bearbeiten', en: '2 · Edit a plant' },
   tourEditText: { de: 'Bei jeder Pflanze findest du einen Bearbeiten-Button (erscheint, wenn die Maus über der Kachel schwebt). Er öffnet sie im Editor — Angaben korrigieren, Namen, Bild und Eigenschaften ergänzen. Von Hand gesetzte Werte bleiben beim Nachladen erhalten.', en: 'Every plant has an edit button (appears when you hover over its tile). It opens the plant in the editor — correct data, add names, image and properties. Values you set by hand are kept when data is reloaded.' },
   tourDummyName: { de: 'Beispielpflanze', en: 'Example plant' },
