@@ -67,6 +67,7 @@ https://www.dropbox.com/scl/fi/kptyeduzlor049spvvvrq/Plant-Species-Toolkit.xlsx?
 - [ ] bug reporting aufsetzen (mit Formular vorstrukturieren)
 - [ ] Github aktualisieren (help.md, ...)
 - [ ] Dokumentation fertig (readme.md; Help.md)
+- [ ] optional: Logo/CI für Startpage
 
 ### Re: FUNKTIONALITÄT
 - [x] Durchmesser auf Baumscheibe etwas runterschieben
