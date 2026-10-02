@@ -118,6 +118,22 @@ export function createEmptyGardenPlan(): GardenPlan {
 
 export type DataSource = 'wikidata' | 'pfaf' | 'efg' | 'naturadb' | 'manual' | 'csv' | 'sample';
 
+export const PLANT_HABITS = ['tree', 'shrub', 'herb', 'climber'] as const;
+export type PlantHabit = typeof PLANT_HABITS[number] | '';
+
+/** Maps free-text growth forms (PFAF "deciduous Shrub", EFG "Vine (l)",
+ *  CSV "Strauch") to a habit; '' when unrecognised. */
+export function parseHabit(raw: unknown): PlantHabit {
+  const s = typeof raw === 'string' ? raw.trim().toLowerCase() : '';
+  if (!s) return '';
+  if ((PLANT_HABITS as readonly string[]).includes(s)) return s as PlantHabit;
+  if (/climber|vine|kletter|liane/.test(s)) return 'climber';
+  if (/tree|baum/.test(s)) return 'tree';
+  if (/shrub|strauch|bamboo|bambus/.test(s)) return 'shrub';
+  if (/herb|kraut|perennial|annual|biennial|bulb|corm|fern|staude|farn|zwiebel|einjährig|zweijährig/.test(s)) return 'herb';
+  return '';
+}
+
 export const SOURCE_LABEL: Record<DataSource, string> = {
   wikidata: 'Wikidata',
   pfaf:     'PFAF',
@@ -213,6 +229,9 @@ export interface PlantData {
   growSpeedLow: boolean;
   growSpeedMid: boolean;
   growSpeedHigh: boolean;
+  // Growth form as stated by PFAF/EFG or the user ('' = unknown). Drives the
+  // layer (Baum/Strauch/Kraut); height is only the fallback.
+  habit: PlantHabit;
   // Climate
   climateZone: string;
   // Phenology - months 0-11
@@ -275,6 +294,7 @@ export function createEmptyPlant(): PlantData {
     growSpeedLow: false,
     growSpeedMid: false,
     growSpeedHigh: false,
+    habit: '',
     climateZone: '',
     fruitMonths: Array(12).fill(false),
     flowerMonths: Array(12).fill(false),

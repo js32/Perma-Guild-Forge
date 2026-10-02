@@ -1,5 +1,5 @@
 import {
-  createEmptyPlant, createEmptyPolyculture, createEmptyGardenPlan,
+  createEmptyPlant, createEmptyPolyculture, createEmptyGardenPlan, parseHabit,
   type PlantData, type Polyculture, type GardenPlan, type DataSource, type PolycultureRole,
 } from './types';
 import { newId } from './id';
@@ -46,6 +46,7 @@ export function normalizePlant(raw: unknown): PlantData | null {
   }
 
   p.id = nonEmptyStr(raw.id, p.id);
+  p.habit = parseHabit(raw.habit);
   const h = finite(raw.heightM), w = finite(raw.widthM);
   p.heightM = h != null && h >= 0 ? h : null;
   p.widthM = w != null && w >= 0 ? w : null;

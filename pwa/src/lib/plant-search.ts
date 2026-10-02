@@ -1,4 +1,4 @@
-import type { PlantData } from './types';
+import { parseHabit, type PlantData } from './types';
 import { isSourceEnabled } from './settings';
 
 // ── Local plant database ─────────────────────────────────────────────────────
@@ -337,7 +337,7 @@ export async function findWikidataId(latinName: string): Promise<string | undefi
 }
 
 const PROXY_DIRECT_FIELDS = [
-  'commonName', 'heightM', 'widthM', 'climateZone',
+  'commonName', 'heightM', 'widthM', 'habit', 'climateZone',
   'eatableScore', 'medsScore', 'materialScore',
   'eatable', 'culinaric', 'meds', 'material', 'fodder', 'fuel',
   'nitrogenFix', 'mineralFix', 'groundCover', 'insects', 'pest',
@@ -368,6 +368,10 @@ export function proxyFieldsToSourceData(raw: Record<string, any>): SourceData {
     const v = raw[f];
     if (v !== null && v !== undefined && v !== '' && v !== false) (fields as any)[f] = v;
     else if (v === false) reportedFalse.push(f);
+  }
+  if ('habit' in fields) {
+    const habit = parseHabit(fields.habit);
+    if (habit) fields.habit = habit; else delete fields.habit;
   }
   if (typeof raw.commonName === 'string' && raw.commonName.trim()) fields.commonNameEn = raw.commonName.trim();
   if (Array.isArray(raw.fruitMonths) && raw.fruitMonths.some(Boolean)) fields.fruitMonths = raw.fruitMonths;

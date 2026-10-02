@@ -117,6 +117,7 @@ function emptyResult(latinName) {
     latinName,
     commonName: '',
     heightM: null, widthM: null,
+    habit: '',
     climateZone: '',
     eatableScore: null, medsScore: null, materialScore: null,
     eatable: false, meds: false, material: false, culinaric: false,

@@ -279,6 +279,14 @@ import Layout from '../layouts/Layout.astro';
               <input type="number" id="f-heightM" step="0.1" min="0" class="mt-0.5 block w-full rounded-md border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-800 px-2.5 py-1.5 text-sm shadow-inner focus:border-green-500 focus:ring-2 focus:ring-green-200 focus:outline-none" /></label>
             <label class="block"><span class="text-xs font-medium text-stone-500 dark:text-stone-400" data-field="widthM" data-i18n="fieldWidthM">Breite (m)</span>
               <input type="number" id="f-widthM" step="0.1" min="0" class="mt-0.5 block w-full rounded-md border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-800 px-2.5 py-1.5 text-sm shadow-inner focus:border-green-500 focus:ring-2 focus:ring-green-200 focus:outline-none" /></label>
+            <label class="block"><span class="text-xs font-medium text-stone-500 dark:text-stone-400" data-field="habit" data-i18n="fieldHabit">Wuchsform</span>
+              <select id="f-habit" class="mt-0.5 block w-full rounded-md border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-800 px-2.5 py-1.5 text-sm shadow-inner focus:border-green-500 focus:ring-2 focus:ring-green-200 focus:outline-none">
+                <option value="" data-i18n="habitUnknown">unbekannt (nach Höhe)</option>
+                <option value="tree" data-i18n="layerTree">Baum</option>
+                <option value="shrub" data-i18n="layerShrub">Strauch</option>
+                <option value="herb" data-i18n="layerHerb">Kraut/Bodendecker</option>
+                <option value="climber" data-i18n="habitClimber">Kletterpflanze</option>
+              </select></label>
             <label class="block"><span class="text-xs font-medium text-stone-500 dark:text-stone-400" data-field="climateZone" data-i18n="fieldClimateZone">Klimazone</span>
               <input type="text" id="f-climateZone" data-i18n-placeholder="climateZonePlaceholder" placeholder="z.B. 5-9" class="mt-0.5 block w-full rounded-md border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-800 px-2.5 py-1.5 text-sm shadow-inner focus:border-green-500 focus:ring-2 focus:ring-green-200 focus:outline-none" /></label>
             <label class="block sm:col-span-2"><span class="text-xs font-medium text-stone-500 dark:text-stone-400" data-field="imageCredit" data-i18n="fieldImageCredit">Bildnachweis (Urheber · Lizenz · Quelle)</span>
@@ -513,7 +521,7 @@ import Layout from '../layouts/Layout.astro';
     try { localStorage.removeItem('plant-filters'); } catch {}
   })();
 
-  const textFields = ['latinName', 'commonName', 'commonNameEn', 'varietyName', 'climateZone', 'imageUrl', 'imageCredit', 'notes'] as const;
+  const textFields = ['latinName', 'commonName', 'commonNameEn', 'varietyName', 'habit', 'climateZone', 'imageUrl', 'imageCredit', 'notes'] as const;
   const numberFields = ['heightM', 'widthM', 'eatableScore', 'medsScore', 'materialScore'] as const;
   const boolFields = BOOL_FIELD_KEYS;
 

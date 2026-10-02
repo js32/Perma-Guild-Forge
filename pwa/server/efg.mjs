@@ -50,6 +50,13 @@ export function parseLength(text) {
 const normalizeName = (s) => s.toLowerCase().replace(/\s+/g, ' ').trim();
 
 /** Converts one sheet row into plant fields (same keys as PFAF's proxy fields). */
+/** "Form" column: "Tree (l)", "Shrub (m-l)", "Herb (s)", "Vine (h)". */
+function efgHabit(form) {
+  const m = form.trim().toLowerCase().match(/^(tree|shrub|herb|vine)\b/);
+  if (!m) return '';
+  return m[1] === 'vine' ? 'climber' : m[1];
+}
+
 function rowToFields(get) {
   const has = (col) => get(col).trim() !== '';
   const light = get('Light'), moisture = get('Moisture');
@@ -65,6 +72,7 @@ function rowToFields(get) {
     commonName: get('Common Name').trim(),
     heightM: parseLength(get('Height')),
     widthM: parseLength(get('Width')),
+    habit: efgHabit(get('Form')),
     climateZone: validZone(cold) && validZone(warm) ? (cold === warm ? cold : `${cold}-${warm}`)
       : validZone(cold) ? `ab ${cold}` : '',
     // Same thresholds as the PFAF parser: a use counts from a "real" rating

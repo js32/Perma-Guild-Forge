@@ -1,4 +1,4 @@
-import { createEmptyPlant, type PlantData } from './types';
+import { createEmptyPlant, parseHabit, type PlantData } from './types';
 import { BOOL_FIELDS } from './plant-fields';
 import { normalizePlant } from './plant-normalize';
 
@@ -48,6 +48,7 @@ const COLUMNS: Column[] = [
   { header: 'Höhe_m', example: '6', get: p => p.heightM == null ? '' : String(p.heightM), set: (p, v) => { p.heightM = num(v); } },
   { header: 'Breite_m', example: '4', get: p => p.widthM == null ? '' : String(p.widthM), set: (p, v) => { p.widthM = num(v); } },
   text('Klimazone', 'climateZone', '5-10'),
+  { header: 'Wuchsform', example: 'shrub', get: p => p.habit ?? '', set: (p, v) => { p.habit = parseHabit(v); } },
   ...BOOL_FIELDS.map((f): Column => ({
     header: f.csv,
     example: ['eatable', 'meds', 'mineralFix', 'insects', 'sunFull', 'sunMid', 'waterMid', 'phNeutral', 'growSpeedHigh'].includes(f.key) ? '1' : '0',

@@ -51,6 +51,17 @@ function extractMonths(phys, kind) {
 // shade plant as full sun too. Require a path separator or quote right before
 // the file name. (PFAF's own naming: sun = full sun, partsun = semi-shade,
 // fullsun = full shade.)
+/** PFAF habit phrase ("deciduous Tree", "evergreen Climber", "PERENNIAL",
+ *  "Bulb", "Fern") → 'tree' | 'shrub' | 'herb' | 'climber' | ''. */
+export function pfafHabit(text) {
+  const s = text.toLowerCase();
+  if (/climber/.test(s)) return 'climber';
+  if (/\btree\b/.test(s)) return 'tree';
+  if (/\bshrub\b|bamboo/.test(s)) return 'shrub';
+  if (/perennial|annual|biennial|bulb|corm|fern|herb/.test(s)) return 'herb';
+  return '';
+}
+
 function hasIcon(html, file) {
   return new RegExp(`[/"']${file.replace('.', '\\.')}`, 'i').test(html);
 }
@@ -97,6 +108,12 @@ export function parsePfafHtml(html) {
 
   const physMatch = html.match(/lblPhystatment[^>]*>([^<]+(?:<[^>]+>[^<]*)*)/i);
   const phys = physMatch ? physMatch[1].replace(/<[^>]+>/g, '') : '';
+
+  // "Rubus fruticosus is a deciduous Shrub growing to 3 m …" — the growth
+  // form decides the layer; height alone would make a 3 m bramble a tree.
+  const habitMatch = phys.match(/\bis an? ([^.]*?)\s+growing to/i);
+  const habit = habitMatch ? pfafHabit(habitMatch[1]) : '';
+  if (habit) result.habit = habit;
 
   const heightMatch = phys.match(/growing to (\d+(?:\.\d+)?)\s*(m|cm)/i);
   if (heightMatch) result.heightM = parsePfafDimension(heightMatch[0]);

@@ -9,17 +9,17 @@ const plant = () => {
 };
 
 const data: GatheredSources = {
-  pfaf: { fields: { height: 25, sunFull: true, commonName: 'Black Locust' }, reportedFalse: ['waterWet'] },
-  efg: { fields: { height: 24.4, waterWet: true, nitrogenFix: true }, reportedFalse: [] },
-  wikidata: { fields: { commonName: 'Gewöhnliche Robinie', height: 30 }, reportedFalse: [] },
+  pfaf: { fields: { heightM: 25, sunFull: true, commonName: 'Black Locust' }, reportedFalse: ['waterWet'] },
+  efg: { fields: { heightM: 24.4, waterWet: true, nitrogenFix: true }, reportedFalse: [] },
+  wikidata: { fields: { commonName: 'Gewöhnliche Robinie', heightM: 30 }, reportedFalse: [] },
 };
 
 describe('applySources', () => {
   it('takes each field from the highest-ranked source with an opinion', () => {
     const p = plant();
     applySources(p, data, ['pfaf', 'efg', 'wikidata']);
-    expect(p.height).toBe(25);
-    expect(p._sources?.height).toBe('pfaf');
+    expect(p.heightM).toBe(25);
+    expect(p._sources?.heightM).toBe('pfaf');
     expect(p.nitrogenFix).toBe(true);
     expect(p._sources?.nitrogenFix).toBe('efg');
     // PFAF's explicit "no" outranks EFG's yes
@@ -30,18 +30,18 @@ describe('applySources', () => {
     const p = plant();
     applySources(p, data, ['pfaf', 'efg', 'wikidata']);
     applySources(p, data, ['efg', 'pfaf', 'wikidata']);
-    expect(p.height).toBe(24.4);
-    expect(p._sources?.height).toBe('efg');
+    expect(p.heightM).toBe(24.4);
+    expect(p._sources?.heightM).toBe('efg');
     expect(p.waterWet).toBe(true);
   });
 
   it('never overwrites values the user entered', () => {
     const p = plant();
-    p.height = 12;
-    p._sources = { height: 'manual' };
+    p.heightM = 12;
+    p._sources = { heightM: 'manual' };
     applySources(p, data, ['pfaf', 'efg', 'wikidata']);
-    expect(p.height).toBe(12);
-    expect(p._sources.height).toBe('manual');
+    expect(p.heightM).toBe(12);
+    expect(p._sources?.heightM).toBe('manual');
   });
 
   it('takes the German name from Wikidata, English names only as fallback', () => {
