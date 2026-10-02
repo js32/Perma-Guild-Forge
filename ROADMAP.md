@@ -62,16 +62,24 @@ Offene Punkte. Abgeschlossene Roadmap-Punkte stehen in [`CHANGELOG.md`](CHANGELO
 
 
 ## jetzt 3.0
-- [ ] calendar view: make sortable by date (earliest - latest)
 - [ ] code-review ultra
 - [ ] layer: option das zu verändern in Bearbeiten-Dialog einfügen
   - vorhandene Layer: tree, shrub, herb, climber, rhizo
 - [ ] functions and uses: use tables on ca page 9 for functions and uses: Namen und Reihenfolge übernehmen in Editiermodus. nicht vorhandene löschen
 - [ ] handy-ansicht ist verschoben bzw. nicht richtig skaliert
+- [ ] calendar view: make sortable by date (earliest - latest)
+- [ ] warum gibt's für diese Pflanzen keine Daten?
+  Gemeiner Rhabarber	Rheum rhabarbarum	—
+	Haferschlehe	Prunus domestica insititia
+	Jostabeere	Ribes x nidigrolaria
+	Rubus pentalobus	Rubus pentalobus
+
 
 ## kurzfristig
 - [ ] Design festlegen. icon integrieren?
 - [ ] zulip wieder starten: cd /opt/zulip && docker compose start
+- [ ] barrierefreiheit - inklusivität mitdenken: Farbenblindheit..
+- [ ] Button: Gruppen als Polykultur einrichten
 
 
 ## bis 1.11./Symposium
