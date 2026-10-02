@@ -62,6 +62,8 @@ Offene Punkte. Abgeschlossene Roadmap-Punkte stehen in [`CHANGELOG.md`](CHANGELO
 
 ## jetzt 3.0
 - [ ] code-review ultra
+- [ ] layer: option das zu verändern in Bearbeiten-Dialog einfügen
+  - vorhandene Layer: tree, shrub, herb, climber, rhizo 
 
 ## kurzfristig
 - [ ] Design festlegen. icon integrieren?
