@@ -81,7 +81,7 @@ function growSpeedRank(p: PlantData): number {
   return Infinity;
 }
 
-const LAYER_RANK: Record<PlantLayer, number> = { herb: 1, shrub: 2, tree: 3 };
+const LAYER_RANK: Record<PlantLayer, number> = { rhizo: 1, herb: 2, climber: 3, shrub: 4, tree: 5 };
 
 /** Earliest active month (0=Jan..11=Dec); unset sorts last. */
 function earliestMonth(months: boolean[] | undefined): number {

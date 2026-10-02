@@ -170,7 +170,8 @@ import Layout from '../layouts/Layout.astro';
       <div class="absolute z-10 mt-1 w-40 space-y-1 rounded-lg bg-white dark:bg-stone-800 p-2.5 text-xs shadow-lg ring-1 ring-stone-200 dark:ring-stone-700">
         <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-layer-opt accent-emerald-600" value="tree" /> <span data-i18n="layerTree">Baum</span></label>
         <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-layer-opt accent-emerald-600" value="shrub" /> <span data-i18n="layerShrub">Strauch</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-layer-opt accent-emerald-600" value="herb" /> <span data-i18n="layerHerb">Kraut/Bodendecker</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-layer-opt accent-emerald-600" value="climber" /> <span data-i18n="layerClimber">Kletterpflanze</span></label>
+        <label class="flex items-center gap-1.5"><input type="checkbox" class="filter-layer-opt accent-emerald-600" value="rhizo" /> <span data-i18n="layerRhizo">Rhizom/Wurzel</span></label>
       </div>
     </details>
     <!-- Gruppen: options are the group names in use, built by renderGroupFilterOptions() -->
@@ -285,7 +286,8 @@ import Layout from '../layouts/Layout.astro';
                 <option value="tree" data-i18n="layerTree">Baum</option>
                 <option value="shrub" data-i18n="layerShrub">Strauch</option>
                 <option value="herb" data-i18n="layerHerb">Kraut/Bodendecker</option>
-                <option value="climber" data-i18n="habitClimber">Kletterpflanze</option>
+                <option value="climber" data-i18n="layerClimber">Kletterpflanze</option>
+                <option value="rhizo" data-i18n="layerRhizo">Rhizom/Wurzel</option>
               </select></label>
             <label class="block"><span class="text-xs font-medium text-stone-500 dark:text-stone-400" data-field="climateZone" data-i18n="fieldClimateZone">Klimazone</span>
               <input type="text" id="f-climateZone" data-i18n-placeholder="climateZonePlaceholder" placeholder="z.B. 5-9" class="mt-0.5 block w-full rounded-md border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-800 px-2.5 py-1.5 text-sm shadow-inner focus:border-green-500 focus:ring-2 focus:ring-green-200 focus:outline-none" /></label>
@@ -447,7 +449,7 @@ import Layout from '../layouts/Layout.astro';
   import { enrichPlant, trackSources, createPlantFromSearch } from '../lib/enrich';
   import { escapeHtml, withButtonSpinner, loadingPlaceholderHtml, imageCreditOverlayHtml } from '../lib/html';
   import { isSourceEnabled, loadSettings } from '../lib/settings';
-  import { deriveLayer, LAYER_STYLE } from '../lib/plant-layer';
+  import { deriveLayer, LAYER_STYLE, LAYER_I18N, PLANT_LAYERS } from '../lib/plant-layer';
   import { exportPolyCardsPDF, exportStripeCardsPDF, exportSingleCardPDF, exportSingleStripeCardPDF, exportBaumscheibePDF, exportBaumscheibesPDF, exportBaumscheibeSheetPDF, exportBaumscheibeScaledPDF, type ScaledPaper } from '../lib/pdf-export';
   import { renderPolyCardHtml, renderStripeCardHtml, printStepperHtml } from '../lib/card-html';
   import { renderBaumscheibeCardHtml } from '../lib/baumscheibe-render';
@@ -698,7 +700,7 @@ import Layout from '../layouts/Layout.astro';
    *  Gartenplan's layer legend. */
   function layerDot(p: PlantData): string {
     const layer = deriveLayer(p);
-    const label = layer === 'tree' ? t('layerTree') : layer === 'shrub' ? t('layerShrub') : t('layerHerb');
+    const label = t(LAYER_I18N[layer]);
     return `<span class="inline-block h-2 w-2 rounded-full" style="background-color:${LAYER_STYLE[layer].fill}" title="${escapeHtml(label)}"></span>`;
   }
 
@@ -712,11 +714,7 @@ import Layout from '../layouts/Layout.astro';
     const sunChips = SUN_BADGES.map(([,,dot,l]) => chip(dot, l)).join(' ');
     const waterChips = WATER_BADGES.map(([,,dot,l]) => chip(dot, l)).join(' ');
     const growthChips = GROWTH_BADGES.map(([,,dot,l]) => chip(dot, l)).join(' ');
-    const layerChips = [
-      chip(LAYER_STYLE.tree.fill, t('layerTree')),
-      chip(LAYER_STYLE.shrub.fill, t('layerShrub')),
-      chip(LAYER_STYLE.herb.fill, t('layerHerb')),
-    ].join(' ');
+    const layerChips = PLANT_LAYERS.map(l => chip(LAYER_STYLE[l].fill, t(LAYER_I18N[l]))).join(' ');
     return `
       <details id="color-legend" open class="mx-3 mb-2 sm:mx-0 rounded-lg bg-stone-50 dark:bg-stone-900 px-3 py-1.5 text-xs text-stone-600 dark:text-stone-300 ring-1 ring-stone-200 dark:ring-stone-700">
         <summary class="cursor-pointer select-none font-medium text-stone-500 dark:text-stone-400">${escapeHtml(t('legendToggle'))}</summary>

@@ -52,13 +52,14 @@ function extractMonths(phys, kind) {
 // the file name. (PFAF's own naming: sun = full sun, partsun = semi-shade,
 // fullsun = full shade.)
 /** PFAF habit phrase ("deciduous Tree", "evergreen Climber", "PERENNIAL",
- *  "Bulb", "Fern") → 'tree' | 'shrub' | 'herb' | 'climber' | ''. */
+ *  "Bulb", "Fern") → 'tree' | 'shrub' | 'herb' | 'climber' | 'rhizo' | ''. */
 export function pfafHabit(text) {
   const s = text.toLowerCase();
   if (/climber/.test(s)) return 'climber';
+  if (/bulb|corm|tuber/.test(s)) return 'rhizo';
   if (/\btree\b/.test(s)) return 'tree';
   if (/\bshrub\b|bamboo/.test(s)) return 'shrub';
-  if (/perennial|annual|biennial|bulb|corm|fern|herb/.test(s)) return 'herb';
+  if (/perennial|annual|biennial|fern|herb/.test(s)) return 'herb';
   return '';
 }
 

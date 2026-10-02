@@ -32,6 +32,8 @@ export function buildTablePdfLabels(lang: Lang): TablePdfLabels {
       tree: pick('Baum', 'Tree'),
       shrub: pick('Strauch', 'Shrub'),
       herb: pick('Kraut/Bodendecker', 'Herb/groundcover'),
+      climber: pick('Kletterpflanze', 'Climber'),
+      rhizo: pick('Rhizom/Wurzel', 'Root/rhizome'),
     },
     chip: Object.fromEntries(BOOL_FIELDS.map(f => [f.key, de ? f.label.de : f.label.en])),
   };

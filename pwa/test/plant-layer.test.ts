@@ -14,7 +14,8 @@ describe('growth form (habit)', () => {
     expect(page('Sambucus_nigra').habit).toBe('shrub');
     expect(page('Hedera_helix').habit).toBe('climber');
     expect(page('Symphytum_officinale').habit).toBe('herb');
-    expect(pfafHabit('Bulb')).toBe('herb');
+    expect(pfafHabit('Bulb')).toBe('rhizo');
+    expect(pfafHabit('Corm')).toBe('rhizo');
     expect(pfafHabit('something odd')).toBe('');
   });
 
@@ -28,14 +29,18 @@ describe('growth form (habit)', () => {
     // without a habit the height still decides
     expect(deriveLayer({ heightM: 8, groundCover: false, habit: '' })).toBe('tree');
     expect(deriveLayer({ heightM: 1, groundCover: false })).toBe('shrub');
-    // climbers count as shrubs at most
-    expect(deriveLayer({ heightM: 15, groundCover: false, habit: 'climber' })).toBe('shrub');
+    // every habit is its own layer, whatever the height
+    expect(deriveLayer({ heightM: 15, groundCover: false, habit: 'climber' })).toBe('climber');
+    expect(deriveLayer({ heightM: 0.3, groundCover: false, habit: 'rhizo' })).toBe('rhizo');
   });
 
   it('parses free text and rejects junk on import', () => {
     expect(parseHabit('Strauch')).toBe('shrub');
     expect(parseHabit('Vine (l)')).toBe('climber');
     expect(parseHabit('tree')).toBe('tree');
+    expect(parseHabit('rhizo')).toBe('rhizo');
+    expect(parseHabit('Rhizom/Wurzel')).toBe('rhizo');
+    expect(parseHabit('Kletterpflanze')).toBe('climber');
     expect(normalizePlant({ latinName: 'x', habit: 'banana' })?.habit).toBe('');
     expect(normalizePlant({ latinName: 'x', habit: 'herb' })?.habit).toBe('herb');
   });

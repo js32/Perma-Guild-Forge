@@ -1,6 +1,6 @@
 import { PDFDocument, PDFFont, PDFPage, StandardFonts, rgb } from 'pdf-lib';
 import type { PlantData } from './types';
-import { deriveLayer } from './plant-layer';
+import { deriveLayer, type PlantLayer } from './plant-layer';
 import { displayCommonName } from './plant-name';
 import { downloadPdf } from './pdf-export';
 import { badgedFieldsOf, type FieldGroup } from './plant-fields';
@@ -15,7 +15,7 @@ type Chip = { key: keyof PlantData; code: string; hex: string };
 export interface TablePdfLabels {
   title: string; page: string; name: string; latin: string; layer: string;
   uses: string; functions: string; sun: string; water: string; growth: string;
-  bloom: string; fruit: string; legend: string; monthsNote: string; layerNames: Record<'tree' | 'shrub' | 'herb', string>;
+  bloom: string; fruit: string; legend: string; monthsNote: string; layerNames: Record<PlantLayer, string>;
   /** label per chip key */
   chip: Record<string, string>;
 }

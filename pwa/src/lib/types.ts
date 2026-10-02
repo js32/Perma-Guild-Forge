@@ -118,19 +118,21 @@ export function createEmptyGardenPlan(): GardenPlan {
 
 export type DataSource = 'wikidata' | 'pfaf' | 'efg' | 'naturadb' | 'manual' | 'csv' | 'sample';
 
-export const PLANT_HABITS = ['tree', 'shrub', 'herb', 'climber'] as const;
+/** Growth forms = layers: Baum, Strauch, Kraut, Kletterpflanze, Rhizom/Wurzel. */
+export const PLANT_HABITS = ['tree', 'shrub', 'herb', 'climber', 'rhizo'] as const;
 export type PlantHabit = typeof PLANT_HABITS[number] | '';
 
-/** Maps free-text growth forms (PFAF "deciduous Shrub", EFG "Vine (l)",
+/** Maps free-text growth forms (PFAF "deciduous Shrub", "Bulb", EFG "Vine (l)",
  *  CSV "Strauch") to a habit; '' when unrecognised. */
 export function parseHabit(raw: unknown): PlantHabit {
   const s = typeof raw === 'string' ? raw.trim().toLowerCase() : '';
   if (!s) return '';
   if ((PLANT_HABITS as readonly string[]).includes(s)) return s as PlantHabit;
   if (/climber|vine|kletter|liane/.test(s)) return 'climber';
+  if (/rhizo|wurzel|root|bulb|corm|tuber|knolle|zwiebel|geophyt/.test(s)) return 'rhizo';
   if (/tree|baum/.test(s)) return 'tree';
   if (/shrub|strauch|bamboo|bambus/.test(s)) return 'shrub';
-  if (/herb|kraut|perennial|annual|biennial|bulb|corm|fern|staude|farn|zwiebel|einjährig|zweijährig/.test(s)) return 'herb';
+  if (/herb|kraut|perennial|annual|biennial|fern|staude|farn|einjährig|zweijährig/.test(s)) return 'herb';
   return '';
 }
 

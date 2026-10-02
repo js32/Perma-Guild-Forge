@@ -1,7 +1,7 @@
 import type { PlantData } from './types';
 import { dataCredits } from './types';
 import { TEXT_FIELDS, BOOL_FIELDS } from './baumscheibe-mapping';
-import { deriveLayer } from './plant-layer';
+import { deriveLayer, type PlantLayer } from './plant-layer';
 import { displayCommonName } from './plant-name';
 
 const TEMPLATE_URL = '/baumscheibe-template.svg';
@@ -204,18 +204,16 @@ function setWaterIcon(svg: SVGSVGElement, plant: PlantData) {
 
 // Same story for "layer" (Baum/Strauch/Kraut/Rhizom/Kletterpflanze), all
 // five stacked at the same position with only l_tree previously visible.
-// There's no PlantData field for layer type, but deriveLayer() (the same
-// heuristic the Gartenplan and plant table already use, from heightM +
-// groundCover) gives a reasonable single state to show — l_rhizo/l_climber
-// have no derivable signal and stay hidden always.
-const LAYER_LABELS = { tree: 'l_tree', shrub: 'l_shrub', herb: 'l_herb' } as const;
+// Shows the icon of deriveLayer() — the growth form, or a height guess.
+const LAYER_LABELS: Record<PlantLayer, string> = {
+  tree: 'l_tree', shrub: 'l_shrub', herb: 'l_herb', climber: 'l_climber', rhizo: 'l_rhizo',
+};
 
 function setLayerIcon(svg: SVGSVGElement, plant: PlantData) {
   const active = deriveLayer(plant);
   for (const [layer, label] of Object.entries(LAYER_LABELS)) {
     for (const el of findByLabel(svg, [label])) setVisible(el, layer === active);
   }
-  for (const el of findByLabel(svg, ['l_rhizo', 'l_climber'])) setVisible(el, false);
 }
 
 // The "rating2" group holds five stacked stripe images ("rating 1".."rating 5",

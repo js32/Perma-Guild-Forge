@@ -75,4 +75,6 @@ export const gartenplanDict: Dict = {
   layerTree: { de: 'Baum', en: 'Tree' },
   layerShrub: { de: 'Strauch', en: 'Shrub' },
   layerHerb: { de: 'Kraut/Bodendecker', en: 'Herb/groundcover' },
+  layerClimber: { de: 'Kletterpflanze', en: 'Climber' },
+  layerRhizo: { de: 'Rhizom/Wurzel', en: 'Root/rhizome' },
 };
