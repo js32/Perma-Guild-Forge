@@ -60,6 +60,9 @@ Offene Punkte. Abgeschlossene Roadmap-Punkte stehen in [`CHANGELOG.md`](CHANGELO
 - [x] Priorisierung bei der Datenbefüllung der Pflanzen: PFAF > EdibleForestGardens(Toensmeier) > Wikidata. In den Einstellungen eine Möglichkeit schaffen, dass die Nutzerin die Reihenfolge selbst definieren kann. Quelle von Toensmeier (Buch) überall wie pfaf und WD als Quelle - soweit genutzt - angeben.
 - [x] Faser- und Nutzholz-icons werden immer angezeigt. das stimmt so nicht, bitte prüfen
 
+## jetzt 3.0
+- [ ] code-review ultra
+
 ## kurzfristig
 - [ ] Design festlegen. icon integrieren?
 - [ ] zulip wieder starten: cd /opt/zulip && docker compose start
