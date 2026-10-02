@@ -60,11 +60,13 @@ Offene Punkte. Abgeschlossene Roadmap-Punkte stehen in [`CHANGELOG.md`](CHANGELO
 - [x] Priorisierung bei der Datenbefüllung der Pflanzen: PFAF > EdibleForestGardens(Toensmeier) > Wikidata. In den Einstellungen eine Möglichkeit schaffen, dass die Nutzerin die Reihenfolge selbst definieren kann. Quelle von Toensmeier (Buch) überall wie pfaf und WD als Quelle - soweit genutzt - angeben.
 - [x] Faser- und Nutzholz-icons werden immer angezeigt. das stimmt so nicht, bitte prüfen
 
+
 ## jetzt 3.0
 - [ ] code-review ultra
 - [ ] layer: option das zu verändern in Bearbeiten-Dialog einfügen
   - vorhandene Layer: tree, shrub, herb, climber, rhizo
-- [ ] functions and uses: use tables on ca page 9 for functions and uses: Namen und Reihenfolge übernehmen in Editiermodus. nicht vorhandene löschen 
+- [ ] functions and uses: use tables on ca page 9 for functions and uses: Namen und Reihenfolge übernehmen in Editiermodus. nicht vorhandene löschen
+- [ ] handy-ansicht ist verschoben bzw. nicht richtig skaliert
 
 ## kurzfristig
 - [ ] Design festlegen. icon integrieren?
