@@ -91,10 +91,10 @@ function buildPlantMesh(placement: GardenPlanPlacement, plant: PlantData | undef
     shrub.position.y = radiusM * 0.6;
     group.add(shrub);
   } else if (layer === 'climber') {
-    // A slim leafy column, as if grown up a support.
+    // A slim leafy column, as if grown up a support. No jitterVertices():
+    // it projects onto a sphere and would squash the column.
     const h = Math.max(0.1, radiusM * 2);
     const columnGeom = new THREE.CylinderGeometry(radiusM * 0.35, radiusM * 0.5, h, 8);
-    jitterVertices(columnGeom, placement.id, style.wobble, radiusM * 0.4);
     const column = new THREE.Mesh(columnGeom, new THREE.MeshStandardMaterial({ color: style.fill, flatShading: true }));
     column.position.y = h / 2;
     group.add(column);

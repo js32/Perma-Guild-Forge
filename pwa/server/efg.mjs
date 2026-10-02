@@ -152,9 +152,17 @@ export function parseEfgCsv(text) {
 }
 
 let cached = null;
-/** Lazily loads data/efg-species.csv. */
+/** Lazily loads data/efg-species.csv. A missing or broken file only disables
+ *  EFG (empty index, logged) — it must not take the PFAF proxy down with it. */
 export function efgIndex() {
-  if (!cached) cached = parseEfgCsv(readFileSync(new URL('./data/efg-species.csv', import.meta.url), 'utf8'));
+  if (!cached) {
+    try {
+      cached = parseEfgCsv(readFileSync(new URL('./data/efg-species.csv', import.meta.url), 'utf8'));
+    } catch (err) {
+      console.error(`EFG data unavailable, continuing without it: ${err.message}`);
+      cached = new Map();
+    }
+  }
   return cached;
 }
 

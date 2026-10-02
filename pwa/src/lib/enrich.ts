@@ -136,7 +136,11 @@ export function applySources(plant: PlantData, data: GatheredSources, order: Enr
 
   // English-only sources fill commonName only when nothing better exists.
   if (!plant.commonName || isMirroredLatin(plant)) {
-    const fallback = order.map(s => data[s]?.fields.commonName).find(n => typeof n === 'string' && n.trim());
+    // Skip names that just mirror the Latin one (Wikidata's last resort), or a
+    // Wikidata ranked first would shadow a real PFAF/EFG English name.
+    const latinLower = plant.latinName.trim().toLowerCase();
+    const fallback = order.map(s => data[s]?.fields.commonName)
+      .find(n => typeof n === 'string' && n.trim() && n.trim().toLowerCase() !== latinLower);
     if (fallback && fallback !== plant.commonName) {
       plant.commonName = fallback;
       sources.commonName = order.find(s => data[s]?.fields.commonName === fallback)!;

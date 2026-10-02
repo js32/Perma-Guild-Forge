@@ -54,4 +54,14 @@ describe('applySources', () => {
     expect(q.commonName).toBe('Black Locust');
     expect(q._sources?.commonName).toBe('pfaf');
   });
+
+  it('does not let a Wikidata-mirrored Latin name shadow a real English name', () => {
+    const p = plant();
+    const mirrored: GatheredSources = {
+      wikidata: { fields: { commonName: 'Robinia pseudoacacia' }, reportedFalse: [] },
+      pfaf: { fields: { commonName: 'Black Locust' }, reportedFalse: [] },
+    };
+    applySources(p, mirrored, ['wikidata', 'pfaf', 'efg']);
+    expect(p.commonName).toBe('Black Locust');
+  });
 });

@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { parsePfafHtml, pfafHabit } from '../server/pfaf-parse.mjs';
 import { lookupEfg } from '../server/efg.mjs';
-import { deriveLayer } from '../src/lib/plant-layer';
+import { deriveLayer, PLANT_LAYERS } from '../src/lib/plant-layer';
 import { parseHabit } from '../src/lib/types';
 import { normalizePlant } from '../src/lib/plant-normalize';
 
@@ -43,5 +43,11 @@ describe('growth form (habit)', () => {
     expect(parseHabit('Kletterpflanze')).toBe('climber');
     expect(normalizePlant({ latinName: 'x', habit: 'banana' })?.habit).toBe('');
     expect(normalizePlant({ latinName: 'x', habit: 'herb' })?.habit).toBe('herb');
+  });
+
+  it('offers every layer in the list filter', () => {
+    const page = readFileSync(new URL('../src/pages/index.astro', import.meta.url), 'utf8');
+    const offered = [...page.matchAll(/class="filter-layer-opt[^"]*" value="(\w+)"/g)].map(m => m[1]);
+    expect(offered.sort()).toEqual([...PLANT_LAYERS].sort());
   });
 });
