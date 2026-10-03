@@ -23,9 +23,13 @@ NSMAP = {"svg": SVG_NS, "inkscape": INK_NS}
 # since it runs as a separate script invocation.
 etree.register_namespace("inkscape", INK_NS)
 
+import sys
+
+VERSION = sys.argv[1] if len(sys.argv) > 1 else "2.5"
+
 parser = etree.XMLParser(huge_tree=True)
 
-new_tree = etree.parse("baumscheibe2.4_labeled.svg", parser)
+new_tree = etree.parse(f"baumscheibe{VERSION}_labeled.svg", parser)
 new_root = new_tree.getroot()
 
 old_tree = etree.parse("../pwa/public/baumscheibe-template.svg", parser)
@@ -63,9 +67,9 @@ print(f"Labeled: {sorted(labeled)}")
 print(f"Copied from old template: {copied}")
 
 new_tree.write(
-    "baumscheibe2.4_integrated.svg",
+    f"baumscheibe{VERSION}_integrated.svg",
     xml_declaration=True,
     encoding="UTF-8",
     standalone=False,
 )
-print("Wrote baumscheibe2.4_integrated.svg")
+print(f"Wrote baumscheibe{VERSION}_integrated.svg")

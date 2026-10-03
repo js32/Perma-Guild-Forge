@@ -63,7 +63,7 @@ export const BOOL_FIELDS: Partial<Record<keyof PlantData, string[]>> = {
   fiber:      ['fiber',     'u_fiber'],
   // Funktionen — same color-wedge aliases where the "color" group has one.
   nitrogenFix:      ['nitrogenFix',      'NitrogenFix',   'f_Nfixer',      'n+'],
-  mineralFix:       ['mineralFix',       'MineralFix',    'f_dynacc',      'da'],
+  mineralFix:       ['mineralFix',       'MineralFix',    'f_dynacc',      'DAnew', 'da'],
   groundCover:      ['groundCover',      'GroundCover',   'f_groundcover', 'gc'],
   insects:          ['insects',          'Insects',       'f_pollinators', 'i'],
   // "apc" is the pest-confuser icon (Duftverwirrer); `pest` covers pest control.
