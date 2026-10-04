@@ -1,0 +1,63 @@
+Perma-Guild-Forge
+Copyright 2024-2026 Sebastian Schucht, Jens Steger, Jörn Müller and Andreas Linder
+
+AUTHORS
+
+  Sebastian Schucht     https://github.com/SZzip
+  Jens Steger           https://github.com/js32
+  Jörn Müller           https://github.com/permagruen, https://www.permagruen.de
+  Andreas Linder        https://github.com/tbdal
+
+HISTORY
+
+  Perma-Guild-Forge continues PermacultureTreeGuildsDesigner by Sebastian
+  Schucht (https://github.com/SZzip/PermacultureTreeGuildsDesigner). Its
+  web app is developed further as the Perma Design Kit
+  (https://github.com/tbdal/Perma-Design-Kit).
+
+LICENSING
+
+1. Functional Source License 1.1, MIT Future License (FSL-1.1-MIT)
+
+   Starting with the commit tagged `fsl-start`, this repository is
+   published under FSL-1.1-MIT, see LICENSE.md. The authors named above
+   agreed to this change.
+
+   Every published version becomes available under the MIT license on the
+   second anniversary of the date it was made available. For this
+   repository, that is the date its commit was pushed to the public
+   repository.
+
+2. Earlier versions: MIT
+
+   All versions published before `fsl-start` were released under the MIT
+   license and remain available under it. The original notice:
+
+   ------------------------------------------------------------------------
+   MIT License
+
+   Copyright (c) 2024 Sebastian Schucht
+
+   Permission is hereby granted, free of charge, to any person obtaining a
+   copy of this software and associated documentation files (the
+   "Software"), to deal in the Software without restriction, including
+   without limitation the rights to use, copy, modify, merge, publish,
+   distribute, sublicense, and/or sell copies of the Software, and to
+   permit persons to whom the Software is furnished to do so, subject to
+   the following conditions:
+
+   The above copyright notice and this permission notice shall be included
+   in all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+   IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+   CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+   TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+   ------------------------------------------------------------------------
+
+3. Third-party material
+
+   Dependencies, fonts and plant or map data keep their own licenses.
