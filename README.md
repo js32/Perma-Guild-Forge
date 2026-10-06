@@ -2,6 +2,10 @@
 
 A tool for designing permaculture tree guilds — composing plants by their ecological functions, human uses, and site conditions, and printing them as physical plant cards.
 
+## Important Notice
+
+This repo is archived. All future development happens here: https://github.com/tbdal/Perma-Design-Kit
+
 ## Quickstart (PWA)
 
 The PWA is the primary interface. It runs in the browser, works offline, and can be installed on desktop and mobile.
